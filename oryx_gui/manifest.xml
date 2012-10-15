@@ -1,7 +1,7 @@
 <package>
-  <description brief="OryxGui">
+  <description brief="oryx_gui">
 
-     OryxGui
+     Package containing a basic teleop GUI
 
   </description>
   <author>oryx</author>
@@ -9,12 +9,12 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/OryxGui</url>
   <depend package="rosjava"/>
-  <depend package="OryxMessages"/>
+  <depend package="oryx_msgs"/>
   <depend package="sensor_msgs"/>
   <depend package="std_msgs"/>
   <depend package="nav_msgs"/>
-  <depend package="OryxCommon"/>
-  <depend package="EposManager"/>
+  <depend package="oryx_common"/>
+  <depend package="epos_manager"/>
   <depend package="joy"/>
 	<export><rosjava-src location="src"/>
 <rosjava-pathelement location="target/" groupId="" artifactId="" version="0.0.0" built="true"/>
