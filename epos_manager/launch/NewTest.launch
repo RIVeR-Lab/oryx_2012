@@ -1,8 +1,8 @@
 <launch>
-	<rosparam command="load" file="$(find EposManager)/params/New_Motor.yaml" ns="motors/Drive_Motors/New_Motor" />
+	<rosparam command="load" file="$(find epos_manager)/params/New_Motor.yaml" ns="motors/Drive_Motors/New_Motor" />
 
 	
-	<node name="Name" pkg="EposManager" type="EposManager" args="New_Motor" ns="motors/Drive_Motors" output="screen" >
+	<node name="Name" pkg="epos_manager" type="epos_manager" args="New_Motor" ns="motors/Drive_Motors" output="screen" >
 		<param name="Port" value="USB0" />
 		<param name="Protocol" value="USB" />
 		<param name="Publish_Rate" value="10" />
