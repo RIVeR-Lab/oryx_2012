@@ -1,4 +1,4 @@
-# Install script for directory: /home/oryx/ros_workspace/Oryx/OryxManager
+# Install script for directory: /home/parallels/fuerte_workspace/oryx/oryx_manager
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/oryx/ros_workspace/Oryx/OryxManager/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/parallels/fuerte_workspace/oryx/oryx_manager/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/oryx/ros_workspace/Oryx/OryxManager/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/parallels/fuerte_workspace/oryx/oryx_manager/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)
