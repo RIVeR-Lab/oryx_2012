@@ -1,5 +1,5 @@
 <launch>	
-<node name="Arm_Camera" pkg="OryxCam" type="OryxCam" respawn="true">
+<node name="arm_camera" pkg="oryx_cam" type="oryx_cam" respawn="true">
 		<param name = "device" value="/dev/video1"/>	
 		<param name = "camera_name" value="Arm_Camera"/>	
 		<param name = "width" value="960"/>	

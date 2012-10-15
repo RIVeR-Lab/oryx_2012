@@ -1,6 +1,6 @@
 <launch>
 
-	<node name="PTZ_Manager" pkg="OryxManager" type="PTZManager" output="screen" >
+	<node name="PTZ_manager" pkg="oryx_manager" type="PTZ_manager" output="screen" >
 		<param name="Boom_Current" value="350" />
 		<param name="Tilt_Current" value="200" />
 		<param name="Pan_Current" value="300" />
@@ -11,7 +11,7 @@
 		<param name="Left_Right_Step" value="1000" />
 	</node>
 
-	<include file="$(find OryxManager)/launch/Motors/PtzMotorsValgrind.launch" />
+	<include file="$(find oryx_manager)/launch/Motors/PtzMotorsValgrind.launch" />
 
 
 </launch>

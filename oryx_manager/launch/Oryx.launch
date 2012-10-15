@@ -1,12 +1,12 @@
 <launch>
 
-	<node name="Oryx_Manager" pkg="OryxManager" type="OryxManager" />
+	<node name="oryx_manager" pkg="oryx_manager" type="oryx_manager" />
 
-	<include file="(find OryxManager/launch/DriveMotors.launch) />
+	<include file="(find oryx_manager/launch/DriveMotors.launch) />
 
-	<include file="(find OryxManager/launch/Cameras.launch) />
+	<include file="(find oryx_manager/launch/Cameras.launch) />
 
-	<node name = "InertiaCube" pkg="OryxManager" type="InertiaCube" cwd="node" />
+	<node name = "inertia_cube" pkg="oryx_manager" type="inertia_cube" cwd="node" />
 
 	<node name = "hokuyo_node" 	pkg="hokuyo_node" type="hokuyo_node">
 		<param name ="min_ang" value = "-1.1" />
@@ -18,11 +18,11 @@
 		<param name = "coalesce_interval" 	value=".04"/>	
     </node>
 
-	<node name=Battery_Manager" pkg="OryxManager" type="BatteryManager" />
+	<node name=battery_manager" pkg="oryx_manager" type="battery_manager" />
 
-	<node name="CPU_Temps" pkg="OryxManager" type="CPUTempFinder" />
+	<node name="CPU_temps" pkg="oryx_manager" type="CPU_temp_finder" />
 
-	<node name="Drive_Manager" pkg="OryxManager" type="DriveManager" />
+	<node name="drive_manager" pkg="oryx_manager" type="drive_manager" />
 	
 
   	<node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">

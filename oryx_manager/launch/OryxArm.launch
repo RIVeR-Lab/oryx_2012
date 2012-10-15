@@ -1,6 +1,6 @@
 <launch>
 
-	<node name="Arm_Manager" pkg="OryxManager" type="ArmManager" output="screen" >
+	<node name="arm_manager" pkg="oryx_manager" type="arm_manager" output="screen" >
 		<param name="Shoulder_Current" value="300" />
 		<param name="Scoop_Current" value="200" />
 		<param name="Pan_Current" value="300" />
@@ -9,7 +9,7 @@
 		<param name="Pan_Velocity" value="1250" />
 	</node>
 
-	<include file="$(find OryxManager)/launch/Motors/ArmMotors.launch" />
+	<include file="$(find oryx_manager)/launch/Motors/ArmMotors.launch" />
 
 
 </launch>

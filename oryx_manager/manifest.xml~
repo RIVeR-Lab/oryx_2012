@@ -1,14 +1,14 @@
 <package>
-  <description brief="OryxManager">
+  <description brief="oryx_manager">
 
-     OryxManager
+     Package which contains all of the high level operation nodes
 
   </description>
   <author>oryx</author>
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/OryxManager</url>
-  <depend package="OryxMessages"/>
+  <depend package="oryx_msgs"/>
   <depend package="roscpp"/>
   <depend package="sensor_msgs"/>
   <depend package="EposManager"/>
