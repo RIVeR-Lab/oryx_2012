@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package OryxMessages-msg)
+(cl:in-package oryx_msgs-msg)
 
 
 ;//! \htmlinclude Blob.msg.html
@@ -35,26 +35,26 @@
 (cl:defmethod cl:initialize-instance :after ((m <Blob>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'Blob)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name OryxMessages-msg:<Blob> is deprecated: use OryxMessages-msg:Blob instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name oryx_msgs-msg:<Blob> is deprecated: use oryx_msgs-msg:Blob instead.")))
 
 (cl:ensure-generic-function 'x-val :lambda-list '(m))
 (cl:defmethod x-val ((m <Blob>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:x-val is deprecated.  Use OryxMessages-msg:x instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:x-val is deprecated.  Use oryx_msgs-msg:x instead.")
   (x m))
 
 (cl:ensure-generic-function 'y-val :lambda-list '(m))
 (cl:defmethod y-val ((m <Blob>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:y-val is deprecated.  Use OryxMessages-msg:y instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:y-val is deprecated.  Use oryx_msgs-msg:y instead.")
   (y m))
 
 (cl:ensure-generic-function 'size-val :lambda-list '(m))
 (cl:defmethod size-val ((m <Blob>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:size-val is deprecated.  Use OryxMessages-msg:size instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:size-val is deprecated.  Use oryx_msgs-msg:size instead.")
   (size m))
 
 (cl:ensure-generic-function 'radius-val :lambda-list '(m))
 (cl:defmethod radius-val ((m <Blob>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:radius-val is deprecated.  Use OryxMessages-msg:radius instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:radius-val is deprecated.  Use oryx_msgs-msg:radius instead.")
   (radius m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <Blob>) ostream)
   "Serializes a message object of type '<Blob>"
@@ -113,10 +113,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<Blob>)))
   "Returns string type for a message object of type '<Blob>"
-  "OryxMessages/Blob")
+  "oryx_msgs/Blob")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'Blob)))
   "Returns string type for a message object of type 'Blob"
-  "OryxMessages/Blob")
+  "oryx_msgs/Blob")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Blob>)))
   "Returns md5sum for a message object of type '<Blob>"
   "8cfb68607934ca46f726004e3324f44b")

@@ -1,7 +1,7 @@
 
 (cl:in-package :asdf)
 
-(defsystem "EposManager-msg"
+(defsystem "epos_manager-msg"
   :depends-on (:roslisp-msg-protocol :roslisp-utils )
   :components ((:file "_package")
     (:file "MotorInfo" :depends-on ("_package_MotorInfo"))

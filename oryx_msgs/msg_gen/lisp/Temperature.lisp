@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package OryxMessages-msg)
+(cl:in-package oryx_msgs-msg)
 
 
 ;//! \htmlinclude Temperature.msg.html
@@ -35,26 +35,26 @@
 (cl:defmethod cl:initialize-instance :after ((m <Temperature>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'Temperature)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name OryxMessages-msg:<Temperature> is deprecated: use OryxMessages-msg:Temperature instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name oryx_msgs-msg:<Temperature> is deprecated: use oryx_msgs-msg:Temperature instead.")))
 
 (cl:ensure-generic-function 'temperature_node-val :lambda-list '(m))
 (cl:defmethod temperature_node-val ((m <Temperature>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:temperature_node-val is deprecated.  Use OryxMessages-msg:temperature_node instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:temperature_node-val is deprecated.  Use oryx_msgs-msg:temperature_node instead.")
   (temperature_node m))
 
 (cl:ensure-generic-function 'temperature-val :lambda-list '(m))
 (cl:defmethod temperature-val ((m <Temperature>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:temperature-val is deprecated.  Use OryxMessages-msg:temperature instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:temperature-val is deprecated.  Use oryx_msgs-msg:temperature instead.")
   (temperature m))
 
 (cl:ensure-generic-function 'warning_Temp-val :lambda-list '(m))
 (cl:defmethod warning_Temp-val ((m <Temperature>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:warning_Temp-val is deprecated.  Use OryxMessages-msg:warning_Temp instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:warning_Temp-val is deprecated.  Use oryx_msgs-msg:warning_Temp instead.")
   (warning_Temp m))
 
 (cl:ensure-generic-function 'danger_Temp-val :lambda-list '(m))
 (cl:defmethod danger_Temp-val ((m <Temperature>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:danger_Temp-val is deprecated.  Use OryxMessages-msg:danger_Temp instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:danger_Temp-val is deprecated.  Use oryx_msgs-msg:danger_Temp instead.")
   (danger_Temp m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <Temperature>) ostream)
   "Serializes a message object of type '<Temperature>"
@@ -110,10 +110,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<Temperature>)))
   "Returns string type for a message object of type '<Temperature>"
-  "OryxMessages/Temperature")
+  "oryx_msgs/Temperature")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'Temperature)))
   "Returns string type for a message object of type 'Temperature"
-  "OryxMessages/Temperature")
+  "oryx_msgs/Temperature")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Temperature>)))
   "Returns md5sum for a message object of type '<Temperature>"
   "e62c9d14f34e94252b4cc03e1d4997da")

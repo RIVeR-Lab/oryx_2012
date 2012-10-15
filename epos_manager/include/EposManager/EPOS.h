@@ -9,10 +9,8 @@
 #define EPOS_H_
 #include "EposManager/Definitions.h"
 #include <ros/ros.h>
-#include <string>
-#include <iostream>
 #include <dynamic_reconfigure/server.h>
-#include <EposManager/EposManagerConfig.h>
+#include "EposManagerConfig.h"
 
 
 class EPOS {

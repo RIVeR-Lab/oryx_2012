@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package EposManager-msg)
+(cl:in-package epos_manager-msg)
 
 
 ;//! \htmlinclude MotorInfo.msg.html
@@ -55,46 +55,46 @@
 (cl:defmethod cl:initialize-instance :after ((m <MotorInfo>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'MotorInfo)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name EposManager-msg:<MotorInfo> is deprecated: use EposManager-msg:MotorInfo instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name epos_manager-msg:<MotorInfo> is deprecated: use epos_manager-msg:MotorInfo instead.")))
 
 (cl:ensure-generic-function 'node_id-val :lambda-list '(m))
 (cl:defmethod node_id-val ((m <MotorInfo>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader EposManager-msg:node_id-val is deprecated.  Use EposManager-msg:node_id instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader epos_manager-msg:node_id-val is deprecated.  Use epos_manager-msg:node_id instead.")
   (node_id m))
 
 (cl:ensure-generic-function 'motor_name-val :lambda-list '(m))
 (cl:defmethod motor_name-val ((m <MotorInfo>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader EposManager-msg:motor_name-val is deprecated.  Use EposManager-msg:motor_name instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader epos_manager-msg:motor_name-val is deprecated.  Use epos_manager-msg:motor_name instead.")
   (motor_name m))
 
 (cl:ensure-generic-function 'state-val :lambda-list '(m))
 (cl:defmethod state-val ((m <MotorInfo>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader EposManager-msg:state-val is deprecated.  Use EposManager-msg:state instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader epos_manager-msg:state-val is deprecated.  Use epos_manager-msg:state instead.")
   (state m))
 
 (cl:ensure-generic-function 'faults-val :lambda-list '(m))
 (cl:defmethod faults-val ((m <MotorInfo>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader EposManager-msg:faults-val is deprecated.  Use EposManager-msg:faults instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader epos_manager-msg:faults-val is deprecated.  Use epos_manager-msg:faults instead.")
   (faults m))
 
 (cl:ensure-generic-function 'motor_velocity-val :lambda-list '(m))
 (cl:defmethod motor_velocity-val ((m <MotorInfo>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader EposManager-msg:motor_velocity-val is deprecated.  Use EposManager-msg:motor_velocity instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader epos_manager-msg:motor_velocity-val is deprecated.  Use epos_manager-msg:motor_velocity instead.")
   (motor_velocity m))
 
 (cl:ensure-generic-function 'motor_position-val :lambda-list '(m))
 (cl:defmethod motor_position-val ((m <MotorInfo>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader EposManager-msg:motor_position-val is deprecated.  Use EposManager-msg:motor_position instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader epos_manager-msg:motor_position-val is deprecated.  Use epos_manager-msg:motor_position instead.")
   (motor_position m))
 
 (cl:ensure-generic-function 'motor_current-val :lambda-list '(m))
 (cl:defmethod motor_current-val ((m <MotorInfo>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader EposManager-msg:motor_current-val is deprecated.  Use EposManager-msg:motor_current instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader epos_manager-msg:motor_current-val is deprecated.  Use epos_manager-msg:motor_current instead.")
   (motor_current m))
 
 (cl:ensure-generic-function 'stamp-val :lambda-list '(m))
 (cl:defmethod stamp-val ((m <MotorInfo>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader EposManager-msg:stamp-val is deprecated.  Use EposManager-msg:stamp instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader epos_manager-msg:stamp-val is deprecated.  Use epos_manager-msg:stamp instead.")
   (stamp m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <MotorInfo>) ostream)
   "Serializes a message object of type '<MotorInfo>"
@@ -197,10 +197,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<MotorInfo>)))
   "Returns string type for a message object of type '<MotorInfo>"
-  "EposManager/MotorInfo")
+  "epos_manager/MotorInfo")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'MotorInfo)))
   "Returns string type for a message object of type 'MotorInfo"
-  "EposManager/MotorInfo")
+  "epos_manager/MotorInfo")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<MotorInfo>)))
   "Returns md5sum for a message object of type '<MotorInfo>"
   "f0af010a942d4953f1738bc4cb3bf83c")

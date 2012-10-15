@@ -10,10 +10,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <std_msgs/String.h>
-#include "EposManager/EPOSControl.h"
-#include "EposManager/GroupEPOSControl.h"
-#include "EposManager/MotorInfo.h"
-#include "EposManager/GroupMotorInfo.h"
+#include "epos_manager/EPOSControl.h"
+#include "epos_manager/GroupEPOSControl.h"
+#include "epos_manager/MotorInfo.h"
+#include "epos_manager/GroupMotorInfo.h"
 #include <map>
 using namespace std;
 

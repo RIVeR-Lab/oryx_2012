@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package EposManager-msg)
+(cl:in-package epos_manager-msg)
 
 
 ;//! \htmlinclude EPOSControl.msg.html
@@ -30,21 +30,21 @@
 (cl:defmethod cl:initialize-instance :after ((m <EPOSControl>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'EPOSControl)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name EposManager-msg:<EPOSControl> is deprecated: use EposManager-msg:EPOSControl instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name epos_manager-msg:<EPOSControl> is deprecated: use epos_manager-msg:EPOSControl instead.")))
 
 (cl:ensure-generic-function 'node_id-val :lambda-list '(m))
 (cl:defmethod node_id-val ((m <EPOSControl>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader EposManager-msg:node_id-val is deprecated.  Use EposManager-msg:node_id instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader epos_manager-msg:node_id-val is deprecated.  Use epos_manager-msg:node_id instead.")
   (node_id m))
 
 (cl:ensure-generic-function 'control_mode-val :lambda-list '(m))
 (cl:defmethod control_mode-val ((m <EPOSControl>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader EposManager-msg:control_mode-val is deprecated.  Use EposManager-msg:control_mode instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader epos_manager-msg:control_mode-val is deprecated.  Use epos_manager-msg:control_mode instead.")
   (control_mode m))
 
 (cl:ensure-generic-function 'setpoint-val :lambda-list '(m))
 (cl:defmethod setpoint-val ((m <EPOSControl>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader EposManager-msg:setpoint-val is deprecated.  Use EposManager-msg:setpoint instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader epos_manager-msg:setpoint-val is deprecated.  Use epos_manager-msg:setpoint instead.")
   (setpoint m))
 (cl:defmethod roslisp-msg-protocol:symbol-codes ((msg-type (cl:eql '<EPOSControl>)))
     "Constants for message type '<EPOSControl>"
@@ -89,10 +89,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<EPOSControl>)))
   "Returns string type for a message object of type '<EPOSControl>"
-  "EposManager/EPOSControl")
+  "epos_manager/EPOSControl")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'EPOSControl)))
   "Returns string type for a message object of type 'EPOSControl"
-  "EposManager/EPOSControl")
+  "epos_manager/EPOSControl")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<EPOSControl>)))
   "Returns md5sum for a message object of type '<EPOSControl>"
   "a188b630eb63b57363acb91954210f81")

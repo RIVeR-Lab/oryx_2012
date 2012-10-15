@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package OryxMessages-msg)
+(cl:in-package oryx_msgs-msg)
 
 
 ;//! \htmlinclude BlobList.msg.html
@@ -10,8 +10,8 @@
   ((blobs
     :reader blobs
     :initarg :blobs
-    :type (cl:vector OryxMessages-msg:Blob)
-   :initform (cl:make-array 0 :element-type 'OryxMessages-msg:Blob :initial-element (cl:make-instance 'OryxMessages-msg:Blob)))
+    :type (cl:vector oryx_msgs-msg:Blob)
+   :initform (cl:make-array 0 :element-type 'oryx_msgs-msg:Blob :initial-element (cl:make-instance 'oryx_msgs-msg:Blob)))
    (blobCount
     :reader blobCount
     :initarg :blobCount
@@ -30,21 +30,21 @@
 (cl:defmethod cl:initialize-instance :after ((m <BlobList>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'BlobList)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name OryxMessages-msg:<BlobList> is deprecated: use OryxMessages-msg:BlobList instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name oryx_msgs-msg:<BlobList> is deprecated: use oryx_msgs-msg:BlobList instead.")))
 
 (cl:ensure-generic-function 'blobs-val :lambda-list '(m))
 (cl:defmethod blobs-val ((m <BlobList>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:blobs-val is deprecated.  Use OryxMessages-msg:blobs instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:blobs-val is deprecated.  Use oryx_msgs-msg:blobs instead.")
   (blobs m))
 
 (cl:ensure-generic-function 'blobCount-val :lambda-list '(m))
 (cl:defmethod blobCount-val ((m <BlobList>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:blobCount-val is deprecated.  Use OryxMessages-msg:blobCount instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:blobCount-val is deprecated.  Use oryx_msgs-msg:blobCount instead.")
   (blobCount m))
 
 (cl:ensure-generic-function 'color-val :lambda-list '(m))
 (cl:defmethod color-val ((m <BlobList>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:color-val is deprecated.  Use OryxMessages-msg:color instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:color-val is deprecated.  Use oryx_msgs-msg:color instead.")
   (color m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <BlobList>) ostream)
   "Serializes a message object of type '<BlobList>"
@@ -75,7 +75,7 @@
   (cl:setf (cl:slot-value msg 'blobs) (cl:make-array __ros_arr_len))
   (cl:let ((vals (cl:slot-value msg 'blobs)))
     (cl:dotimes (i __ros_arr_len)
-    (cl:setf (cl:aref vals i) (cl:make-instance 'OryxMessages-msg:Blob))
+    (cl:setf (cl:aref vals i) (cl:make-instance 'oryx_msgs-msg:Blob))
   (roslisp-msg-protocol:deserialize (cl:aref vals i) istream))))
     (cl:let ((unsigned 0))
       (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
@@ -90,10 +90,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<BlobList>)))
   "Returns string type for a message object of type '<BlobList>"
-  "OryxMessages/BlobList")
+  "oryx_msgs/BlobList")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'BlobList)))
   "Returns string type for a message object of type 'BlobList"
-  "OryxMessages/BlobList")
+  "oryx_msgs/BlobList")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<BlobList>)))
   "Returns md5sum for a message object of type '<BlobList>"
   "76c461d0b54f222fd763ee65e508f7e8")
@@ -102,10 +102,10 @@
   "76c461d0b54f222fd763ee65e508f7e8")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<BlobList>)))
   "Returns full string definition for message of type '<BlobList>"
-  (cl:format cl:nil "Blob[] blobs~%int32 blobCount~%int8 color~%~%================================================================================~%MSG: OryxMessages/Blob~%int32 x~%int32 y~%int32 size~%int32 radius~%~%~%"))
+  (cl:format cl:nil "Blob[] blobs~%int32 blobCount~%int8 color~%~%================================================================================~%MSG: oryx_msgs/Blob~%int32 x~%int32 y~%int32 size~%int32 radius~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'BlobList)))
   "Returns full string definition for message of type 'BlobList"
-  (cl:format cl:nil "Blob[] blobs~%int32 blobCount~%int8 color~%~%================================================================================~%MSG: OryxMessages/Blob~%int32 x~%int32 y~%int32 size~%int32 radius~%~%~%"))
+  (cl:format cl:nil "Blob[] blobs~%int32 blobCount~%int8 color~%~%================================================================================~%MSG: oryx_msgs/Blob~%int32 x~%int32 y~%int32 size~%int32 radius~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <BlobList>))
   (cl:+ 0
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'blobs) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ (roslisp-msg-protocol:serialization-length ele))))

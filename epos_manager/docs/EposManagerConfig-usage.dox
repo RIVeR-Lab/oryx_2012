@@ -1,6 +1,6 @@
 \subsubsection usage Usage
 \verbatim
-<node name="EPOS" pkg="EposManager" type="EPOS">
+<node name="EPOS" pkg="epos_manager" type="EPOS">
   <param name="Position_Profile_Velocity" type="int" value="0" />
   <param name="Position_Profile_Acceleration" type="int" value="0" />
   <param name="Position_Profile_Deceleration" type="int" value="0" />

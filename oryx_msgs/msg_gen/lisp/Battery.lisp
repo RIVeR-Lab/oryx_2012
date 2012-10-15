@@ -1,7 +1,7 @@
 ; Auto-generated. Do not edit!
 
 
-(cl:in-package OryxMessages-msg)
+(cl:in-package oryx_msgs-msg)
 
 
 ;//! \htmlinclude Battery.msg.html
@@ -25,16 +25,16 @@
 (cl:defmethod cl:initialize-instance :after ((m <Battery>) cl:&rest args)
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'Battery)
-    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name OryxMessages-msg:<Battery> is deprecated: use OryxMessages-msg:Battery instead.")))
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name oryx_msgs-msg:<Battery> is deprecated: use oryx_msgs-msg:Battery instead.")))
 
 (cl:ensure-generic-function 'node-val :lambda-list '(m))
 (cl:defmethod node-val ((m <Battery>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:node-val is deprecated.  Use OryxMessages-msg:node instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:node-val is deprecated.  Use oryx_msgs-msg:node instead.")
   (node m))
 
 (cl:ensure-generic-function 'voltage-val :lambda-list '(m))
 (cl:defmethod voltage-val ((m <Battery>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader OryxMessages-msg:voltage-val is deprecated.  Use OryxMessages-msg:voltage instead.")
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader oryx_msgs-msg:voltage-val is deprecated.  Use oryx_msgs-msg:voltage instead.")
   (voltage m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <Battery>) ostream)
   "Serializes a message object of type '<Battery>"
@@ -64,10 +64,10 @@
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<Battery>)))
   "Returns string type for a message object of type '<Battery>"
-  "OryxMessages/Battery")
+  "oryx_msgs/Battery")
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'Battery)))
   "Returns string type for a message object of type 'Battery"
-  "OryxMessages/Battery")
+  "oryx_msgs/Battery")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Battery>)))
   "Returns md5sum for a message object of type '<Battery>"
   "2d1e860aa474f2b66bc671e6980bbd27")

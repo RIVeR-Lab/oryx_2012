@@ -1,4 +1,4 @@
-(cl:defpackage EposManager-msg
+(cl:defpackage epos_manager-msg
   (:use )
   (:export
    "<MOTORINFO>"
