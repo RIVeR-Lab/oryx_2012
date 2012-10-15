@@ -11,7 +11,7 @@
   <depend package="oryx_msgs"/>
   <depend package="roscpp"/>
   <depend package="sensor_msgs"/>
-  <depend package="EposManager"/>
+  <depend package="epos_manager"/>
   <depend package="tf"/>
   <depend package="geometry_msgs"/>
   <depend package="nav_msgs"/>
