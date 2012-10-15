@@ -40,7 +40,11 @@
 ##  POSSIBILITY OF SUCH DAMAGE.
 ##**********************************************************/
 
-config_description = [{'srcline': 9, 'description': 'Velocity Used During Position Control', 'max': 40000, 'cconsttype': 'const int', 'ctype': 'int', 'srcfile': '../cfg/Motor.cfg', 'name': 'Position_Profile_Velocity', 'edit_method': '', 'default': 0, 'level': 0, 'min': 0, 'type': 'int'}, {'srcline': 10, 'description': 'Acceleration Used During Position Control', 'max': 20000, 'cconsttype': 'const int', 'ctype': 'int', 'srcfile': '../cfg/Motor.cfg', 'name': 'Position_Profile_Acceleration', 'edit_method': '', 'default': 0, 'level': 0, 'min': 0, 'type': 'int'}, {'srcline': 11, 'description': 'Deceleration Used During Position Control', 'max': 20000, 'cconsttype': 'const int', 'ctype': 'int', 'srcfile': '../cfg/Motor.cfg', 'name': 'Position_Profile_Deceleration', 'edit_method': '', 'default': 0, 'level': 0, 'min': 0, 'type': 'int'}, {'srcline': 12, 'description': 'Acceleration Used During Velocity Control', 'max': 20000, 'cconsttype': 'const int', 'ctype': 'int', 'srcfile': '../cfg/Motor.cfg', 'name': 'Velocity_Profile_Acceleration', 'edit_method': '', 'default': 0, 'level': 0, 'min': 0, 'type': 'int'}, {'srcline': 13, 'description': 'Deceleration Used During Velocity Control', 'max': 20000, 'cconsttype': 'const int', 'ctype': 'int', 'srcfile': '../cfg/Motor.cfg', 'name': 'Velocity_Profile_Deceleration', 'edit_method': '', 'default': 0, 'level': 0, 'min': 0, 'type': 'int'}, {'srcline': 14, 'description': 'Check to disable motor, uncheck to endable', 'max': True, 'cconsttype': 'const bool', 'ctype': 'bool', 'srcfile': '../cfg/Motor.cfg', 'name': 'Disable_Motor', 'edit_method': '', 'default': False, 'level': 0, 'min': False, 'type': 'bool'}, {'srcline': 15, 'description': 'Reinitialize motor if it fails to initialize', 'max': True, 'cconsttype': 'const bool', 'ctype': 'bool', 'srcfile': '../cfg/Motor.cfg', 'name': 'Reinitialize_Motor', 'edit_method': '', 'default': False, 'level': 0, 'min': False, 'type': 'bool'}]
+from dynamic_reconfigure.encoding import extract_params
+
+inf = float('inf')
+
+config_description = {'upper': 'DEFAULT', 'lower': 'groups', 'srcline': 233, 'name': 'Default', 'parent': 0, 'srcfile': '/opt/ros/fuerte/stacks/dynamic_reconfigure/src/dynamic_reconfigure/parameter_generator.py', 'cstate': 'true', 'parentname': 'Default', 'class': 'DEFAULT', 'field': 'default', 'state': True, 'parentclass': '', 'groups': [], 'parameters': [{'srcline': 259, 'description': 'Velocity Used During Position Control', 'max': 40000, 'cconsttype': 'const int', 'ctype': 'int', 'srcfile': '/opt/ros/fuerte/stacks/dynamic_reconfigure/src/dynamic_reconfigure/parameter_generator.py', 'name': 'Position_Profile_Velocity', 'edit_method': '', 'default': 0, 'level': 0, 'min': 0, 'type': 'int'}, {'srcline': 259, 'description': 'Acceleration Used During Position Control', 'max': 20000, 'cconsttype': 'const int', 'ctype': 'int', 'srcfile': '/opt/ros/fuerte/stacks/dynamic_reconfigure/src/dynamic_reconfigure/parameter_generator.py', 'name': 'Position_Profile_Acceleration', 'edit_method': '', 'default': 0, 'level': 0, 'min': 0, 'type': 'int'}, {'srcline': 259, 'description': 'Deceleration Used During Position Control', 'max': 20000, 'cconsttype': 'const int', 'ctype': 'int', 'srcfile': '/opt/ros/fuerte/stacks/dynamic_reconfigure/src/dynamic_reconfigure/parameter_generator.py', 'name': 'Position_Profile_Deceleration', 'edit_method': '', 'default': 0, 'level': 0, 'min': 0, 'type': 'int'}, {'srcline': 259, 'description': 'Acceleration Used During Velocity Control', 'max': 20000, 'cconsttype': 'const int', 'ctype': 'int', 'srcfile': '/opt/ros/fuerte/stacks/dynamic_reconfigure/src/dynamic_reconfigure/parameter_generator.py', 'name': 'Velocity_Profile_Acceleration', 'edit_method': '', 'default': 0, 'level': 0, 'min': 0, 'type': 'int'}, {'srcline': 259, 'description': 'Deceleration Used During Velocity Control', 'max': 20000, 'cconsttype': 'const int', 'ctype': 'int', 'srcfile': '/opt/ros/fuerte/stacks/dynamic_reconfigure/src/dynamic_reconfigure/parameter_generator.py', 'name': 'Velocity_Profile_Deceleration', 'edit_method': '', 'default': 0, 'level': 0, 'min': 0, 'type': 'int'}, {'srcline': 259, 'description': 'Check to disable motor, uncheck to endable', 'max': True, 'cconsttype': 'const bool', 'ctype': 'bool', 'srcfile': '/opt/ros/fuerte/stacks/dynamic_reconfigure/src/dynamic_reconfigure/parameter_generator.py', 'name': 'Disable_Motor', 'edit_method': '', 'default': False, 'level': 0, 'min': False, 'type': 'bool'}, {'srcline': 259, 'description': 'Reinitialize motor if it fails to initialize', 'max': True, 'cconsttype': 'const bool', 'ctype': 'bool', 'srcfile': '/opt/ros/fuerte/stacks/dynamic_reconfigure/src/dynamic_reconfigure/parameter_generator.py', 'name': 'Reinitialize_Motor', 'edit_method': '', 'default': False, 'level': 0, 'min': False, 'type': 'bool'}], 'type': '', 'id': 0}
 
 min = {}
 max = {}
@@ -49,7 +53,14 @@ level = {}
 type = {}
 all_level = 0
 
-for param in config_description:
+#def extract_params(config):
+#    params = []
+#    params.extend(config['parameters'])    
+#    for group in config['groups']:
+#        params.extend(extract_params(group))
+#    return params
+
+for param in extract_params(config_description):
     min[param['name']] = param['min']
     max[param['name']] = param['max']
     defaults[param['name']] = param['default']
