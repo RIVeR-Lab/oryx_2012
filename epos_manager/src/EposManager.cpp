@@ -32,9 +32,9 @@ map<int,int> nodeIDMap;
 
 
 //////////CALLBACKS//////////////////
-void groupMotorControlCallback(const EposManager::GroupEPOSControl::ConstPtr& msg)
+void groupMotorControlCallback(const epos_manager::GroupEPOSControl::ConstPtr& msg)
 {
-	vector<EposManager::EPOSControl> controlGroup;
+	vector<epos_manager::EPOSControl> controlGroup;
 	controlGroup = msg->motor_group;
 
 	for(unsigned int i=0; i< controlGroup.size();i++){
@@ -42,22 +42,22 @@ void groupMotorControlCallback(const EposManager::GroupEPOSControl::ConstPtr& ms
 		if (key >=0){
 				switch(controlGroup[i].control_mode){
 
-				case EposManager::EPOSControl::VELOCITY :
+				case epos_manager::EPOSControl::VELOCITY :
 					motors[key]->setVelocity(controlGroup[i].setpoint);
 					break;
-				case EposManager::EPOSControl::ABSOLUTE_POSITION:
+				case epos_manager::EPOSControl::ABSOLUTE_POSITION:
 					motors[key]->setPosition(controlGroup[i].setpoint,true,false);
 					break;
 
-				case EposManager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE:
+				case epos_manager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE:
 					motors[key]->setPosition(controlGroup[i].setpoint,true,true);
 					break;
 
-				case EposManager::EPOSControl::RELATIVE_POSITION:
+				case epos_manager::EPOSControl::RELATIVE_POSITION:
 					motors[key]->setPosition(controlGroup[i].setpoint,false,false);
 					break;
 
-				case EposManager::EPOSControl::RELATIVE_POSITION_IMMEDIATE:
+				case epos_manager::EPOSControl::RELATIVE_POSITION_IMMEDIATE:
 					motors[key]->setPosition(controlGroup[i].setpoint,false,true);
 					break;
 
@@ -69,26 +69,26 @@ void groupMotorControlCallback(const EposManager::GroupEPOSControl::ConstPtr& ms
 	}
 }
 
-void motorControlCallback(const EposManager::EPOSControl::ConstPtr& msg) {
+void motorControlCallback(const epos_manager::EPOSControl::ConstPtr& msg) {
 	int key = nodeIDMap.find(msg->node_id)->second;
 			switch (msg->control_mode) {
 
-			case EposManager::EPOSControl::VELOCITY:
+			case epos_manager::EPOSControl::VELOCITY:
 				motors[key]->setVelocity(msg->setpoint);
 				return;
-			case EposManager::EPOSControl::ABSOLUTE_POSITION:
+			case epos_manager::EPOSControl::ABSOLUTE_POSITION:
 				motors[key]->setPosition(msg->setpoint, true, false);
 				return;
 
-			case EposManager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE:
+			case epos_manager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE:
 				motors[key]->setPosition(msg->setpoint, true, true);
 				return;
 
-			case EposManager::EPOSControl::RELATIVE_POSITION:
+			case epos_manager::EPOSControl::RELATIVE_POSITION:
 				motors[key]->setPosition(msg->setpoint, false, false);
 				return;
 
-			case EposManager::EPOSControl::RELATIVE_POSITION_IMMEDIATE:
+			case epos_manager::EPOSControl::RELATIVE_POSITION_IMMEDIATE:
 				motors[key]->setPosition(msg->setpoint, false, true);
 				return;
 
@@ -99,13 +99,13 @@ void motorControlCallback(const EposManager::EPOSControl::ConstPtr& msg) {
 
 
 void motorInfoCallback(const ros::TimerEvent&){
-	EposManager::GroupMotorInfo msg;
-	vector<EposManager::MotorInfo> motor_group;
+	epos_manager::GroupMotorInfo msg;
+	vector<epos_manager::MotorInfo> motor_group;
 	short current;
 	long velocity,position;
 	for(int i=0;i<numMotors;i++){
 		if (motors[i]->isEPOSInitialized()) {
-			EposManager::MotorInfo motor_msg;
+			epos_manager::MotorInfo motor_msg;
 			motors[i]->getState();
 			if (motors[i]->state == ST_FAULT) {
 				motors[i]->printFaults();
@@ -238,8 +238,8 @@ int main(int argc, char** argv){
 	//Initialize publishers and subscribers
 	ros::Subscriber groupMotorControl = nh.subscribe("Group_Motor_Control", 1, groupMotorControlCallback);
 	ros::Subscriber motorControl 	  = nh.subscribe("Motor_Control", 4, motorControlCallback);
-	groupMotorInfoPublisher 		  = nh.advertise<EposManager::GroupMotorInfo>("Group_Motor_Info",10);
-	motorInfoPublisher				  = nh.advertise<EposManager::MotorInfo>("Motor_Info",10);
+	groupMotorInfoPublisher 		  = nh.advertise<epos_manager::GroupMotorInfo>("Group_Motor_Info",10);
+	motorInfoPublisher				  = nh.advertise<epos_manager::MotorInfo>("Motor_Info",10);
 	ros::Timer motorInfoTimer		  = nh.createTimer(ros::Duration(1/motorInfoPublishRate), motorInfoCallback);
 
 	if(heartbeat){

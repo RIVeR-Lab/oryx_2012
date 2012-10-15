@@ -10,7 +10,7 @@
 #include "EposManager/Definitions.h"
 #include <ros/ros.h>
 #include <dynamic_reconfigure/server.h>
-#include "EposManagerConfig.h"
+#include <epos_manager/epos_managerConfig.h>
 
 
 class EPOS {
@@ -243,7 +243,7 @@ public:
 	 */
 	bool printFaults();
 	virtual ~EPOS();
-	void dynamicCallback(EposManager::EposManagerConfig &config, uint32_t level);
+	void dynamicCallback(epos_manager::epos_managerConfig &config, uint32_t level);
 	/**
 	 * Returns a boolean indicating whether or not the EPOS has been initialized
 	 *
@@ -341,9 +341,9 @@ private:
 	bool quickStopActiveLow;
 	int quickstopPin;
 
-	dynamic_reconfigure::Server<EposManager::EposManagerConfig> server;
-	dynamic_reconfigure::Server<EposManager::EposManagerConfig>::CallbackType callbackManager;
-	EposManager::EposManagerConfig currentConfig;
+	dynamic_reconfigure::Server<epos_manager::epos_managerConfig> server;
+	dynamic_reconfigure::Server<epos_manager::epos_managerConfig>::CallbackType callbackManager;
+	epos_manager::epos_managerConfig currentConfig;
 
 	/*******************METHODS******************/
 

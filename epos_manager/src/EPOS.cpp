@@ -5,12 +5,12 @@
  *      Author: oryx
  */
 
-#include "EposManager/EPOS.h"
+#include <EposManager/EPOS.h>
 #include <errno.h>
 #include <signal.h>
 using namespace std;
 
-void EPOS::dynamicCallback(EposManager::EposManagerConfig &config, uint32_t level){
+void EPOS::dynamicCallback(epos_manager::epos_managerConfig &config, uint32_t level){
 	if(isInitialized){
 		if(currentConfig.Position_Profile_Velocity!=config.Position_Profile_Velocity){
 			setPositionProfileVelocity(config.Position_Profile_Velocity);
