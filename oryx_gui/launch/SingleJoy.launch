@@ -1,5 +1,5 @@
 <launch>
-	<node name="DriverJoy" pkg="joy" type="joy_node" >
+	<node name="driver_joy" pkg="joy" type="joy_node" >
 		<param name="deadzone" value=".2" />
 		<param name="coalesce_interval" value=".05" />
 		<param name="dev" value="/dev/input/js0"/>
