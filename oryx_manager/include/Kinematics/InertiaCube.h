@@ -16,7 +16,7 @@
 #include <termios.h>
 #include <unistd.h>
 #include <string>
-#include "OryxManager/IMUConfig.h"
+#include "oryx_manager/IMUConfig.h"
 
 
 
@@ -24,7 +24,7 @@ ISD_TRACKER_HANDLE handle;
 ISD_STATION_INFO_TYPE station;
 ISD_TRACKING_DATA_TYPE data;
 sensor_msgs::Imu getIMUData();
-void reconfigureCallback(OryxManager::IMUConfig &config, uint32_t level);
+void reconfigureCallback(oryx_manager::IMUConfig &config, uint32_t level);
 int port =1;
 double publishRate= 10;
 

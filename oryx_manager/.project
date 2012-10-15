@@ -119,41 +119,6 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>[Targets]/[exe] CPU_temp_finder</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] CPU_temp_finder/</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] CPU_temp_finder/Source Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] CPU_temp_finder/Source Files/CPUTempFinder.cpp</name>
-			<type>1</type>
-			<location>/home/parallels/fuerte_workspace/oryx/oryx_manager/src/Internals/CPUTempFinder.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] CPU_temp_finder/Header Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] CPU_temp_finder/CMake Rules</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] CPU_temp_finder/Resources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
 			<name>[Targets]/[exe] battery_manager</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -220,41 +185,6 @@
 		</link>
 		<link>
 			<name>[Targets]/[exe] drive_manager/Resources</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] inertia_cube</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] inertia_cube/</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] inertia_cube/Source Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] inertia_cube/Source Files/InertiaCube.cpp</name>
-			<type>1</type>
-			<location>/home/parallels/fuerte_workspace/oryx/oryx_manager/src/Kinematics/InertiaCube.cpp</location>
-		</link>
-		<link>
-			<name>[Targets]/[exe] inertia_cube/Header Files</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] inertia_cube/CMake Rules</name>
-			<type>2</type>
-			<locationURI>virtual:/virtual</locationURI>
-		</link>
-		<link>
-			<name>[Targets]/[exe] inertia_cube/Resources</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>

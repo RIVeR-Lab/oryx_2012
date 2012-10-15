@@ -7,7 +7,7 @@
 
 #include <sensors/sensors.h>
 #include <string>
-#include <OryxMessages/Temperature.h>
+#include <oryx_msgs/Temperature.h>
 #include <ros/ros.h>
 ros::Publisher temperaturePublisher;
 double dangerTemp,warningTemp;
@@ -46,7 +46,7 @@ void getTemps(){
                     if (rc < 0) {
                        ROS_WARN_STREAM("Invalid Sensor reading: " << rc);
                     } else {
-                        OryxMessages::Temperature msg;
+                        oryx_msgs::Temperature msg;
                         msg.temperature_node=c+10;
                         //Convert temperatures to fahrenheit
                         msg.warning_Temp=warningTemp;
@@ -74,7 +74,7 @@ int main(int argc, char** argv){
 	ros::param::get("~Danger_Temp",dangerTemp);
 	ros::param::get("~Publish_Rate",publishRate);
 
-	temperaturePublisher = nh.advertise<OryxMessages::Temperature>("Temps",10);
+	temperaturePublisher = nh.advertise<oryx_msgs::Temperature>("Temps",10);
 	ros::Rate loopRate(publishRate);
 
     sensors_cleanup();

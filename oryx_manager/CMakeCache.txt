@@ -207,7 +207,7 @@ ROSPACK_EXE:FILEPATH=/opt/ros/fuerte/bin/rospack
 USERCONFIG:FILEPATH=USERCONFIG-NOTFOUND
 
 //Path to a file.
-_file_name:FILEPATH=/home/parallels/fuerte_workspace/oryx/oryx_manager/src/Kinematics/InertiaCube.cpp
+_file_name:FILEPATH=/home/parallels/fuerte_workspace/oryx/oryx_manager/src/Internals/BatteryManager.cpp
 
 //Value Computed by CMake
 oryx_manager_BINARY_DIR:STATIC=/home/parallels/fuerte_workspace/oryx/oryx_manager
@@ -361,7 +361,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.3()]
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 _rosbuild_EXPORTS:INTERNAL=
-_rosbuild_cached_flag_time:INTERNAL=1350263101.61
+_rosbuild_cached_flag_time:INTERNAL=1350309449.47
 _roslang_LANGS:INTERNAL=roslisp;rospy;roscpp
 _rospack_deps_manifests_invoke_result:INTERNAL=/home/parallels/fuerte_workspace/oryx/oryx_msgs/manifest.xml;/opt/ros/fuerte/share/roslang/manifest.xml;/opt/ros/fuerte/share/roscpp/manifest.xml;/opt/ros/fuerte/share/geometry_msgs/manifest.xml;/opt/ros/fuerte/share/sensor_msgs/manifest.xml;/opt/ros/fuerte/share/rospy/manifest.xml;/opt/ros/fuerte/share/rosservice/manifest.xml;/opt/ros/fuerte/stacks/dynamic_reconfigure/manifest.xml;/home/parallels/fuerte_workspace/oryx/epos_manager/manifest.xml;/opt/ros/fuerte/stacks/bullet/manifest.xml;/opt/ros/fuerte/share/rosconsole/manifest.xml;/opt/ros/fuerte/stacks/geometry/angles/manifest.xml;/opt/ros/fuerte/share/rostest/manifest.xml;/opt/ros/fuerte/share/roswtf/manifest.xml;/opt/ros/fuerte/share/message_filters/manifest.xml;/opt/ros/fuerte/stacks/geometry/tf/manifest.xml;/opt/ros/fuerte/share/nav_msgs/manifest.xml
 _rospack_msgsrv_gen_invoke_result:INTERNAL=/home/parallels/fuerte_workspace/oryx/oryx_msgs/msg_gen/generated;/opt/ros/fuerte/stacks/dynamic_reconfigure/msg_gen/generated;/opt/ros/fuerte/stacks/dynamic_reconfigure/srv_gen/generated;/home/parallels/fuerte_workspace/oryx/epos_manager/msg_gen/generated;/opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated;/opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated

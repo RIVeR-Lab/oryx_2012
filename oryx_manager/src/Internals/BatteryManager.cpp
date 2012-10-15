@@ -22,8 +22,8 @@
 #include <unistd.h>
 
 #include "ros/ros.h"
-#include "OryxMessages/Battery.h"
-#include "OryxMessages/Temperature.h"
+#include <oryx_msgs/Battery.h>
+#include <oryx_msgs/Temperature.h>
 using namespace std;
 
 #define FALSE 0
@@ -309,8 +309,8 @@ int main (int argc, char *argv[])
     ros::param::get("~Loop_Rate",loop);
     ros::param::get("~Port",port);
 
-    ros::Publisher batteryPublisher = n.advertise<OryxMessages::Battery>("Battery",6);
-    ros::Publisher temperaturePublisher = n.advertise<OryxMessages::Temperature>("Temps",15);
+    ros::Publisher batteryPublisher = n.advertise<oryx_msgs::Battery>("Battery",6);
+    ros::Publisher temperaturePublisher = n.advertise<oryx_msgs::Temperature>("Temps",15);
 
     ros::Rate loopRate(loop);
 
@@ -320,8 +320,8 @@ int main (int argc, char *argv[])
        {
 
 
-    	OryxMessages::Battery batteryMsg;
-    	OryxMessages::Temperature temperatureMsg;
+    	oryx_msgs::Battery batteryMsg;
+    	oryx_msgs::Temperature temperatureMsg;
 
     	temperatureMsg.warning_Temp = warning_temp;
     	temperatureMsg.danger_Temp = danger_Temp;

@@ -6,7 +6,7 @@
 
 void joyCallback(const sensor_msgs::Joy::ConstPtr& msg){
 	if (msg->buttons[LEFT_BUTTON] <.1 && msg->buttons[RIGHT_BUTTON] <.1) {
-		EposManager::GroupEPOSControl drive_msg;
+		epos_manager::GroupEPOSControl drive_msg;
 		float scale = 1;
 
 
@@ -42,9 +42,9 @@ void joyCallback(const sensor_msgs::Joy::ConstPtr& msg){
 }
 
 
-void motorInfoCallback(const EposManager::GroupMotorInfo::ConstPtr& msg){
+void motorInfoCallback(const epos_manager::GroupMotorInfo::ConstPtr& msg){
 	//TODO: Implement odometry
-	vector<EposManager::MotorInfo> motor_group;
+	vector<epos_manager::MotorInfo> motor_group;
 		motor_group = msg->motor_group;
 		for(int i=0; i< motor_group.size();i++){
 
@@ -52,18 +52,18 @@ void motorInfoCallback(const EposManager::GroupMotorInfo::ConstPtr& msg){
 }
 
 void twistCallback(const geometry_msgs::Twist::ConstPtr& msg){
-	EposManager::GroupEPOSControl drive_msg;
-	EposManager::EPOSControl front_right,front_left,back_right,back_left;
+	epos_manager::GroupEPOSControl drive_msg;
+	epos_manager::EPOSControl front_right,front_left,back_right,back_left;
 
 	front_right.node_id=FRONT_RIGHT_WHEEL;
 	back_right.node_id=BACK_RIGHT_WHEEL;
 	front_left.node_id=FRONT_LEFT_WHEEL;
 	back_left.node_id=BACK_LEFT_WHEEL;
 
-	front_right.control_mode=EposManager::EPOSControl::VELOCITY;
-	back_right.control_mode=EposManager::EPOSControl::VELOCITY;
-	front_left.control_mode=EposManager::EPOSControl::VELOCITY;
-	back_left.control_mode=EposManager::EPOSControl::VELOCITY;
+	front_right.control_mode=epos_manager::EPOSControl::VELOCITY;
+	back_right.control_mode=epos_manager::EPOSControl::VELOCITY;
+	front_left.control_mode=epos_manager::EPOSControl::VELOCITY;
+	back_left.control_mode=epos_manager::EPOSControl::VELOCITY;
 
 	double angularToLinearCoef = (baseWidth*baseWidth + baseLength*baseLength)/(2*baseWidth);
 	long left_speed  = velocityToRPM(msg->linear.x - msg->angular.z*angularToLinearCoef);
@@ -96,10 +96,10 @@ int main (int argc, char **argv){
 	ros::Subscriber joy_subscriber = n.subscribe("joy", 1, joyCallback);
 	ros::Subscriber driver_joy_subscriber = n.subscribe("DriverJoy", 1, joyCallback);
 	ros::Subscriber drive_motor_twist_subscriber = n.subscribe("motors/Drive_Motors/Twist",1,twistCallback);
-	group_drive_publisher = n.advertise<EposManager::GroupEPOSControl>("motors/Drive_Motors/Group_Motor_Control", 1);
+	group_drive_publisher = n.advertise<epos_manager::GroupEPOSControl>("motors/Drive_Motors/Group_Motor_Control", 1);
 
-	dynamic_reconfigure::Server<OryxManager::DriveManagerConfig> server;
-	dynamic_reconfigure::Server<OryxManager::DriveManagerConfig>::CallbackType f;
+	dynamic_reconfigure::Server<oryx_manager::drive_managerConfig> server;
+	dynamic_reconfigure::Server<oryx_manager::drive_managerConfig>::CallbackType f;
 
 	//f = boost::bind(reconfigureCallback, _1 ,_2);
 //	server.setCallback(f);
@@ -112,19 +112,19 @@ int velocityToRPM(float velocity){
 	return (int) velocity;
 }
 
-EposManager::GroupEPOSControl joyToDriveMessage(float left_value, float right_value,float scale){
-	EposManager::GroupEPOSControl drive_msg;
-	EposManager::EPOSControl front_right, front_left, back_right, back_left;
+epos_manager::GroupEPOSControl joyToDriveMessage(float left_value, float right_value,float scale){
+	epos_manager::GroupEPOSControl drive_msg;
+	epos_manager::EPOSControl front_right, front_left, back_right, back_left;
 
 	front_right.node_id=FRONT_RIGHT_WHEEL;
 	back_right.node_id=BACK_RIGHT_WHEEL;
 	front_left.node_id=FRONT_LEFT_WHEEL;
 	back_left.node_id=BACK_LEFT_WHEEL;
 
-	front_right.control_mode=EposManager::EPOSControl::VELOCITY;
-	back_right.control_mode=EposManager::EPOSControl::VELOCITY;
-	front_left.control_mode=EposManager::EPOSControl::VELOCITY;
-	back_left.control_mode=EposManager::EPOSControl::VELOCITY;
+	front_right.control_mode=epos_manager::EPOSControl::VELOCITY;
+	back_right.control_mode=epos_manager::EPOSControl::VELOCITY;
+	front_left.control_mode=epos_manager::EPOSControl::VELOCITY;
+	back_left.control_mode=epos_manager::EPOSControl::VELOCITY;
 
 	long left_speed,right_speed;
 	left_speed  = left_value*maxRPM*scale;

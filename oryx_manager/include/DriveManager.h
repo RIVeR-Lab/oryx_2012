@@ -9,7 +9,7 @@
 #define DRIVEMANAGER_H_
 
 #include "OryxManager.h"
-#include "OryxManager/DriveManagerConfig.h"
+#include <oryx_manager/drive_managerConfig.h>
 
 
 double maxVelocity = 1.2;
@@ -19,6 +19,6 @@ int maxRPM;
 ros::Publisher group_drive_publisher;
 
 int velocityToRPM(float velocity);
-EposManager::GroupEPOSControl joyToDriveMessage(float left_value, float right_value, float scale);
+epos_manager::GroupEPOSControl joyToDriveMessage(float left_value, float right_value, float scale);
 
 #endif /* DRIVEMANAGER_H_ */

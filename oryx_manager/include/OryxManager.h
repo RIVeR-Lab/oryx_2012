@@ -14,12 +14,12 @@ using namespace std;
 #include "ros/ros.h"
 #include "sensor_msgs/Joy.h"
 #include "geometry_msgs/TwistStamped.h"
-#include <OryxMessages/Battery.h>
-#include <OryxMessages/Temperature.h>
-#include <EposManager/GroupEPOSControl.h>
-#include <EposManager/EPOSControl.h>
-#include <EposManager/GroupMotorInfo.h>
-#include <EposManager/MotorInfo.h>
+#include <oryx_msgs/Battery.h>
+#include <oryx_msgs/Temperature.h>
+#include <epos_manager/GroupEPOSControl.h>
+#include <epos_manager/EPOSControl.h>
+#include <epos_manager/GroupMotorInfo.h>
+#include <epos_manager/MotorInfo.h>
 #include <dynamic_reconfigure/server.h>
 #include <boost/thread.hpp>
 

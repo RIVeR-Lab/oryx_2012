@@ -130,7 +130,7 @@ void ptzJoyCallback(const sensor_msgs::Joy::ConstPtr& msg){
 /**
  * The callback for reconfiguring the different manager parameters/functions.
  */
-void reconfigureCallback(OryxManager::PTZManagerConfig &config, uint32_t level){
+void reconfigureCallback(oryx_manager::PTZ_managerConfig &config, uint32_t level){
 	if(config.Home_Pan == true && previousConfig.Home_Pan == false){
 		panMotor.isHoming=true;
 		panMotor.maxValue=0;
@@ -180,7 +180,7 @@ void publishCameraAngle(){
 /**
  * Callback to be run whenever a new motor info message is received
  */
-void motorInfoCallback(const EposManager::MotorInfo::ConstPtr& msg){
+void motorInfoCallback(const epos_manager::MotorInfo::ConstPtr& msg){
 	if(msg->node_id == panMotor.nodeId){
 		//Get Position of motor
 		panMotor.currentPosition=msg->motor_position;
@@ -241,9 +241,9 @@ bool isMotorTooClose(homingData motor){
  */
 void sendVelocityMessage(homingData motor, int velocity){
 
-	EposManager::EPOSControl controlMsg;
+	epos_manager::EPOSControl controlMsg;
 	controlMsg.node_id=motor.nodeId;
-	controlMsg.control_mode=EposManager::EPOSControl::VELOCITY;
+	controlMsg.control_mode=epos_manager::EPOSControl::VELOCITY;
 	controlMsg.setpoint=velocity;
 	ptz_publisher.publish(controlMsg);
 }
@@ -260,10 +260,10 @@ void sendPositionMessage(homingData motor, int setpoint, bool absolute){
 		if(motor.currentPosition+setpoint < motor.minValue) setpoint=0;
 		else if(motor.currentPosition+setpoint > motor.maxValue) setpoint=0;
 	}
-	EposManager::EPOSControl controlMsg;
+	epos_manager::EPOSControl controlMsg;
 	controlMsg.node_id=motor.nodeId;
-	if(absolute)controlMsg.control_mode=EposManager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE;
-	else controlMsg.control_mode=EposManager::EPOSControl::RELATIVE_POSITION_IMMEDIATE;
+	if(absolute)controlMsg.control_mode=epos_manager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE;
+	else controlMsg.control_mode=epos_manager::EPOSControl::RELATIVE_POSITION_IMMEDIATE;
 	controlMsg.setpoint=setpoint;
 	ptz_publisher.publish(controlMsg);
 }
@@ -271,16 +271,16 @@ void sendPositionMessage(homingData motor, int setpoint, bool absolute){
 /**
  * This function will home the given motor by monitoring current spikes.
  */
-void homeMotor(homingData* motor, const EposManager::MotorInfo::ConstPtr& msg){
+void homeMotor(homingData* motor, const epos_manager::MotorInfo::ConstPtr& msg){
 		//Ignore first few readings for a Motor, as they tend to spike
 		motor->isReadyForControl=false;
 		if(++motor->ignoreCounter >= motor->timesToIgnore){
 			//If the first limit has not been set and hard stop reached
 			if(motor->nodeId==PTZ_BOOM && driveBoomWithoutMonitoring){
 				if(motor->ignoreCounter == motor->timesToIgnore+75){
-					EposManager::EPOSControl controlMsg;
+					epos_manager::EPOSControl controlMsg;
 					controlMsg.node_id=motor->nodeId;
-					controlMsg.control_mode=EposManager::EPOSControl::VELOCITY;
+					controlMsg.control_mode=epos_manager::EPOSControl::VELOCITY;
 					controlMsg.setpoint=motor->homeVelocity;
 					motor->ignoreCounter =0;
 					driveBoomWithoutMonitoring = false;
@@ -291,9 +291,9 @@ void homeMotor(homingData* motor, const EposManager::MotorInfo::ConstPtr& msg){
 			}
 			if(abs(msg->motor_current) > motor->homeCurrent && motor->maxValue==0){
 				//Generate Motor Message
-				EposManager::EPOSControl controlMsg;
+				epos_manager::EPOSControl controlMsg;
 				controlMsg.node_id=motor->nodeId;
-				controlMsg.control_mode=EposManager::EPOSControl::VELOCITY;
+				controlMsg.control_mode=epos_manager::EPOSControl::VELOCITY;
 				controlMsg.setpoint=-motor->homeVelocity;
 				if(motor->nodeId == PTZ_BOOM){
 					controlMsg.setpoint=0;
@@ -307,11 +307,11 @@ void homeMotor(homingData* motor, const EposManager::MotorInfo::ConstPtr& msg){
 			}
 			//If the second limit has not been set and hard stop reached
 			else if (abs(msg->motor_current) > motor->homeCurrent && motor->minValue==0){
-				EposManager::EPOSControl controlMsg;
+				epos_manager::EPOSControl controlMsg;
 				motor->minValue=(long int)(msg->motor_position);
 				motor->homePos=(motor->maxValue+motor->minValue)/2;
 				controlMsg.node_id=motor->nodeId;
-				controlMsg.control_mode=EposManager::EPOSControl::ABSOLUTE_POSITION;
+				controlMsg.control_mode=epos_manager::EPOSControl::ABSOLUTE_POSITION;
 				controlMsg.setpoint=motor->homePos;
 				ptz_publisher.publish(controlMsg);
 				motor->isHoming=false;
@@ -367,12 +367,12 @@ int main (int argc, char **argv){
 	ros::Subscriber ptz_joy_subscriber = n.subscribe("OperatorJoy", 1, ptzJoyCallback);
 	ros::Subscriber ptz_motor_info_subscriber = n.subscribe("motors/PTZ_Motors/Motor_Info", 1, motorInfoCallback);
 
-	ptz_publisher = n.advertise<EposManager::EPOSControl>("motors/PTZ_Motors/Motor_Control", 5);
-	group_ptz_publisher = n.advertise<EposManager::GroupEPOSControl>("motors/PTZ_Motors/Group_Motor_Control", 5);
+	ptz_publisher = n.advertise<epos_manager::EPOSControl>("motors/PTZ_Motors/Motor_Control", 5);
+	group_ptz_publisher = n.advertise<epos_manager::GroupEPOSControl>("motors/PTZ_Motors/Group_Motor_Control", 5);
 	cameraOrientationPublisher = n.advertise<geometry_msgs::Quaternion>("PTZ/Orientation",1);
 
-	dynamic_reconfigure::Server<OryxManager::PTZManagerConfig> server;
-	dynamic_reconfigure::Server<OryxManager::PTZManagerConfig>::CallbackType f;
+	dynamic_reconfigure::Server<oryx_manager::PTZ_managerConfig> server;
+	dynamic_reconfigure::Server<oryx_manager::PTZ_managerConfig>::CallbackType f;
 
 	f = boost::bind(reconfigureCallback, _1 ,_2);
 	server.setCallback(f);

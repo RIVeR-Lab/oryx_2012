@@ -8,7 +8,7 @@
 
 #include "Kinematics/InertiaCube.h"
 
-void reconfigureCallback(OryxManager::IMUConfig &config, uint32_t level){
+void reconfigureCallback(oryx_manager::IMUConfig &config, uint32_t level){
 	if(config.Compass !=Compass){
 		Compass = config.Compass;
 		station.Compass=Compass;
@@ -114,8 +114,8 @@ int main(int argc, char** argv){
 		station.Prediction=Prediction;
 	}
 
-	dynamic_reconfigure::Server<OryxManager::IMUConfig> server;
-	dynamic_reconfigure::Server<OryxManager::IMUConfig>::CallbackType f;
+	dynamic_reconfigure::Server<oryx_manager::IMUConfig> server;
+	dynamic_reconfigure::Server<oryx_manager::IMUConfig>::CallbackType f;
 
 	f = boost::bind(reconfigureCallback, _1 ,_2);
 	server.setCallback(f);

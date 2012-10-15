@@ -96,19 +96,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CPU_temp_finder
-
-# Build rule for target.
-CPU_temp_finder: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CPU_temp_finder
-.PHONY : CPU_temp_finder
-
-# fast build rule for target.
-CPU_temp_finder/fast:
-	$(MAKE) -f CMakeFiles/CPU_temp_finder.dir/build.make CMakeFiles/CPU_temp_finder.dir/build
-.PHONY : CPU_temp_finder/fast
-
-#=============================================================================
 # Target rules for targets named ROSBUILD_gencfg_cpp
 
 # Build rule for target.
@@ -211,19 +198,6 @@ drive_manager: cmake_check_build_system
 drive_manager/fast:
 	$(MAKE) -f CMakeFiles/drive_manager.dir/build.make CMakeFiles/drive_manager.dir/build
 .PHONY : drive_manager/fast
-
-#=============================================================================
-# Target rules for targets named inertia_cube
-
-# Build rule for target.
-inertia_cube: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 inertia_cube
-.PHONY : inertia_cube
-
-# fast build rule for target.
-inertia_cube/fast:
-	$(MAKE) -f CMakeFiles/inertia_cube.dir/build.make CMakeFiles/inertia_cube.dir/build
-.PHONY : inertia_cube/fast
 
 #=============================================================================
 # Target rules for targets named rosbuild_precompile
@@ -397,36 +371,6 @@ src/Internals/BatteryManager.s:
 .PHONY : src/Internals/BatteryManager.s
 
 # target to build an object file
-src/Internals/CPUTempFinder.o:
-	$(MAKE) -f CMakeFiles/CPU_temp_finder.dir/build.make CMakeFiles/CPU_temp_finder.dir/src/Internals/CPUTempFinder.o
-.PHONY : src/Internals/CPUTempFinder.o
-
-# target to preprocess a source file
-src/Internals/CPUTempFinder.i:
-	$(MAKE) -f CMakeFiles/CPU_temp_finder.dir/build.make CMakeFiles/CPU_temp_finder.dir/src/Internals/CPUTempFinder.i
-.PHONY : src/Internals/CPUTempFinder.i
-
-# target to generate assembly for a file
-src/Internals/CPUTempFinder.s:
-	$(MAKE) -f CMakeFiles/CPU_temp_finder.dir/build.make CMakeFiles/CPU_temp_finder.dir/src/Internals/CPUTempFinder.s
-.PHONY : src/Internals/CPUTempFinder.s
-
-# target to build an object file
-src/Kinematics/InertiaCube.o:
-	$(MAKE) -f CMakeFiles/inertia_cube.dir/build.make CMakeFiles/inertia_cube.dir/src/Kinematics/InertiaCube.o
-.PHONY : src/Kinematics/InertiaCube.o
-
-# target to preprocess a source file
-src/Kinematics/InertiaCube.i:
-	$(MAKE) -f CMakeFiles/inertia_cube.dir/build.make CMakeFiles/inertia_cube.dir/src/Kinematics/InertiaCube.i
-.PHONY : src/Kinematics/InertiaCube.i
-
-# target to generate assembly for a file
-src/Kinematics/InertiaCube.s:
-	$(MAKE) -f CMakeFiles/inertia_cube.dir/build.make CMakeFiles/inertia_cube.dir/src/Kinematics/InertiaCube.s
-.PHONY : src/Kinematics/InertiaCube.s
-
-# target to build an object file
 src/Motors/DriveManager.o:
 	$(MAKE) -f CMakeFiles/drive_manager.dir/build.make CMakeFiles/drive_manager.dir/src/Motors/DriveManager.o
 .PHONY : src/Motors/DriveManager.o
@@ -447,7 +391,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... CPU_temp_finder"
 	@echo "... ROSBUILD_gencfg_cpp"
 	@echo "... ROSBUILD_genmsg_cpp"
 	@echo "... ROSBUILD_genmsg_lisp"
@@ -457,7 +400,6 @@ help:
 	@echo "... clean-test-results"
 	@echo "... drive_manager"
 	@echo "... edit_cache"
-	@echo "... inertia_cube"
 	@echo "... rebuild_cache"
 	@echo "... rosbuild_precompile"
 	@echo "... rosbuild_premsgsrvgen"
@@ -474,12 +416,6 @@ help:
 	@echo "... src/Internals/BatteryManager.o"
 	@echo "... src/Internals/BatteryManager.i"
 	@echo "... src/Internals/BatteryManager.s"
-	@echo "... src/Internals/CPUTempFinder.o"
-	@echo "... src/Internals/CPUTempFinder.i"
-	@echo "... src/Internals/CPUTempFinder.s"
-	@echo "... src/Kinematics/InertiaCube.o"
-	@echo "... src/Kinematics/InertiaCube.i"
-	@echo "... src/Kinematics/InertiaCube.s"
 	@echo "... src/Motors/DriveManager.o"
 	@echo "... src/Motors/DriveManager.i"
 	@echo "... src/Motors/DriveManager.s"

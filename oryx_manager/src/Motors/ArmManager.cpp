@@ -80,23 +80,23 @@ void driverJoyCallback(const sensor_msgs::Joy::ConstPtr& msg){
 
 void dropOffRock(){
 	shoulderMotor.isHoming=true;
-	EposManager::EPOSControl shoulderMsg;
+	epos_manager::EPOSControl shoulderMsg;
 	shoulderMsg.node_id=shoulderMotor.nodeId;
-	shoulderMsg.control_mode=EposManager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE;
+	shoulderMsg.control_mode=epos_manager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE;
 	shoulderMsg.setpoint = -230000;
 	arm_publisher.publish(shoulderMsg);
 //	ros::spinOnce();
 	sleep(2);
-	EposManager::EPOSControl panMsg;
+	epos_manager::EPOSControl panMsg;
 	panMsg.node_id=panMotor.nodeId;
-	panMsg.control_mode=EposManager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE;
+	panMsg.control_mode=epos_manager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE;
 	panMsg.setpoint = 50;
 	arm_publisher.publish(panMsg);
 //	ros::spinOnce();
 	sleep(3);
-	EposManager::EPOSControl scoopMsg;
+	epos_manager::EPOSControl scoopMsg;
 	scoopMsg.node_id=scoopMotor.nodeId;
-	scoopMsg.control_mode=EposManager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE;
+	scoopMsg.control_mode=epos_manager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE;
 	scoopMsg.setpoint = -1300000;
 	arm_publisher.publish(scoopMsg);
 	shoulderMotor.isHoming=false;
@@ -105,9 +105,9 @@ void dropOffRock(){
 }
 
 void sendVelocityMessage(homingData motor, int velocity){
-	EposManager::EPOSControl controlMsg;
+	epos_manager::EPOSControl controlMsg;
 	controlMsg.node_id=motor.nodeId;
-	controlMsg.control_mode=EposManager::EPOSControl::VELOCITY;
+	controlMsg.control_mode=epos_manager::EPOSControl::VELOCITY;
 	controlMsg.setpoint=velocity;
 	arm_publisher.publish(controlMsg);
 }
@@ -151,8 +151,8 @@ int main (int argc, char **argv){
 	ros::Subscriber driver_joy_subscriber = n.subscribe("DriverJoy", 1, driverJoyCallback);
 
 //	ros::Subscriber arm_motor_info_subscriber = n.subscribe("motors/Arm_Motors/Motor_Info", 1, motorInfoCallback);
-	arm_publisher = n.advertise<EposManager::EPOSControl>("motors/Arm_Motors/Motor_Control", 5);
-	group_arm_publisher = n.advertise<EposManager::GroupEPOSControl>("motors/Arm_Motors/Group_Motor_Control", 5);
+	arm_publisher = n.advertise<epos_manager::EPOSControl>("motors/Arm_Motors/Motor_Control", 5);
+	group_arm_publisher = n.advertise<epos_manager::GroupEPOSControl>("motors/Arm_Motors/Group_Motor_Control", 5);
 
 
 

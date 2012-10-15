@@ -1,6 +1,6 @@
 #include "OryxManager.h"
 #include "std_msgs/String.h"
-#include <OryxManager/OryxManagerConfig.h>
+#include <oryx_manager/oryx_managerConfig.h>
 
 ros::Publisher heartbeatPublisher;
 bool remoteConnection=false;
@@ -16,7 +16,7 @@ void heartbeatCallback(const ros::TimerEvent&){
 	}
 }
 
-void batteryCallback(const OryxMessages::Battery::ConstPtr& msg){
+void batteryCallback(const oryx_msgs::Battery::ConstPtr& msg){
 	if(msg->voltage <2.2) ROS_WARN_STREAM("Battery Node " << msg->node << " is low. Shut off soon." );
 	if(msg->voltage < 2.1 && msg->voltage >1.0){
 		ROS_ERROR_STREAM("Battery Node " << msg->node << " is at " << msg->voltage <<". Shutting Down...");
@@ -30,7 +30,7 @@ void batteryCallback(const OryxMessages::Battery::ConstPtr& msg){
 
 }
 
-void temperatureCallback(const OryxMessages::Temperature::ConstPtr& msg){
+void temperatureCallback(const oryx_msgs::Temperature::ConstPtr& msg){
 	if(msg->temperature > msg->danger_Temp){
 		ROS_WARN_STREAM("NODE " << msg->temperature_node << " TEMPERATURE IS DANGEROUSLY HIGH");
 	}
@@ -39,7 +39,7 @@ void temperatureCallback(const OryxMessages::Temperature::ConstPtr& msg){
 	}
 }
 
-void reconfigureCallback(OryxManager::OryxManagerConfig &config, uint32_t level){
+void reconfigureCallback(oryx_manager::oryx_managerConfig &config, uint32_t level){
 	remoteConnection=config.Remote_Connection;
 }
 
@@ -69,8 +69,8 @@ int main(int argc, char** argv){
 		= nh.subscribe("/RemoteConnection",1,remoteConnectionCallback);
 
 	//Begin dynamic_reconfigure server
-	dynamic_reconfigure::Server<OryxManager::OryxManagerConfig> server;
-	dynamic_reconfigure::Server<OryxManager::OryxManagerConfig>::CallbackType f;
+	dynamic_reconfigure::Server<oryx_manager::oryx_managerConfig> server;
+	dynamic_reconfigure::Server<oryx_manager::oryx_managerConfig>::CallbackType f;
 
 	//Call reconfigureCallback when new dynamic reconfigure update received
 	f = boost::bind(reconfigureCallback, _1 ,_2);
