@@ -1,0 +1,2 @@
+Some awesome config
+wlan0,X3EY8

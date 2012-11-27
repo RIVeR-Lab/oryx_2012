@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="oryx_network_manager" name="oryx_network_manager" type="oryx_network_manager"/>
+
+</launch>
