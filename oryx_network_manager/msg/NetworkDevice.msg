@@ -3,8 +3,9 @@ string product
 string device_type
 string hardware_address
 string driver
+uint32 state
 
-string ETHERNET_DEVICE =Ethernet
+string ETHERNET_DEVICE=Ethernet
 string WIFI_DEVICE=802.11 WiFi
 string GSM_DEVICE=GSM
 string CDMA_DEVICE=CDMA

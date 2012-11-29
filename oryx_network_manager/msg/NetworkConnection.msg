@@ -1,5 +1,5 @@
 string name
-string uuid
+string path
 string connection_type
 string wifi_ssid
 string wifi_security
