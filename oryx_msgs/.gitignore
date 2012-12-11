@@ -1,2 +1,10 @@
-/bin
+#Stuff built by rosmake
 /build
+/bin
+/lib/*.so
+/catkin*
+#Stuff added by make eclipse-project
+*.project
+*.pydevproject
+*.cproject
+
