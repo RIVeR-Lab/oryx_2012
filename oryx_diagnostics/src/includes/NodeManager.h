@@ -46,7 +46,6 @@ class NodeManager {
 	class NodeInformationContainer;
 	typedef NodeManager::NodeInformationContainer container;
 	typedef boost::unordered_map<int, container> node_map;
-	typedef node_map::iterator iterator;
 public:
 	NodeManager();
 	virtual ~NodeManager();
@@ -58,18 +57,55 @@ public:
 	void touch(int node_id)throw(NoMatchingNodeId);
 
 	void deleteNode(int node_id)throw(NoMatchingNodeId);
+
+	void printList(std::stringstream& output) const;
+
+	const container& operator[](int node_id) const throw(NoMatchingNodeId);
+
+	friend std::ostream& operator<<(std::ostream& out, const NodeManager& rhs);
+
+
 private:
 	int _next_id;		///The next node_id to be assigned at registration
 
 	node_map _nodes;	///A Map of node_id's to their respective NodeInformationContainer data
 
-
+	bool checkId(int node_id)const throw(NoMatchingNodeId);
 
 	/**
 	 * Sub-class to act as a container type for holding information about registered nodes
 	 */
 	class NodeInformationContainer{
 	public:
+		/**
+		 * Empty constructor for STL compliance
+		 */
+		inline NodeInformationContainer(){
+			this->_criticality = 0;
+			this->_heartbeat_rate = 0;
+			this->_heartbeat_tolerance = 0;
+		};
+
+		/**
+		 * Copy constructor for STL compliance
+		 * @param copy NodeInformationContainer to copy
+		 */
+		inline NodeInformationContainer(NodeInformationContainer& copy):
+					_node_name(copy._node_name),
+					_node_type(copy._node_type),
+					_last_touch(copy._last_touch){
+			this->_criticality = copy._criticality;
+			this->_heartbeat_rate = copy._heartbeat_rate;
+			this->_heartbeat_tolerance = copy._heartbeat_tolerance;
+		}
+		inline NodeInformationContainer(const NodeInformationContainer& copy):
+							_node_name(copy._node_name),
+							_node_type(copy._node_type),
+							_last_touch(copy._last_touch){
+			this->_criticality = copy._criticality;
+			this->_heartbeat_rate = copy._heartbeat_rate;
+			this->_heartbeat_tolerance = copy._heartbeat_tolerance;
+		}
 		/**
 		 * Creates a new NodeInformationContainer
 		 * @param [in] node_name			The unique ROS name for a node
@@ -79,14 +115,6 @@ private:
 		 * @param [in] heartbeat_tolerance	The tolerance amount for the node, in Hz
 		 */
 		inline NodeInformationContainer(const std::string& node_name, const std::string& node_type, int criticality, int heartbeat_rate, int heartbeat_tolarence):
-		_node_name(node_name),
-		_node_type(node_type){
-			this->_criticality    = criticality;
-			this->_heartbeat_rate = heartbeat_rate;
-			this->_heartbeat_tolerance = heartbeat_tolarence;
-			this->_last_touch     = ros::Time::now();
-		}
-		inline NodeInformationContainer(std::string& node_name, std::string& node_type, int criticality, int heartbeat_rate, int heartbeat_tolarence):
 				_node_name(node_name),
 				_node_type(node_type){
 			this->_criticality    = criticality;
@@ -94,9 +122,17 @@ private:
 			this->_heartbeat_tolerance = heartbeat_tolarence;
 			this->_last_touch     = ros::Time::now();
 		}
-		inline NodeInformationContainer(const char* node_name, const char* node_type, int criticality, int heartbeat_rate, int heartbeat_tolarence):
+		inline NodeInformationContainer(std::string& node_name, std::string& node_type, int criticality, int heartbeat_rate, int heartbeat_tolarence):
 						_node_name(node_name),
 						_node_type(node_type){
+			this->_criticality    = criticality;
+			this->_heartbeat_rate = heartbeat_rate;
+			this->_heartbeat_tolerance = heartbeat_tolarence;
+			this->_last_touch     = ros::Time::now();
+		}
+		inline NodeInformationContainer(const char* node_name, const char* node_type, int criticality, int heartbeat_rate, int heartbeat_tolarence):
+								_node_name(node_name),
+								_node_type(node_type){
 			this->_criticality    = criticality;
 			this->_heartbeat_rate = heartbeat_rate;
 			this->_heartbeat_tolerance = heartbeat_tolarence;
@@ -142,37 +178,37 @@ private:
 			return out;
 		}
 
-//		inline friend std::istream& operator>>(std::istream& in, NodeInformationContainer& rhs) // output
-//		{
-//			std::string _t_node_name, _t_node_type;
-//			int _c, _h, _t;
-//			ros::Time _lt;
-//
-//			in>>_t_node_name;
-//			rhs._node_name = _t_node_name;
-//
-//			in.ignore(1);
-//			in>>_t_node_type;
-//			rhs._node_type = _t_node_type;
-//
-//			in.ignore(2);
-//			in>>_lt;
-//			rhs._last_touch = _lt;
-//
-//			in.ignore(4);
-//			in>>_c;
-//			rhs._criticality = _c;
-//
-//			in.ignore(3);
-//			in>>_h;
-//			rhs._heartbeat_rate = _h;
-//
-//			in.ignore(3);
-//			in>>_t;
-//			rhs._heartbeat_tolerance = _t;
-//
-//			return in;
-//		}
+		//		inline friend std::istream& operator>>(std::istream& in, NodeInformationContainer& rhs) // output
+		//		{
+		//			std::string _t_node_name, _t_node_type;
+		//			int _c, _h, _t;
+		//			ros::Time _lt;
+		//
+		//			in>>_t_node_name;
+		//			rhs._node_name = _t_node_name;
+		//
+		//			in.ignore(1);
+		//			in>>_t_node_type;
+		//			rhs._node_type = _t_node_type;
+		//
+		//			in.ignore(2);
+		//			in>>_lt;
+		//			rhs._last_touch = _lt;
+		//
+		//			in.ignore(4);
+		//			in>>_c;
+		//			rhs._criticality = _c;
+		//
+		//			in.ignore(3);
+		//			in>>_h;
+		//			rhs._heartbeat_rate = _h;
+		//
+		//			in.ignore(3);
+		//			in>>_t;
+		//			rhs._heartbeat_tolerance = _t;
+		//
+		//			return in;
+		//		}
 
 	private:
 		std::string _node_name;				///Unique ROS name of the node
