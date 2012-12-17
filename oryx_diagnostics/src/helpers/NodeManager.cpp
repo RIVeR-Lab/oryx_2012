@@ -12,7 +12,7 @@ using namespace oryx_diagnostics;
 namespace oryx_diagnostics {
 
 NodeManager::NodeManager() {
-	this->_next_id = 0;
+	this->next_id_ = 0;
 }
 
 NodeManager::~NodeManager() {
@@ -21,35 +21,35 @@ NodeManager::~NodeManager() {
 
 int NodeManager::registerNode(const std::string& node_name, const std::string& node_type, int criticality, int heartbeat_rate, int heartbeat_tolerence)throw(NonUniqueNodeName){
 	container _n(node_name, node_type, criticality, heartbeat_rate, heartbeat_tolerence);
-	this->_nodes[this->_next_id]=_n;
-	this->_next_id++;
-	return this->_next_id-1;
+	this->nodes_[this->next_id_]=_n;
+	this->next_id_++;
+	return this->next_id_-1;
 }
 
 const NodeManager::container& NodeManager::getNode(int node_id) const throw(NoMatchingNodeId){
 	checkId(node_id);
-	return this->_nodes.at(node_id);
+	return this->nodes_.at(node_id);
 }
 
 void NodeManager::touch(int node_id)throw(NoMatchingNodeId){
 	checkId(node_id);
-	this->_nodes[node_id].touch();
+	this->nodes_[node_id].touch();
 }
 
 void NodeManager::deleteNode(int node_id)throw(NoMatchingNodeId){
 	checkId(node_id);
-	this->_nodes.erase(node_id);
+	this->nodes_.erase(node_id);
 }
 
 bool NodeManager::checkId(int node_id)const throw(NoMatchingNodeId){
-	if(this->_nodes.count(node_id)==1){
+	if(this->nodes_.count(node_id)==1){
 		return true;
 	}else throw NoMatchingNodeId(node_id);
 	return false;
 }
 
 void NodeManager::printList(std::stringstream& output) const{
-	BOOST_FOREACH(node_map::value_type item, this->_nodes){
+	BOOST_FOREACH(node_map::value_type item, this->nodes_){
 		output<<"["<<item.first<<"]"<<item.second<<"\n";
 	}
 }
@@ -59,7 +59,7 @@ const NodeManager::container& NodeManager::operator[](int node_id) const throw(N
 }
 
 std::ostream& operator<<(std::ostream& out, const NodeManager& rhs){
-	BOOST_FOREACH(NodeManager::node_map::value_type item, rhs._nodes){
+	BOOST_FOREACH(NodeManager::node_map::value_type item, rhs.nodes_){
 		out<<"["<<item.first<<"]"<<item.second<<"\n";
 	}
 	return out;

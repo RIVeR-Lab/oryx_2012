@@ -14,31 +14,31 @@ using namespace oryx_diagnostics;
 class DiagnosticsManager{
 public:
 	DiagnosticsManager(const std::string& name, ros::NodeHandle& nh):
-	_name(name),
-	_nodes(),
-	_nh(nh){
+	name_(name),
+	nodes_(),
+	nh_(nh){
 		ROS_INFO_STREAM("Setting Up Oryx Diagnostics Manager <"<<name<<">...");
-		this->_reg_srv = this->_nh.advertiseService("oryx/diagnostics/registration", &DiagnosticsManager::regCB, this);
-		this->_nodes.registerNode(name,"diagnostics_manager",-1,0,0);
+		this->reg_srv_ = this->nh_.advertiseService("oryx/diagnostics/registration", &DiagnosticsManager::regCB, this);
+		this->nodes_.registerNode(name,"diagnostics_manager",-1,0,0);
 	}
 	virtual ~DiagnosticsManager(){};
 
 	void printList(){
 		std::stringstream output;
-		output<<"This is the Node List for Diagnostics Manager <"<<this->_name<<">\n"<<this->_nodes;
+		output<<"This is the Node List for Diagnostics Manager <"<<this->name_<<">\n"<<this->nodes_;
 		ROS_INFO_STREAM(output.str());
 	}
 
 private:
-	std::string			_name;
-	NodeManager			_nodes;
-	ros::NodeHandle		_nh;
-	ros::ServiceServer	_reg_srv;
+	std::string			name_;
+	NodeManager			nodes_;
+	ros::NodeHandle		nh_;
+	ros::ServiceServer	reg_srv_;
 
 	bool regCB(	oryx_msgs::DiagnositicsRegistration::Request& req,
 				oryx_msgs::DiagnositicsRegistration::Response& res){
 		try{
-			res.node_id = this->_nodes.registerNode(req.node_name, req.node_type, req.criticality, req.heartbeat_frequency, req.heartbeat_tolerence);
+			res.node_id = this->nodes_.registerNode(req.node_name, req.node_type, req.criticality, req.heartbeat_frequency, req.heartbeat_tolerence);
 			res.success = true;
 			return true;
 		}catch(oryx_diagnostics::NodeManagerException& e){
