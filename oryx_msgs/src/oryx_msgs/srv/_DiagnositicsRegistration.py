@@ -276,17 +276,16 @@ import struct
 
 
 class DiagnositicsRegistrationResponse(genpy.Message):
-  _md5sum = "ee3c79643e54cac2b3e515df2a461d42"
+  _md5sum = "e36aa4dbe30d8c4b48cdc6950ad4b551"
   _type = "oryx_msgs/DiagnositicsRegistrationResponse"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """
+bool   success
 uint16 node_id
 
-
-
 """
-  __slots__ = ['node_id']
-  _slot_types = ['uint16']
+  __slots__ = ['success','node_id']
+  _slot_types = ['bool','uint16']
 
   def __init__(self, *args, **kwds):
     """
@@ -296,7 +295,7 @@ uint16 node_id
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       node_id
+       success,node_id
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -305,9 +304,12 @@ uint16 node_id
     if args or kwds:
       super(DiagnositicsRegistrationResponse, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
+      if self.success is None:
+        self.success = False
       if self.node_id is None:
         self.node_id = 0
     else:
+      self.success = False
       self.node_id = 0
 
   def _get_types(self):
@@ -322,7 +324,8 @@ uint16 node_id
     :param buff: buffer, ``StringIO``
     """
     try:
-      buff.write(_struct_H.pack(self.node_id))
+      _x = self
+      buff.write(_struct_BH.pack(_x.success, _x.node_id))
     except struct.error as se: self._check_types(se)
     except TypeError as te: self._check_types(te)
 
@@ -333,9 +336,11 @@ uint16 node_id
     """
     try:
       end = 0
+      _x = self
       start = end
-      end += 2
-      (self.node_id,) = _struct_H.unpack(str[start:end])
+      end += 3
+      (_x.success, _x.node_id,) = _struct_BH.unpack(str[start:end])
+      self.success = bool(self.success)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -348,7 +353,8 @@ uint16 node_id
     :param numpy: numpy python module
     """
     try:
-      buff.write(_struct_H.pack(self.node_id))
+      _x = self
+      buff.write(_struct_BH.pack(_x.success, _x.node_id))
     except struct.error as se: self._check_types(se)
     except TypeError as te: self._check_types(te)
 
@@ -360,17 +366,19 @@ uint16 node_id
     """
     try:
       end = 0
+      _x = self
       start = end
-      end += 2
-      (self.node_id,) = _struct_H.unpack(str[start:end])
+      end += 3
+      (_x.success, _x.node_id,) = _struct_BH.unpack(str[start:end])
+      self.success = bool(self.success)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_H = struct.Struct("<H")
+_struct_BH = struct.Struct("<BH")
 class DiagnositicsRegistration(object):
   _type          = 'oryx_msgs/DiagnositicsRegistration'
-  _md5sum = '698e2521f84f02743caae3010eb8d359'
+  _md5sum = 'fdb47cf15720a2faf91ffa89fbc260ef'
   _request_class  = DiagnositicsRegistrationRequest
   _response_class = DiagnositicsRegistrationResponse

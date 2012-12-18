@@ -80,14 +80,19 @@ struct DiagnositicsRegistrationResponse_ {
   typedef DiagnositicsRegistrationResponse_<ContainerAllocator> Type;
 
   DiagnositicsRegistrationResponse_()
-  : node_id(0)
+  : success(false)
+  , node_id(0)
   {
   }
 
   DiagnositicsRegistrationResponse_(const ContainerAllocator& _alloc)
-  : node_id(0)
+  : success(false)
+  , node_id(0)
   {
   }
+
+  typedef uint8_t _success_type;
+  uint8_t success;
 
   typedef uint16_t _node_id_type;
   uint16_t node_id;
@@ -216,12 +221,12 @@ template<class ContainerAllocator>
 struct MD5Sum< ::oryx_msgs::DiagnositicsRegistrationResponse_<ContainerAllocator> > {
   static const char* value() 
   {
-    return "ee3c79643e54cac2b3e515df2a461d42";
+    return "e36aa4dbe30d8c4b48cdc6950ad4b551";
   }
 
   static const char* value(const  ::oryx_msgs::DiagnositicsRegistrationResponse_<ContainerAllocator> &) { return value(); } 
-  static const uint64_t static_value1 = 0xee3c79643e54cac2ULL;
-  static const uint64_t static_value2 = 0xb3e515df2a461d42ULL;
+  static const uint64_t static_value1 = 0xe36aa4dbe30d8c4bULL;
+  static const uint64_t static_value2 = 0x48cdc6950ad4b551ULL;
 };
 
 template<class ContainerAllocator>
@@ -239,9 +244,8 @@ struct Definition< ::oryx_msgs::DiagnositicsRegistrationResponse_<ContainerAlloc
   static const char* value() 
   {
     return "\n\
+bool   success\n\
 uint16 node_id\n\
-\n\
-\n\
 \n\
 ";
   }
@@ -285,6 +289,7 @@ template<class ContainerAllocator> struct Serializer< ::oryx_msgs::DiagnositicsR
 {
   template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
   {
+    stream.next(m.success);
     stream.next(m.node_id);
   }
 
@@ -301,7 +306,7 @@ template<>
 struct MD5Sum<oryx_msgs::DiagnositicsRegistration> {
   static const char* value() 
   {
-    return "698e2521f84f02743caae3010eb8d359";
+    return "fdb47cf15720a2faf91ffa89fbc260ef";
   }
 
   static const char* value(const oryx_msgs::DiagnositicsRegistration&) { return value(); } 
@@ -321,7 +326,7 @@ template<class ContainerAllocator>
 struct MD5Sum<oryx_msgs::DiagnositicsRegistrationRequest_<ContainerAllocator> > {
   static const char* value() 
   {
-    return "698e2521f84f02743caae3010eb8d359";
+    return "fdb47cf15720a2faf91ffa89fbc260ef";
   }
 
   static const char* value(const oryx_msgs::DiagnositicsRegistrationRequest_<ContainerAllocator> &) { return value(); } 
@@ -341,7 +346,7 @@ template<class ContainerAllocator>
 struct MD5Sum<oryx_msgs::DiagnositicsRegistrationResponse_<ContainerAllocator> > {
   static const char* value() 
   {
-    return "698e2521f84f02743caae3010eb8d359";
+    return "fdb47cf15720a2faf91ffa89fbc260ef";
   }
 
   static const char* value(const oryx_msgs::DiagnositicsRegistrationResponse_<ContainerAllocator> &) { return value(); } 
