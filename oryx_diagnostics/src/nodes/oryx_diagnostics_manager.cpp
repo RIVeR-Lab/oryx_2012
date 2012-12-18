@@ -6,6 +6,8 @@
  */
 #include<ros/ros.h>
 #include<oryx_msgs/DiagnositicsRegistration.h>
+#include<oryx_diagnostics/DiagnosticsCommand.h>
+#include<boost/unordered/unordered_map.hpp>
 
 #include"NodeManager.h"
 
@@ -19,7 +21,9 @@ public:
 	nh_(nh){
 		ROS_INFO_STREAM("Setting Up Oryx Diagnostics Manager <"<<name<<">...");
 		this->reg_srv_ = this->nh_.advertiseService("oryx/diagnostics/registration", &DiagnosticsManager::regCB, this);
+		this->com_srv_ = this->nh_.advertiseService("oryx/diagnostics/commands", &DiagnosticsManager::comCB, this);
 		this->nodes_.registerNode(name,"diagnostics_manager",-1,0,0);
+
 	}
 	virtual ~DiagnosticsManager(){};
 
@@ -34,6 +38,10 @@ private:
 	NodeManager			nodes_;
 	ros::NodeHandle		nh_;
 	ros::ServiceServer	reg_srv_;
+	ros::ServiceServer  com_srv_;
+
+	typedef boost::function<bool (std::string& data, oryx_diagnostics::DiagnosticsCommand::Response& response)> command_func_;	///Typedef defining a boost::function object wrapper specifying the callback signature of commands
+	boost::unordered_map<std::string, command_func_> commands_;			///boost::unordered_map mapping the string command name with its function
 
 	bool regCB(	oryx_msgs::DiagnositicsRegistration::Request& req,
 				oryx_msgs::DiagnositicsRegistration::Response& res){
@@ -48,6 +56,25 @@ private:
 			ROS_ERROR("%s", e.what());
 		}
 		return false;
+	}
+
+	bool comCB( oryx_diagnostics::DiagnosticsCommand::Request& req,
+				oryx_diagnostics::DiagnosticsCommand::Response& response){
+		if(this->commands_.count(req.command)!=1){
+			response.success = false;
+			response.data = "Invalid Command:" + req.command;
+			return true;
+		}else{
+			return this->commands_[req.command](req.data, response);
+		}
+		return false;
+	}
+
+	bool listCB(std::string& data, oryx_diagnostics::DiagnosticsCommand::Response& response){
+		std::stringstream res_data;
+		this->nodes_.printList(res_data);
+		response.data = res_data.str();
+		return true;
 	}
 };
 
