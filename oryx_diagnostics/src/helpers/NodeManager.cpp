@@ -54,6 +54,33 @@ void NodeManager::printList(std::stringstream& output) const{
 	}
 }
 
+void NodeManager::timeCheck(result_map& results, ros::Time& checkTime) const{
+	BOOST_FOREACH(node_map::value_type item, this->nodes_){
+		//If the heartbeat rate check in enabled by being greater than 0
+		if(item.second.getHeartbeatRate()>0){
+			//Calculate all the durations
+			ros::Duration tolerence(item.second.getHeartbeatTolerence());
+			ros::Duration check_rate(item.second.getHeartbeatRate());
+			ros::Duration heart_rate(checkTime-item.second.getLastTouch());
+
+			results[item.first].second = item.second.getCriticality();
+			//If the duration of the last heartbeat was longer than the expected duration plus tolerence, it failed
+			if(heart_rate>(check_rate+tolerence)){
+				results[item.first].first = false;
+			}
+			//Otherwise it passed
+			else{
+				results[item.first].first = true;
+			}
+		}
+		//Otherwise it automatically passes
+		else{
+			results[item.first].second = item.second.getCriticality();
+			results[item.first].first  = true;
+		}
+	}
+}
+
 const NodeManager::container& NodeManager::operator[](int node_id) const throw(NoMatchingNodeId){
 	return getNode(node_id);
 }

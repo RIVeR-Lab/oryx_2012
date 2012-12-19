@@ -59,83 +59,12 @@ private:
  * Class for maintain a set of registered nodes and their associated node information. Provides basic CRUD functionality
  */
 class NodeManager {
-	class NodeInformationContainer;	///Pre-declaration of class prototype
+public:
+	class NodeInformationContainer;
 	typedef NodeManager::NodeInformationContainer container;	///typedef for convenience
 	typedef boost::unordered_map<int, container> node_map;		///typedef for convenience
-public:
-	/**
-	 * Sets up a new NodeManager with an empty set of nodes.
-	 */
-	NodeManager();
-	virtual ~NodeManager();
-
-	/**
-	 * Registers a new node with the NodeManager
-	 * @param [in] node_name			The unique ROS name for a node
-	 * @param [in] node_type			The non-unique type of the node
-	 * @param [in] criticality			The criticality for the node
-	 * @param [in] heartbeat_rate		The heartbeat rate for the node, in Hz
-	 * @param [in] heartbeat_tolerance	The tolerance amount for the node, in Hz
-	 * @return The unique node_id for the newly registered node
-	 */
-	int registerNode(const std::string& node_name, const std::string& node_type, int criticality, int heartbeat_rate, int heartbeat_tolarence)throw(NonUniqueNodeName);
-
-	/**
-	 * Retrieves the information on a node based on a given node_id
-	 * @param [in] node_id The node_id to search for
-	 * @return The NodeInformationContainer which holds the information on that node
-	 * @throw NoMatchingNodeId if the given node_id was not registered with the system
-	 */
-	const NodeInformationContainer& getNode(int node_id) const throw(NoMatchingNodeId);
-
-	/**
-	 * Touches a node in the NodeManager
-	 * @param [in] node_id The node_id to touch
-	 * @throw NoMatchingNodeId if the given node_id was not registered with the system
-	 */
-	void touch(int node_id)throw(NoMatchingNodeId);
-
-	/**
-	 * De-registers a node with the NodeManager
-	 * @param [in] node_id The node_id to touch
-	 * @throw NoMatchingNodeId if the given node_id was not registered with the system
-	 */
-	void deleteNode(int node_id)throw(NoMatchingNodeId);
-
-	/**
-	 * Prints out a list of the information on all currently registered nodes in the NodeManager
-	 * @param [out] output std::stringstream to write the list to
-	 */
-	void printList(std::stringstream& output) const;
-
-	/**
-	 * Retrieves the information on a node based on a given node_id
-	 * @param [in] node_id The node_id to search for
-	 * @return The NodeInformationContainer which holds the information on that node
-	 * @throw NoMatchingNodeId if the given node_id was not registered with the system
-	 */
-	const container& operator[](int node_id) const throw(NoMatchingNodeId);
-
-	/**
-	 * Overload of << operator for use with std::ostream. Has the same operation as printList
-	 * @param [in/out] out std::stringstream to write the list to
-	 * @param [in] rhs the NodeManager to insert into the stream
-	 */
-	friend std::ostream& operator<<(std::ostream& out, const NodeManager& rhs);
-
-
-private:
-	int next_id_;		///The next node_id to be assigned at registration
-
-	node_map nodes_;	///A Map of node_id's to their respective NodeInformationContainer data
-
-	/**
-	 * Checks to make sure that a given node_id exists in the NodeManager's node_map
-	 * @param node_id The node_id to use as a key to check for
-	 * @return TRUE if the key is in the map, else false
-	 * @throw NoMatchingNodeId if the node_id is not in the map
-	 */
-	bool checkId(int node_id)const throw(NoMatchingNodeId);
+	typedef std::pair<bool,int> check_result;					///typedef for convenience
+	typedef boost::unordered_map<int, check_result> result_map;	///typedef for convenience
 
 	/**
 	 * Sub-class to act as a container type for holding information about registered nodes
@@ -156,17 +85,17 @@ private:
 		 * @param copy NodeInformationContainer to copy
 		 */
 		inline NodeInformationContainer(NodeInformationContainer& copy):
-							node_name_(copy.node_name_),
-							node_type_(copy.node_type_),
-							last_touch_(copy.last_touch_){
+												node_name_(copy.node_name_),
+												node_type_(copy.node_type_),
+												last_touch_(copy.last_touch_){
 			this->criticality_ = copy.criticality_;
 			this->heartbeat_rate_ = copy.heartbeat_rate_;
 			this->heartbeat_tolerance_ = copy.heartbeat_tolerance_;
 		}
 		inline NodeInformationContainer(const NodeInformationContainer& copy):
-									node_name_(copy.node_name_),
-									node_type_(copy.node_type_),
-									last_touch_(copy.last_touch_){
+														node_name_(copy.node_name_),
+														node_type_(copy.node_type_),
+														last_touch_(copy.last_touch_){
 			this->criticality_ = copy.criticality_;
 			this->heartbeat_rate_ = copy.heartbeat_rate_;
 			this->heartbeat_tolerance_ = copy.heartbeat_tolerance_;
@@ -180,24 +109,24 @@ private:
 		 * @param [in] heartbeat_tolerance	The tolerance amount for the node, in Hz
 		 */
 		inline NodeInformationContainer(const std::string& node_name, const std::string& node_type, int criticality, int heartbeat_rate, int heartbeat_tolarence):
-						node_name_(node_name),
-						node_type_(node_type){
+											node_name_(node_name),
+											node_type_(node_type){
 			this->criticality_    = criticality;
-			this->heartbeat_rate_ = heartbeat_rate;
-			this->heartbeat_tolerance_ = heartbeat_tolarence;
+			this->heartbeat_rate_		= (1.0/(double)heartbeat_rate);
+			this->heartbeat_tolerance_	= (1.0/(double)heartbeat_tolarence);
 			this->last_touch_     = ros::Time::now();
 		}
 		inline NodeInformationContainer(std::string& node_name, std::string& node_type, int criticality, int heartbeat_rate, int heartbeat_tolarence):
-								node_name_(node_name),
-								node_type_(node_type){
+													node_name_(node_name),
+													node_type_(node_type){
 			this->criticality_    = criticality;
 			this->heartbeat_rate_ = heartbeat_rate;
 			this->heartbeat_tolerance_ = heartbeat_tolarence;
 			this->last_touch_     = ros::Time::now();
 		}
 		inline NodeInformationContainer(const char* node_name, const char* node_type, int criticality, int heartbeat_rate, int heartbeat_tolarence):
-										node_name_(node_name),
-										node_type_(node_type){
+															node_name_(node_name),
+															node_type_(node_type){
 			this->criticality_    = criticality;
 			this->heartbeat_rate_ = heartbeat_rate;
 			this->heartbeat_tolerance_ = heartbeat_tolarence;
@@ -219,13 +148,13 @@ private:
 		 */
 		inline int getCriticality() 		const{return this->criticality_;}
 		/**
-		 * @return The heartbeat rate for the node, in Hz
+		 * @return The heartbeat rate for the node, in seconds
 		 */
-		inline int getHeartbeatRate() 		const{return this->heartbeat_rate_;}
+		inline double getHeartbeatRate() 		const{return this->heartbeat_rate_;}
 		/**
-		 * @return The heartbeat tolerence for the node, in Hz
+		 * @return The heartbeat tolerance for the node, in seconds
 		 */
-		inline int getHeartbeatTolerence()	const{return this->heartbeat_tolerance_;}
+		inline double getHeartbeatTolerence()	const{return this->heartbeat_tolerance_;}
 
 		/**
 		 * @return The last ros::Time that the node was touched
@@ -243,7 +172,7 @@ private:
 		 */
 		inline const std::string toString() const{
 			std::stringstream output;
-			output<<this->node_name_<<"["<<this->node_type_<<"]<"<<this->last_touch_<<"> C:"<<this->criticality_<<" H:"<<this->heartbeat_rate_<<" T:"<<this->heartbeat_tolerance_;
+			output<<this->node_name_<<"["<<this->node_type_<<"]<"<<this->last_touch_<<"> C:"<<this->criticality_<<" H:"<<(1.0/this->heartbeat_rate_)<<" T:"<<(1.0/this->heartbeat_tolerance_);
 			return output.str();
 		}
 
@@ -295,11 +224,97 @@ private:
 		std::string node_name_;				///Unique ROS name of the node
 		std::string node_type_;				///Non-unique node-type of the node
 		int			criticality_;			///The criticality level of the node
-		int			heartbeat_rate_;		///The heartbeat rate of the node, in Hz
-		int			heartbeat_tolerance_;	///The heartbeat tolerence of the node, in Hz
+		double		heartbeat_rate_;		///The heartbeat rate of the node, in seconds
+		double		heartbeat_tolerance_;	///The heartbeat tolerence of the node, in seconds
 		ros::Time   last_touch_;			///The ros::Time corresponding to the last time the node was touched
 	};
 
+	/**
+	 * Sets up a new NodeManager with an empty set of nodes.
+	 */
+	NodeManager();
+	virtual ~NodeManager();
+
+	/**
+	 * Registers a new node with the NodeManager
+	 * @param [in] node_name			The unique ROS name for a node
+	 * @param [in] node_type			The non-unique type of the node
+	 * @param [in] criticality			The criticality for the node
+	 * @param [in] heartbeat_rate		The heartbeat rate for the node, in Hz
+	 * @param [in] heartbeat_tolerance	The tolerance amount for the node, in Hz
+	 * @return The unique node_id for the newly registered node
+	 */
+	int registerNode(const std::string& node_name, const std::string& node_type, int criticality, int heartbeat_rate, int heartbeat_tolarence)throw(NonUniqueNodeName);
+
+	/**
+	 * Retrieves the information on a node based on a given node_id
+	 * @param [in] node_id The node_id to search for
+	 * @return The NodeInformationContainer which holds the information on that node
+	 * @throw NoMatchingNodeId if the given node_id was not registered with the system
+	 */
+	const NodeInformationContainer& getNode(int node_id) const throw(NoMatchingNodeId);
+
+	/**
+	 * Touches a node in the NodeManager
+	 * @param [in] node_id The node_id to touch
+	 * @throw NoMatchingNodeId if the given node_id was not registered with the system
+	 */
+	void touch(int node_id)throw(NoMatchingNodeId);
+
+	/**
+	 * De-registers a node with the NodeManager
+	 * @param [in] node_id The node_id to touch
+	 * @throw NoMatchingNodeId if the given node_id was not registered with the system
+	 */
+	void deleteNode(int node_id)throw(NoMatchingNodeId);
+
+	/**
+	 * Prints out a list of the information on all currently registered nodes in the NodeManager
+	 * @param [out] output std::stringstream to write the list to
+	 */
+	void printList(std::stringstream& output) const;
+
+
+	/**
+	 * Checks to see if the nodes in the NodeManager have been touched recently enough to pass their heartbeat
+	 * rate within their specified tolerence
+	 * @param [out] results A reference to an empty result_map to write the results into
+	 * @param [in]  checkTime The time to compare against
+	 *
+	 * @details The results map will be filled with check_results as values, and keyed by node_id. The first item in the check_result is
+	 * a bool, which will be true if it passed its heartbeat rate test. The second item is an int, an corrisponds to the criticality of that node
+	 */
+	void timeCheck(result_map& results, ros::Time& checkTime) const;
+
+
+	/**
+	 * Retrieves the information on a node based on a given node_id
+	 * @param [in] node_id The node_id to search for
+	 * @return The NodeInformationContainer which holds the information on that node
+	 * @throw NoMatchingNodeId if the given node_id was not registered with the system
+	 */
+	const container& operator[](int node_id) const throw(NoMatchingNodeId);
+
+	/**
+	 * Overload of << operator for use with std::ostream. Has the same operation as printList
+	 * @param [in/out] out std::stringstream to write the list to
+	 * @param [in] rhs the NodeManager to insert into the stream
+	 */
+	friend std::ostream& operator<<(std::ostream& out, const NodeManager& rhs);
+
+
+private:
+	int next_id_;		///The next node_id to be assigned at registration
+
+	node_map nodes_;	///A Map of node_id's to their respective NodeInformationContainer data
+
+	/**
+	 * Checks to make sure that a given node_id exists in the NodeManager's node_map
+	 * @param node_id The node_id to use as a key to check for
+	 * @return TRUE if the key is in the map, else false
+	 * @throw NoMatchingNodeId if the node_id is not in the map
+	 */
+	bool checkId(int node_id)const throw(NoMatchingNodeId);
 };
 
 } /* namespace oryx_diagnostics */
