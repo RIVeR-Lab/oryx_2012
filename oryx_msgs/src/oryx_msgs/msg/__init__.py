@@ -5,3 +5,4 @@ from ._WheelVelocities import *
 from ._BlobList import *
 from ._Blob import *
 from ._Heartbeat import *
+from ._SoftwareStop import *
