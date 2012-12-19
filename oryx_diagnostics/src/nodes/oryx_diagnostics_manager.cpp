@@ -9,6 +9,8 @@
 #include<oryx_diagnostics/DiagnosticsCommand.h>
 #include<boost/unordered/unordered_map.hpp>
 #include<boost/foreach.hpp>
+#include<boost/function.hpp>
+#include<boost/bind.hpp>
 #include"NodeManager.h"
 
 using namespace oryx_diagnostics;
