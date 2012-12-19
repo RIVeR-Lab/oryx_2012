@@ -32,7 +32,7 @@ private:
 /**
  * Class for representing the exception case of when an attempt is made to access an invalid node_id in a NodeManager
  */
-class NoMatchingNodeId:NodeManagerException{
+class NoMatchingNodeId:public NodeManagerException{
 public:
 	/**
 	 * Constructor for creating a new exception
@@ -44,7 +44,7 @@ public:
 /**
  * Class for representing the exception case for when a non-unique node-name is inserted into the NodeManager
  */
-class NonUniqueNodeName:NodeManagerException{
+class NonUniqueNodeName:public NodeManagerException{
 public:
 	NonUniqueNodeName(std::string name):NodeManagerException(generateMessage(name), -1){};
 private:
