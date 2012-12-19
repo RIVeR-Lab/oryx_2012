@@ -62,6 +62,12 @@ private:
 
 	command_map commands_;			///boost::unordered_map mapping the string command name with its function
 
+	/**
+	 * Callback for processing requests to register new nodes with oryx_diagnostics
+	 * @param req The service request
+	 * @param res The service response
+	 * @return TRUE if sucessful, else false
+	 */
 	bool regCB(	oryx_msgs::DiagnositicsRegistration::Request& req,
 				oryx_msgs::DiagnositicsRegistration::Response& res){
 		try{
@@ -77,6 +83,13 @@ private:
 		return false;
 	}
 
+
+	/**
+	 * Callback for servicing DiagnosticsCommand services
+	 * @param req The service request
+	 * @param response The service response
+	 * @return TRUE if sucessful, else false
+	 */
 	bool comCB( oryx_diagnostics::DiagnosticsCommand::Request& req,
 				oryx_diagnostics::DiagnosticsCommand::Response& response){
 		if(this->commands_.count(req.command)!=1){
@@ -89,6 +102,13 @@ private:
 		return false;
 	}
 
+	/**
+	 * Callback for handling the "node_list" command. Fills the response.data field with the same string as would result
+	 * from calling DiagnosticsManager::printList
+	 * @param data The callback argument data (in this case, ignored)
+	 * @param response The DiagnosticsCommand::Response reference to fill with data
+	 * @return TRUE if sucessful, else FALSE
+	 */
 	bool listCB(std::string& data, oryx_diagnostics::DiagnosticsCommand::Response& response){
 		std::stringstream res_data;
 		res_data<<"This is the current node list:\n";
