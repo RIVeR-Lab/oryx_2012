@@ -1,0 +1,1544 @@
+\section{\-E\-P\-O\-S \-Class \-Reference}
+\label{classEPOS}\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}}
+
+
+{\ttfamily \#include $<$\-E\-P\-O\-S.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf clear\-Faults} ()
+\item 
+void {\bf dynamic\-Callback} ({\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config} \&config, uint32\-\_\-t level)
+\item 
+{\bf \-E\-P\-O\-S} (ros\-::\-Node\-Handle \-\_\-nh)
+\item 
+bool {\bf get\-Current} (short $\ast$current)
+\item 
+bool {\bf get\-Enable\-State} (bool $\ast$enabled)
+\item 
+std\-::string {\bf get\-Error} (std\-::string error)
+\item 
+std\-::string {\bf get\-Motor\-Name} ()
+\item 
+int {\bf get\-Node\-I\-D} ()
+\item 
+bool {\bf get\-Position} (long $\ast$position)
+\item 
+bool {\bf get\-State} ()
+\item 
+bool {\bf get\-Velocity} (long $\ast$velocity)
+\item 
+bool {\bf initialize\-Motor} (void $\ast${\bf key\-Handle})
+\item 
+bool {\bf is\-E\-P\-O\-S\-Initialized} ()
+\item 
+bool {\bf is\-In\-Fault} ()
+\item 
+bool {\bf print\-Faults} ()
+\item 
+bool {\bf reinitialize} ()
+\item 
+bool {\bf set\-Enable\-State} (bool enabled)
+\item 
+void {\bf set\-Max\-Command\-Attempts} (unsigned short command\-Attempts)
+\item 
+bool {\bf set\-Position} (long int setpoint, bool absolute, bool immediately)
+\item 
+bool {\bf set\-Position\-Profile} (int {\bf position\-Profile\-Velocity}, int {\bf position\-Profile\-Acceleration}, int {\bf position\-Profile\-Deceleration})
+\item 
+bool {\bf set\-Position\-Profile\-Acceleration} (unsigned long {\bf position\-Profile\-Acceleration})
+\item 
+bool {\bf set\-Position\-Profile\-Deceleration} (unsigned long {\bf position\-Profile\-Deceleration})
+\item 
+bool {\bf set\-Position\-Profile\-Velocity} (unsigned long {\bf position\-Profile\-Velocity})
+\item 
+bool {\bf set\-Velocity} (long int setpoint)
+\item 
+bool {\bf set\-Velocity\-Profile} (int {\bf velocity\-Profile\-Acceleration}, int {\bf velocity\-Profile\-Deceleration})
+\item 
+bool {\bf set\-Velocity\-Profile\-Acceleration} (unsigned long {\bf velocity\-Profile\-Acceleration})
+\item 
+bool {\bf set\-Velocity\-Profile\-Deceleration} (unsigned long {\bf velocity\-Profile\-Deceleration})
+\item 
+virtual {\bf $\sim$\-E\-P\-O\-S} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short {\bf state}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf activate\-Profile\-Position\-Mode} ()
+\item 
+bool {\bf activate\-Profile\-Velocity\-Mode} ()
+\item 
+std\-::string {\bf get\-Error\-Info} (unsigned long error)
+\item 
+bool {\bf load\-Current\-P\-I\-D\-From\-Epos} ()
+\item 
+bool {\bf load\-D\-C\-Motor\-Parameters\-From\-Epos} ()
+\item 
+bool {\bf load\-E\-C\-Motor\-Parameters\-From\-Epos} ()
+\item 
+bool {\bf load\-Hall\-Sensor\-Parameters\-From\-Epos} ()
+\item 
+bool {\bf load\-Inc\-Encoder\-Parameters\-From\-Epos} ()
+\item 
+bool {\bf load\-Max\-Acceleration\-From\-Epos} ()
+\item 
+bool {\bf load\-Max\-Following\-Error\-From\-Epos} ()
+\item 
+bool {\bf load\-Max\-Velocity\-From\-Epos} ()
+\item 
+bool {\bf load\-Motor\-Type\-From\-Epos} ()
+\item 
+bool {\bf load\-Parameters\-From\-Epos} ()
+\item 
+bool {\bf load\-Position\-P\-I\-D\-From\-Epos} ()
+\item 
+bool {\bf load\-Position\-Profile\-From\-Epos} ()
+\item 
+bool {\bf load\-Sensor\-Type\-From\-Epos} ()
+\item 
+bool {\bf load\-Ssi\-Abs\-Encoder\-Parameters\-From\-Epos} ()
+\item 
+bool {\bf load\-Velocity\-P\-I\-D\-From\-Epos} ()
+\item 
+bool {\bf load\-Velocity\-Profile\-From\-Epos} ()
+\item 
+bool {\bf move\-To\-Position} (long int setpoint, int absolute, int immediately)
+\item 
+bool {\bf move\-With\-Velocity} (long int setpoint)
+\item 
+bool {\bf save\-Parameters} ()
+\item 
+bool {\bf set\-Current\-P\-I\-D} (int p\-Gain, int i\-Gain)
+\item 
+bool {\bf set\-D\-C\-Motor\-Parameters} (int {\bf motor\-Nominal\-Current}, int {\bf motor\-Max\-Current}, int {\bf motor\-Thermal\-Time\-Constant})
+\item 
+bool {\bf set\-E\-C\-Motor\-Parameters} (int {\bf motor\-Nominal\-Current}, int {\bf motor\-Max\-Current}, int {\bf motor\-Thermal\-Time\-Constant}, int {\bf motor\-Number\-Pole\-Pairs})
+\item 
+bool {\bf set\-Hall\-Sensor\-Parameters} (int {\bf sensor\-Inversion})
+\item 
+bool {\bf set\-Inc\-Encoder\-Parameters} (int {\bf sensor\-Inc\-Encoder\-Resolution}, int {\bf sensor\-Inversion})
+\item 
+bool {\bf set\-Max\-Acceleration} (int {\bf max\-Acceleration})
+\item 
+bool {\bf set\-Max\-Following\-Error} (int {\bf max\-Following\-Error})
+\item 
+bool {\bf set\-Max\-Velocity} (int max\-Velocity)
+\item 
+bool {\bf set\-Motor\-Type} (int {\bf motor\-Type})
+\item 
+bool {\bf set\-Operation\-Mode} (char operation\-Mode)
+\item 
+bool {\bf set\-Position\-P\-I\-D} (int p\-Gain, int i\-Gain, int d\-Gain)
+\item 
+bool {\bf set\-Quickstop} (int {\bf quickstop\-Pin}, bool active\-Low, bool enable)
+\item 
+bool {\bf set\-Sensor\-Type} (int {\bf sensor\-Type})
+\item 
+bool {\bf set\-Ssi\-Abs\-Encoder\-Parameters} (int {\bf sensor\-S\-S\-I\-Encoder\-Data\-Rate}, int {\bf sensor\-S\-S\-I\-Encoder\-Number\-Multi\-Turn\-Bits}, int {\bf sensor\-S\-S\-I\-Encoder\-Number\-Single\-Turn\-Bits}, int {\bf sensor\-Inversion})
+\item 
+bool {\bf set\-Velocity\-P\-I\-D} (int p\-Gain, int i\-Gain)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dynamic\-\_\-reconfigure\-::\-Server\*
+$<$ {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config} $>$\*
+\-::\-Callback\-Type {\bf callback\-Manager}
+\item 
+{\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config} {\bf current\-Config}
+\item 
+int {\bf current\-I}
+\item 
+int {\bf current\-P}
+\item 
+unsigned long {\bf error\-Code}
+\item 
+bool {\bf is\-Enabled}
+\item 
+bool {\bf is\-Faulted}
+\item 
+bool {\bf is\-Initialized}
+\item 
+void $\ast$ {\bf key\-Handle}
+\item 
+int {\bf max\-Acceleration}
+\item 
+int {\bf max\-Command\-Attempts}
+\item 
+int {\bf max\-Following\-Error}
+\item 
+int {\bf max\-Profile\-Velocity}
+\item 
+int {\bf motor\-Max\-Current}
+\item 
+std\-::string {\bf motor\-Name}
+\item 
+int {\bf motor\-Nominal\-Current}
+\item 
+int {\bf motor\-Number\-Pole\-Pairs}
+\item 
+int {\bf motor\-Thermal\-Time\-Constant}
+\item 
+int {\bf motor\-Type}
+\item 
+ros\-::\-Node\-Handle {\bf nh}
+\item 
+int {\bf node\-I\-D}
+\item 
+char {\bf operating\-Mode}
+\item 
+int {\bf position\-D}
+\item 
+int {\bf position\-I}
+\item 
+int {\bf position\-P}
+\item 
+int {\bf position\-Profile\-Acceleration}
+\item 
+int {\bf position\-Profile\-Deceleration}
+\item 
+int {\bf position\-Profile\-Velocity}
+\item 
+bool {\bf quick\-Stop\-Active\-Low}
+\item 
+int {\bf quickstop\-Pin}
+\item 
+int {\bf sensor\-Inc\-Encoder\-Resolution}
+\item 
+int {\bf sensor\-Inversion}
+\item 
+int {\bf sensor\-S\-S\-I\-Encoder\-Data\-Rate}
+\item 
+int {\bf sensor\-S\-S\-I\-Encoder\-Number\-Multi\-Turn\-Bits}
+\item 
+int {\bf sensor\-S\-S\-I\-Encoder\-Number\-Single\-Turn\-Bits}
+\item 
+int {\bf sensor\-Type}
+\item 
+dynamic\-\_\-reconfigure\-::\-Server\*
+$<$ {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config} $>$ {\bf server}
+\item 
+bool {\bf use\-Quickstop}
+\item 
+int {\bf velocity\-I}
+\item 
+int {\bf velocity\-P}
+\item 
+int {\bf velocity\-Profile\-Acceleration}
+\item 
+int {\bf velocity\-Profile\-Deceleration}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 16 of file \-E\-P\-O\-S.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!\-E\-P\-O\-S@{\-E\-P\-O\-S}}
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{\-E\-P\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-O\-S\-::\-E\-P\-O\-S} (
+\begin{DoxyParamCaption}
+\item[{ros\-::\-Node\-Handle}]{\-\_\-nh}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a0f04075c5cc72fc2e47ec5a24cebc06a}
+
+
+\-Definition at line 43 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!$\sim$\-E\-P\-O\-S@{$\sim$\-E\-P\-O\-S}}
+\index{$\sim$\-E\-P\-O\-S@{$\sim$\-E\-P\-O\-S}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{$\sim$\-E\-P\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-O\-S\-::$\sim$\-E\-P\-O\-S} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classEPOS_a09c6fb541070c31b86e7b8003fd903c8}
+
+
+\-Definition at line 798 of file \-E\-P\-O\-S.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!activate\-Profile\-Position\-Mode@{activate\-Profile\-Position\-Mode}}
+\index{activate\-Profile\-Position\-Mode@{activate\-Profile\-Position\-Mode}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{activate\-Profile\-Position\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::activate\-Profile\-Position\-Mode} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_af1c95592a1ed53d7e16674c8b7251ad7}
+
+
+\-Definition at line 575 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!activate\-Profile\-Velocity\-Mode@{activate\-Profile\-Velocity\-Mode}}
+\index{activate\-Profile\-Velocity\-Mode@{activate\-Profile\-Velocity\-Mode}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{activate\-Profile\-Velocity\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::activate\-Profile\-Velocity\-Mode} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a25e0fec3cba2f479fc84987f8e60677d}
+
+
+\-Definition at line 551 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!clear\-Faults@{clear\-Faults}}
+\index{clear\-Faults@{clear\-Faults}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{clear\-Faults}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::clear\-Faults} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a87569fbb466da4c51b1b4ce8933053a9}
+\-Clears all faults on the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS}.
+
+\-Sometimes, the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} will go into a fault state if there is a device or function failure. \-Fortunately, it is possible to clear these faults. \-This method clears any faults it can on the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS}.
+
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 697 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!dynamic\-Callback@{dynamic\-Callback}}
+\index{dynamic\-Callback@{dynamic\-Callback}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{dynamic\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-O\-S\-::dynamic\-Callback} (
+\begin{DoxyParamCaption}
+\item[{{\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config} \&}]{config, }
+\item[{uint32\-\_\-t}]{level}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a04e69018e3ffbf7840ebd3639d018597}
+
+
+\-Definition at line 13 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!get\-Current@{get\-Current}}
+\index{get\-Current@{get\-Current}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{get\-Current}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::get\-Current} (
+\begin{DoxyParamCaption}
+\item[{short $\ast$}]{current}
+\end{DoxyParamCaption}
+)}\label{classEPOS_ac5fa5b95d2b7c9f48bdcf1feacc88587}
+\-Returns the current being drawn by the motor in m\-A.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em current} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 657 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!get\-Enable\-State@{get\-Enable\-State}}
+\index{get\-Enable\-State@{get\-Enable\-State}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{get\-Enable\-State}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::get\-Enable\-State} (
+\begin{DoxyParamCaption}
+\item[{bool $\ast$}]{enabled}
+\end{DoxyParamCaption}
+)}\label{classEPOS_aa8b09ca7f6dc8adc234d189bac4e4bb3}
+\-Returns the enable state of the motor
+
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 676 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!get\-Error@{get\-Error}}
+\index{get\-Error@{get\-Error}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{get\-Error}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-E\-P\-O\-S\-::get\-Error} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{error}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a9d0a63612cdbbb9157af7b6277f6b8f1}
+\-Returns an error message if a function fails.
+
+\-This method is called when a method fails for one reason or another. \-A string is passed to it containing information on the location of the failure (such as when trying to set or get the the velocity). \-The method then takes this string and appends the error code containing the cause behind the failure ( such as a \-U\-S\-B \-Read \-Error). \-This is useful for debugging the code, or notifying other programs that there was an error in this program.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em error} & \-An error message stating where the program failed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+error \-A modified error message containing the location and cause of the failure. 
+\end{DoxyReturn}
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!get\-Error\-Info@{get\-Error\-Info}}
+\index{get\-Error\-Info@{get\-Error\-Info}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{get\-Error\-Info}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-E\-P\-O\-S\-::get\-Error\-Info} (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{error}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a0978205866b11dd8e77564f84fc389c4}
+\-Converts an \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} error code into the corresponding error string
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em error} & \-The error code on the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+error\-Str \-A string explaining the error corresponding to the error code 
+\end{DoxyReturn}
+
+
+\-Definition at line 356 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!get\-Motor\-Name@{get\-Motor\-Name}}
+\index{get\-Motor\-Name@{get\-Motor\-Name}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{get\-Motor\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-E\-P\-O\-S\-::get\-Motor\-Name} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a820811956771256a6de6756a3b23e0a0}
+\-Returns the name of the \-Motor
+
+\-Returns the name of the motor. \-This name is passed in as a parameter at runtime. it is not essential, as it is only used in \-Motor\-Info messages. \-It is primarily for the benefit of the user, so they can easily tell which motor specific data is coming from, rather than having to use only the node \-I\-D;
+
+\begin{DoxyReturn}{\-Returns}
+motor\-Name \-The name given to the motor 
+\end{DoxyReturn}
+
+
+\-Definition at line 393 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!get\-Node\-I\-D@{get\-Node\-I\-D}}
+\index{get\-Node\-I\-D@{get\-Node\-I\-D}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{get\-Node\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::get\-Node\-I\-D} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a56b8ea8a17c74a371a15139bc253957c}
+\-Returns the \-Node \-I\-D of the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} \-Controller in a \-C\-A\-N chain.
+
+\-Returns the \-Node \-I\-D of the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} \-Controller. \-This node id is passed in as a parameter to the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} at runtime. \-The node \-I\-D for each \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} can be configured through the \-D\-I\-P switches on the side of the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS}.
+
+\begin{DoxyReturn}{\-Returns}
+node\-I\-D \-The node \-I\-D of the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} \-Controller 
+\end{DoxyReturn}
+
+
+\-Definition at line 389 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::get\-Position} (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{position}
+\end{DoxyParamCaption}
+)}\label{classEPOS_afb115defe3e03ec972b6cb11bf22d607}
+\-Returns the position of the motor in encoder counts.
+
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 621 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!get\-State@{get\-State}}
+\index{get\-State@{get\-State}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{get\-State}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::get\-State} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classEPOS_ab72a91b5514427acf0adb0a5d4c0f31f}
+\-Finds the state of the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} and stores it in the state variable
+
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 782 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!get\-Velocity@{get\-Velocity}}
+\index{get\-Velocity@{get\-Velocity}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{get\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::get\-Velocity} (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{velocity}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a3fa902917a8dbb705076cc26f4264a2f}
+\-Returns the velocity of the motor in rpm.
+
+\-This method returns the velocity of the motor in rpm. \-It is important to note that this value does \-N\-O\-T include any gearbox attached to the motor, only the motor itself.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em velocity} & \-Holder for the velocity of the motor in rpm. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 639 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!initialize\-Motor@{initialize\-Motor}}
+\index{initialize\-Motor@{initialize\-Motor}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{initialize\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::initialize\-Motor} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{key\-Handle}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a160349a86d01846f6b3734e0cd7ac443}
+\-Initializes the motor to use the parameters passed in at runtime
+
+\-This method initializes the given \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} using the various parameters passed into it at runtime. \-It is important that each of the parameters has an acceptable value, otherwise the initialization will fail. \-If any part of the initialization fails, it will stop the process and alert the user of the issue. \-It is also important that a valid keyhandle be passed into this method. \-If the keyhandle is not initialized beforehand, this will fail.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em key\-Handle} & the \-Keyhandle for the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} \-Chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 368 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!is\-E\-P\-O\-S\-Initialized@{is\-E\-P\-O\-S\-Initialized}}
+\index{is\-E\-P\-O\-S\-Initialized@{is\-E\-P\-O\-S\-Initialized}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{is\-E\-P\-O\-S\-Initialized}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::is\-E\-P\-O\-S\-Initialized} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classEPOS_ad5010ea47a4f42a5acfeefa00a790dd0}
+\-Returns a boolean indicating whether or not the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} has been initialized
+
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating initialization of \doxyref{\-E\-P\-O\-S}{p.}{classEPOS}. \-True if initialized, \-False if not. 
+\end{DoxyReturn}
+
+
+\-Definition at line 778 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!is\-In\-Fault@{is\-In\-Fault}}
+\index{is\-In\-Fault@{is\-In\-Fault}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{is\-In\-Fault}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::is\-In\-Fault} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a134f283224654e5b283f03ec37003f57}
+\-Gets the fault state of the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS}
+
+\-This method checks the fault state of the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS}, and returns whether or not the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} is ina fault state.
+
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating the fault state of the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS}, \-True if it is in a fault state, \-False if it is not. 
+\end{DoxyReturn}
+
+
+\-Definition at line 711 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Current\-P\-I\-D\-From\-Epos@{load\-Current\-P\-I\-D\-From\-Epos}}
+\index{load\-Current\-P\-I\-D\-From\-Epos@{load\-Current\-P\-I\-D\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Current\-P\-I\-D\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Current\-P\-I\-D\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a5670dee0fca5882e1b8682eac6e5db8b}
+
+
+\-Definition at line 679 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-D\-C\-Motor\-Parameters\-From\-Epos@{load\-D\-C\-Motor\-Parameters\-From\-Epos}}
+\index{load\-D\-C\-Motor\-Parameters\-From\-Epos@{load\-D\-C\-Motor\-Parameters\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-D\-C\-Motor\-Parameters\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-D\-C\-Motor\-Parameters\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a1b4dec836251fdef59b6f8b3be49a424}
+
+
+\-Definition at line 748 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-E\-C\-Motor\-Parameters\-From\-Epos@{load\-E\-C\-Motor\-Parameters\-From\-Epos}}
+\index{load\-E\-C\-Motor\-Parameters\-From\-Epos@{load\-E\-C\-Motor\-Parameters\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-E\-C\-Motor\-Parameters\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-E\-C\-Motor\-Parameters\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a5d689f91bb7b1ebb44eadf2712ae1354}
+
+
+\-Definition at line 760 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Hall\-Sensor\-Parameters\-From\-Epos@{load\-Hall\-Sensor\-Parameters\-From\-Epos}}
+\index{load\-Hall\-Sensor\-Parameters\-From\-Epos@{load\-Hall\-Sensor\-Parameters\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Hall\-Sensor\-Parameters\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Hall\-Sensor\-Parameters\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a06cb1cb2ac1815d72968b0042020810b}
+
+
+\-Definition at line 713 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Inc\-Encoder\-Parameters\-From\-Epos@{load\-Inc\-Encoder\-Parameters\-From\-Epos}}
+\index{load\-Inc\-Encoder\-Parameters\-From\-Epos@{load\-Inc\-Encoder\-Parameters\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Inc\-Encoder\-Parameters\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Inc\-Encoder\-Parameters\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_ad22a8ac86ce1d2e0c678be6708a5f073}
+
+
+\-Definition at line 701 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Max\-Acceleration\-From\-Epos@{load\-Max\-Acceleration\-From\-Epos}}
+\index{load\-Max\-Acceleration\-From\-Epos@{load\-Max\-Acceleration\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Max\-Acceleration\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Max\-Acceleration\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_aa10e2af54887545bfdc743b379c7576a}
+
+
+\-Definition at line 807 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Max\-Following\-Error\-From\-Epos@{load\-Max\-Following\-Error\-From\-Epos}}
+\index{load\-Max\-Following\-Error\-From\-Epos@{load\-Max\-Following\-Error\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Max\-Following\-Error\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Max\-Following\-Error\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a8a0d1334ffcabb39a0f332ae8e37232d}
+
+
+\-Definition at line 773 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Max\-Velocity\-From\-Epos@{load\-Max\-Velocity\-From\-Epos}}
+\index{load\-Max\-Velocity\-From\-Epos@{load\-Max\-Velocity\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Max\-Velocity\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Max\-Velocity\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a7f022a45a193d495a27bd907afba7d43}
+
+
+\-Definition at line 819 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Motor\-Type\-From\-Epos@{load\-Motor\-Type\-From\-Epos}}
+\index{load\-Motor\-Type\-From\-Epos@{load\-Motor\-Type\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Motor\-Type\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Motor\-Type\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_acee4f11443194b75d1c6488e4d6fe712}
+
+
+\-Definition at line 737 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Parameters\-From\-Epos@{load\-Parameters\-From\-Epos}}
+\index{load\-Parameters\-From\-Epos@{load\-Parameters\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Parameters\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Parameters\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a623ab50dbe0d75cc5605012c943a44e8}
+
+
+\-Definition at line 830 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Position\-P\-I\-D\-From\-Epos@{load\-Position\-P\-I\-D\-From\-Epos}}
+\index{load\-Position\-P\-I\-D\-From\-Epos@{load\-Position\-P\-I\-D\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Position\-P\-I\-D\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Position\-P\-I\-D\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a6b3e946f886947691ed68f05035969dc}
+
+
+\-Definition at line 668 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Position\-Profile\-From\-Epos@{load\-Position\-Profile\-From\-Epos}}
+\index{load\-Position\-Profile\-From\-Epos@{load\-Position\-Profile\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Position\-Profile\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Position\-Profile\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a1e1f700fea7359457865bae85aa95127}
+
+
+\-Definition at line 796 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Sensor\-Type\-From\-Epos@{load\-Sensor\-Type\-From\-Epos}}
+\index{load\-Sensor\-Type\-From\-Epos@{load\-Sensor\-Type\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Sensor\-Type\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Sensor\-Type\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a911c50a77537d11d44550758c2bfca82}
+
+
+\-Definition at line 690 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Ssi\-Abs\-Encoder\-Parameters\-From\-Epos@{load\-Ssi\-Abs\-Encoder\-Parameters\-From\-Epos}}
+\index{load\-Ssi\-Abs\-Encoder\-Parameters\-From\-Epos@{load\-Ssi\-Abs\-Encoder\-Parameters\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Ssi\-Abs\-Encoder\-Parameters\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Ssi\-Abs\-Encoder\-Parameters\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_ad0024e1052996305af77fc5eae3366a3}
+
+
+\-Definition at line 724 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Velocity\-P\-I\-D\-From\-Epos@{load\-Velocity\-P\-I\-D\-From\-Epos}}
+\index{load\-Velocity\-P\-I\-D\-From\-Epos@{load\-Velocity\-P\-I\-D\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Velocity\-P\-I\-D\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Velocity\-P\-I\-D\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a3186d03344055b5aba9b82bd955c0133}
+
+
+\-Definition at line 657 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!load\-Velocity\-Profile\-From\-Epos@{load\-Velocity\-Profile\-From\-Epos}}
+\index{load\-Velocity\-Profile\-From\-Epos@{load\-Velocity\-Profile\-From\-Epos}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{load\-Velocity\-Profile\-From\-Epos}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::load\-Velocity\-Profile\-From\-Epos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a356bf7c4e969623e5d56278667668504}
+
+
+\-Definition at line 785 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!move\-To\-Position@{move\-To\-Position}}
+\index{move\-To\-Position@{move\-To\-Position}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{move\-To\-Position}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::move\-To\-Position} (
+\begin{DoxyParamCaption}
+\item[{long int}]{setpoint, }
+\item[{int}]{absolute, }
+\item[{int}]{immediately}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a86a0642b1daa02974ecee1143dce8b95}
+
+
+\-Definition at line 586 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!move\-With\-Velocity@{move\-With\-Velocity}}
+\index{move\-With\-Velocity@{move\-With\-Velocity}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{move\-With\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::move\-With\-Velocity} (
+\begin{DoxyParamCaption}
+\item[{long int}]{setpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_ac0e57b16986a619d5e56a08a4d8e957e}
+
+
+\-Definition at line 562 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!print\-Faults@{print\-Faults}}
+\index{print\-Faults@{print\-Faults}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{print\-Faults}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::print\-Faults} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a840d8fc962aeac554d4fb133862c1432}
+\-Prints the faults on the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS}
+
+\-This method prints any fault or error it finds on the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} to \-R\-O\-S\-\_\-\-E\-R\-R\-O\-R.
+
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 735 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!reinitialize@{reinitialize}}
+\index{reinitialize@{reinitialize}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{reinitialize}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::reinitialize} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a59030384046604420e7b99cf785d870b}
+\-Initializes the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} from parameters stored on the parameter server.
+
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 53 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!save\-Parameters@{save\-Parameters}}
+\index{save\-Parameters@{save\-Parameters}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{save\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::save\-Parameters} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a6bcbc903eb57d6b4cac67c70bc9bbb84}
+
+
+\-Definition at line 487 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Current\-P\-I\-D@{set\-Current\-P\-I\-D}}
+\index{set\-Current\-P\-I\-D@{set\-Current\-P\-I\-D}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Current\-P\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Current\-P\-I\-D} (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-Gain, }
+\item[{int}]{i\-Gain}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_aa1efef4cb16f65a6e51126fec7e33a27}
+
+
+\-Definition at line 625 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-D\-C\-Motor\-Parameters@{set\-D\-C\-Motor\-Parameters}}
+\index{set\-D\-C\-Motor\-Parameters@{set\-D\-C\-Motor\-Parameters}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-D\-C\-Motor\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-D\-C\-Motor\-Parameters} (
+\begin{DoxyParamCaption}
+\item[{int}]{motor\-Nominal\-Current, }
+\item[{int}]{motor\-Max\-Current, }
+\item[{int}]{motor\-Thermal\-Time\-Constant}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a35b8a953a545f117f7f6390bd9005f41}
+
+
+\-Definition at line 454 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-E\-C\-Motor\-Parameters@{set\-E\-C\-Motor\-Parameters}}
+\index{set\-E\-C\-Motor\-Parameters@{set\-E\-C\-Motor\-Parameters}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-E\-C\-Motor\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-E\-C\-Motor\-Parameters} (
+\begin{DoxyParamCaption}
+\item[{int}]{motor\-Nominal\-Current, }
+\item[{int}]{motor\-Max\-Current, }
+\item[{int}]{motor\-Thermal\-Time\-Constant, }
+\item[{int}]{motor\-Number\-Pole\-Pairs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a794455a1e889990d2c409404a7aaaa10}
+
+
+\-Definition at line 469 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Enable\-State@{set\-Enable\-State}}
+\index{set\-Enable\-State@{set\-Enable\-State}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Enable\-State}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Enable\-State} (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a9abb4673953a69bdfc78787c0f0a3d92}
+\-Sets the enable state of the motor.
+
+\-This method can be used to enable or disable to motor. \-If the motor is disabled, it can still send current, velocity, and position data, but cannot be sent move commands. \-Also, when the motor is disabled, it does \-N\-O\-T brake, and can be backdriven.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em enabled} & \-Boolean indicating desired enable state of motor. \-True is enabled, \-False if disabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 485 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Hall\-Sensor\-Parameters@{set\-Hall\-Sensor\-Parameters}}
+\index{set\-Hall\-Sensor\-Parameters@{set\-Hall\-Sensor\-Parameters}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Hall\-Sensor\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Hall\-Sensor\-Parameters} (
+\begin{DoxyParamCaption}
+\item[{int}]{sensor\-Inversion}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a9475d68bc4d7abf7e412fab36fe56002}
+
+
+\-Definition at line 400 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Inc\-Encoder\-Parameters@{set\-Inc\-Encoder\-Parameters}}
+\index{set\-Inc\-Encoder\-Parameters@{set\-Inc\-Encoder\-Parameters}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Inc\-Encoder\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Inc\-Encoder\-Parameters} (
+\begin{DoxyParamCaption}
+\item[{int}]{sensor\-Inc\-Encoder\-Resolution, }
+\item[{int}]{sensor\-Inversion}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a82848aa209ebbf2c5516425139c8f8c9}
+
+
+\-Definition at line 386 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Max\-Acceleration@{set\-Max\-Acceleration}}
+\index{set\-Max\-Acceleration@{set\-Max\-Acceleration}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Max\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Max\-Acceleration} (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Acceleration}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_afa17c6a1db02a188663e3d1db3566da0}
+
+
+\-Definition at line 513 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Max\-Command\-Attempts@{set\-Max\-Command\-Attempts}}
+\index{set\-Max\-Command\-Attempts@{set\-Max\-Command\-Attempts}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Max\-Command\-Attempts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-O\-S\-::set\-Max\-Command\-Attempts} (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{command\-Attempts}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a9c0054c70d4330024cb7e7dca0b24faa}
+\-Sets the maximum number of times a command will attempts to be sent to the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS}.
+
+\-The \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} controllers seem to be somewhat finicky in \-Linux. \-In some systems, the first few command attempts will fail. \-We could just keep them in a continuous while loop, but if there is another problem with the motors or the controllers, they will be stuck in an infinite loop. \-For this reason, each of our commands contains a loop that, if a command fails to send, will retry a specific number of times. \-This method sets that number.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em command\-Attempts} & \-The maximum number of times a method will attempt to send a command before failing. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 398 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Max\-Following\-Error@{set\-Max\-Following\-Error}}
+\index{set\-Max\-Following\-Error@{set\-Max\-Following\-Error}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Max\-Following\-Error}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Max\-Following\-Error} (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Following\-Error}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a10343bb3e147f61921e02685076a2058}
+\-Sets the maximum following error of the encoder. \-T\-O\-D\-O\-: \-Finish this comment \-This method sets the maximum following error of the encoder. \-The following error is the difference 
+
+\-Definition at line 535 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Max\-Velocity@{set\-Max\-Velocity}}
+\index{set\-Max\-Velocity@{set\-Max\-Velocity}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Max\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Max\-Velocity} (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Velocity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a2e7a96d0b2c0d2b96eea2a6cdccc3b1f}
+
+
+\-Definition at line 498 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Motor\-Type@{set\-Motor\-Type}}
+\index{set\-Motor\-Type@{set\-Motor\-Type}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Motor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Motor\-Type} (
+\begin{DoxyParamCaption}
+\item[{int}]{motor\-Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a95b3a7f4ff51e5d905b33cd49bef1a9f}
+
+
+\-Definition at line 442 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Operation\-Mode@{set\-Operation\-Mode}}
+\index{set\-Operation\-Mode@{set\-Operation\-Mode}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Operation\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Operation\-Mode} (
+\begin{DoxyParamCaption}
+\item[{char}]{operation\-Mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a95ca75e61230e7862a3069ad9a3914f6}
+
+
+\-Definition at line 430 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Position} (
+\begin{DoxyParamCaption}
+\item[{long int}]{setpoint, }
+\item[{bool}]{absolute, }
+\item[{bool}]{immediately}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a2a34357b6579b2672aa3a8a21388a844}
+\-Sets the position of the motor in encoder counts.
+
+\-This method will tell the motor to go to a position, specified by the setpoint. \-The setpoint is in encoder counts, so it will be up to the user to translate this into angles, distances, etc. \-The absolute parameter allows the user to specify whether or not they would like their motor to travel to specific point. \-If absolute is true, it will go to the specified setpoint, regardless of the current number of counts on the motor. \-If it is false, it will move setpoint number of counts from its current position. \-Immediately specifies whether or not the motor should finish any move action it is currently undertaking, or if it should cancel the previous action and move directly to the setpoint.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em setpoint} & \-The position, in encoder counts, that the motor is to move to. \\
+\hline
+{\em absolute} & \-True if the motor is to move to setpoint counts, false if setpoint counts relative to its current position \\
+\hline
+{\em immediately} & \-True if motor is to begin moving to setpoint immediately, false if it is to wait until current action is complete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 447 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Position\-P\-I\-D@{set\-Position\-P\-I\-D}}
+\index{set\-Position\-P\-I\-D@{set\-Position\-P\-I\-D}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Position\-P\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Position\-P\-I\-D} (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-Gain, }
+\item[{int}]{i\-Gain, }
+\item[{int}]{d\-Gain}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a7bc559f1a49f6b3ae1e4f7e6ac191d92}
+
+
+\-Definition at line 611 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Position\-Profile@{set\-Position\-Profile}}
+\index{set\-Position\-Profile@{set\-Position\-Profile}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Position\-Profile}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Position\-Profile} (
+\begin{DoxyParamCaption}
+\item[{int}]{position\-Profile\-Velocity, }
+\item[{int}]{position\-Profile\-Acceleration, }
+\item[{int}]{position\-Profile\-Deceleration}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a2aa0c23f7df38de9edb239016197db60}
+\-Sets the \-Position \-Profile of the motor.
+
+\-This method sets the parameters that the motor uses when the \-Position \-Profile is activated. \-This allows the user to configure how they want the motors to move when in \-Position \-Profile \-Mode.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em position\-Profile\-Velocity} & \-The velocity the motor will travel at when in \-Position \-Profile \-Mode \\
+\hline
+{\em position\-Profile\-Acceleration} & \-The acceleration of the motor when in \-Position \-Profile \-Mode \\
+\hline
+{\em position\-Profile\-Deceleration} & \-The deceleration of the motor when in \-Position \-Profile \-Mode \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 513 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Position\-Profile\-Acceleration@{set\-Position\-Profile\-Acceleration}}
+\index{set\-Position\-Profile\-Acceleration@{set\-Position\-Profile\-Acceleration}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Position\-Profile\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Position\-Profile\-Acceleration} (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{position\-Profile\-Acceleration}
+\end{DoxyParamCaption}
+)}\label{classEPOS_ab0b847bdd2f92e7ef06e1b838006c489}
+\-Sets the acceleration the motor use when in \-Position \-Profile \-Mode.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em position\-Profile\-Acceleration} & \-The acceleration the motor will use when in \-Position \-Profile \-Mode \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 600 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Position\-Profile\-Deceleration@{set\-Position\-Profile\-Deceleration}}
+\index{set\-Position\-Profile\-Deceleration@{set\-Position\-Profile\-Deceleration}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Position\-Profile\-Deceleration}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Position\-Profile\-Deceleration} (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{position\-Profile\-Deceleration}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a18b46fece41457faadb25fd3272bb9a4}
+\-Sets the deceleration the motor use when in \-Position \-Profile \-Mode.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em position\-Profile\-Deceleration} & \-The deceleration the motor will use when in \-Position \-Profile \-Mode \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 604 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Position\-Profile\-Velocity@{set\-Position\-Profile\-Velocity}}
+\index{set\-Position\-Profile\-Velocity@{set\-Position\-Profile\-Velocity}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Position\-Profile\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Position\-Profile\-Velocity} (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{position\-Profile\-Velocity}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a57cadc19d2982ee6212687c4d9147eaa}
+\-Sets the velocity the motor will travel at in \-Position \-Profile \-Mode.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em position\-Profile\-Velocity} & \-The velocity the motor will travel at when in \-Position \-Profile \-Mode \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 595 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Quickstop@{set\-Quickstop}}
+\index{set\-Quickstop@{set\-Quickstop}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Quickstop}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Quickstop} (
+\begin{DoxyParamCaption}
+\item[{int}]{quickstop\-Pin, }
+\item[{bool}]{active\-Low, }
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_aaadb48833832815e1311dd87ff1bd375}
+\-Sets a specified pin to be in \-Quick\-Stop mode.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em quickstop\-Pin} & \-The pin to be set \\
+\hline
+{\em active\-Low} & \-True if quickstop is to be activated when pin is low, false if when pin is high \\
+\hline
+{\em enable} & \-Boolean indicating if quickstop mode should be enabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 646 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Sensor\-Type@{set\-Sensor\-Type}}
+\index{set\-Sensor\-Type@{set\-Sensor\-Type}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Sensor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Sensor\-Type} (
+\begin{DoxyParamCaption}
+\item[{int}]{sensor\-Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a216d85beee7620f982981c069c90a5ad}
+\-Sets the sensor type on the motor
+
+\-This method sets the sensor type of the motor (hall, incremental, absolute, etc). \-The acceptable values can be found in \doxyref{\-Definitions.\-h}{p.}{Definitions_8h} from lines 305-\/310.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em sensor\-Type} & \-The sensor type of the motor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 374 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Ssi\-Abs\-Encoder\-Parameters@{set\-Ssi\-Abs\-Encoder\-Parameters}}
+\index{set\-Ssi\-Abs\-Encoder\-Parameters@{set\-Ssi\-Abs\-Encoder\-Parameters}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Ssi\-Abs\-Encoder\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Ssi\-Abs\-Encoder\-Parameters} (
+\begin{DoxyParamCaption}
+\item[{int}]{sensor\-S\-S\-I\-Encoder\-Data\-Rate, }
+\item[{int}]{sensor\-S\-S\-I\-Encoder\-Number\-Multi\-Turn\-Bits, }
+\item[{int}]{sensor\-S\-S\-I\-Encoder\-Number\-Single\-Turn\-Bits, }
+\item[{int}]{sensor\-Inversion}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_a6f505c6010f7047ddae15ae339441834}
+
+
+\-Definition at line 412 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Velocity@{set\-Velocity}}
+\index{set\-Velocity@{set\-Velocity}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Velocity} (
+\begin{DoxyParamCaption}
+\item[{long int}]{setpoint}
+\end{DoxyParamCaption}
+)}\label{classEPOS_a597d16874e39d0675552872801872524}
+\-Sets the speed of the motor in rpm.
+
+\-This method will set the motor to a specific speed, denoted by setpoint. \-It is important to note that this speed is in rotations per minute, and is of only the motor. \-The final output speed will be affected by any gearboxes attached to it.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em setpoint} & \-The velocity, in rpm, that the motor is to rotate at. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating whether or not the command succeeded. 
+\end{DoxyReturn}
+
+
+\-Definition at line 402 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Velocity\-P\-I\-D@{set\-Velocity\-P\-I\-D}}
+\index{set\-Velocity\-P\-I\-D@{set\-Velocity\-P\-I\-D}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Velocity\-P\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Velocity\-P\-I\-D} (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-Gain, }
+\item[{int}]{i\-Gain}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, private]}}\label{classEPOS_abcaefef227891b9a10d7abe3cb030356}
+
+
+\-Definition at line 598 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Velocity\-Profile@{set\-Velocity\-Profile}}
+\index{set\-Velocity\-Profile@{set\-Velocity\-Profile}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Velocity\-Profile}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Velocity\-Profile} (
+\begin{DoxyParamCaption}
+\item[{int}]{velocity\-Profile\-Acceleration, }
+\item[{int}]{velocity\-Profile\-Deceleration}
+\end{DoxyParamCaption}
+)}\label{classEPOS_acd58cbc98f25d7069fc3b49eaf6a6e94}
+\-Sets the \-Velocity \-Profile of the motor.
+
+\-This method sets the parameters that the motor uses when the \-Velocity \-Profile is activated. \-This allows the user to configure how they want the motors to move when in \-Velocity \-Profile \-Mode.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em velocity\-Profile\-Acceleration} & \-The acceleration of the motor when in \-Velocity \-Profile \-Mode \\
+\hline
+{\em velocity\-Profile\-Deceleration} & \-The deceleration of the motor when in \-Velocity \-Profile \-Mode \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 559 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Velocity\-Profile\-Acceleration@{set\-Velocity\-Profile\-Acceleration}}
+\index{set\-Velocity\-Profile\-Acceleration@{set\-Velocity\-Profile\-Acceleration}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Velocity\-Profile\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Velocity\-Profile\-Acceleration} (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{velocity\-Profile\-Acceleration}
+\end{DoxyParamCaption}
+)}\label{classEPOS_adf0591b55c2d826dde2906f1fc63b0ee}
+\-Sets the acceleration the motor use when in \-Velocity \-Profile \-Mode.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em velocity\-Profile\-Acceleration} & \-The acceleration the motor will use when in \-Velocity \-Profile \-Mode \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 611 of file \-E\-P\-O\-S.\-cpp.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!set\-Velocity\-Profile\-Deceleration@{set\-Velocity\-Profile\-Deceleration}}
+\index{set\-Velocity\-Profile\-Deceleration@{set\-Velocity\-Profile\-Deceleration}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{set\-Velocity\-Profile\-Deceleration}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::set\-Velocity\-Profile\-Deceleration} (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{velocity\-Profile\-Deceleration}
+\end{DoxyParamCaption}
+)}\label{classEPOS_aa7fb10fbd353653ac067773eb5399691}
+\-Sets the deceleration the motor use when in \-Velocity \-Profile \-Mode.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em velocity\-Profile\-Deceleration} & \-The deceleration the motor will use when in \-Velocity \-Profile \-Mode \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 616 of file \-E\-P\-O\-S.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!callback\-Manager@{callback\-Manager}}
+\index{callback\-Manager@{callback\-Manager}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{callback\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}dynamic\-\_\-reconfigure\-::\-Server$<${\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config}$>$\-::\-Callback\-Type {\bf \-E\-P\-O\-S\-::callback\-Manager}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a91fc2240929f5b0a7bb712e01980e59f}
+
+
+\-Definition at line 345 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!current\-Config@{current\-Config}}
+\index{current\-Config@{current\-Config}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{current\-Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config} {\bf \-E\-P\-O\-S\-::current\-Config}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a8e29f3bb266aa25ad8e68d3c03e398dd}
+
+
+\-Definition at line 346 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!current\-I@{current\-I}}
+\index{current\-I@{current\-I}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{current\-I}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::current\-I}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a41bd71028116f2206d4e30e26390a9e1}
+
+
+\-Definition at line 332 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!current\-P@{current\-P}}
+\index{current\-P@{current\-P}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{current\-P}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::current\-P}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a6f29b023c7e195193edd882069a6ecfe}
+
+
+\-Definition at line 331 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!error\-Code@{error\-Code}}
+\index{error\-Code@{error\-Code}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{error\-Code}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf \-E\-P\-O\-S\-::error\-Code}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a713f3a04bfcb88f8632fc82277565871}
+
+
+\-Definition at line 271 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!is\-Enabled@{is\-Enabled}}
+\index{is\-Enabled@{is\-Enabled}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{is\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::is\-Enabled}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a03a3abd0e25991abdaceb509bc006454}
+
+
+\-Definition at line 276 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!is\-Faulted@{is\-Faulted}}
+\index{is\-Faulted@{is\-Faulted}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{is\-Faulted}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::is\-Faulted}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a9d56375bf6627a8459d52ea0809920e0}
+
+
+\-Definition at line 277 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!is\-Initialized@{is\-Initialized}}
+\index{is\-Initialized@{is\-Initialized}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{is\-Initialized}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::is\-Initialized}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_af3551e69be7d82ed14d677e2ec31a1b4}
+
+
+\-Definition at line 274 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!key\-Handle@{key\-Handle}}
+\index{key\-Handle@{key\-Handle}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{key\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf \-E\-P\-O\-S\-::key\-Handle}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_ab8740b62bbae63210cd62c5a6505f6d1}
+
+
+\-Definition at line 273 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!max\-Acceleration@{max\-Acceleration}}
+\index{max\-Acceleration@{max\-Acceleration}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{max\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::max\-Acceleration}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a29104222cb7aa61eeaffd39529328f97}
+
+
+\-Definition at line 314 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!max\-Command\-Attempts@{max\-Command\-Attempts}}
+\index{max\-Command\-Attempts@{max\-Command\-Attempts}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{max\-Command\-Attempts}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::max\-Command\-Attempts}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a252f9735d4f20170552de17dbee4b3fd}
+
+
+\-Definition at line 272 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!max\-Following\-Error@{max\-Following\-Error}}
+\index{max\-Following\-Error@{max\-Following\-Error}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{max\-Following\-Error}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::max\-Following\-Error}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a0f66f041c8afec5c027b349bfe14fbce}
+
+
+\-Definition at line 312 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!max\-Profile\-Velocity@{max\-Profile\-Velocity}}
+\index{max\-Profile\-Velocity@{max\-Profile\-Velocity}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{max\-Profile\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::max\-Profile\-Velocity}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_af7524857e35b04f1199aea292cc0ac06}
+
+
+\-Definition at line 313 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!motor\-Max\-Current@{motor\-Max\-Current}}
+\index{motor\-Max\-Current@{motor\-Max\-Current}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{motor\-Max\-Current}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::motor\-Max\-Current}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a42130ba8c07973af9552f5ed31451cf3}
+
+
+\-Definition at line 291 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!motor\-Name@{motor\-Name}}
+\index{motor\-Name@{motor\-Name}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{motor\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-E\-P\-O\-S\-::motor\-Name}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_ab956265a647d130f8abb15ee86692a9e}
+
+
+\-Definition at line 275 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!motor\-Nominal\-Current@{motor\-Nominal\-Current}}
+\index{motor\-Nominal\-Current@{motor\-Nominal\-Current}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{motor\-Nominal\-Current}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::motor\-Nominal\-Current}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a84be11d84a6268df6319653401cb238a}
+
+
+\-Definition at line 290 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!motor\-Number\-Pole\-Pairs@{motor\-Number\-Pole\-Pairs}}
+\index{motor\-Number\-Pole\-Pairs@{motor\-Number\-Pole\-Pairs}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{motor\-Number\-Pole\-Pairs}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::motor\-Number\-Pole\-Pairs}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_af27b63dad869badbb2d0807d8c2116a1}
+
+
+\-Definition at line 293 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!motor\-Thermal\-Time\-Constant@{motor\-Thermal\-Time\-Constant}}
+\index{motor\-Thermal\-Time\-Constant@{motor\-Thermal\-Time\-Constant}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{motor\-Thermal\-Time\-Constant}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::motor\-Thermal\-Time\-Constant}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_ad27577348ba2297cb1f36649c60eb999}
+
+
+\-Definition at line 292 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!motor\-Type@{motor\-Type}}
+\index{motor\-Type@{motor\-Type}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{motor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::motor\-Type}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a995aefecf5a2b6af277859b10200a246}
+
+
+\-Definition at line 288 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!nh@{nh}}
+\index{nh@{nh}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{nh}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle {\bf \-E\-P\-O\-S\-::nh}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_ab74f261f45abc45e92d1336cfc92c729}
+
+
+\-Definition at line 270 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!node\-I\-D@{node\-I\-D}}
+\index{node\-I\-D@{node\-I\-D}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{node\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::node\-I\-D}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a27513dd61de7a061696c9c8ceaade2a1}
+
+
+\-Definition at line 279 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!operating\-Mode@{operating\-Mode}}
+\index{operating\-Mode@{operating\-Mode}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{operating\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf \-E\-P\-O\-S\-::operating\-Mode}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a1911a60f4411f6fdae683eeff26db7d7}
+
+
+\-Definition at line 278 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!position\-D@{position\-D}}
+\index{position\-D@{position\-D}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{position\-D}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::position\-D}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a6f4c9b29faf2c7231bfdf44be0cd54d8}
+
+
+\-Definition at line 324 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!position\-I@{position\-I}}
+\index{position\-I@{position\-I}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{position\-I}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::position\-I}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a7191abf5f0cb8f08854abaea4e3f0976}
+
+
+\-Definition at line 323 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!position\-P@{position\-P}}
+\index{position\-P@{position\-P}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{position\-P}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::position\-P}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a0043f25949bbbcf5b17f185d5c90d68c}
+
+
+\-Definition at line 322 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!position\-Profile\-Acceleration@{position\-Profile\-Acceleration}}
+\index{position\-Profile\-Acceleration@{position\-Profile\-Acceleration}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{position\-Profile\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::position\-Profile\-Acceleration}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_af8a6a55f5dc1ac54ff8e17034ffb3394}
+
+
+\-Definition at line 335 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!position\-Profile\-Deceleration@{position\-Profile\-Deceleration}}
+\index{position\-Profile\-Deceleration@{position\-Profile\-Deceleration}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{position\-Profile\-Deceleration}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::position\-Profile\-Deceleration}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_af2a3aa59d73216454e37208c6d15060e}
+
+
+\-Definition at line 336 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!position\-Profile\-Velocity@{position\-Profile\-Velocity}}
+\index{position\-Profile\-Velocity@{position\-Profile\-Velocity}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{position\-Profile\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::position\-Profile\-Velocity}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a48e66e1f93517697b3db7bc6dce90138}
+
+
+\-Definition at line 334 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!quick\-Stop\-Active\-Low@{quick\-Stop\-Active\-Low}}
+\index{quick\-Stop\-Active\-Low@{quick\-Stop\-Active\-Low}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{quick\-Stop\-Active\-Low}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::quick\-Stop\-Active\-Low}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a33f41fc9e8b7d3e5c3604128908a6ac3}
+
+
+\-Definition at line 341 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!quickstop\-Pin@{quickstop\-Pin}}
+\index{quickstop\-Pin@{quickstop\-Pin}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{quickstop\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::quickstop\-Pin}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_ac5480e46873d6b04462e4532ab621ebb}
+
+
+\-Definition at line 342 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!sensor\-Inc\-Encoder\-Resolution@{sensor\-Inc\-Encoder\-Resolution}}
+\index{sensor\-Inc\-Encoder\-Resolution@{sensor\-Inc\-Encoder\-Resolution}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{sensor\-Inc\-Encoder\-Resolution}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::sensor\-Inc\-Encoder\-Resolution}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a44c05be39454967ace02c82bfc1cb8f2}
+
+
+\-Definition at line 307 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!sensor\-Inversion@{sensor\-Inversion}}
+\index{sensor\-Inversion@{sensor\-Inversion}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{sensor\-Inversion}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::sensor\-Inversion}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_af55f38afd44c8bddc189e8bd5cd38814}
+
+
+\-Definition at line 306 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!sensor\-S\-S\-I\-Encoder\-Data\-Rate@{sensor\-S\-S\-I\-Encoder\-Data\-Rate}}
+\index{sensor\-S\-S\-I\-Encoder\-Data\-Rate@{sensor\-S\-S\-I\-Encoder\-Data\-Rate}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{sensor\-S\-S\-I\-Encoder\-Data\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::sensor\-S\-S\-I\-Encoder\-Data\-Rate}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a278f411cbe1e3d96eade255e03a70a40}
+
+
+\-Definition at line 308 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!sensor\-S\-S\-I\-Encoder\-Number\-Multi\-Turn\-Bits@{sensor\-S\-S\-I\-Encoder\-Number\-Multi\-Turn\-Bits}}
+\index{sensor\-S\-S\-I\-Encoder\-Number\-Multi\-Turn\-Bits@{sensor\-S\-S\-I\-Encoder\-Number\-Multi\-Turn\-Bits}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{sensor\-S\-S\-I\-Encoder\-Number\-Multi\-Turn\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::sensor\-S\-S\-I\-Encoder\-Number\-Multi\-Turn\-Bits}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a77b617008518ef98a94ea546794cadda}
+
+
+\-Definition at line 309 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!sensor\-S\-S\-I\-Encoder\-Number\-Single\-Turn\-Bits@{sensor\-S\-S\-I\-Encoder\-Number\-Single\-Turn\-Bits}}
+\index{sensor\-S\-S\-I\-Encoder\-Number\-Single\-Turn\-Bits@{sensor\-S\-S\-I\-Encoder\-Number\-Single\-Turn\-Bits}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{sensor\-S\-S\-I\-Encoder\-Number\-Single\-Turn\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::sensor\-S\-S\-I\-Encoder\-Number\-Single\-Turn\-Bits}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_ae3e70967235679c706a8bfc302c2cb46}
+
+
+\-Definition at line 310 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!sensor\-Type@{sensor\-Type}}
+\index{sensor\-Type@{sensor\-Type}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{sensor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::sensor\-Type}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a777e5aef1650a057c645d3b04b282c4b}
+
+
+\-Definition at line 304 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!server@{server}}
+\index{server@{server}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{server}]{\setlength{\rightskip}{0pt plus 5cm}dynamic\-\_\-reconfigure\-::\-Server$<${\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config}$>$ {\bf \-E\-P\-O\-S\-::server}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a90fc374a84bdc7b1d07d55b67917d40d}
+
+
+\-Definition at line 344 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!state@{state}}
+\index{state@{state}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short {\bf \-E\-P\-O\-S\-::state}}\label{classEPOS_acedb42c1f9b196b446e32ed5854e7b07}
+
+
+\-Definition at line 265 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!use\-Quickstop@{use\-Quickstop}}
+\index{use\-Quickstop@{use\-Quickstop}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{use\-Quickstop}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-O\-S\-::use\-Quickstop}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a739c879f664be2c7b7878b093c4900f3}
+
+
+\-Definition at line 340 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!velocity\-I@{velocity\-I}}
+\index{velocity\-I@{velocity\-I}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{velocity\-I}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::velocity\-I}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_aade426dd4329213a740200f96e00e7f9}
+
+
+\-Definition at line 328 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!velocity\-P@{velocity\-P}}
+\index{velocity\-P@{velocity\-P}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{velocity\-P}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::velocity\-P}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_ad83781080abaa5b52447a84ad965573e}
+
+
+\-Definition at line 327 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!velocity\-Profile\-Acceleration@{velocity\-Profile\-Acceleration}}
+\index{velocity\-Profile\-Acceleration@{velocity\-Profile\-Acceleration}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{velocity\-Profile\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::velocity\-Profile\-Acceleration}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a60aab71957907d48a75251fdf37f8c4a}
+
+
+\-Definition at line 337 of file \-E\-P\-O\-S.\-h.
+
+\index{\-E\-P\-O\-S@{\-E\-P\-O\-S}!velocity\-Profile\-Deceleration@{velocity\-Profile\-Deceleration}}
+\index{velocity\-Profile\-Deceleration@{velocity\-Profile\-Deceleration}!EPOS@{\-E\-P\-O\-S}}
+\subsubsection[{velocity\-Profile\-Deceleration}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-E\-P\-O\-S\-::velocity\-Profile\-Deceleration}\hspace{0.3cm}{\ttfamily  [private]}}\label{classEPOS_a155047fde8ce7258ebb0ae164cd00e0c}
+
+
+\-Definition at line 338 of file \-E\-P\-O\-S.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-E\-P\-O\-S.\-h}\item 
+{\bf \-E\-P\-O\-S.\-cpp}\end{DoxyCompactItemize}

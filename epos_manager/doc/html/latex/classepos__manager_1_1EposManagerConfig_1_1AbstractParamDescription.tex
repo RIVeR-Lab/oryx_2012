@@ -1,0 +1,154 @@
+\section{epos\-\_\-manager\-:\-:\-Epos\-Manager\-Config\-:\-:\-Abstract\-Param\-Description \-Class \-Reference}
+\label{classepos__manager_1_1EposManagerConfig_1_1AbstractParamDescription}\index{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}}
+
+
+{\ttfamily \#include $<$\-Epos\-Manager\-Config.\-h$>$}
+
+
+
+\-Inheritance diagram for epos\-\_\-manager\-:\-:\-Epos\-Manager\-Config\-:\-:\-Abstract\-Param\-Description\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classepos__manager_1_1EposManagerConfig_1_1AbstractParamDescription__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Abstract\-Param\-Description} (std\-::string n, std\-::string t, uint32\-\_\-t l, std\-::string d, std\-::string e)
+\item 
+virtual void {\bf calc\-Level} (uint32\-\_\-t \&level, const {\bf \-Epos\-Manager\-Config} \&config1, const {\bf \-Epos\-Manager\-Config} \&config2) const =0
+\item 
+virtual void {\bf clamp} ({\bf \-Epos\-Manager\-Config} \&config, const {\bf \-Epos\-Manager\-Config} \&{\bf max}, const {\bf \-Epos\-Manager\-Config} \&{\bf min}) const =0
+\item 
+virtual bool {\bf from\-Message} (const dynamic\-\_\-reconfigure\-::\-Config \&msg, {\bf \-Epos\-Manager\-Config} \&config) const =0
+\item 
+virtual void {\bf from\-Server} (const ros\-::\-Node\-Handle \&nh, {\bf \-Epos\-Manager\-Config} \&config) const =0
+\item 
+virtual void {\bf get\-Value} (const {\bf \-Epos\-Manager\-Config} \&config, boost\-::any \&val) const =0
+\item 
+virtual void {\bf to\-Message} (dynamic\-\_\-reconfigure\-::\-Config \&msg, const {\bf \-Epos\-Manager\-Config} \&config) const =0
+\item 
+virtual void {\bf to\-Server} (const ros\-::\-Node\-Handle \&nh, const {\bf \-Epos\-Manager\-Config} \&config) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 66 of file \-Epos\-Manager\-Config.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}!\-Abstract\-Param\-Description@{\-Abstract\-Param\-Description}}
+\index{\-Abstract\-Param\-Description@{\-Abstract\-Param\-Description}!epos_manager::EposManagerConfig::AbstractParamDescription@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}}
+\subsubsection[{\-Abstract\-Param\-Description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description\-::\-Abstract\-Param\-Description} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{n, }
+\item[{std\-::string}]{t, }
+\item[{uint32\-\_\-t}]{l, }
+\item[{std\-::string}]{d, }
+\item[{std\-::string}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classepos__manager_1_1EposManagerConfig_1_1AbstractParamDescription_a0d3b2e247066a9cc203bf8efbc178df9}
+
+
+\-Definition at line 69 of file \-Epos\-Manager\-Config.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}!calc\-Level@{calc\-Level}}
+\index{calc\-Level@{calc\-Level}!epos_manager::EposManagerConfig::AbstractParamDescription@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}}
+\subsubsection[{calc\-Level}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description\-::calc\-Level} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t \&}]{level, }
+\item[{const {\bf \-Epos\-Manager\-Config} \&}]{config1, }
+\item[{const {\bf \-Epos\-Manager\-Config} \&}]{config2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classepos__manager_1_1EposManagerConfig_1_1AbstractParamDescription_a3b9539f05a3c4866b991ec1a73db2c8b}
+
+
+\-Implemented in {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Param\-Description$<$ T $>$} \doxyref{}{p.}{classepos__manager_1_1EposManagerConfig_1_1ParamDescription_a51c1044f699496321be8a10ad993242d}.
+
+\index{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}!clamp@{clamp}}
+\index{clamp@{clamp}!epos_manager::EposManagerConfig::AbstractParamDescription@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}}
+\subsubsection[{clamp}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description\-::clamp} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Epos\-Manager\-Config} \&}]{config, }
+\item[{const {\bf \-Epos\-Manager\-Config} \&}]{max, }
+\item[{const {\bf \-Epos\-Manager\-Config} \&}]{min}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classepos__manager_1_1EposManagerConfig_1_1AbstractParamDescription_aac4b3db1bd01b61fd0cb42bdb2d6d5be}
+
+
+\-Implemented in {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Param\-Description$<$ T $>$} \doxyref{}{p.}{classepos__manager_1_1EposManagerConfig_1_1ParamDescription_a544551a628bd264d2419d3f3b5725ca5}, and {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Param\-Description$<$ T $>$} \doxyref{}{p.}{classepos__manager_1_1EposManagerConfig_1_1ParamDescription_af582b456f6e7bded99773b5a5e92d440}.
+
+\index{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}!from\-Message@{from\-Message}}
+\index{from\-Message@{from\-Message}!epos_manager::EposManagerConfig::AbstractParamDescription@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}}
+\subsubsection[{from\-Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description\-::from\-Message} (
+\begin{DoxyParamCaption}
+\item[{const dynamic\-\_\-reconfigure\-::\-Config \&}]{msg, }
+\item[{{\bf \-Epos\-Manager\-Config} \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classepos__manager_1_1EposManagerConfig_1_1AbstractParamDescription_a5177e9675d2fd7667ca9a01226e96807}
+
+
+\-Implemented in {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Param\-Description$<$ T $>$} \doxyref{}{p.}{classepos__manager_1_1EposManagerConfig_1_1ParamDescription_a69e02a1d3043873681b18360617f183d}.
+
+\index{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}!from\-Server@{from\-Server}}
+\index{from\-Server@{from\-Server}!epos_manager::EposManagerConfig::AbstractParamDescription@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}}
+\subsubsection[{from\-Server}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description\-::from\-Server} (
+\begin{DoxyParamCaption}
+\item[{const ros\-::\-Node\-Handle \&}]{nh, }
+\item[{{\bf \-Epos\-Manager\-Config} \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classepos__manager_1_1EposManagerConfig_1_1AbstractParamDescription_aa2af65101d8947a74c89ef119cd71326}
+
+
+\-Implemented in {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Param\-Description$<$ T $>$} \doxyref{}{p.}{classepos__manager_1_1EposManagerConfig_1_1ParamDescription_a0ca8c69c7cb5f51e3eb873c7a6e965ed}.
+
+\index{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}!get\-Value@{get\-Value}}
+\index{get\-Value@{get\-Value}!epos_manager::EposManagerConfig::AbstractParamDescription@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}}
+\subsubsection[{get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description\-::get\-Value} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Epos\-Manager\-Config} \&}]{config, }
+\item[{boost\-::any \&}]{val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classepos__manager_1_1EposManagerConfig_1_1AbstractParamDescription_a8f40a2664b5c51b8bafdf7236fae719f}
+
+
+\-Implemented in {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Param\-Description$<$ T $>$} \doxyref{}{p.}{classepos__manager_1_1EposManagerConfig_1_1ParamDescription_a9fa5bb349055511fb8b4940a5e21c122}.
+
+\index{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}!to\-Message@{to\-Message}}
+\index{to\-Message@{to\-Message}!epos_manager::EposManagerConfig::AbstractParamDescription@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}}
+\subsubsection[{to\-Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description\-::to\-Message} (
+\begin{DoxyParamCaption}
+\item[{dynamic\-\_\-reconfigure\-::\-Config \&}]{msg, }
+\item[{const {\bf \-Epos\-Manager\-Config} \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classepos__manager_1_1EposManagerConfig_1_1AbstractParamDescription_a28c4806a48c6ef507cc9c4dffd8a8750}
+
+
+\-Implemented in {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Param\-Description$<$ T $>$} \doxyref{}{p.}{classepos__manager_1_1EposManagerConfig_1_1ParamDescription_a6c5cdb5051fa4536e6a345dcc818f228}.
+
+\index{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}!to\-Server@{to\-Server}}
+\index{to\-Server@{to\-Server}!epos_manager::EposManagerConfig::AbstractParamDescription@{epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description}}
+\subsubsection[{to\-Server}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Abstract\-Param\-Description\-::to\-Server} (
+\begin{DoxyParamCaption}
+\item[{const ros\-::\-Node\-Handle \&}]{nh, }
+\item[{const {\bf \-Epos\-Manager\-Config} \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classepos__manager_1_1EposManagerConfig_1_1AbstractParamDescription_a4895037fae4efc613e3d4bf8fe548332}
+
+
+\-Implemented in {\bf epos\-\_\-manager\-::\-Epos\-Manager\-Config\-::\-Param\-Description$<$ T $>$} \doxyref{}{p.}{classepos__manager_1_1EposManagerConfig_1_1ParamDescription_a8c9d2ca9c27703cdbdcdfaafc35ce000}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Epos\-Manager\-Config.\-h}\end{DoxyCompactItemize}

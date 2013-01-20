@@ -1,0 +1,266 @@
+\section{epos\-\_\-manager\-:\-:\-Motor\-Info\-\_\-$<$ \-Container\-Allocator $>$ \-Struct \-Template \-Reference}
+\label{structepos__manager_1_1MotorInfo__}\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-$<$ Container\-Allocator $>$@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-$<$ Container\-Allocator $>$}}
+
+
+{\ttfamily \#include $<$\-Motor\-Info.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::basic\-\_\-string\*
+$<$ char, std\-::char\-\_\-traits$<$ char $>$\*
+, typename \*
+\-Container\-Allocator\-::template \*
+rebind$<$ char $>$\-::other $>$ {\bf \-\_\-faults\-\_\-type}
+\item 
+typedef int32\-\_\-t {\bf \-\_\-motor\-\_\-current\-\_\-type}
+\item 
+typedef std\-::basic\-\_\-string\*
+$<$ char, std\-::char\-\_\-traits$<$ char $>$\*
+, typename \*
+\-Container\-Allocator\-::template \*
+rebind$<$ char $>$\-::other $>$ {\bf \-\_\-motor\-\_\-name\-\_\-type}
+\item 
+typedef int32\-\_\-t {\bf \-\_\-motor\-\_\-position\-\_\-type}
+\item 
+typedef int32\-\_\-t {\bf \-\_\-motor\-\_\-velocity\-\_\-type}
+\item 
+typedef uint16\-\_\-t {\bf \-\_\-node\-\_\-id\-\_\-type}
+\item 
+typedef ros\-::\-Time {\bf \-\_\-stamp\-\_\-type}
+\item 
+typedef uint16\-\_\-t {\bf \-\_\-state\-\_\-type}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ \-::{\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}\*
+$<$ \-Container\-Allocator $>$ const  $>$ {\bf \-Const\-Ptr}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ \-::{\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}\*
+$<$ \-Container\-Allocator $>$ $>$ {\bf \-Ptr}
+\item 
+typedef {\bf \-Motor\-Info\-\_\-}\*
+$<$ \-Container\-Allocator $>$ {\bf \-Type}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Motor\-Info\-\_\-} ()
+\item 
+{\bf \-Motor\-Info\-\_\-} (const \-Container\-Allocator \&\-\_\-alloc)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\-::shared\-\_\-ptr$<$ std\-::map\*
+$<$ std\-::string, std\-::string $>$ $>$ {\bf \-\_\-\-\_\-connection\-\_\-header}
+\item 
+std\-::basic\-\_\-string$<$ char, \*
+std\-::char\-\_\-traits$<$ char $>$\*
+, typename \*
+\-Container\-Allocator\-::template \*
+rebind$<$ char $>$\-::other $>$ {\bf faults}
+\item 
+int32\-\_\-t {\bf motor\-\_\-current}
+\item 
+std\-::basic\-\_\-string$<$ char, \*
+std\-::char\-\_\-traits$<$ char $>$\*
+, typename \*
+\-Container\-Allocator\-::template \*
+rebind$<$ char $>$\-::other $>$ {\bf motor\-\_\-name}
+\item 
+int32\-\_\-t {\bf motor\-\_\-position}
+\item 
+int32\-\_\-t {\bf motor\-\_\-velocity}
+\item 
+uint16\-\_\-t {\bf node\-\_\-id}
+\item 
+ros\-::\-Time {\bf stamp}
+\item 
+uint16\-\_\-t {\bf state}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$class Container\-Allocator$>$struct epos\-\_\-manager\-::\-Motor\-Info\-\_\-$<$ Container\-Allocator $>$}
+
+
+
+\-Definition at line 21 of file \-Motor\-Info.\-h.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-\_\-faults\-\_\-type@{\-\_\-faults\-\_\-type}}
+\index{\-\_\-faults\-\_\-type@{\-\_\-faults\-\_\-type}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-\_\-faults\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef std\-::basic\-\_\-string$<$char, std\-::char\-\_\-traits$<$char$>$, typename \-Container\-Allocator\-::template rebind$<$char$>$\-::other $>$ {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-faults\-\_\-type}}\label{structepos__manager_1_1MotorInfo___a00878aead7a39942d9bd39f889589e31}
+
+
+\-Definition at line 57 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-\_\-motor\-\_\-current\-\_\-type@{\-\_\-motor\-\_\-current\-\_\-type}}
+\index{\-\_\-motor\-\_\-current\-\_\-type@{\-\_\-motor\-\_\-current\-\_\-type}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-\_\-motor\-\_\-current\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef int32\-\_\-t {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-motor\-\_\-current\-\_\-type}}\label{structepos__manager_1_1MotorInfo___ae6ba080b21c6212171fade4cfc045c67}
+
+
+\-Definition at line 66 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-\_\-motor\-\_\-name\-\_\-type@{\-\_\-motor\-\_\-name\-\_\-type}}
+\index{\-\_\-motor\-\_\-name\-\_\-type@{\-\_\-motor\-\_\-name\-\_\-type}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-\_\-motor\-\_\-name\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef std\-::basic\-\_\-string$<$char, std\-::char\-\_\-traits$<$char$>$, typename \-Container\-Allocator\-::template rebind$<$char$>$\-::other $>$ {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-motor\-\_\-name\-\_\-type}}\label{structepos__manager_1_1MotorInfo___acc37a7d154008e1eee9c1de1ca344b88}
+
+
+\-Definition at line 51 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-\_\-motor\-\_\-position\-\_\-type@{\-\_\-motor\-\_\-position\-\_\-type}}
+\index{\-\_\-motor\-\_\-position\-\_\-type@{\-\_\-motor\-\_\-position\-\_\-type}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-\_\-motor\-\_\-position\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef int32\-\_\-t {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-motor\-\_\-position\-\_\-type}}\label{structepos__manager_1_1MotorInfo___a4a1d979a401e24bda5797a400eee8019}
+
+
+\-Definition at line 63 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-\_\-motor\-\_\-velocity\-\_\-type@{\-\_\-motor\-\_\-velocity\-\_\-type}}
+\index{\-\_\-motor\-\_\-velocity\-\_\-type@{\-\_\-motor\-\_\-velocity\-\_\-type}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-\_\-motor\-\_\-velocity\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef int32\-\_\-t {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-motor\-\_\-velocity\-\_\-type}}\label{structepos__manager_1_1MotorInfo___a1c7c2e7c3125883bfc18f0d7dc6777bf}
+
+
+\-Definition at line 60 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-\_\-node\-\_\-id\-\_\-type@{\-\_\-node\-\_\-id\-\_\-type}}
+\index{\-\_\-node\-\_\-id\-\_\-type@{\-\_\-node\-\_\-id\-\_\-type}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-\_\-node\-\_\-id\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef uint16\-\_\-t {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-node\-\_\-id\-\_\-type}}\label{structepos__manager_1_1MotorInfo___a8ad13a57c56281dfd1f2c4a7ba41e16e}
+
+
+\-Definition at line 48 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-\_\-stamp\-\_\-type@{\-\_\-stamp\-\_\-type}}
+\index{\-\_\-stamp\-\_\-type@{\-\_\-stamp\-\_\-type}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-\_\-stamp\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef ros\-::\-Time {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-stamp\-\_\-type}}\label{structepos__manager_1_1MotorInfo___a353db97bf56ddeb0a3ad4d0d56544503}
+
+
+\-Definition at line 69 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-\_\-state\-\_\-type@{\-\_\-state\-\_\-type}}
+\index{\-\_\-state\-\_\-type@{\-\_\-state\-\_\-type}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-\_\-state\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef uint16\-\_\-t {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-state\-\_\-type}}\label{structepos__manager_1_1MotorInfo___a8f62b87124919a6125d027fb583a1bc6}
+
+
+\-Definition at line 54 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-Const\-Ptr@{\-Const\-Ptr}}
+\index{\-Const\-Ptr@{\-Const\-Ptr}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-Const\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef boost\-::shared\-\_\-ptr$<$ \-::{\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$\-Container\-Allocator$>$ const$>$ {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-Const\-Ptr}}\label{structepos__manager_1_1MotorInfo___a11d462a544e4565b7a6c87f36247e2a7}
+
+
+\-Definition at line 74 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-Ptr@{\-Ptr}}
+\index{\-Ptr@{\-Ptr}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef boost\-::shared\-\_\-ptr$<$ \-::{\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$\-Container\-Allocator$>$ $>$ {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-Ptr}}\label{structepos__manager_1_1MotorInfo___a0c9cc8c6f25073dd7c48e39b3ceaadf7}
+
+
+\-Definition at line 73 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-Type@{\-Type}}
+\index{\-Type@{\-Type}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef {\bf \-Motor\-Info\-\_\-}$<$\-Container\-Allocator$>$ {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-Type}}\label{structepos__manager_1_1MotorInfo___aa254fb2fe5dd0aafd59b494dbf748a88}
+
+
+\-Definition at line 22 of file \-Motor\-Info.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-Motor\-Info\-\_\-@{\-Motor\-Info\-\_\-}}
+\index{\-Motor\-Info\-\_\-@{\-Motor\-Info\-\_\-}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-Motor\-Info\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-Motor\-Info\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{structepos__manager_1_1MotorInfo___acd40b85fead4c15f63d4c088ce757043}
+
+
+\-Definition at line 24 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-Motor\-Info\-\_\-@{\-Motor\-Info\-\_\-}}
+\index{\-Motor\-Info\-\_\-@{\-Motor\-Info\-\_\-}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-Motor\-Info\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-Motor\-Info\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{const \-Container\-Allocator \&}]{\-\_\-alloc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{structepos__manager_1_1MotorInfo___a7181cd0a40daf407e52c94e443a78dfa}
+
+
+\-Definition at line 36 of file \-Motor\-Info.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!\-\_\-\-\_\-connection\-\_\-header@{\-\_\-\-\_\-connection\-\_\-header}}
+\index{\-\_\-\-\_\-connection\-\_\-header@{\-\_\-\-\_\-connection\-\_\-header}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{\-\_\-\-\_\-connection\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ boost\-::shared\-\_\-ptr$<$std\-::map$<$std\-::string, std\-::string$>$ $>$ {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-\-\_\-connection\-\_\-header}}\label{structepos__manager_1_1MotorInfo___a33ec39ce9407d8d7322bc9026a48c797}
+
+
+\-Definition at line 75 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!faults@{faults}}
+\index{faults@{faults}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{faults}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ std\-::basic\-\_\-string$<$char, std\-::char\-\_\-traits$<$char$>$, typename \-Container\-Allocator\-::template rebind$<$char$>$\-::other $>$ {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf faults}}\label{structepos__manager_1_1MotorInfo___aa640db9a40cf4c822ff8b9216fb2f22b}
+
+
+\-Definition at line 58 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!motor\-\_\-current@{motor\-\_\-current}}
+\index{motor\-\_\-current@{motor\-\_\-current}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{motor\-\_\-current}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ int32\-\_\-t {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf motor\-\_\-current}}\label{structepos__manager_1_1MotorInfo___a85898e79fb769c0b16a571f0908d9bfd}
+
+
+\-Definition at line 67 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!motor\-\_\-name@{motor\-\_\-name}}
+\index{motor\-\_\-name@{motor\-\_\-name}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{motor\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ std\-::basic\-\_\-string$<$char, std\-::char\-\_\-traits$<$char$>$, typename \-Container\-Allocator\-::template rebind$<$char$>$\-::other $>$ {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf motor\-\_\-name}}\label{structepos__manager_1_1MotorInfo___a03c91963a4279131442b3caaf60bc835}
+
+
+\-Definition at line 52 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!motor\-\_\-position@{motor\-\_\-position}}
+\index{motor\-\_\-position@{motor\-\_\-position}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{motor\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ int32\-\_\-t {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf motor\-\_\-position}}\label{structepos__manager_1_1MotorInfo___a307aacb25bd47d3e1e90775e49f46d5e}
+
+
+\-Definition at line 64 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!motor\-\_\-velocity@{motor\-\_\-velocity}}
+\index{motor\-\_\-velocity@{motor\-\_\-velocity}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{motor\-\_\-velocity}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ int32\-\_\-t {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf motor\-\_\-velocity}}\label{structepos__manager_1_1MotorInfo___a409cdbc5cbf9b665b3aa0075f4c58031}
+
+
+\-Definition at line 61 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!node\-\_\-id@{node\-\_\-id}}
+\index{node\-\_\-id@{node\-\_\-id}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{node\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ uint16\-\_\-t {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf node\-\_\-id}}\label{structepos__manager_1_1MotorInfo___a19dcb985bf0687564bca4f4fa46443ef}
+
+
+\-Definition at line 49 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!stamp@{stamp}}
+\index{stamp@{stamp}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{stamp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ ros\-::\-Time {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf stamp}}\label{structepos__manager_1_1MotorInfo___aebdaebf9ad9c4f1f4212665fd2cff206}
+
+
+\-Definition at line 70 of file \-Motor\-Info.\-h.
+
+\index{epos\-\_\-manager\-::\-Motor\-Info\-\_\-@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}!state@{state}}
+\index{state@{state}!epos_manager::MotorInfo_@{epos\-\_\-manager\-::\-Motor\-Info\-\_\-}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ uint16\-\_\-t {\bf epos\-\_\-manager\-::\-Motor\-Info\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf state}}\label{structepos__manager_1_1MotorInfo___aa79dcaa8ea2171d081cc17d70f23001a}
+
+
+\-Definition at line 55 of file \-Motor\-Info.\-h.
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Motor\-Info.\-h}\end{DoxyCompactItemize}
