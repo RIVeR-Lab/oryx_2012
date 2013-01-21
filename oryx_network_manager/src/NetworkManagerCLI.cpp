@@ -3,6 +3,9 @@
  *
  *  Created on: Nov 18, 2012
  *      Author: mitchell
+ *
+ *  A simple command line interface to talk to the Oryx Network Manager
+ *  Each command is broken out into a function
  */
 
 #include "ros/ros.h"
@@ -50,8 +53,8 @@ void list_active_connections_callback(const ActiveNetworkConnections::ConstPtr& 
   for (unsigned int i = 0; i < active_connections->list.size(); ++i)
   {
     ActiveNetworkConnection connection = active_connections->list[i];
-    printf("\t%s on %s: %d\n", connection.connection.name.c_str(), connection.device.iface.c_str(),
-        connection.connection_state);
+    printf("\t%s on %s: %d, %d\n", connection.connection.name.c_str(), connection.device.iface.c_str(),
+        connection.connection_state, connection.device.state);
     if (!connection.ipv4_address.empty())
       printf("\t\tIPv4 Address: %s\n", connection.ipv4_address.c_str());
     printf("\n");
@@ -74,7 +77,7 @@ void list_devices_callback(const NetworkDevices::ConstPtr& devices, bool run_onc
   for (unsigned int i = 0; i < devices->list.size(); ++i)
   {
     oryx_network_manager::NetworkDevice device = devices->list[i];
-    printf("\t%s (%s)\n", device.iface.c_str(), device.product.c_str());
+    printf("\t%s (%s): %d\n", device.iface.c_str(), device.product.c_str(), device.state);
     printf("\t\t%s Device\n", device.device_type.c_str());
     if (!device.driver.empty())
       printf("\t\tDriver: %s\n", device.driver.c_str());

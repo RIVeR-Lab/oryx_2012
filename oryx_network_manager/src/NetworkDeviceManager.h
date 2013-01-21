@@ -3,6 +3,8 @@
  *
  *  Created on: Nov 28, 2012
  *      Author: mitchell
+ *
+ * A class which handles changes in the connected network devices and provides a service to retrieve the connected devices
  */
 
 #ifndef NETWORKDEVICEMANAGER_H_

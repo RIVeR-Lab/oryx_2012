@@ -1,2 +1,2 @@
 Some awesome config
-wlan0,X3EY8
+wlan0,WPI Wireless

@@ -10,6 +10,9 @@
 
 #include "std_msgs/Header.h"
 
+/**
+ * fill in values in a ROS header message
+ */
 static inline void fill_header_message(std_msgs::Header& header, uint32_t seq){
   header.frame_id = "0";
   header.seq = seq;

@@ -23,7 +23,7 @@ rosbuild_genmsg()
 rosbuild_gensrv()
 
 
-rosbuild_add_executable(server src/NetworkManagerServer.cpp src/NetworkDeviceManager.cpp src/NetworkConnectionManager.cpp src/ActiveNetworkConnectionManager.cpp src/ActivateConnectionService.cpp)
+rosbuild_add_executable(server src/NetworkManagerServer.cpp src/NetworkDeviceManager.cpp src/NetworkConnectionManager.cpp src/ActiveNetworkConnectionManager.cpp src/ActivateConnectionService.cpp src/NetworkConfigurationManager.cpp)
 pkg_check_modules(LIB_NM REQUIRED dbus-1 glib-2.0 dbus-glib-1 libnm-glib libnm-util)
 include_directories(${LIB_NM_INCLUDE_DIRS})
 link_directories(${LIB_NM_LIBRARY_DIRS})

@@ -3,6 +3,8 @@
  *
  *  Created on: Nov 28, 2012
  *      Author: mitchell
+ *
+ * A class which handles changes in the active connections and provides a service to retrieve the active connections
  */
 
 #ifndef ACTIVENETWORKCONNECTIONMANAGER_H_

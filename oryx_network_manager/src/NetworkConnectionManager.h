@@ -3,6 +3,8 @@
  *
  *  Created on: Nov 28, 2012
  *      Author: mitchell
+ *
+ * A class which handles changes in the connections and provides a service to retrieve the connections
  */
 
 #ifndef NETWORKCONNECTIONMANAGER_H_

@@ -23,7 +23,7 @@ void NetworkConnectionManager::process_added_connection(NMConnection *connection
 {
   g_signal_connect(connection, NM_REMOTE_CONNECTION_UPDATED, G_CALLBACK(connection_updated_cb), this);
   g_signal_connect(connection, NM_REMOTE_CONNECTION_REMOVED, G_CALLBACK(connection_removed_cb), this);
-  ROS_INFO("Network Connection Added: %s", nm_connection_get_path(connection));
+  ROS_DEBUG("Network Connection Added: %s", nm_connection_get_path(connection));
 
   NetworkConnection connection_info;
   fill_connection_info(connection, connection_info);
@@ -35,14 +35,14 @@ void NetworkConnectionManager::process_removed_connection(NMConnection *connecti
 {
   //g_signal_handlers_disconnect_by_func(connection, (gpointer)G_CALLBACK (connection_removed_cb), this);
   //g_signal_handlers_disconnect_by_func(connection, (gpointer)G_CALLBACK (connection_updated_cb), this);
-  ROS_INFO("Network Connection Removed: %s", nm_connection_get_path(connection));
+  ROS_DEBUG("Network Connection Removed: %s", nm_connection_get_path(connection));
   connections.erase(nm_connection_get_path(connection));
 
   publish_connections();
 }
 void NetworkConnectionManager::process_updated_connection(NMConnection* connection)
 {
-  ROS_INFO("Network Connection Updated: %s", nm_connection_get_path(connection));
+  ROS_DEBUG("Network Connection Updated: %s", nm_connection_get_path(connection));
   NetworkConnection connection_info;
   fill_connection_info(connection, connection_info);
   connections[nm_connection_get_path(connection)] = connection_info;

@@ -3,6 +3,8 @@
  *
  *  Created on: Nov 28, 2012
  *      Author: mitchell
+ *
+ * A class which provides a service which allows for activating a network connection on a network device
  */
 
 #ifndef ACTIVATECONNECTIONSERVICE_H_

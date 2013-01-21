@@ -26,7 +26,7 @@ NetworkDeviceManager::NetworkDeviceManager(ros::NodeHandle& handle, NMClient* cl
 
 void NetworkDeviceManager::process_added_device(NMDevice *device)
 {
-  ROS_INFO("Network Device Added: %s", nm_device_get_iface(device));
+  ROS_DEBUG("Network Device Added: %s", nm_device_get_iface(device));
   g_signal_connect(device, "state-changed", G_CALLBACK (device_state_changed_cb), this);
 
   NetworkDevice device_info;
@@ -37,7 +37,7 @@ void NetworkDeviceManager::process_added_device(NMDevice *device)
 }
 void NetworkDeviceManager::process_removed_device(NMDevice *device)
 {
-  ROS_INFO("Network Device Removed: %s", nm_device_get_iface(device));
+  ROS_DEBUG("Network Device Removed: %s", nm_device_get_iface(device));
   //g_signal_handlers_disconnect_by_func(device, (gpointer)G_CALLBACK (device_state_changed_cb), this);
 
   devices.erase(nm_device_get_iface(device));
@@ -46,7 +46,7 @@ void NetworkDeviceManager::process_removed_device(NMDevice *device)
 }
 void NetworkDeviceManager::process_device_state_changed(NMDevice *device, NMDeviceState state)
 {
-  ROS_INFO("Network Device State Changed: %s -> %d", nm_device_get_iface(device), state);
+  ROS_DEBUG("Network Device State Changed: %s -> %d", nm_device_get_iface(device), state);
 
   NetworkDevice device_info;
   fill_device_info(device, device_info);
