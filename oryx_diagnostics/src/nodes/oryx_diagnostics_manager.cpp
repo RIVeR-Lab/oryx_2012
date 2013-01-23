@@ -5,7 +5,7 @@
  * @brief	//TODO fill in detailed discription here
  */
 #include<ros/ros.h>
-#include<oryx_msgs/DiagnositicsRegistration.h>
+#include<oryx_diagnostics/DiagnosticsRegistration.h>
 #include<oryx_msgs/Heartbeat.h>
 #include<oryx_msgs/SoftwareStop.h>
 #include<oryx_diagnostics/DiagnosticsCommand.h>
@@ -122,8 +122,8 @@ private:
 	 * @param res The service response
 	 * @return TRUE if sucessful, else false
 	 */
-	bool regCB(	oryx_msgs::DiagnositicsRegistration::Request& req,
-			oryx_msgs::DiagnositicsRegistration::Response& res){
+	bool regCB(	oryx_diagnostics::DiagnosticsRegistration::Request& req,
+			oryx_diagnostics::DiagnosticsRegistration::Response& res){
 		try{
 			res.node_id = this->nodes_.registerNode(req.node_name, req.node_type, req.criticality, req.heartbeat_frequency, req.heartbeat_tolerence);
 			res.success = true;
