@@ -33,11 +33,23 @@ private:
 	typedef function<bool (string& data, oryx_diagnostics::DiagnosticsCommand::Response& response)> command_func_;	///Typedef defining a function object wrapper specifying the callback signature of commands
 	typedef unordered_map<string, command_func_> command_map;
 public:
+	/**
+	 * Constructor for creating a new DiagnosticsManager
+	 * @author Adam Panzica
+	 * @param name The node name of the node containg the diagnostics manager
+	 * @param nh NodeHandel to access parameters/ros system
+	 */
 	DiagnosticsManager(const string& name, ros::NodeHandle& nh);
 	virtual ~DiagnosticsManager();
 
+	/**
+	 * Prints a list of all currently registered nodes to ROS_INFO
+	 */
 	void printList();
 
+	/**
+	 * Begins the actual operation of performing diagnostics checks. Will run as long as ros::ok() returns true
+	 */
 	void runDiagnostics();
 
 private:
@@ -54,7 +66,14 @@ private:
 	command_map commands_;			///unordered_map mapping the string command name with its function
 
 	/**
+	 * Handles registering commands with the system
+	 * @author Adam Panzica
+	 */
+	void registerCommands();
+
+	/**
 	 * Callback for processing requests to register new nodes with oryx_diagnostics
+	 * @author Adam Panzica
 	 * @param req The service request
 	 * @param res The service response
 	 * @return TRUE if sucessful, else false
@@ -64,12 +83,14 @@ private:
 
 	/**
 	 * Callback for handling receiving heartbeat messages from nodes
+	 * @author Adam Panzica
 	 */
 	void hbCB(const oryx_msgs::HeartbeatConstPtr& msg);
 
 
 	/**
 	 * Callback for servicing DiagnosticsCommand services
+	 * @author Adam Panzica
 	 * @param req The service request
 	 * @param response The service response
 	 * @return TRUE if sucessful, else false
@@ -80,6 +101,7 @@ private:
 	/**
 	 * Callback for handling the "node_list" command. Fills the response.data field with the same string as would result
 	 * from calling DiagnosticsManager::printList
+	 * @author Adam Panzica
 	 * @param data The callback argument data (in this case, ignored)
 	 * @param response The DiagnosticsCommand::Response reference to fill with data
 	 * @return TRUE if sucessful, else FALSE
