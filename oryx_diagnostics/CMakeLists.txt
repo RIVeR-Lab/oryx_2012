@@ -34,5 +34,5 @@ include_directories("${PROJECT_SOURCE_DIR}/src/helpers")
 
 rosbuild_add_boost_directories()
 rosbuild_add_library(${PROJECT_NAME} src/helpers/NodeManager.cpp)
-rosbuild_add_executable(oryx_diagnostics_manager src/nodes/oryx_diagnostics_manager.cpp src/helpers/NodeManager.cpp)
+rosbuild_add_executable(oryx_diagnostics_manager src/nodes/oryx_diagnostics_manager.cpp src/helpers/NodeManager.cpp src/helpers/DiagnosticsManager.cpp)
 rosbuild_add_executable(oryx_diagnostics_client src/nodes/oryx_diagnostics_client.cpp src/helpers/NodeManager.cpp)
