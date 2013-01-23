@@ -34,7 +34,7 @@ private:
 	typedef unordered_map<string, command_func_> command_map;
 public:
 	DiagnosticsManager(const string& name, ros::NodeHandle& nh);
-	virtual ~DiagnosticsManager(){};
+	virtual ~DiagnosticsManager();
 
 	void printList();
 
