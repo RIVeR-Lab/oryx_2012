@@ -54,16 +54,40 @@ public:
 
 private:
 	string			name_;
+	/**
+	 * NodeManger containing a database of all currently registered nodes
+	 */
 	NodeManager			nodes_;
+	/**
+	 * ROS NodeHandle
+	 */
 	ros::NodeHandle		nh_;
+	/**
+	 * ROS service server for DiagnosticsRegistration
+	 */
 	ros::ServiceServer	reg_srv_;
+	/**
+	 * ROS service server for DiagnosticsCommands
+	 */
 	ros::ServiceServer  com_srv_;
+	/**
+	 * ROS Subscriber to Hearbeat messages
+	 */
 	ros::Subscriber		hb_sub_;
+	/**
+	 * ROS publisher for SoftwareStop messages
+	 */
 	ros::Publisher		soft_stop_pub_;
+	/**
+	 * The Duration that represents the maximum acceptable skew between a heartbeat being sent out and recieved
+	 */
 	ros::Duration		max_skew_;
 
 
-	command_map commands_;			///unordered_map mapping the string command name with its function
+	/**
+	 * unordered_map between string command keywords and their callback functions
+	 */
+	command_map commands_;
 
 	/**
 	 * Handles registering commands with the system
