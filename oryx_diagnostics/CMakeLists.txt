@@ -28,7 +28,7 @@ rosbuild_gensrv()
 #rosbuild_link_boost(${PROJECT_NAME} thread)
 #rosbuild_add_executable(example examples/example.cpp)
 #target_link_libraries(example ${PROJECT_NAME})
-include_directories("${PROJECT_SOURCE_DIR}/src/includes")
+include_directories("${PROJECT_SOURCE_DIR}/include")
 include_directories("${PROJECT_SOURCE_DIR}/src/nodes")
 include_directories("${PROJECT_SOURCE_DIR}/src/helpers")
 
