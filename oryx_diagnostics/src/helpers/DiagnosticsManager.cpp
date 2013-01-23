@@ -10,10 +10,10 @@
 namespace oryx_diagnostics{
 
 DiagnosticsManager::DiagnosticsManager(const string& name, ros::NodeHandle& nh):
-				name_(name),
-				nodes_(),
-				nh_(nh),
-				max_skew_(1.0/250.0){
+						name_(name),
+						nodes_(),
+						nh_(nh),
+						max_skew_(1.0/250.0){
 	//Printout startup information
 	ROS_INFO_STREAM("Setting Up Oryx Diagnostics Manager <"<<name<<">...");
 
@@ -25,7 +25,13 @@ DiagnosticsManager::DiagnosticsManager(const string& name, ros::NodeHandle& nh):
 
 	//Register itself with its node manager
 	this->nodes_.registerNode(name,"diagnostics_manager",0,-1,0);
+	//Register commands
+	this->registerCommands();
 
+}
+DiagnosticsManager::~DiagnosticsManager(){};
+
+void DiagnosticsManager::registerCommands(){
 	//Register valid commands for communication with oryx_diagnostics_client
 	this->commands_["node_list"]=boost::bind(&DiagnosticsManager::listCB, this, _1, _2);
 
@@ -34,9 +40,7 @@ DiagnosticsManager::DiagnosticsManager(const string& name, ros::NodeHandle& nh):
 	BOOST_FOREACH(command_map::value_type item, this->commands_){
 		ROS_INFO("Registered Command: %s", item.first.c_str());
 	}
-
 }
-DiagnosticsManager::~DiagnosticsManager(){};
 
 void DiagnosticsManager::printList(){
 	stringstream output;
