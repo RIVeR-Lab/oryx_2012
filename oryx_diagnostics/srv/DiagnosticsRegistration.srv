@@ -18,15 +18,18 @@ string node_type
 #criticalities are simply for diagnostics purpose/reserved for future use
 uint8 criticality   
 
-#The cuttoff heartbeat frequency for the node, in Hz. If the heartbeat rate of the node is below this frequency, action will
+#The cuttoff heartbeat frequency for the node, in ms. If the heartbeat rate of the node is longer than this time, action will
 #be taken depending on the tolerence parameter in the message
 uint32 heartbeat_frequency
 
-#The tolerence for detecting heartbeat failures, in Hz. A tolerence of zero means that a heartbeat falure will be triggered
-#as soon as the heartbeat frequency exceeds the heartbeat_frequency parameter. A value of 5Hz would mean that as long as the
-#heartbeat is within 5Hz of the expected frequency a failure will not be triggered, but a warning message will be logged.
+#The tolerence for detecting heartbeat failures, in ms. A tolerence of zero means that a heartbeat falure will be triggered
+#as soon as the heartbeat duration exceeds the heartbeat_frequency parameter. A value of 5ms would mean that as long as the
+#heartbeat is within 5ms of the expected duration a failure will not be triggered, but a warning message will be logged.
 uint32 heartbeat_tolerence
 ---
 #Response containing the node_id that should be sent with all diagnostics messages
 bool   success
+#unique node id to be used with all node-specific communication
 uint16 node_id
+#If success is false, this will contain a detailed discription as to why registration failed
+string message
