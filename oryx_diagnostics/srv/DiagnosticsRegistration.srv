@@ -1,0 +1,35 @@
+#Service type for regstering with the oryx_diagnostics package. The node requesting registration sends its details to the
+#diagnostics package, and recieves a reply containg its unique identifier ID that it should use when communicating with the
+#diagnostics nodes
+
+#Header
+Header header
+
+#Node information
+
+#A descriptive name of the node (should be whatever it's called in the ros namespace)
+string node_name
+
+#The type of the node (should be whatever the actual TYPE of the node is, not its unique name) 
+string node_type  
+
+#The criticality of the node, with 0 being the most critical. Nodes of criticality 0 will cause a
+#software-stop message to be sent out over the wire informing the node-graph that a critical node has failed. Lesser
+#criticalities are simply for diagnostics purpose/reserved for future use
+uint8 criticality   
+
+#The cuttoff heartbeat frequency for the node, in ms. If the heartbeat rate of the node is longer than this time, action will
+#be taken depending on the tolerence parameter in the message
+uint32 heartbeat_frequency
+
+#The tolerence for detecting heartbeat failures, in ms. A tolerence of zero means that a heartbeat falure will be triggered
+#as soon as the heartbeat duration exceeds the heartbeat_frequency parameter. A value of 5ms would mean that as long as the
+#heartbeat is within 5ms of the expected duration a failure will not be triggered, but a warning message will be logged.
+uint32 heartbeat_tolerence
+---
+#Response containing the node_id that should be sent with all diagnostics messages
+bool   success
+#unique node id to be used with all node-specific communication
+uint16 node_id
+#If success is false, this will contain a detailed discription as to why registration failed
+string message

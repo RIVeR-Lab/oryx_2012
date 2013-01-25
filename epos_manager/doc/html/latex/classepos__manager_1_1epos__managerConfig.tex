@@ -1,0 +1,354 @@
+\section{epos\-\_\-manager\-:\-:epos\-\_\-manager\-Config \-Class \-Reference}
+\label{classepos__manager_1_1epos__managerConfig}\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+
+
+{\ttfamily \#include $<$epos\-\_\-manager\-Config.\-h$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf \-Abstract\-Group\-Description}
+\item 
+class {\bf \-Abstract\-Param\-Description}
+\item 
+class {\bf \-D\-E\-F\-A\-U\-L\-T}
+\item 
+class {\bf \-Group\-Description}
+\item 
+class {\bf \-Param\-Description}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ const \*
+{\bf \-Abstract\-Group\-Description} $>$ {\bf \-Abstract\-Group\-Description\-Const\-Ptr}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ {\bf \-Abstract\-Group\-Description} $>$ {\bf \-Abstract\-Group\-Description\-Ptr}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ const \*
+{\bf \-Abstract\-Param\-Description} $>$ {\bf \-Abstract\-Param\-Description\-Const\-Ptr}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ {\bf \-Abstract\-Param\-Description} $>$ {\bf \-Abstract\-Param\-Description\-Ptr}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf \-\_\-\-\_\-clamp\-\_\-\-\_\-} ()
+\item 
+bool {\bf \-\_\-\-\_\-from\-Message\-\_\-\-\_\-} (dynamic\-\_\-reconfigure\-::\-Config \&msg)
+\item 
+void {\bf \-\_\-\-\_\-from\-Server\-\_\-\-\_\-} (const ros\-::\-Node\-Handle \&nh)
+\item 
+uint32\-\_\-t {\bf \-\_\-\-\_\-level\-\_\-\-\_\-} (const {\bf epos\-\_\-manager\-Config} \&config) const 
+\item 
+void {\bf \-\_\-\-\_\-to\-Message\-\_\-\-\_\-} (dynamic\-\_\-reconfigure\-::\-Config \&msg, const std\-::vector$<$ {\bf \-Abstract\-Param\-Description\-Const\-Ptr} $>$ \&\-\_\-\-\_\-param\-\_\-descriptions\-\_\-\-\_\-, const std\-::vector$<$ {\bf \-Abstract\-Group\-Description\-Const\-Ptr} $>$ \&\-\_\-\-\_\-group\-\_\-descriptions\-\_\-\-\_\-) const 
+\item 
+void {\bf \-\_\-\-\_\-to\-Message\-\_\-\-\_\-} (dynamic\-\_\-reconfigure\-::\-Config \&msg) const 
+\item 
+void {\bf \-\_\-\-\_\-to\-Server\-\_\-\-\_\-} (const ros\-::\-Node\-Handle \&nh) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const {\bf epos\-\_\-manager\-Config} \& {\bf \-\_\-\-\_\-get\-Default\-\_\-\-\_\-} ()
+\item 
+static const \*
+dynamic\-\_\-reconfigure\-::\-Config\-Description \& {\bf \-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-} ()
+\item 
+static const std\-::vector\*
+$<$ {\bf \-Abstract\-Group\-Description\-Const\-Ptr} $>$ \& {\bf \-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-} ()
+\item 
+static const {\bf epos\-\_\-manager\-Config} \& {\bf \-\_\-\-\_\-get\-Max\-\_\-\-\_\-} ()
+\item 
+static const {\bf epos\-\_\-manager\-Config} \& {\bf \-\_\-\-\_\-get\-Min\-\_\-\-\_\-} ()
+\item 
+static const std\-::vector\*
+$<$ {\bf \-Abstract\-Param\-Description\-Const\-Ptr} $>$ \& {\bf \-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf \-Disable\-\_\-\-Motor}
+\item 
+class \*
+{\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-D\-E\-F\-A\-U\-L\-T} {\bf groups}
+\item 
+int {\bf \-Position\-\_\-\-Profile\-\_\-\-Acceleration}
+\item 
+int {\bf \-Position\-\_\-\-Profile\-\_\-\-Deceleration}
+\item 
+int {\bf \-Position\-\_\-\-Profile\-\_\-\-Velocity}
+\item 
+bool {\bf \-Reinitialize\-\_\-\-Motor}
+\item 
+int {\bf \-Velocity\-\_\-\-Profile\-\_\-\-Acceleration}
+\item 
+int {\bf \-Velocity\-\_\-\-Profile\-\_\-\-Deceleration}
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \*
+{\bf epos\-\_\-manager\-Config\-Statics} $\ast$ {\bf \-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 63 of file epos\-\_\-manager\-Config.\-h.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-Abstract\-Group\-Description\-Const\-Ptr@{\-Abstract\-Group\-Description\-Const\-Ptr}}
+\index{\-Abstract\-Group\-Description\-Const\-Ptr@{\-Abstract\-Group\-Description\-Const\-Ptr}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-Abstract\-Group\-Description\-Const\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<$const {\bf \-Abstract\-Group\-Description}$>$ {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-Abstract\-Group\-Description\-Const\-Ptr}}\label{classepos__manager_1_1epos__managerConfig_ac6431d734aee710db1234bd446d81f91}
+
+
+\-Definition at line 175 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-Abstract\-Group\-Description\-Ptr@{\-Abstract\-Group\-Description\-Ptr}}
+\index{\-Abstract\-Group\-Description\-Ptr@{\-Abstract\-Group\-Description\-Ptr}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-Abstract\-Group\-Description\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf \-Abstract\-Group\-Description}$>$ {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-Abstract\-Group\-Description\-Ptr}}\label{classepos__manager_1_1epos__managerConfig_a843f6b8f480e7c23040a9ef9834f2ec0}
+
+
+\-Definition at line 174 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-Abstract\-Param\-Description\-Const\-Ptr@{\-Abstract\-Param\-Description\-Const\-Ptr}}
+\index{\-Abstract\-Param\-Description\-Const\-Ptr@{\-Abstract\-Param\-Description\-Const\-Ptr}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-Abstract\-Param\-Description\-Const\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<$const {\bf \-Abstract\-Param\-Description}$>$ {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-Abstract\-Param\-Description\-Const\-Ptr}}\label{classepos__manager_1_1epos__managerConfig_a8d4b84ec87b58d61e089bf43a7481804}
+
+
+\-Definition at line 89 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-Abstract\-Param\-Description\-Ptr@{\-Abstract\-Param\-Description\-Ptr}}
+\index{\-Abstract\-Param\-Description\-Ptr@{\-Abstract\-Param\-Description\-Ptr}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-Abstract\-Param\-Description\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf \-Abstract\-Param\-Description}$>$ {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-Abstract\-Param\-Description\-Ptr}}\label{classepos__manager_1_1epos__managerConfig_aad00926686b69d86fd2512646530ef31}
+
+
+\-Definition at line 88 of file epos\-\_\-manager\-Config.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-clamp\-\_\-\-\_\-@{\-\_\-\-\_\-clamp\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-clamp\-\_\-\-\_\-@{\-\_\-\-\_\-clamp\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-clamp\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-clamp\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classepos__manager_1_1epos__managerConfig_acab9288b1b0d3ccd15d62d9149cd4081}
+
+
+\-Definition at line 399 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-from\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-from\-Message\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-from\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-from\-Message\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-from\-Message\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-from\-Message\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{dynamic\-\_\-reconfigure\-::\-Config \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classepos__manager_1_1epos__managerConfig_aa1e271a8ebd098d2a0f4b845e777e002}
+
+
+\-Definition at line 308 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-from\-Server\-\_\-\-\_\-@{\-\_\-\-\_\-from\-Server\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-from\-Server\-\_\-\-\_\-@{\-\_\-\-\_\-from\-Server\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-from\-Server\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-from\-Server\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{const ros\-::\-Node\-Handle \&}]{nh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classepos__manager_1_1epos__managerConfig_a6cd004162e7afc21f83f7d163d4f847b}
+
+
+\-Definition at line 381 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-@{\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-@{\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf epos\-\_\-manager\-Config\-Statics} $\ast$ {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static, private]}}\label{classepos__manager_1_1epos__managerConfig_a1712ee447d9c7af12de8bdb46dafbc21}
+
+
+\-Definition at line 573 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-get\-Default\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Default\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Default\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Default\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Default\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf epos\-\_\-manager\-Config} \& {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-get\-Default\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classepos__manager_1_1epos__managerConfig_aedb96e7941e542e2807f5105308ddec3}
+
+
+\-Definition at line 548 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const dynamic\-\_\-reconfigure\-::\-Config\-Description \& {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classepos__manager_1_1epos__managerConfig_a047ca3ca7b116b4afdb053d995258354}
+
+
+\-Definition at line 543 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$ {\bf epos\-\_\-manager\-Config\-::\-Abstract\-Group\-Description\-Const\-Ptr} $>$ \& {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classepos__manager_1_1epos__managerConfig_a2d98e7a8ddcc0748e57fcc994ea16fe3}
+
+
+\-Definition at line 568 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-get\-Max\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Max\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Max\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Max\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Max\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf epos\-\_\-manager\-Config} \& {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-get\-Max\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classepos__manager_1_1epos__managerConfig_a7a494797972c7dcca2f305e79eba0d4e}
+
+
+\-Definition at line 553 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-get\-Min\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Min\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Min\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Min\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Min\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf epos\-\_\-manager\-Config} \& {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-get\-Min\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classepos__manager_1_1epos__managerConfig_a27ea594d96a17102ce292c3fed446056}
+
+
+\-Definition at line 558 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$ {\bf epos\-\_\-manager\-Config\-::\-Abstract\-Param\-Description\-Const\-Ptr} $>$ \& {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classepos__manager_1_1epos__managerConfig_a2840eafcd1d8095e3d6ea5b4cf67242c}
+
+
+\-Definition at line 563 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-level\-\_\-\-\_\-@{\-\_\-\-\_\-level\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-level\-\_\-\-\_\-@{\-\_\-\-\_\-level\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-level\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-level\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{const {\bf epos\-\_\-manager\-Config} \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline]}}\label{classepos__manager_1_1epos__managerConfig_a49b929cfbf073f721d496da18cae7e10}
+
+
+\-Definition at line 408 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-to\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-to\-Message\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{dynamic\-\_\-reconfigure\-::\-Config \&}]{msg, }
+\item[{const std\-::vector$<$ {\bf \-Abstract\-Param\-Description\-Const\-Ptr} $>$ \&}]{\-\_\-\-\_\-param\-\_\-descriptions\-\_\-\-\_\-, }
+\item[{const std\-::vector$<$ {\bf \-Abstract\-Group\-Description\-Const\-Ptr} $>$ \&}]{\-\_\-\-\_\-group\-\_\-descriptions\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline]}}\label{classepos__manager_1_1epos__managerConfig_a3ae661f6f4685f18a840e446bc6c82d6}
+
+
+\-Definition at line 352 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-to\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-to\-Message\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{dynamic\-\_\-reconfigure\-::\-Config \&}]{msg}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline]}}\label{classepos__manager_1_1epos__managerConfig_a26d0309f7492e5ac00fd9d42af717172}
+
+
+\-Definition at line 367 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-\_\-\-\_\-to\-Server\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Server\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-to\-Server\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Server\-\_\-\-\_\-}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-\_\-\-\_\-to\-Server\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-\_\-\-\_\-to\-Server\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{const ros\-::\-Node\-Handle \&}]{nh}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline]}}\label{classepos__manager_1_1epos__managerConfig_aa33bf0c1ea7988f0bdc5324c9e093a77}
+
+
+\-Definition at line 374 of file epos\-\_\-manager\-Config.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-Disable\-\_\-\-Motor@{\-Disable\-\_\-\-Motor}}
+\index{\-Disable\-\_\-\-Motor@{\-Disable\-\_\-\-Motor}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-Disable\-\_\-\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-Disable\-\_\-\-Motor}}\label{classepos__manager_1_1epos__managerConfig_a7f8f0f6d784a9c37b7ce82c811cab966}
+
+
+\-Definition at line 303 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!groups@{groups}}
+\index{groups@{groups}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{groups}]{\setlength{\rightskip}{0pt plus 5cm}class {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-D\-E\-F\-A\-U\-L\-T} {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::groups}}\label{classepos__manager_1_1epos__managerConfig_ae88afd819c82c5d46c72ec0a9df3711c}
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-Position\-\_\-\-Profile\-\_\-\-Acceleration@{\-Position\-\_\-\-Profile\-\_\-\-Acceleration}}
+\index{\-Position\-\_\-\-Profile\-\_\-\-Acceleration@{\-Position\-\_\-\-Profile\-\_\-\-Acceleration}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-Position\-\_\-\-Profile\-\_\-\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-Position\-\_\-\-Profile\-\_\-\-Acceleration}}\label{classepos__manager_1_1epos__managerConfig_a08833c6418cdde97dece1ce329b21c95}
+
+
+\-Definition at line 295 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-Position\-\_\-\-Profile\-\_\-\-Deceleration@{\-Position\-\_\-\-Profile\-\_\-\-Deceleration}}
+\index{\-Position\-\_\-\-Profile\-\_\-\-Deceleration@{\-Position\-\_\-\-Profile\-\_\-\-Deceleration}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-Position\-\_\-\-Profile\-\_\-\-Deceleration}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-Position\-\_\-\-Profile\-\_\-\-Deceleration}}\label{classepos__manager_1_1epos__managerConfig_a8d6403b9c17e53359355965e939cbebb}
+
+
+\-Definition at line 297 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-Position\-\_\-\-Profile\-\_\-\-Velocity@{\-Position\-\_\-\-Profile\-\_\-\-Velocity}}
+\index{\-Position\-\_\-\-Profile\-\_\-\-Velocity@{\-Position\-\_\-\-Profile\-\_\-\-Velocity}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-Position\-\_\-\-Profile\-\_\-\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-Position\-\_\-\-Profile\-\_\-\-Velocity}}\label{classepos__manager_1_1epos__managerConfig_a9b0381dc3abf1e2da6e4837e65fbdfaf}
+
+
+\-Definition at line 293 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-Reinitialize\-\_\-\-Motor@{\-Reinitialize\-\_\-\-Motor}}
+\index{\-Reinitialize\-\_\-\-Motor@{\-Reinitialize\-\_\-\-Motor}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-Reinitialize\-\_\-\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-Reinitialize\-\_\-\-Motor}}\label{classepos__manager_1_1epos__managerConfig_ac1d6f817216be3de0566b5fb744ac37a}
+
+
+\-Definition at line 305 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-Velocity\-\_\-\-Profile\-\_\-\-Acceleration@{\-Velocity\-\_\-\-Profile\-\_\-\-Acceleration}}
+\index{\-Velocity\-\_\-\-Profile\-\_\-\-Acceleration@{\-Velocity\-\_\-\-Profile\-\_\-\-Acceleration}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-Velocity\-\_\-\-Profile\-\_\-\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-Velocity\-\_\-\-Profile\-\_\-\-Acceleration}}\label{classepos__manager_1_1epos__managerConfig_afadd32544729b0ac8498c009e23d6253}
+
+
+\-Definition at line 299 of file epos\-\_\-manager\-Config.\-h.
+
+\index{epos\-\_\-manager\-::epos\-\_\-manager\-Config@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}!\-Velocity\-\_\-\-Profile\-\_\-\-Deceleration@{\-Velocity\-\_\-\-Profile\-\_\-\-Deceleration}}
+\index{\-Velocity\-\_\-\-Profile\-\_\-\-Deceleration@{\-Velocity\-\_\-\-Profile\-\_\-\-Deceleration}!epos_manager::epos_managerConfig@{epos\-\_\-manager\-::epos\-\_\-manager\-Config}}
+\subsubsection[{\-Velocity\-\_\-\-Profile\-\_\-\-Deceleration}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf epos\-\_\-manager\-::epos\-\_\-manager\-Config\-::\-Velocity\-\_\-\-Profile\-\_\-\-Deceleration}}\label{classepos__manager_1_1epos__managerConfig_a6f844ebb3a7814046486b6e16eb4cd02}
+
+
+\-Definition at line 301 of file epos\-\_\-manager\-Config.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf epos\-\_\-manager\-Config.\-h}\end{DoxyCompactItemize}

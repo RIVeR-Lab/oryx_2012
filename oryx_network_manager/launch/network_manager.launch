@@ -1,0 +1,7 @@
+<launch>
+
+  <node name="oryx_network_manager_server" pkg="oryx_network_manager" type="server" output="screen">
+  	<param name="config_file" value="$(find oryx_network_manager)/config.txt" />
+  </node>
+
+</launch>

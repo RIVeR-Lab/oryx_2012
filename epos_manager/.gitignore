@@ -1,0 +1,8 @@
+/bin
+/build
+/.svn
+*.cproject
+*.project
+*.pydevproject
+/.settings
+/CMakeFiles

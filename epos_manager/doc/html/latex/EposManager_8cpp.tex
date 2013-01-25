@@ -1,0 +1,237 @@
+\section{\-Epos\-Manager.\-cpp \-File \-Reference}
+\label{EposManager_8cpp}\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}}
+{\ttfamily \#include $<$ros/ros.\-h$>$}\*
+{\ttfamily \#include $<$\-Epos\-Manager/\-E\-P\-O\-S.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$std\-\_\-msgs/\-String.\-h$>$}\*
+{\ttfamily \#include \char`\"{}epos\-\_\-manager/\-E\-P\-O\-S\-Control.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}epos\-\_\-manager/\-Group\-E\-P\-O\-S\-Control.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}epos\-\_\-manager/\-Motor\-Info.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}epos\-\_\-manager/\-Group\-Motor\-Info.\-h\char`\"{}}\*
+{\ttfamily \#include $<$map$>$}\*
+\-Include dependency graph for \-Epos\-Manager.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EposManager_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf group\-Motor\-Control\-Callback} (const {\bf epos\-\_\-manager\-::\-Group\-E\-P\-O\-S\-Control\-::\-Const\-Ptr} \&msg)
+\item 
+void {\bf heartbeat\-Listener\-Callback} (const std\-\_\-msgs\-::\-String\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf heartbeat\-Timer\-Callback} (const ros\-::\-Timer\-Event \&)
+\item 
+bool {\bf initialize\-Key\-Handle} ()
+\item 
+int {\bf main} (int argc, char $\ast$$\ast$argv)
+\item 
+void {\bf motor\-Control\-Callback} (const {\bf epos\-\_\-manager\-::\-E\-P\-O\-S\-Control\-::\-Const\-Ptr} \&msg)
+\item 
+void {\bf motor\-Info\-Callback} (const ros\-::\-Timer\-Event \&)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long {\bf error\-Code}
+\item 
+ros\-::\-Publisher {\bf group\-Motor\-Info\-Publisher}
+\item 
+int {\bf heartbeat\-Attempts}
+\item 
+ros\-::\-Subscriber {\bf heartbeat\-Listener}
+\item 
+ros\-::\-Publisher {\bf heartbeat\-Publisher}
+\item 
+ros\-::\-Timer {\bf heartbeat\-Timer}
+\item 
+void $\ast$ {\bf key\-Handle}
+\item 
+int {\bf max\-Heartbeat\-Attempts}
+\item 
+ros\-::\-Publisher {\bf motor\-Info\-Publisher}
+\item 
+{\bf \-E\-P\-O\-S} $\ast$$\ast$ {\bf motors}
+\item 
+map$<$ int, int $>$ {\bf node\-I\-D\-Map}
+\item 
+int {\bf num\-Motors}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!group\-Motor\-Control\-Callback@{group\-Motor\-Control\-Callback}}
+\index{group\-Motor\-Control\-Callback@{group\-Motor\-Control\-Callback}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{group\-Motor\-Control\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf group\-Motor\-Control\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const {\bf epos\-\_\-manager\-::\-Group\-E\-P\-O\-S\-Control\-::\-Const\-Ptr} \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{EposManager_8cpp_aa637675fd5a7eab658c7392e5616a43e}
+
+
+\-Definition at line 35 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!heartbeat\-Listener\-Callback@{heartbeat\-Listener\-Callback}}
+\index{heartbeat\-Listener\-Callback@{heartbeat\-Listener\-Callback}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{heartbeat\-Listener\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf heartbeat\-Listener\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const std\-\_\-msgs\-::\-String\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{EposManager_8cpp_aeefbbccd1d46308e003fa9bf1003103f}
+
+
+\-Definition at line 153 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!heartbeat\-Timer\-Callback@{heartbeat\-Timer\-Callback}}
+\index{heartbeat\-Timer\-Callback@{heartbeat\-Timer\-Callback}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{heartbeat\-Timer\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf heartbeat\-Timer\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const ros\-::\-Timer\-Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{EposManager_8cpp_adb6d1daeff6b9858bee5b3b5c02179bf}
+
+
+\-Definition at line 138 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!initialize\-Key\-Handle@{initialize\-Key\-Handle}}
+\index{initialize\-Key\-Handle@{initialize\-Key\-Handle}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{initialize\-Key\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf initialize\-Key\-Handle} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{EposManager_8cpp_aaa00071d9fedd23d291e7a7d5cff00c8}
+\-This program initializes the \doxyref{\-E\-P\-O\-S}{p.}{classEPOS} and finds its corresponding keyhandle.
+
+\begin{DoxyReturn}{\-Returns}
+\-A boolean indicating the success of the method. 
+\end{DoxyReturn}
+
+
+\-Definition at line 164 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!main@{main}}
+\index{main@{main}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{EposManager_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 201 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!motor\-Control\-Callback@{motor\-Control\-Callback}}
+\index{motor\-Control\-Callback@{motor\-Control\-Callback}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{motor\-Control\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf motor\-Control\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const {\bf epos\-\_\-manager\-::\-E\-P\-O\-S\-Control\-::\-Const\-Ptr} \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{EposManager_8cpp_a28c866ab27f5d792089e51057108d602}
+
+
+\-Definition at line 72 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!motor\-Info\-Callback@{motor\-Info\-Callback}}
+\index{motor\-Info\-Callback@{motor\-Info\-Callback}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{motor\-Info\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf motor\-Info\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const ros\-::\-Timer\-Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{EposManager_8cpp_af98fbd090b34b6340343581c18e216ba}
+
+
+\-Definition at line 101 of file \-Epos\-Manager.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!error\-Code@{error\-Code}}
+\index{error\-Code@{error\-Code}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{error\-Code}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf error\-Code}}\label{EposManager_8cpp_a8f13076207e105705dac9aefa1b504a3}
+
+
+\-Definition at line 29 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!group\-Motor\-Info\-Publisher@{group\-Motor\-Info\-Publisher}}
+\index{group\-Motor\-Info\-Publisher@{group\-Motor\-Info\-Publisher}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{group\-Motor\-Info\-Publisher}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf group\-Motor\-Info\-Publisher}}\label{EposManager_8cpp_a1128a6485767acb086b76fc42420977f}
+
+
+\-Definition at line 20 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!heartbeat\-Attempts@{heartbeat\-Attempts}}
+\index{heartbeat\-Attempts@{heartbeat\-Attempts}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{heartbeat\-Attempts}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf heartbeat\-Attempts}}\label{EposManager_8cpp_a4b16bb34c47d2e02173ef018b70b4f9c}
+
+
+\-Definition at line 26 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!heartbeat\-Listener@{heartbeat\-Listener}}
+\index{heartbeat\-Listener@{heartbeat\-Listener}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{heartbeat\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf heartbeat\-Listener}}\label{EposManager_8cpp_a8b72d289bdcf8fbfcb249933d38d1e4c}
+
+
+\-Definition at line 23 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!heartbeat\-Publisher@{heartbeat\-Publisher}}
+\index{heartbeat\-Publisher@{heartbeat\-Publisher}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{heartbeat\-Publisher}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf heartbeat\-Publisher}}\label{EposManager_8cpp_aebbd08c4c946dfb1aada6336a0867588}
+
+
+\-Definition at line 22 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!heartbeat\-Timer@{heartbeat\-Timer}}
+\index{heartbeat\-Timer@{heartbeat\-Timer}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{heartbeat\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Timer {\bf heartbeat\-Timer}}\label{EposManager_8cpp_a95ea080434ba1e9281d139d16ab9a671}
+
+
+\-Definition at line 24 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!key\-Handle@{key\-Handle}}
+\index{key\-Handle@{key\-Handle}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{key\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf key\-Handle}}\label{EposManager_8cpp_a8b9cfbe9d71fa6ba5d5b95d9aec04ff5}
+
+
+\-Definition at line 30 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!max\-Heartbeat\-Attempts@{max\-Heartbeat\-Attempts}}
+\index{max\-Heartbeat\-Attempts@{max\-Heartbeat\-Attempts}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{max\-Heartbeat\-Attempts}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf max\-Heartbeat\-Attempts}}\label{EposManager_8cpp_ac0c22ed101463515d74a8b6388c799f3}
+
+
+\-Definition at line 25 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!motor\-Info\-Publisher@{motor\-Info\-Publisher}}
+\index{motor\-Info\-Publisher@{motor\-Info\-Publisher}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{motor\-Info\-Publisher}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf motor\-Info\-Publisher}}\label{EposManager_8cpp_aef5a76ff139998dd759964a5f0ca67da}
+
+
+\-Definition at line 21 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!motors@{motors}}
+\index{motors@{motors}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{motors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-O\-S}$\ast$$\ast$ {\bf motors}}\label{EposManager_8cpp_a475714ac21099e75f9da3d392e16295e}
+
+
+\-Definition at line 27 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!node\-I\-D\-Map@{node\-I\-D\-Map}}
+\index{node\-I\-D\-Map@{node\-I\-D\-Map}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{node\-I\-D\-Map}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int,int$>$ {\bf node\-I\-D\-Map}}\label{EposManager_8cpp_aad2deeb18180890c6f2bcaa9b92abc5a}
+
+
+\-Definition at line 31 of file \-Epos\-Manager.\-cpp.
+
+\index{\-Epos\-Manager.\-cpp@{\-Epos\-Manager.\-cpp}!num\-Motors@{num\-Motors}}
+\index{num\-Motors@{num\-Motors}!EposManager.cpp@{\-Epos\-Manager.\-cpp}}
+\subsubsection[{num\-Motors}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf num\-Motors}}\label{EposManager_8cpp_a392bdbe40e5f8d174711c86320110fb6}
+
+
+\-Definition at line 28 of file \-Epos\-Manager.\-cpp.
+

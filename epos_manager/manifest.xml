@@ -1,0 +1,17 @@
+<package>
+  <description brief="epos_manager">
+
+     Package containing nodes needed for communicating with Maxon Epos motor controllers
+
+  </description>
+  <author>RIVeR</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/EposManager</url>
+  <depend package="roscpp"/>
+  <depend package="oryx_msgs"/>
+  <depend package="dynamic_reconfigure"/>
+
+</package>
+
+

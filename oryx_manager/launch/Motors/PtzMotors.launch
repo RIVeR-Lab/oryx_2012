@@ -1,0 +1,13 @@
+<launch>
+	<rosparam command="load" file="$(find oryx_manager)/params/Pan_Motor.yaml" ns="motors/PTZ_Motors/Pan_Motor" />
+	<rosparam command="load" file="$(find oryx_manager)/params/Tilt_Motor.yaml" ns="motors/PTZ_Motors/Tilt_Motor" />
+	<rosparam command="load" file="$(find oryx_manager)/params/Boom_Motor.yaml" ns="motors/PTZ_Motors/Boom_Motor" />
+
+	<node name="PTZ_motors" pkg="epos_manager" type="epos_manager" args="Boom_Motor Pan_Motor Tilt_Motor" ns="motors/PTZ_Motors" output="screen" respawn="true">
+		<param name="Port" value="USB6 " />
+		<param name="Protocol" value="USB" />
+		<param name="Publish_Rate" value="10" />		
+	</node>
+
+
+</launch>

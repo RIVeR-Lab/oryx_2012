@@ -1,0 +1,159 @@
+\section{oryx\-\_\-diagnostics\-:\-:\-Diagnostics\-Command\-Request\-\_\-$<$ \-Container\-Allocator $>$ \-Struct \-Template \-Reference}
+\label{structoryx__diagnostics_1_1DiagnosticsCommandRequest__}\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-$<$ Container\-Allocator $>$@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-$<$ Container\-Allocator $>$}}
+
+
+{\ttfamily \#include $<$\-Diagnostics\-Command.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::basic\-\_\-string\*
+$<$ char, std\-::char\-\_\-traits$<$ char $>$\*
+, typename \*
+\-Container\-Allocator\-::template \*
+rebind$<$ char $>$\-::other $>$ {\bf \-\_\-command\-\_\-type}
+\item 
+typedef std\-::basic\-\_\-string\*
+$<$ char, std\-::char\-\_\-traits$<$ char $>$\*
+, typename \*
+\-Container\-Allocator\-::template \*
+rebind$<$ char $>$\-::other $>$ {\bf \-\_\-data\-\_\-type}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ \-::{\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}\*
+$<$ \-Container\-Allocator $>$ const  $>$ {\bf \-Const\-Ptr}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ \-::{\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}\*
+$<$ \-Container\-Allocator $>$ $>$ {\bf \-Ptr}
+\item 
+typedef \*
+{\bf \-Diagnostics\-Command\-Request\-\_\-}\*
+$<$ \-Container\-Allocator $>$ {\bf \-Type}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Diagnostics\-Command\-Request\-\_\-} ()
+\item 
+{\bf \-Diagnostics\-Command\-Request\-\_\-} (const \-Container\-Allocator \&\-\_\-alloc)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\-::shared\-\_\-ptr$<$ std\-::map\*
+$<$ std\-::string, std\-::string $>$ $>$ {\bf \-\_\-\-\_\-connection\-\_\-header}
+\item 
+std\-::basic\-\_\-string$<$ char, \*
+std\-::char\-\_\-traits$<$ char $>$\*
+, typename \*
+\-Container\-Allocator\-::template \*
+rebind$<$ char $>$\-::other $>$ {\bf command}
+\item 
+std\-::basic\-\_\-string$<$ char, \*
+std\-::char\-\_\-traits$<$ char $>$\*
+, typename \*
+\-Container\-Allocator\-::template \*
+rebind$<$ char $>$\-::other $>$ {\bf data}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$class Container\-Allocator$>$struct oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-$<$ Container\-Allocator $>$}
+
+
+
+\-Definition at line 25 of file \-Diagnostics\-Command.\-h.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}!\-\_\-command\-\_\-type@{\-\_\-command\-\_\-type}}
+\index{\-\_\-command\-\_\-type@{\-\_\-command\-\_\-type}!oryx_diagnostics::DiagnosticsCommandRequest_@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}}
+\subsubsection[{\-\_\-command\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef std\-::basic\-\_\-string$<$char, std\-::char\-\_\-traits$<$char$>$, typename \-Container\-Allocator\-::template rebind$<$char$>$\-::other $>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-command\-\_\-type}}\label{structoryx__diagnostics_1_1DiagnosticsCommandRequest___aaa7caf39209daaae4c274c8e2c211239}
+
+
+\-Definition at line 40 of file \-Diagnostics\-Command.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}!\-\_\-data\-\_\-type@{\-\_\-data\-\_\-type}}
+\index{\-\_\-data\-\_\-type@{\-\_\-data\-\_\-type}!oryx_diagnostics::DiagnosticsCommandRequest_@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}}
+\subsubsection[{\-\_\-data\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef std\-::basic\-\_\-string$<$char, std\-::char\-\_\-traits$<$char$>$, typename \-Container\-Allocator\-::template rebind$<$char$>$\-::other $>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-data\-\_\-type}}\label{structoryx__diagnostics_1_1DiagnosticsCommandRequest___a705e209d86f2d856c063f9276e873e7a}
+
+
+\-Definition at line 43 of file \-Diagnostics\-Command.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}!\-Const\-Ptr@{\-Const\-Ptr}}
+\index{\-Const\-Ptr@{\-Const\-Ptr}!oryx_diagnostics::DiagnosticsCommandRequest_@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}}
+\subsubsection[{\-Const\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef boost\-::shared\-\_\-ptr$<$ \-::{\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$\-Container\-Allocator$>$ const$>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-Const\-Ptr}}\label{structoryx__diagnostics_1_1DiagnosticsCommandRequest___abaeecdb3af20cc036aa87e57a806b718}
+
+
+\-Definition at line 48 of file \-Diagnostics\-Command.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}!\-Ptr@{\-Ptr}}
+\index{\-Ptr@{\-Ptr}!oryx_diagnostics::DiagnosticsCommandRequest_@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}}
+\subsubsection[{\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef boost\-::shared\-\_\-ptr$<$ \-::{\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$\-Container\-Allocator$>$ $>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-Ptr}}\label{structoryx__diagnostics_1_1DiagnosticsCommandRequest___a836937fade2c022c462533754369fd1a}
+
+
+\-Definition at line 47 of file \-Diagnostics\-Command.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}!\-Type@{\-Type}}
+\index{\-Type@{\-Type}!oryx_diagnostics::DiagnosticsCommandRequest_@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}}
+\subsubsection[{\-Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ typedef {\bf \-Diagnostics\-Command\-Request\-\_\-}$<$\-Container\-Allocator$>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-Type}}\label{structoryx__diagnostics_1_1DiagnosticsCommandRequest___a2f5dc3dabe47ccb508a3d2a3308d681d}
+
+
+\-Definition at line 26 of file \-Diagnostics\-Command.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}!\-Diagnostics\-Command\-Request\-\_\-@{\-Diagnostics\-Command\-Request\-\_\-}}
+\index{\-Diagnostics\-Command\-Request\-\_\-@{\-Diagnostics\-Command\-Request\-\_\-}!oryx_diagnostics::DiagnosticsCommandRequest_@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}}
+\subsubsection[{\-Diagnostics\-Command\-Request\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-Diagnostics\-Command\-Request\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{structoryx__diagnostics_1_1DiagnosticsCommandRequest___a95ed78b0bacd6ef3a55a09a17fac2da4}
+
+
+\-Definition at line 28 of file \-Diagnostics\-Command.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}!\-Diagnostics\-Command\-Request\-\_\-@{\-Diagnostics\-Command\-Request\-\_\-}}
+\index{\-Diagnostics\-Command\-Request\-\_\-@{\-Diagnostics\-Command\-Request\-\_\-}!oryx_diagnostics::DiagnosticsCommandRequest_@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}}
+\subsubsection[{\-Diagnostics\-Command\-Request\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-Diagnostics\-Command\-Request\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{const \-Container\-Allocator \&}]{\-\_\-alloc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{structoryx__diagnostics_1_1DiagnosticsCommandRequest___a9ca3d8860de0667da3a0e22a857d4fb0}
+
+
+\-Definition at line 34 of file \-Diagnostics\-Command.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}!\-\_\-\-\_\-connection\-\_\-header@{\-\_\-\-\_\-connection\-\_\-header}}
+\index{\-\_\-\-\_\-connection\-\_\-header@{\-\_\-\-\_\-connection\-\_\-header}!oryx_diagnostics::DiagnosticsCommandRequest_@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}}
+\subsubsection[{\-\_\-\-\_\-connection\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ boost\-::shared\-\_\-ptr$<$std\-::map$<$std\-::string, std\-::string$>$ $>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf \-\_\-\-\_\-connection\-\_\-header}}\label{structoryx__diagnostics_1_1DiagnosticsCommandRequest___a4ffbb3622203ba40df83ba87ed428886}
+
+
+\-Definition at line 49 of file \-Diagnostics\-Command.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}!command@{command}}
+\index{command@{command}!oryx_diagnostics::DiagnosticsCommandRequest_@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}}
+\subsubsection[{command}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ std\-::basic\-\_\-string$<$char, std\-::char\-\_\-traits$<$char$>$, typename \-Container\-Allocator\-::template rebind$<$char$>$\-::other $>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf command}}\label{structoryx__diagnostics_1_1DiagnosticsCommandRequest___a88b7ce59bc986210aae81197ca74564a}
+
+
+\-Definition at line 41 of file \-Diagnostics\-Command.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}!data@{data}}
+\index{data@{data}!oryx_diagnostics::DiagnosticsCommandRequest_@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Container\-Allocator $>$ std\-::basic\-\_\-string$<$char, std\-::char\-\_\-traits$<$char$>$, typename \-Container\-Allocator\-::template rebind$<$char$>$\-::other $>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-Request\-\_\-}$<$ \-Container\-Allocator $>$\-::{\bf data}}\label{structoryx__diagnostics_1_1DiagnosticsCommandRequest___ae53e76725d0ee5b2bd13e3fb65959322}
+
+
+\-Definition at line 44 of file \-Diagnostics\-Command.\-h.
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Diagnostics\-Command.\-h}\end{DoxyCompactItemize}

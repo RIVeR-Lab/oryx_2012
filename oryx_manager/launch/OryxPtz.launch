@@ -1,0 +1,17 @@
+<launch>
+
+	<node name="PTZ_manager" pkg="oryx_manager" type="PTZ_manager" output="screen" >
+		<param name="Boom_Current" value="300" />
+		<param name="Tilt_Current" value="200" />
+		<param name="Pan_Current" value="300" />
+		<param name="Boom_Velocity" value="3000" />
+		<param name="Tilt_Velocity" value="470" />
+		<param name="Pan_Velocity" value="750" />
+		<param name="Up_Down_Step" value="20000" />
+		<param name="Left_Right_Step" value="5000" />
+	</node>
+
+	<include file="$(find oryx_manager)/launch/Motors/PtzMotors.launch" />
+
+
+</launch>

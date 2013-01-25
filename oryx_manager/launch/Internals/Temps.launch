@@ -1,0 +1,7 @@
+<launch>
+
+    <node name="CPU_temps" pkg="oryx_manager" type="CPU_temp_finder" />
+
+	<node name="arduino_temps" pkg="rosserial_python" type="serial_node.py" args="/dev/Arduino" respawn="false"/>
+
+</launch>
