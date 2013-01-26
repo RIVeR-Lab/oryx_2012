@@ -1,0 +1,8 @@
+\subsubsection usage Usage
+\verbatim
+<node name="oryx_manager" pkg="oryx_manager" type="oryx_manager">
+  <param name="Max_Speed" type="double" value="1.0" />
+  <param name="Linear_Velocity" type="double" value="1.0" />
+</node>
+\endverbatim
+

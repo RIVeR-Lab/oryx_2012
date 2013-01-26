@@ -1,0 +1,13 @@
+\subsubsection usage Usage
+\verbatim
+<node name="oryx_manager" pkg="oryx_manager" type="oryx_manager">
+  <param name="Pan" type="int" value="0" />
+  <param name="Tilt" type="int" value="0" />
+  <param name="Invert" type="bool" value="False" />
+  <param name="Home_Pan" type="bool" value="False" />
+  <param name="Home_Tilt" type="bool" value="False" />
+  <param name="Home_Boom" type="bool" value="False" />
+  <param name="Home_Safely" type="bool" value="True" />
+</node>
+\endverbatim
+

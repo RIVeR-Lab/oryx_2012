@@ -1,0 +1,8 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~Turrent_Angle" : \b [int] Turret Angle in Degrees min: -90, default: 0, max: 90
+- \b "~Arm_Angle" : \b [int] Arm Angle in Degrees min: -40, default: 0, max: 140
+- \b "~Gripper" : \b [int] Gripper Open Level min: 0, default: 0, max: 180
+
