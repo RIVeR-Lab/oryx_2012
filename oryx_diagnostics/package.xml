@@ -1,0 +1,30 @@
+<package>
+  <name>oryx_diagnostics</name>
+  <version>1.0.0</version>
+  <description>
+
+     oryx_diagnostics
+
+  </description>
+  <maintainer email="robot@wpi.edu">aruis</maintainer>
+  <license>BSD</license>
+  <url>http://ros.org/wiki/oryx_diagnostics</url>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>oryx_msgs</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>oryx_msgs</run_depend>
+
+</package>
+
+
