@@ -17,6 +17,7 @@ m_handle(handle), m_client(client), msg_seq(0), connection_sub(
                 boost::bind(&ActiveNetworkConnectionManager::devices_changed_cb, this, _1))), active_connection_pub(
                     handle.advertise<ActiveNetworkConnections>("oryx_active_network_connections", 10, true))
 {
+  process_active_connections_changed();
   g_signal_connect(client, "notify::active-connections", G_CALLBACK(active_connections_changed_cb), this);
 }
 
@@ -33,7 +34,7 @@ void ActiveNetworkConnectionManager::devices_changed_cb(const NetworkDevices::Co
 
 void ActiveNetworkConnectionManager::process_active_connections_changed()
 {
-  ROS_INFO("Active Network Connections Updated");
+  ROS_DEBUG("Updating Active Network Connections");
   const NetworkConnections::ConstPtr connections = m_latest_connections;
   const NetworkDevices::ConstPtr devices = m_latest_devices;
   if(!connections || !devices)//haven't yet received any device and connection data
