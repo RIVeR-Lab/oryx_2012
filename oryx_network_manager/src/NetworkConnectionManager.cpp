@@ -16,6 +16,8 @@ NetworkConnectionManager::NetworkConnectionManager(ros::NodeHandle& handle, NMRe
     m_handle(handle), m_remote_settings(remote_settings), msg_seq(0), connection_pub(
         handle.advertise<NetworkConnections>("oryx_network_connections", 10, true))
 {
+  ROS_INFO("Initing Network Connection Manager");
+  publish_connections();
   g_signal_connect(m_remote_settings, NM_REMOTE_SETTINGS_NEW_CONNECTION, G_CALLBACK(connection_added_cb), this);
 }
 
@@ -23,7 +25,7 @@ void NetworkConnectionManager::process_added_connection(NMConnection *connection
 {
   g_signal_connect(connection, NM_REMOTE_CONNECTION_UPDATED, G_CALLBACK(connection_updated_cb), this);
   g_signal_connect(connection, NM_REMOTE_CONNECTION_REMOVED, G_CALLBACK(connection_removed_cb), this);
-  ROS_DEBUG("Network Connection Added: %s", nm_connection_get_path(connection));
+  ROS_INFO("Network Connection Added: %s", nm_connection_get_path(connection));
 
   NetworkConnection connection_info;
   fill_connection_info(connection, connection_info);
@@ -35,20 +37,21 @@ void NetworkConnectionManager::process_removed_connection(NMConnection *connecti
 {
   //g_signal_handlers_disconnect_by_func(connection, (gpointer)G_CALLBACK (connection_removed_cb), this);
   //g_signal_handlers_disconnect_by_func(connection, (gpointer)G_CALLBACK (connection_updated_cb), this);
-  ROS_DEBUG("Network Connection Removed: %s", nm_connection_get_path(connection));
+  ROS_INFO("Network Connection Removed: %s", nm_connection_get_path(connection));
   connections.erase(nm_connection_get_path(connection));
 
   publish_connections();
 }
 void NetworkConnectionManager::process_updated_connection(NMConnection* connection)
 {
-  ROS_DEBUG("Network Connection Updated: %s", nm_connection_get_path(connection));
+  ROS_INFO("Network Connection Updated: %s", nm_connection_get_path(connection));
   NetworkConnection connection_info;
   fill_connection_info(connection, connection_info);
   connections[nm_connection_get_path(connection)] = connection_info;
 
   publish_connections();
 }
+
 
 void NetworkConnectionManager::fill_connection_info(NMConnection* connection,
     oryx_network_manager::NetworkConnection& ros_connection_message)
@@ -139,7 +142,7 @@ void NetworkConnectionManager::connection_updated_cb(NMRemoteConnection *connect
 NetworkConnectionManager::~NetworkConnectionManager()
 {
   //g_signal_handlers_disconnect_by_func(m_remote_settings, (gpointer)G_CALLBACK (connection_added_cb), this);
-  //g_signal_handlers_disconnect_by_func(m_remote_settings, (gpointer)G_CALLBACK (initial_connections_read_cb), this);
+  //g_signal_handlers_disconnect_by_func(m_remote_settings, (gpointer)G_CALLBACK (got_connections_cb), this);
   g_object_unref(m_remote_settings);
 }
 

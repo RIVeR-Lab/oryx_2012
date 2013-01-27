@@ -24,7 +24,9 @@ pthread_t g_main_loop_thread;
 //spawned in new thread to run the glib main loop, this loop handles dispatching events
 static void* run_main_loop(void* loop)
 {
+  ROS_INFO("GMainLoop Started");
   g_main_loop_run ((GMainLoop*)loop);
+  ROS_INFO("GMainLoop Ended");
   pthread_exit(NULL);
 }
 
@@ -36,6 +38,10 @@ static void spawn_g_main_loop(GMainLoop* loop)
   {
     ROS_ERROR("ERROR; return code from pthread_create() is %d\n", rc);
   }
+}
+
+void got_connections_cb(){
+  ROS_INFO("THIS IS A TEST");
 }
 
 int main(int argc, char **argv)
@@ -56,14 +62,25 @@ int main(int argc, char **argv)
   NMClient* client = nm_client_new();
   NMRemoteSettings* remote_settings = nm_remote_settings_new(bus);
 
-  ROS_INFO("Running glib main loop");
-  spawn_g_main_loop(loop); //spawns main loop in another thread
+  if(!remote_settings)
+    ROS_WARN("Could not get system settings");
 
+
+  /* Find out whether setting service is running */
+  gboolean settings_running;
+  g_object_get (remote_settings, NM_REMOTE_SETTINGS_SERVICE_RUNNING, &settings_running, NULL);
+  if (!settings_running) {
+    ROS_WARN("Can't obtain connections: settings service is not running.");
+  }
+  
   NetworkDeviceManager deviceManager(n, client);
   NetworkConnectionManager connectionManager(n, remote_settings);
   ActiveNetworkConnectionManager activeConnectionManager(n, client);
   ActivateConnectionService activateConnectionService(n, client, remote_settings);
   NetworkConfigurationManager configurationManager(n, client, remote_settings);
+
+  ROS_INFO("Running glib main loop");
+  spawn_g_main_loop(loop); //spawns main loop in another thread
 
 
   ROS_INFO("Waiting 2 seconds to retrieve connection info");
