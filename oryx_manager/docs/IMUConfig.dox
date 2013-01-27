@@ -1,0 +1,11 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~Compass" : \b [bool] Use Compass min: False, default: False, max: True
+- \b "~Timestamped" : \b [bool] Use Timestamp min: False, default: True, max: True
+- \b "~Compass_Compensation" : \b [int] Level of Compass Compensation min: 0, default: 2, max: 3
+- \b "~Enhancement" : \b [int] Level of Enhancement min: 0, default: 1, max: 3
+- \b "~Prediction" : \b [int] Level of Pridiction min: 0, default: 1, max: 3
+- \b "~Reset_Heading" : \b [bool] Reset Heading min: False, default: False, max: True
+

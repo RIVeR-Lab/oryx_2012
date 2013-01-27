@@ -62,10 +62,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00010"></a>00010 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &lt;std_msgs/String.h&gt;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="EPOSControl_8h.html">epos_manager/EPOSControl.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="GroupEPOSControl_8h.html">epos_manager/GroupEPOSControl.h</a>&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="MotorInfo_8h.html">epos_manager/MotorInfo.h</a>&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="GroupMotorInfo_8h.html">epos_manager/GroupMotorInfo.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;epos_manager/EPOSControl.h&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;epos_manager/GroupEPOSControl.h&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;epos_manager/MotorInfo.h&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;epos_manager/GroupMotorInfo.h&quot;</span>
 <a name="l00017"></a>00017 <span class="preprocessor">#include &lt;map&gt;</span>
 <a name="l00018"></a>00018 <span class="keyword">using namespace </span>std;
 <a name="l00019"></a>00019 
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00031"></a><a class="code" href="EposManager_8cpp.html#aad2deeb18180890c6f2bcaa9b92abc5a">00031</a> map&lt;int,int&gt; <a class="code" href="EposManager_8cpp.html#aad2deeb18180890c6f2bcaa9b92abc5a">nodeIDMap</a>;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 
-<a name="l00035"></a><a class="code" href="EposManager_8cpp.html#aa637675fd5a7eab658c7392e5616a43e">00035</a> <span class="keywordtype">void</span> <a class="code" href="EposManager_8cpp.html#aa637675fd5a7eab658c7392e5616a43e">groupMotorControlCallback</a>(<span class="keyword">const</span> <a class="code" href="structepos__manager_1_1GroupEPOSControl__.html#a1089e237a0adc3c56ca37511b4b8fa6d">epos_manager::GroupEPOSControl::ConstPtr</a>&amp; msg)
+<a name="l00035"></a><a class="code" href="EposManager_8cpp.html#aa637675fd5a7eab658c7392e5616a43e">00035</a> <span class="keywordtype">void</span> <a class="code" href="EposManager_8cpp.html#aa637675fd5a7eab658c7392e5616a43e">groupMotorControlCallback</a>(<span class="keyword">const</span> epos_manager::GroupEPOSControl::ConstPtr&amp; msg)
 <a name="l00036"></a>00036 {
 <a name="l00037"></a>00037         vector&lt;epos_manager::EPOSControl&gt; controlGroup;
 <a name="l00038"></a>00038         controlGroup = msg-&gt;motor_group;
@@ -93,22 +93,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00042"></a>00042                 <span class="keywordflow">if</span> (key &gt;=0){
 <a name="l00043"></a>00043                                 <span class="keywordflow">switch</span>(controlGroup[i].control_mode){
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045                                 <span class="keywordflow">case</span> <a class="code" href="structepos__manager_1_1EPOSControl__.html#a1e05a2bc4e928f0d5599dcb6232bf480a4e78b7a1e085faff507be5406584fedc">epos_manager::EPOSControl::VELOCITY</a> :
+<a name="l00045"></a>00045                                 <span class="keywordflow">case</span> epos_manager::EPOSControl::VELOCITY :
 <a name="l00046"></a>00046                                         <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[key]-&gt;<a class="code" href="classEPOS.html#a597d16874e39d0675552872801872524">setVelocity</a>(controlGroup[i].setpoint);
 <a name="l00047"></a>00047                                         <span class="keywordflow">break</span>;
-<a name="l00048"></a>00048                                 <span class="keywordflow">case</span> <a class="code" href="structepos__manager_1_1EPOSControl__.html#a5e42db8d4218a27e2512dead606359c5a2f18ada62d03c9ba524b3112e6c7eeca">epos_manager::EPOSControl::ABSOLUTE_POSITION</a>:
+<a name="l00048"></a>00048                                 <span class="keywordflow">case</span> epos_manager::EPOSControl::ABSOLUTE_POSITION:
 <a name="l00049"></a>00049                                         <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[key]-&gt;<a class="code" href="classEPOS.html#a2a34357b6579b2672aa3a8a21388a844">setPosition</a>(controlGroup[i].setpoint,<span class="keyword">true</span>,<span class="keyword">false</span>);
 <a name="l00050"></a>00050                                         <span class="keywordflow">break</span>;
 <a name="l00051"></a>00051 
-<a name="l00052"></a>00052                                 <span class="keywordflow">case</span> <a class="code" href="structepos__manager_1_1EPOSControl__.html#acfbc358326c6508ec0ff761ceaa5030ba37c459ec9838f5be9691ee9945f45493">epos_manager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE</a>:
+<a name="l00052"></a>00052                                 <span class="keywordflow">case</span> epos_manager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE:
 <a name="l00053"></a>00053                                         <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[key]-&gt;<a class="code" href="classEPOS.html#a2a34357b6579b2672aa3a8a21388a844">setPosition</a>(controlGroup[i].setpoint,<span class="keyword">true</span>,<span class="keyword">true</span>);
 <a name="l00054"></a>00054                                         <span class="keywordflow">break</span>;
 <a name="l00055"></a>00055 
-<a name="l00056"></a>00056                                 <span class="keywordflow">case</span> <a class="code" href="structepos__manager_1_1EPOSControl__.html#abc951d378e31bd4045788ec2707a9780af1aa94128df0ac56ef76c84dd47ac107">epos_manager::EPOSControl::RELATIVE_POSITION</a>:
+<a name="l00056"></a>00056                                 <span class="keywordflow">case</span> epos_manager::EPOSControl::RELATIVE_POSITION:
 <a name="l00057"></a>00057                                         <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[key]-&gt;<a class="code" href="classEPOS.html#a2a34357b6579b2672aa3a8a21388a844">setPosition</a>(controlGroup[i].setpoint,<span class="keyword">false</span>,<span class="keyword">false</span>);
 <a name="l00058"></a>00058                                         <span class="keywordflow">break</span>;
 <a name="l00059"></a>00059 
-<a name="l00060"></a>00060                                 <span class="keywordflow">case</span> <a class="code" href="structepos__manager_1_1EPOSControl__.html#afc54aee43e9f06b66fbc5e3851b4781ca8eec81b56f344cd425543fbde0dfa7ee">epos_manager::EPOSControl::RELATIVE_POSITION_IMMEDIATE</a>:
+<a name="l00060"></a>00060                                 <span class="keywordflow">case</span> epos_manager::EPOSControl::RELATIVE_POSITION_IMMEDIATE:
 <a name="l00061"></a>00061                                         <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[key]-&gt;<a class="code" href="classEPOS.html#a2a34357b6579b2672aa3a8a21388a844">setPosition</a>(controlGroup[i].setpoint,<span class="keyword">false</span>,<span class="keyword">true</span>);
 <a name="l00062"></a>00062                                         <span class="keywordflow">break</span>;
 <a name="l00063"></a>00063 
@@ -120,26 +120,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00069"></a>00069         }
 <a name="l00070"></a>00070 }
 <a name="l00071"></a>00071 
-<a name="l00072"></a><a class="code" href="EposManager_8cpp.html#a28c866ab27f5d792089e51057108d602">00072</a> <span class="keywordtype">void</span> <a class="code" href="EposManager_8cpp.html#a28c866ab27f5d792089e51057108d602">motorControlCallback</a>(<span class="keyword">const</span> <a class="code" href="structepos__manager_1_1EPOSControl__.html#a6a11f64719f4d3b81ea646c62876e220">epos_manager::EPOSControl::ConstPtr</a>&amp; msg) {
+<a name="l00072"></a><a class="code" href="EposManager_8cpp.html#a28c866ab27f5d792089e51057108d602">00072</a> <span class="keywordtype">void</span> <a class="code" href="EposManager_8cpp.html#a28c866ab27f5d792089e51057108d602">motorControlCallback</a>(<span class="keyword">const</span> epos_manager::EPOSControl::ConstPtr&amp; msg) {
 <a name="l00073"></a>00073         <span class="keywordtype">int</span> key = <a class="code" href="EposManager_8cpp.html#aad2deeb18180890c6f2bcaa9b92abc5a">nodeIDMap</a>.find(msg-&gt;node_id)-&gt;second;
 <a name="l00074"></a>00074                         <span class="keywordflow">switch</span> (msg-&gt;control_mode) {
 <a name="l00075"></a>00075 
-<a name="l00076"></a>00076                         <span class="keywordflow">case</span> <a class="code" href="structepos__manager_1_1EPOSControl__.html#a1e05a2bc4e928f0d5599dcb6232bf480a4e78b7a1e085faff507be5406584fedc">epos_manager::EPOSControl::VELOCITY</a>:
+<a name="l00076"></a>00076                         <span class="keywordflow">case</span> epos_manager::EPOSControl::VELOCITY:
 <a name="l00077"></a>00077                                 <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[key]-&gt;<a class="code" href="classEPOS.html#a597d16874e39d0675552872801872524">setVelocity</a>(msg-&gt;setpoint);
 <a name="l00078"></a>00078                                 <span class="keywordflow">return</span>;
-<a name="l00079"></a>00079                         <span class="keywordflow">case</span> <a class="code" href="structepos__manager_1_1EPOSControl__.html#a5e42db8d4218a27e2512dead606359c5a2f18ada62d03c9ba524b3112e6c7eeca">epos_manager::EPOSControl::ABSOLUTE_POSITION</a>:
+<a name="l00079"></a>00079                         <span class="keywordflow">case</span> epos_manager::EPOSControl::ABSOLUTE_POSITION:
 <a name="l00080"></a>00080                                 <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[key]-&gt;<a class="code" href="classEPOS.html#a2a34357b6579b2672aa3a8a21388a844">setPosition</a>(msg-&gt;setpoint, <span class="keyword">true</span>, <span class="keyword">false</span>);
 <a name="l00081"></a>00081                                 <span class="keywordflow">return</span>;
 <a name="l00082"></a>00082 
-<a name="l00083"></a>00083                         <span class="keywordflow">case</span> <a class="code" href="structepos__manager_1_1EPOSControl__.html#acfbc358326c6508ec0ff761ceaa5030ba37c459ec9838f5be9691ee9945f45493">epos_manager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE</a>:
+<a name="l00083"></a>00083                         <span class="keywordflow">case</span> epos_manager::EPOSControl::ABSOLUTE_POSITION_IMMEDIATE:
 <a name="l00084"></a>00084                                 <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[key]-&gt;<a class="code" href="classEPOS.html#a2a34357b6579b2672aa3a8a21388a844">setPosition</a>(msg-&gt;setpoint, <span class="keyword">true</span>, <span class="keyword">true</span>);
 <a name="l00085"></a>00085                                 <span class="keywordflow">return</span>;
 <a name="l00086"></a>00086 
-<a name="l00087"></a>00087                         <span class="keywordflow">case</span> <a class="code" href="structepos__manager_1_1EPOSControl__.html#abc951d378e31bd4045788ec2707a9780af1aa94128df0ac56ef76c84dd47ac107">epos_manager::EPOSControl::RELATIVE_POSITION</a>:
+<a name="l00087"></a>00087                         <span class="keywordflow">case</span> epos_manager::EPOSControl::RELATIVE_POSITION:
 <a name="l00088"></a>00088                                 <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[key]-&gt;<a class="code" href="classEPOS.html#a2a34357b6579b2672aa3a8a21388a844">setPosition</a>(msg-&gt;setpoint, <span class="keyword">false</span>, <span class="keyword">false</span>);
 <a name="l00089"></a>00089                                 <span class="keywordflow">return</span>;
 <a name="l00090"></a>00090 
-<a name="l00091"></a>00091                         <span class="keywordflow">case</span> <a class="code" href="structepos__manager_1_1EPOSControl__.html#afc54aee43e9f06b66fbc5e3851b4781ca8eec81b56f344cd425543fbde0dfa7ee">epos_manager::EPOSControl::RELATIVE_POSITION_IMMEDIATE</a>:
+<a name="l00091"></a>00091                         <span class="keywordflow">case</span> epos_manager::EPOSControl::RELATIVE_POSITION_IMMEDIATE:
 <a name="l00092"></a>00092                                 <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[key]-&gt;<a class="code" href="classEPOS.html#a2a34357b6579b2672aa3a8a21388a844">setPosition</a>(msg-&gt;setpoint, <span class="keyword">false</span>, <span class="keyword">true</span>);
 <a name="l00093"></a>00093                                 <span class="keywordflow">return</span>;
 <a name="l00094"></a>00094 
@@ -150,28 +150,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00099"></a>00099 
 <a name="l00100"></a>00100 
 <a name="l00101"></a><a class="code" href="EposManager_8cpp.html#af98fbd090b34b6340343581c18e216ba">00101</a> <span class="keywordtype">void</span> <a class="code" href="EposManager_8cpp.html#af98fbd090b34b6340343581c18e216ba">motorInfoCallback</a>(<span class="keyword">const</span> ros::TimerEvent&amp;){
-<a name="l00102"></a>00102         <a class="code" href="structepos__manager_1_1GroupMotorInfo__.html">epos_manager::GroupMotorInfo</a> msg;
+<a name="l00102"></a>00102         epos_manager::GroupMotorInfo msg;
 <a name="l00103"></a>00103         vector&lt;epos_manager::MotorInfo&gt; motor_group;
 <a name="l00104"></a>00104         <span class="keywordtype">short</span> current;
 <a name="l00105"></a>00105         <span class="keywordtype">long</span> velocity,position;
 <a name="l00106"></a>00106         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="EposManager_8cpp.html#a392bdbe40e5f8d174711c86320110fb6">numMotors</a>;i++){
 <a name="l00107"></a>00107                 <span class="keywordflow">if</span> (<a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;isEPOSInitialized()) {
-<a name="l00108"></a>00108                         <a class="code" href="structepos__manager_1_1MotorInfo__.html">epos_manager::MotorInfo</a> motor_msg;
+<a name="l00108"></a>00108                         epos_manager::MotorInfo motor_msg;
 <a name="l00109"></a>00109                         <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;<a class="code" href="classEPOS.html#ab72a91b5514427acf0adb0a5d4c0f31f">getState</a>();
 <a name="l00110"></a>00110                         <span class="keywordflow">if</span> (<a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;state == <a class="code" href="Definitions_8h.html#acffa12fb6fe9a25eea79c9b190967edc">ST_FAULT</a>) {
 <a name="l00111"></a>00111                                 <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;<a class="code" href="classEPOS.html#a840d8fc962aeac554d4fb133862c1432">printFaults</a>();
 <a name="l00112"></a>00112                         }
 <a name="l00113"></a>00113                         <span class="keywordflow">else</span> {
-<a name="l00114"></a>00114                                 motor_msg.<a class="code" href="structepos__manager_1_1MotorInfo__.html#a19dcb985bf0687564bca4f4fa46443ef">node_id</a> = <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;<a class="code" href="classEPOS.html#a56b8ea8a17c74a371a15139bc253957c">getNodeID</a>();
-<a name="l00115"></a>00115                                 motor_msg.<a class="code" href="structepos__manager_1_1MotorInfo__.html#a03c91963a4279131442b3caaf60bc835">motor_name</a> = <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;<a class="code" href="classEPOS.html#a820811956771256a6de6756a3b23e0a0">getMotorName</a>();
+<a name="l00114"></a>00114                                 motor_msg.node_id = <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;<a class="code" href="classEPOS.html#a56b8ea8a17c74a371a15139bc253957c">getNodeID</a>();
+<a name="l00115"></a>00115                                 motor_msg.motor_name = <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;<a class="code" href="classEPOS.html#a820811956771256a6de6756a3b23e0a0">getMotorName</a>();
 <a name="l00116"></a>00116                                 <span class="keywordflow">if</span>(<a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;getCurrent(&amp;current))
-<a name="l00117"></a>00117                                         motor_msg.<a class="code" href="structepos__manager_1_1MotorInfo__.html#a85898e79fb769c0b16a571f0908d9bfd">motor_current</a> = current;
+<a name="l00117"></a>00117                                         motor_msg.motor_current = current;
 <a name="l00118"></a>00118                                 <span class="keywordflow">if</span>(<a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;getPosition(&amp;position))
-<a name="l00119"></a>00119                                         motor_msg.<a class="code" href="structepos__manager_1_1MotorInfo__.html#a307aacb25bd47d3e1e90775e49f46d5e">motor_position</a> = position;
+<a name="l00119"></a>00119                                         motor_msg.motor_position = position;
 <a name="l00120"></a>00120                                 <span class="keywordflow">if</span>(<a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;getVelocity(&amp;velocity))
-<a name="l00121"></a>00121                                         motor_msg.<a class="code" href="structepos__manager_1_1MotorInfo__.html#a409cdbc5cbf9b665b3aa0075f4c58031">motor_velocity</a> = velocity;
-<a name="l00122"></a>00122                                 motor_msg.<a class="code" href="structepos__manager_1_1MotorInfo__.html#aa79dcaa8ea2171d081cc17d70f23001a">state</a> = <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;<a class="code" href="classEPOS.html#acedb42c1f9b196b446e32ed5854e7b07">state</a>;
-<a name="l00123"></a>00123                                 motor_msg.<a class="code" href="structepos__manager_1_1MotorInfo__.html#aebdaebf9ad9c4f1f4212665fd2cff206">stamp</a> = ros::Time::now();
+<a name="l00121"></a>00121                                         motor_msg.motor_velocity = velocity;
+<a name="l00122"></a>00122                                 motor_msg.state = <a class="code" href="EposManager_8cpp.html#a475714ac21099e75f9da3d392e16295e">motors</a>[i]-&gt;<a class="code" href="classEPOS.html#acedb42c1f9b196b446e32ed5854e7b07">state</a>;
+<a name="l00123"></a>00123                                 motor_msg.stamp = ros::Time::now();
 <a name="l00124"></a>00124                                 motor_group.push_back(motor_msg);
 <a name="l00125"></a>00125 
 <a name="l00126"></a>00126                                 <span class="comment">//Publish single message</span>
@@ -180,7 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00129"></a>00129                 }
 <a name="l00130"></a>00130         }
 <a name="l00131"></a>00131 
-<a name="l00132"></a>00132         msg.<a class="code" href="structepos__manager_1_1GroupMotorInfo__.html#a5d53c4df9193061075bb3767662dd9e4">motor_group</a>=motor_group;
+<a name="l00132"></a>00132         msg.motor_group=motor_group;
 <a name="l00133"></a>00133 
 <a name="l00134"></a>00134         <span class="comment">//Publish messages as group</span>
 <a name="l00135"></a>00135         <a class="code" href="EposManager_8cpp.html#a1128a6485767acb086b76fc42420977f">groupMotorInfoPublisher</a>.publish(msg);
@@ -283,8 +283,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00238"></a>00238         <span class="comment">//Initialize publishers and subscribers</span>
 <a name="l00239"></a>00239         ros::Subscriber groupMotorControl = nh.subscribe(<span class="stringliteral">&quot;Group_Motor_Control&quot;</span>, 1, <a class="code" href="EposManager_8cpp.html#aa637675fd5a7eab658c7392e5616a43e">groupMotorControlCallback</a>);
 <a name="l00240"></a>00240         ros::Subscriber motorControl      = nh.subscribe(<span class="stringliteral">&quot;Motor_Control&quot;</span>, 4, <a class="code" href="EposManager_8cpp.html#a28c866ab27f5d792089e51057108d602">motorControlCallback</a>);
-<a name="l00241"></a>00241         <a class="code" href="EposManager_8cpp.html#a1128a6485767acb086b76fc42420977f">groupMotorInfoPublisher</a>                   = nh.advertise&lt;<a class="code" href="structepos__manager_1_1GroupMotorInfo__.html">epos_manager::GroupMotorInfo</a>&gt;(<span class="stringliteral">&quot;Group_Motor_Info&quot;</span>,10);
-<a name="l00242"></a>00242         <a class="code" href="EposManager_8cpp.html#aef5a76ff139998dd759964a5f0ca67da">motorInfoPublisher</a>                                = nh.advertise&lt;<a class="code" href="structepos__manager_1_1MotorInfo__.html">epos_manager::MotorInfo</a>&gt;(<span class="stringliteral">&quot;Motor_Info&quot;</span>,10);
+<a name="l00241"></a>00241         <a class="code" href="EposManager_8cpp.html#a1128a6485767acb086b76fc42420977f">groupMotorInfoPublisher</a>                   = nh.advertise&lt;epos_manager::GroupMotorInfo&gt;(<span class="stringliteral">&quot;Group_Motor_Info&quot;</span>,10);
+<a name="l00242"></a>00242         <a class="code" href="EposManager_8cpp.html#aef5a76ff139998dd759964a5f0ca67da">motorInfoPublisher</a>                                = nh.advertise&lt;epos_manager::MotorInfo&gt;(<span class="stringliteral">&quot;Motor_Info&quot;</span>,10);
 <a name="l00243"></a>00243         ros::Timer motorInfoTimer                 = nh.createTimer(ros::Duration(1/motorInfoPublishRate), <a class="code" href="EposManager_8cpp.html#af98fbd090b34b6340343581c18e216ba">motorInfoCallback</a>);
 <a name="l00244"></a>00244 
 <a name="l00245"></a>00245         <span class="keywordflow">if</span>(heartbeat){
@@ -312,7 +312,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -325,8 +325,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <br clear="all" />
 <hr size="1"><div style="align: right;">
 <a href="http://ros.org/wiki/epos_manager">epos_manager</a><br />
-Author(s): RIVeR</br />
-<small>autogenerated on Sun Jan 20 2013 15:16:25</small>
+Author(s): </br />
+<small>autogenerated on Sun Jan 27 2013 12:08:28</small>
 </div>
 </body>
 </html>

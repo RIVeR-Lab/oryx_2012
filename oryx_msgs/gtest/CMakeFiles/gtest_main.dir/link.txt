@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -O2 -g   -shared -Wl,-soname,libgtest_main.so -o ../lib/libgtest_main.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -L/home/parallels/groovy_workspace/oryx/oryx_msgs/gtest/src -lpthread ../lib/libgtest.so -lpthread -Wl,-rpath,/home/parallels/groovy_workspace/oryx/oryx_msgs/gtest/src:/home/parallels/groovy_workspace/oryx/oryx_msgs/lib 

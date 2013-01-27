@@ -1,7 +1,7 @@
 var searchData=
 [
   ['default',['default',['../epos__managerConfig_8dox.html#adb36a153a297a36f55ff4df8c7ddfbf7',1,'default():&#160;epos_managerConfig.dox'],['../EposManagerConfig_8dox.html#adb36a153a297a36f55ff4df8c7ddfbf7',1,'default():&#160;EposManagerConfig.dox']]],
-  ['defaults',['defaults',['../namespaceepos__manager_1_1cfg_1_1epos__managerConfig.html#a1bd90c70f9ebc2cb019121aa10614b8b',1,'epos_manager::cfg::epos_managerConfig.defaults()'],['../namespaceepos__manager_1_1cfg_1_1EposManagerConfig.html#a50e0dc3826e5c81e792209d902bf5b48',1,'epos_manager::cfg::EposManagerConfig.defaults()']]],
+  ['defaults',['defaults',['../namespaceepos__manager_1_1cfg_1_1epos__managerConfig.html#a1bd90c70f9ebc2cb019121aa10614b8b',1,'epos_manager::cfg::epos_managerConfig']]],
   ['dic_5fdrive_5fenable',['DIC_DRIVE_ENABLE',['../Definitions_8h.html#ab361b8e5b48a44fb74b03bed9e7cbdfd',1,'Definitions.h']]],
   ['dic_5fgeneral_5fpurpose_5fa',['DIC_GENERAL_PURPOSE_A',['../Definitions_8h.html#a3a7d1ffd84631733710ae95f4ba478f7',1,'Definitions.h']]],
   ['dic_5fgeneral_5fpurpose_5fb',['DIC_GENERAL_PURPOSE_B',['../Definitions_8h.html#a1aefcb75c9171064afd803c786ea609b',1,'Definitions.h']]],
@@ -18,7 +18,7 @@ var searchData=
   ['dic_5fposition_5fmarker',['DIC_POSITION_MARKER',['../Definitions_8h.html#acd633cd894892d0faeb07bbd74c4719b',1,'Definitions.h']]],
   ['dic_5fpositive_5flimit_5fswitch',['DIC_POSITIVE_LIMIT_SWITCH',['../Definitions_8h.html#a6fc327b5ce5200b1ea696cb85b166410',1,'Definitions.h']]],
   ['dic_5fquick_5fstop',['DIC_QUICK_STOP',['../Definitions_8h.html#a1ac83f1961d6267804c42da92c8cbc0c',1,'Definitions.h']]],
-  ['disable_5fmotor',['Disable_Motor',['../classepos__manager_1_1epos__managerConfig_1_1DEFAULT.html#a263f714da48faa030391a7aa9ed650da',1,'epos_manager::epos_managerConfig::DEFAULT::Disable_Motor()'],['../classepos__manager_1_1epos__managerConfig.html#a7f8f0f6d784a9c37b7ce82c811cab966',1,'epos_manager::epos_managerConfig::Disable_Motor()'],['../classepos__manager_1_1EposManagerConfig_1_1DEFAULT.html#a57f5a002b0f5fda74fd31d22a9f1f14f',1,'epos_manager::EposManagerConfig::DEFAULT::Disable_Motor()'],['../classepos__manager_1_1EposManagerConfig.html#aecfb3ae923579dd6680a31cf61b26dc4',1,'epos_manager::EposManagerConfig::Disable_Motor()']]],
+  ['disable_5fmotor',['Disable_Motor',['../classepos__manager_1_1epos__managerConfig_1_1DEFAULT.html#a263f714da48faa030391a7aa9ed650da',1,'epos_manager::epos_managerConfig::DEFAULT::Disable_Motor()'],['../classepos__manager_1_1epos__managerConfig.html#a7f8f0f6d784a9c37b7ce82c811cab966',1,'epos_manager::epos_managerConfig::Disable_Motor()']]],
   ['dm_5fconfirm_5fdlg',['DM_CONFIRM_DLG',['../Definitions_8h.html#a955120cbf7d29f4a265f5aabc8dfa24e',1,'Definitions.h']]],
   ['dm_5fno_5fdlg',['DM_NO_DLG',['../Definitions_8h.html#a1cc23487af10762a0f5cea7355256af3',1,'Definitions.h']]],
   ['dm_5fprogress_5fand_5fconfirm_5fdlg',['DM_PROGRESS_AND_CONFIRM_DLG',['../Definitions_8h.html#a457cac46749f66029cb2ec582df1f891',1,'Definitions.h']]],

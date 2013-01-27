@@ -1,0 +1,96 @@
+\section{\-Network\-Manager\-Server.\-cpp \-File \-Reference}
+\label{NetworkManagerServer_8cpp}\index{\-Network\-Manager\-Server.\-cpp@{\-Network\-Manager\-Server.\-cpp}}
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include \char`\"{}ros/ros.\-h\char`\"{}}\*
+{\ttfamily \#include $<$glib.\-h$>$}\*
+{\ttfamily \#include $<$dbus/dbus-\/glib.\-h$>$}\*
+{\ttfamily \#include $<$dbus/dbus.\-h$>$}\*
+{\ttfamily \#include $<$pthread.\-h$>$}\*
+{\ttfamily \#include \char`\"{}\-Network\-Device\-Manager.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Network\-Connection\-Manager.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Active\-Network\-Connection\-Manager.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Activate\-Connection\-Service.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Network\-Configuration\-Manager.\-h\char`\"{}}\*
+\-Include dependency graph for \-Network\-Manager\-Server.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{NetworkManagerServer_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf got\-\_\-connections\-\_\-cb} ()
+\item 
+int {\bf main} (int argc, char $\ast$$\ast$argv)
+\item 
+static void $\ast$ {\bf run\-\_\-main\-\_\-loop} (void $\ast$loop)
+\item 
+static void {\bf spawn\-\_\-g\-\_\-main\-\_\-loop} (\-G\-Main\-Loop $\ast$loop)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+pthread\-\_\-t {\bf g\-\_\-main\-\_\-loop\-\_\-thread}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Network\-Manager\-Server.\-cpp@{\-Network\-Manager\-Server.\-cpp}!got\-\_\-connections\-\_\-cb@{got\-\_\-connections\-\_\-cb}}
+\index{got\-\_\-connections\-\_\-cb@{got\-\_\-connections\-\_\-cb}!NetworkManagerServer.cpp@{\-Network\-Manager\-Server.\-cpp}}
+\subsubsection[{got\-\_\-connections\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf got\-\_\-connections\-\_\-cb} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{NetworkManagerServer_8cpp_a7d4b9bdeb3e107efe5fb7b01bca560cf}
+
+
+\-Definition at line 43 of file \-Network\-Manager\-Server.\-cpp.
+
+\index{\-Network\-Manager\-Server.\-cpp@{\-Network\-Manager\-Server.\-cpp}!main@{main}}
+\index{main@{main}!NetworkManagerServer.cpp@{\-Network\-Manager\-Server.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{NetworkManagerServer_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 47 of file \-Network\-Manager\-Server.\-cpp.
+
+\index{\-Network\-Manager\-Server.\-cpp@{\-Network\-Manager\-Server.\-cpp}!run\-\_\-main\-\_\-loop@{run\-\_\-main\-\_\-loop}}
+\index{run\-\_\-main\-\_\-loop@{run\-\_\-main\-\_\-loop}!NetworkManagerServer.cpp@{\-Network\-Manager\-Server.\-cpp}}
+\subsubsection[{run\-\_\-main\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}static void$\ast$ {\bf run\-\_\-main\-\_\-loop} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{loop}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [static]}}\label{NetworkManagerServer_8cpp_a399da051f4f2766856947a4d5a9ac534}
+
+
+\-Definition at line 25 of file \-Network\-Manager\-Server.\-cpp.
+
+\index{\-Network\-Manager\-Server.\-cpp@{\-Network\-Manager\-Server.\-cpp}!spawn\-\_\-g\-\_\-main\-\_\-loop@{spawn\-\_\-g\-\_\-main\-\_\-loop}}
+\index{spawn\-\_\-g\-\_\-main\-\_\-loop@{spawn\-\_\-g\-\_\-main\-\_\-loop}!NetworkManagerServer.cpp@{\-Network\-Manager\-Server.\-cpp}}
+\subsubsection[{spawn\-\_\-g\-\_\-main\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf spawn\-\_\-g\-\_\-main\-\_\-loop} (
+\begin{DoxyParamCaption}
+\item[{\-G\-Main\-Loop $\ast$}]{loop}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [static]}}\label{NetworkManagerServer_8cpp_a8a9855b1c32e1e915b3d5a32f331ed74}
+
+
+\-Definition at line 34 of file \-Network\-Manager\-Server.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\index{\-Network\-Manager\-Server.\-cpp@{\-Network\-Manager\-Server.\-cpp}!g\-\_\-main\-\_\-loop\-\_\-thread@{g\-\_\-main\-\_\-loop\-\_\-thread}}
+\index{g\-\_\-main\-\_\-loop\-\_\-thread@{g\-\_\-main\-\_\-loop\-\_\-thread}!NetworkManagerServer.cpp@{\-Network\-Manager\-Server.\-cpp}}
+\subsubsection[{g\-\_\-main\-\_\-loop\-\_\-thread}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-t {\bf g\-\_\-main\-\_\-loop\-\_\-thread}}\label{NetworkManagerServer_8cpp_a33a37394f9142e45773417cd32f8c5bd}
+
+
+\-Definition at line 23 of file \-Network\-Manager\-Server.\-cpp.
+

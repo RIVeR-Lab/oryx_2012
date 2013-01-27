@@ -1,0 +1,147 @@
+\section{oryx\-\_\-manager\-:\-:oryx\-\_\-manager\-Config\-:\-:\-Abstract\-Group\-Description \-Class \-Reference}
+\label{classoryx__manager_1_1oryx__managerConfig_1_1AbstractGroupDescription}\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}}
+
+
+{\ttfamily \#include $<$oryx\-\_\-manager\-Config.\-h$>$}
+
+
+
+\-Inheritance diagram for oryx\-\_\-manager\-:\-:oryx\-\_\-manager\-Config\-:\-:\-Abstract\-Group\-Description\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classoryx__manager_1_1oryx__managerConfig_1_1AbstractGroupDescription__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Abstract\-Group\-Description} (std\-::string n, std\-::string t, int p, int i, bool s)
+\item 
+void {\bf convert\-Params} ()
+\item 
+virtual bool {\bf from\-Message} (const dynamic\-\_\-reconfigure\-::\-Config \&msg, boost\-::any \&config) const =0
+\item 
+virtual void {\bf set\-Initial\-State} (boost\-::any \&cfg) const =0
+\item 
+virtual void {\bf to\-Message} (dynamic\-\_\-reconfigure\-::\-Config \&msg, const boost\-::any \&config) const =0
+\item 
+virtual void {\bf update\-Params} (boost\-::any \&cfg, {\bf oryx\-\_\-manager\-Config} \&top) const =0
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector\*
+$<$ {\bf \-Abstract\-Param\-Description\-Const\-Ptr} $>$ {\bf abstract\-\_\-parameters}
+\item 
+bool {\bf state}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 144 of file oryx\-\_\-manager\-Config.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}!\-Abstract\-Group\-Description@{\-Abstract\-Group\-Description}}
+\index{\-Abstract\-Group\-Description@{\-Abstract\-Group\-Description}!oryx_manager::oryx_managerConfig::AbstractGroupDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}}
+\subsubsection[{\-Abstract\-Group\-Description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description\-::\-Abstract\-Group\-Description} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{n, }
+\item[{std\-::string}]{t, }
+\item[{int}]{p, }
+\item[{int}]{i, }
+\item[{bool}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1AbstractGroupDescription_a9ab9f53a3d79c9b208bda7cc41dfad77}
+
+
+\-Definition at line 147 of file oryx\-\_\-manager\-Config.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}!convert\-Params@{convert\-Params}}
+\index{convert\-Params@{convert\-Params}!oryx_manager::oryx_managerConfig::AbstractGroupDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}}
+\subsubsection[{convert\-Params}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description\-::convert\-Params} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1AbstractGroupDescription_ab3e5c605dc7a5b804fe891dd6d0592be}
+
+
+\-Definition at line 165 of file oryx\-\_\-manager\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}!from\-Message@{from\-Message}}
+\index{from\-Message@{from\-Message}!oryx_manager::oryx_managerConfig::AbstractGroupDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}}
+\subsubsection[{from\-Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description\-::from\-Message} (
+\begin{DoxyParamCaption}
+\item[{const dynamic\-\_\-reconfigure\-::\-Config \&}]{msg, }
+\item[{boost\-::any \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1AbstractGroupDescription_afb68293d27e180593bea0c2588ab4127}
+
+
+\-Implemented in {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Group\-Description$<$ T, P\-T $>$} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1GroupDescription_abbccd52ac41310a30c08f71fad4e0c32}.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}!set\-Initial\-State@{set\-Initial\-State}}
+\index{set\-Initial\-State@{set\-Initial\-State}!oryx_manager::oryx_managerConfig::AbstractGroupDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}}
+\subsubsection[{set\-Initial\-State}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description\-::set\-Initial\-State} (
+\begin{DoxyParamCaption}
+\item[{boost\-::any \&}]{cfg}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1AbstractGroupDescription_aef385d7728e4d29b6ce8353b25fa3eed}
+
+
+\-Implemented in {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Group\-Description$<$ T, P\-T $>$} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1GroupDescription_a0a520df67ce2b4e00903a2c86465adc6}.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}!to\-Message@{to\-Message}}
+\index{to\-Message@{to\-Message}!oryx_manager::oryx_managerConfig::AbstractGroupDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}}
+\subsubsection[{to\-Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description\-::to\-Message} (
+\begin{DoxyParamCaption}
+\item[{dynamic\-\_\-reconfigure\-::\-Config \&}]{msg, }
+\item[{const boost\-::any \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1AbstractGroupDescription_aa0555603ede361f7d4afd0438ec88b18}
+
+
+\-Implemented in {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Group\-Description$<$ T, P\-T $>$} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1GroupDescription_a778f4ee0d87831a4a98d840ca93ce6e4}.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}!update\-Params@{update\-Params}}
+\index{update\-Params@{update\-Params}!oryx_manager::oryx_managerConfig::AbstractGroupDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}}
+\subsubsection[{update\-Params}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description\-::update\-Params} (
+\begin{DoxyParamCaption}
+\item[{boost\-::any \&}]{cfg, }
+\item[{{\bf oryx\-\_\-manager\-Config} \&}]{top}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [pure virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1AbstractGroupDescription_a8a1baf66a61f4e9e28a284b8be2d232f}
+
+
+\-Implemented in {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Group\-Description$<$ T, P\-T $>$} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1GroupDescription_afa94a1b34dd1805b8dd6acdbeeba4396}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}!abstract\-\_\-parameters@{abstract\-\_\-parameters}}
+\index{abstract\-\_\-parameters@{abstract\-\_\-parameters}!oryx_manager::oryx_managerConfig::AbstractGroupDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}}
+\subsubsection[{abstract\-\_\-parameters}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf \-Abstract\-Param\-Description\-Const\-Ptr}$>$ {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description\-::abstract\-\_\-parameters}}\label{classoryx__manager_1_1oryx__managerConfig_1_1AbstractGroupDescription_ad241b6a01f51a80aa5cd659f6bd4c125}
+
+
+\-Definition at line 156 of file oryx\-\_\-manager\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}!state@{state}}
+\index{state@{state}!oryx_manager::oryx_managerConfig::AbstractGroupDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Group\-Description\-::state}}\label{classoryx__manager_1_1oryx__managerConfig_1_1AbstractGroupDescription_a62b510f62740af858c076c89e4c460bb}
+
+
+\-Definition at line 157 of file oryx\-\_\-manager\-Config.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf oryx\-\_\-manager\-Config.\-h}\end{DoxyCompactItemize}

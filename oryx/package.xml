@@ -1,0 +1,15 @@
+<package>
+  <name>oryx</name>
+  <version>1.0.0</version>
+  <description>
+    A set of packages that define the operation of WPI's Oryx Robot. This stack contains all packages responsable for the basic operation of the platform (motor controllers, health monitoring, etc), but does not contain any special logic for the type of operation that is being conducted (autonomous, teleop, etc). It is inteded that anyone building a robot using the Oryx platform as its base will create their own stack that uses this stack as a dependancy.
+  </description>
+  <maintainer email="robot@wpi.edu">WPI RIVeR Lab</maintainer>
+  <license>?</license>
+  <url>http://robot.wpi.edu/wiki/index.php/Oryx</url>
+  
+  <export>
+    <metapackage/>
+  </export>
+  
+</package>

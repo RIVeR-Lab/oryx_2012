@@ -1,0 +1,193 @@
+\section{\-Active\-Network\-Connection\-Manager \-Class \-Reference}
+\label{classActiveNetworkConnectionManager}\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}}
+
+
+{\ttfamily \#include $<$\-Active\-Network\-Connection\-Manager.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Active\-Network\-Connection\-Manager} (ros\-::\-Node\-Handle \&handle, \-N\-M\-Client $\ast$client)
+\item 
+virtual {\bf $\sim$\-Active\-Network\-Connection\-Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf connections\-\_\-changed\-\_\-cb} (const \-Network\-Connections\-::\-Const\-Ptr \&latest\-\_\-connections)
+\item 
+void {\bf devices\-\_\-changed\-\_\-cb} (const \-Network\-Devices\-::\-Const\-Ptr \&latest\-\_\-devices)
+\item 
+void {\bf process\-\_\-active\-\_\-connections\-\_\-changed} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf active\-\_\-connections\-\_\-changed\-\_\-cb} (\-N\-M\-Client $\ast$client, \-G\-Param\-Spec $\ast$pspec, gpointer user\-\_\-data)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\-::\-Publisher {\bf active\-\_\-connection\-\_\-pub}
+\item 
+ros\-::\-Subscriber {\bf connection\-\_\-sub}
+\item 
+ros\-::\-Subscriber {\bf devices\-\_\-sub}
+\item 
+\-N\-M\-Client $\ast$ {\bf m\-\_\-client}
+\item 
+ros\-::\-Node\-Handle \& {\bf m\-\_\-handle}
+\item 
+\-Network\-Connections\-::\-Const\-Ptr {\bf m\-\_\-latest\-\_\-connections}
+\item 
+\-Network\-Devices\-::\-Const\-Ptr {\bf m\-\_\-latest\-\_\-devices}
+\item 
+uint32\-\_\-t {\bf msg\-\_\-seq}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 21 of file \-Active\-Network\-Connection\-Manager.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}}
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{\-Active\-Network\-Connection\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Active\-Network\-Connection\-Manager\-::\-Active\-Network\-Connection\-Manager} (
+\begin{DoxyParamCaption}
+\item[{ros\-::\-Node\-Handle \&}]{handle, }
+\item[{\-N\-M\-Client $\ast$}]{client}
+\end{DoxyParamCaption}
+)}\label{classActiveNetworkConnectionManager_a60a2a901a4f96edc31bc886673307f5e}
+
+
+\-Definition at line 12 of file \-Active\-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!$\sim$\-Active\-Network\-Connection\-Manager@{$\sim$\-Active\-Network\-Connection\-Manager}}
+\index{$\sim$\-Active\-Network\-Connection\-Manager@{$\sim$\-Active\-Network\-Connection\-Manager}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{$\sim$\-Active\-Network\-Connection\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Active\-Network\-Connection\-Manager\-::$\sim$\-Active\-Network\-Connection\-Manager} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classActiveNetworkConnectionManager_af66d450ee78d83ae870ade62e5c7c7fc}
+
+
+\-Definition at line 123 of file \-Active\-Network\-Connection\-Manager.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!active\-\_\-connections\-\_\-changed\-\_\-cb@{active\-\_\-connections\-\_\-changed\-\_\-cb}}
+\index{active\-\_\-connections\-\_\-changed\-\_\-cb@{active\-\_\-connections\-\_\-changed\-\_\-cb}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{active\-\_\-connections\-\_\-changed\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Active\-Network\-Connection\-Manager\-::active\-\_\-connections\-\_\-changed\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Client $\ast$}]{client, }
+\item[{\-G\-Param\-Spec $\ast$}]{pspec, }
+\item[{gpointer}]{user\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [static, private]}}\label{classActiveNetworkConnectionManager_a64d60481f753128d099b8fc3d092b304}
+
+
+\-Definition at line 116 of file \-Active\-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!connections\-\_\-changed\-\_\-cb@{connections\-\_\-changed\-\_\-cb}}
+\index{connections\-\_\-changed\-\_\-cb@{connections\-\_\-changed\-\_\-cb}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{connections\-\_\-changed\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Active\-Network\-Connection\-Manager\-::connections\-\_\-changed\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{const \-Network\-Connections\-::\-Const\-Ptr \&}]{latest\-\_\-connections}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classActiveNetworkConnectionManager_a8940f876e47ddabf8595da4edd2846dc}
+
+
+\-Definition at line 24 of file \-Active\-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!devices\-\_\-changed\-\_\-cb@{devices\-\_\-changed\-\_\-cb}}
+\index{devices\-\_\-changed\-\_\-cb@{devices\-\_\-changed\-\_\-cb}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{devices\-\_\-changed\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Active\-Network\-Connection\-Manager\-::devices\-\_\-changed\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{const \-Network\-Devices\-::\-Const\-Ptr \&}]{latest\-\_\-devices}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classActiveNetworkConnectionManager_a36d64117f475a97f9850223fbabd9ad7}
+
+
+\-Definition at line 29 of file \-Active\-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!process\-\_\-active\-\_\-connections\-\_\-changed@{process\-\_\-active\-\_\-connections\-\_\-changed}}
+\index{process\-\_\-active\-\_\-connections\-\_\-changed@{process\-\_\-active\-\_\-connections\-\_\-changed}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{process\-\_\-active\-\_\-connections\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Active\-Network\-Connection\-Manager\-::process\-\_\-active\-\_\-connections\-\_\-changed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classActiveNetworkConnectionManager_a50bcf7607004013d11cb48291b63a8b8}
+
+
+\-Definition at line 35 of file \-Active\-Network\-Connection\-Manager.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!active\-\_\-connection\-\_\-pub@{active\-\_\-connection\-\_\-pub}}
+\index{active\-\_\-connection\-\_\-pub@{active\-\_\-connection\-\_\-pub}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{active\-\_\-connection\-\_\-pub}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf \-Active\-Network\-Connection\-Manager\-::active\-\_\-connection\-\_\-pub}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActiveNetworkConnectionManager_adfd56b391a554dc7bed6f498525f8207}
+
+
+\-Definition at line 37 of file \-Active\-Network\-Connection\-Manager.\-h.
+
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!connection\-\_\-sub@{connection\-\_\-sub}}
+\index{connection\-\_\-sub@{connection\-\_\-sub}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{connection\-\_\-sub}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Active\-Network\-Connection\-Manager\-::connection\-\_\-sub}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActiveNetworkConnectionManager_a95a6c51ec7a9bbdf269cfd34e29ca5f0}
+
+
+\-Definition at line 35 of file \-Active\-Network\-Connection\-Manager.\-h.
+
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!devices\-\_\-sub@{devices\-\_\-sub}}
+\index{devices\-\_\-sub@{devices\-\_\-sub}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{devices\-\_\-sub}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Active\-Network\-Connection\-Manager\-::devices\-\_\-sub}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActiveNetworkConnectionManager_a6a01f6004280e0729aee9c148736df82}
+
+
+\-Definition at line 36 of file \-Active\-Network\-Connection\-Manager.\-h.
+
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!m\-\_\-client@{m\-\_\-client}}
+\index{m\-\_\-client@{m\-\_\-client}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{m\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}\-N\-M\-Client$\ast$ {\bf \-Active\-Network\-Connection\-Manager\-::m\-\_\-client}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActiveNetworkConnectionManager_ac396aa42342a745abd73942326046aaa}
+
+
+\-Definition at line 33 of file \-Active\-Network\-Connection\-Manager.\-h.
+
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!m\-\_\-handle@{m\-\_\-handle}}
+\index{m\-\_\-handle@{m\-\_\-handle}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{m\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle\& {\bf \-Active\-Network\-Connection\-Manager\-::m\-\_\-handle}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActiveNetworkConnectionManager_a0a973ef85d741b93370605198eb008bf}
+
+
+\-Definition at line 32 of file \-Active\-Network\-Connection\-Manager.\-h.
+
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!m\-\_\-latest\-\_\-connections@{m\-\_\-latest\-\_\-connections}}
+\index{m\-\_\-latest\-\_\-connections@{m\-\_\-latest\-\_\-connections}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{m\-\_\-latest\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}\-Network\-Connections\-::\-Const\-Ptr {\bf \-Active\-Network\-Connection\-Manager\-::m\-\_\-latest\-\_\-connections}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActiveNetworkConnectionManager_a07c47fc80d7aefcbd090653bbe84791c}
+
+
+\-Definition at line 38 of file \-Active\-Network\-Connection\-Manager.\-h.
+
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!m\-\_\-latest\-\_\-devices@{m\-\_\-latest\-\_\-devices}}
+\index{m\-\_\-latest\-\_\-devices@{m\-\_\-latest\-\_\-devices}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{m\-\_\-latest\-\_\-devices}]{\setlength{\rightskip}{0pt plus 5cm}\-Network\-Devices\-::\-Const\-Ptr {\bf \-Active\-Network\-Connection\-Manager\-::m\-\_\-latest\-\_\-devices}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActiveNetworkConnectionManager_af5050daf76e9310dcaf30999e841cdf8}
+
+
+\-Definition at line 39 of file \-Active\-Network\-Connection\-Manager.\-h.
+
+\index{\-Active\-Network\-Connection\-Manager@{\-Active\-Network\-Connection\-Manager}!msg\-\_\-seq@{msg\-\_\-seq}}
+\index{msg\-\_\-seq@{msg\-\_\-seq}!ActiveNetworkConnectionManager@{\-Active\-Network\-Connection\-Manager}}
+\subsubsection[{msg\-\_\-seq}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Active\-Network\-Connection\-Manager\-::msg\-\_\-seq}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActiveNetworkConnectionManager_a23662bc8ff3a40a0c99b2fe67c50a213}
+
+
+\-Definition at line 34 of file \-Active\-Network\-Connection\-Manager.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Active\-Network\-Connection\-Manager.\-h}\item 
+{\bf \-Active\-Network\-Connection\-Manager.\-cpp}\end{DoxyCompactItemize}

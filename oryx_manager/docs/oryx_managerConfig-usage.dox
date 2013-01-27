@@ -1,0 +1,7 @@
+\subsubsection usage Usage
+\verbatim
+<node name="oryx_manager" pkg="oryx_manager" type="oryx_manager">
+  <param name="Remote_Connection" type="bool" value="False" />
+</node>
+\endverbatim
+

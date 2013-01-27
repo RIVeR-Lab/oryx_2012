@@ -1,0 +1,38 @@
+<package>
+  <name>oryx_manager</name>
+  <version>1.0.0</version>
+  <description>
+
+     Package which contains all of the high level operation nodes
+
+  </description>
+  <maintainer email="robot@wpi.edu">oryx</maintainer>
+  <license>BSD</license>
+  <url>http://ros.org/wiki/OryxManager</url>
+
+
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>oryx_msgs</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>epos_manager</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>oryx_msgs</run_depend>
+  <run_depend>dynamic_reconfigure</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>epos_manager</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+
+</package>
+
+

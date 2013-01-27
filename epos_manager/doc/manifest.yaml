@@ -1,16 +1,19 @@
-authors: RIVeR
-brief: epos_manager
+authors: ''
+brief: ''
 depends:
 - dynamic_reconfigure
-- oryx_msgs
+- catkin
 - roscpp
-description: "\n\n     Package containing nodes needed for communicating with Maxon\
-  \ Epos motor controllers\n\n  "
+- message_runtime
+- oryx_msgs
+- message_generation
+description: Package containing nodes needed for communicating with Maxon Epos motor
+  controllers
 license: BSD
 msgs:
-- MotorInfo
-- EPOSControl
 - GroupMotorInfo
+- EPOSControl
+- MotorInfo
 - GroupEPOSControl
 package_type: package
 srvs: []

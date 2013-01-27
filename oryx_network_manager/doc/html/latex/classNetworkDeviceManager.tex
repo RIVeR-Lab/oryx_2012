@@ -1,0 +1,227 @@
+\section{\-Network\-Device\-Manager \-Class \-Reference}
+\label{classNetworkDeviceManager}\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}}
+
+
+{\ttfamily \#include $<$\-Network\-Device\-Manager.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Network\-Device\-Manager} (ros\-::\-Node\-Handle \&handle, \-N\-M\-Client $\ast$client)
+\item 
+virtual {\bf $\sim$\-Network\-Device\-Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf fill\-\_\-device\-\_\-info} (\-N\-M\-Device $\ast$device, \-Network\-Device \&ros\-\_\-device\-\_\-message)
+\item 
+void {\bf process\-\_\-added\-\_\-device} (\-N\-M\-Device $\ast$device)
+\item 
+void {\bf process\-\_\-device\-\_\-state\-\_\-changed} (\-N\-M\-Device $\ast$device, \-N\-M\-Device\-State state)
+\item 
+void {\bf process\-\_\-removed\-\_\-device} (\-N\-M\-Device $\ast$device)
+\item 
+void {\bf publish\-\_\-devices} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf device\-\_\-added\-\_\-cb} (\-N\-M\-Client $\ast$client, \-N\-M\-Device $\ast$device, gpointer user\-\_\-data)
+\item 
+static void {\bf device\-\_\-removed\-\_\-cb} (\-N\-M\-Client $\ast$client, \-N\-M\-Device $\ast$device, gpointer user\-\_\-data)
+\item 
+static void {\bf device\-\_\-state\-\_\-changed\-\_\-cb} (\-N\-M\-Device $\ast$device, \-N\-M\-Device\-State state, guint arg2, guint arg3, gpointer user\-\_\-data)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\-::\-Publisher {\bf device\-\_\-pub}
+\item 
+std\-::map$<$ std\-::string, \*
+\-Network\-Device $>$ {\bf devices}
+\item 
+\-N\-M\-Client $\ast$ {\bf m\-\_\-client}
+\item 
+ros\-::\-Node\-Handle \& {\bf m\-\_\-handle}
+\item 
+uint32\-\_\-t {\bf msg\-\_\-seq}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 25 of file \-Network\-Device\-Manager.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!\-Network\-Device\-Manager@{\-Network\-Device\-Manager}}
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{\-Network\-Device\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Network\-Device\-Manager\-::\-Network\-Device\-Manager} (
+\begin{DoxyParamCaption}
+\item[{ros\-::\-Node\-Handle \&}]{handle, }
+\item[{\-N\-M\-Client $\ast$}]{client}
+\end{DoxyParamCaption}
+)}\label{classNetworkDeviceManager_a9554c981c365d623ffc7449401f89092}
+
+
+\-Definition at line 11 of file \-Network\-Device\-Manager.\-cpp.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!$\sim$\-Network\-Device\-Manager@{$\sim$\-Network\-Device\-Manager}}
+\index{$\sim$\-Network\-Device\-Manager@{$\sim$\-Network\-Device\-Manager}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{$\sim$\-Network\-Device\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Network\-Device\-Manager\-::$\sim$\-Network\-Device\-Manager} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classNetworkDeviceManager_a5b3024caff9a246acfcecfb29df7b364}
+
+
+\-Definition at line 125 of file \-Network\-Device\-Manager.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!device\-\_\-added\-\_\-cb@{device\-\_\-added\-\_\-cb}}
+\index{device\-\_\-added\-\_\-cb@{device\-\_\-added\-\_\-cb}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{device\-\_\-added\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Device\-Manager\-::device\-\_\-added\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Client $\ast$}]{client, }
+\item[{\-N\-M\-Device $\ast$}]{device, }
+\item[{gpointer}]{user\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [static, private]}}\label{classNetworkDeviceManager_aa5aa096ff2129f2df416d5e032c3473b}
+
+
+\-Definition at line 108 of file \-Network\-Device\-Manager.\-cpp.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!device\-\_\-removed\-\_\-cb@{device\-\_\-removed\-\_\-cb}}
+\index{device\-\_\-removed\-\_\-cb@{device\-\_\-removed\-\_\-cb}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{device\-\_\-removed\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Device\-Manager\-::device\-\_\-removed\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Client $\ast$}]{client, }
+\item[{\-N\-M\-Device $\ast$}]{device, }
+\item[{gpointer}]{user\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [static, private]}}\label{classNetworkDeviceManager_a46a412a33a0d1a6fb039a2fcd3d43de1}
+
+
+\-Definition at line 113 of file \-Network\-Device\-Manager.\-cpp.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!device\-\_\-state\-\_\-changed\-\_\-cb@{device\-\_\-state\-\_\-changed\-\_\-cb}}
+\index{device\-\_\-state\-\_\-changed\-\_\-cb@{device\-\_\-state\-\_\-changed\-\_\-cb}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{device\-\_\-state\-\_\-changed\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Device\-Manager\-::device\-\_\-state\-\_\-changed\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Device $\ast$}]{device, }
+\item[{\-N\-M\-Device\-State}]{state, }
+\item[{guint}]{arg2, }
+\item[{guint}]{arg3, }
+\item[{gpointer}]{user\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [static, private]}}\label{classNetworkDeviceManager_a46872d468da55df23f4682e91e8e4ca0}
+
+
+\-Definition at line 118 of file \-Network\-Device\-Manager.\-cpp.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!fill\-\_\-device\-\_\-info@{fill\-\_\-device\-\_\-info}}
+\index{fill\-\_\-device\-\_\-info@{fill\-\_\-device\-\_\-info}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{fill\-\_\-device\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Device\-Manager\-::fill\-\_\-device\-\_\-info} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Device $\ast$}]{device, }
+\item[{\-Network\-Device \&}]{ros\-\_\-device\-\_\-message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkDeviceManager_a29e5ee4c344a9eb2dda73ae95b307551}
+
+
+\-Definition at line 59 of file \-Network\-Device\-Manager.\-cpp.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!process\-\_\-added\-\_\-device@{process\-\_\-added\-\_\-device}}
+\index{process\-\_\-added\-\_\-device@{process\-\_\-added\-\_\-device}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{process\-\_\-added\-\_\-device}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Device\-Manager\-::process\-\_\-added\-\_\-device} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Device $\ast$}]{device}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkDeviceManager_af6d1b7c7d53518b7efe88c0268d24cf3}
+
+
+\-Definition at line 28 of file \-Network\-Device\-Manager.\-cpp.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!process\-\_\-device\-\_\-state\-\_\-changed@{process\-\_\-device\-\_\-state\-\_\-changed}}
+\index{process\-\_\-device\-\_\-state\-\_\-changed@{process\-\_\-device\-\_\-state\-\_\-changed}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{process\-\_\-device\-\_\-state\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Device\-Manager\-::process\-\_\-device\-\_\-state\-\_\-changed} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Device $\ast$}]{device, }
+\item[{\-N\-M\-Device\-State}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkDeviceManager_a4e7b46903909512d2368cce08c874982}
+
+
+\-Definition at line 48 of file \-Network\-Device\-Manager.\-cpp.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!process\-\_\-removed\-\_\-device@{process\-\_\-removed\-\_\-device}}
+\index{process\-\_\-removed\-\_\-device@{process\-\_\-removed\-\_\-device}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{process\-\_\-removed\-\_\-device}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Device\-Manager\-::process\-\_\-removed\-\_\-device} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Device $\ast$}]{device}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkDeviceManager_ab123bdd2182e14288cae9170ea525dbc}
+
+
+\-Definition at line 39 of file \-Network\-Device\-Manager.\-cpp.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!publish\-\_\-devices@{publish\-\_\-devices}}
+\index{publish\-\_\-devices@{publish\-\_\-devices}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{publish\-\_\-devices}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Device\-Manager\-::publish\-\_\-devices} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkDeviceManager_a1df862e24e11559efd3a6a1cf9ec9d2d}
+
+
+\-Definition at line 98 of file \-Network\-Device\-Manager.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!device\-\_\-pub@{device\-\_\-pub}}
+\index{device\-\_\-pub@{device\-\_\-pub}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{device\-\_\-pub}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf \-Network\-Device\-Manager\-::device\-\_\-pub}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkDeviceManager_a4cf41169eeabf250c9a786cc6d828866}
+
+
+\-Definition at line 45 of file \-Network\-Device\-Manager.\-h.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!devices@{devices}}
+\index{devices@{devices}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{devices}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$std\-::string, \-Network\-Device$>$ {\bf \-Network\-Device\-Manager\-::devices}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkDeviceManager_aa6ec2b4b34f5a62e23d6b3d572d9965d}
+
+
+\-Definition at line 46 of file \-Network\-Device\-Manager.\-h.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!m\-\_\-client@{m\-\_\-client}}
+\index{m\-\_\-client@{m\-\_\-client}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{m\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}\-N\-M\-Client$\ast$ {\bf \-Network\-Device\-Manager\-::m\-\_\-client}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkDeviceManager_a061bff79211ec2ab864c6d395bd967b8}
+
+
+\-Definition at line 43 of file \-Network\-Device\-Manager.\-h.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!m\-\_\-handle@{m\-\_\-handle}}
+\index{m\-\_\-handle@{m\-\_\-handle}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{m\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle\& {\bf \-Network\-Device\-Manager\-::m\-\_\-handle}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkDeviceManager_aafa94d7cb727d394dc3f3ec0c6bee8d6}
+
+
+\-Definition at line 42 of file \-Network\-Device\-Manager.\-h.
+
+\index{\-Network\-Device\-Manager@{\-Network\-Device\-Manager}!msg\-\_\-seq@{msg\-\_\-seq}}
+\index{msg\-\_\-seq@{msg\-\_\-seq}!NetworkDeviceManager@{\-Network\-Device\-Manager}}
+\subsubsection[{msg\-\_\-seq}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Network\-Device\-Manager\-::msg\-\_\-seq}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkDeviceManager_a5f095ff84d988fcb50047ebcf91c1c56}
+
+
+\-Definition at line 44 of file \-Network\-Device\-Manager.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Network\-Device\-Manager.\-h}\item 
+{\bf \-Network\-Device\-Manager.\-cpp}\end{DoxyCompactItemize}

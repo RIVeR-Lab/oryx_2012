@@ -1,0 +1,222 @@
+\section{\-Network\-Connection\-Manager \-Class \-Reference}
+\label{classNetworkConnectionManager}\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}}
+
+
+{\ttfamily \#include $<$\-Network\-Connection\-Manager.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Network\-Connection\-Manager} (ros\-::\-Node\-Handle \&handle, \-N\-M\-Remote\-Settings $\ast$remote\-\_\-settings)
+\item 
+virtual {\bf $\sim$\-Network\-Connection\-Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf fill\-\_\-connection\-\_\-info} (\-N\-M\-Connection $\ast$connection, oryx\-\_\-network\-\_\-manager\-::\-Network\-Connection \&ros\-\_\-connection\-\_\-message)
+\item 
+void {\bf process\-\_\-added\-\_\-connection} (\-N\-M\-Connection $\ast$connection)
+\item 
+void {\bf process\-\_\-removed\-\_\-connection} (\-N\-M\-Connection $\ast$connection)
+\item 
+void {\bf process\-\_\-updated\-\_\-connection} (\-N\-M\-Connection $\ast$connection)
+\item 
+void {\bf publish\-\_\-connections} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf connection\-\_\-added\-\_\-cb} (\-N\-M\-Remote\-Settings $\ast$settings, \-N\-M\-Remote\-Connection $\ast$connection, gpointer user\-\_\-data)
+\item 
+static void {\bf connection\-\_\-removed\-\_\-cb} (\-N\-M\-Remote\-Connection $\ast$connection, gpointer user\-\_\-data)
+\item 
+static void {\bf connection\-\_\-updated\-\_\-cb} (\-N\-M\-Remote\-Connection $\ast$connection, gpointer user\-\_\-data)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\-::\-Publisher {\bf connection\-\_\-pub}
+\item 
+std\-::map$<$ std\-::string, \*
+\-Network\-Connection $>$ {\bf connections}
+\item 
+ros\-::\-Node\-Handle \& {\bf m\-\_\-handle}
+\item 
+\-N\-M\-Remote\-Settings $\ast$ {\bf m\-\_\-remote\-\_\-settings}
+\item 
+uint32\-\_\-t {\bf msg\-\_\-seq}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 20 of file \-Network\-Connection\-Manager.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}}
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{\-Network\-Connection\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Network\-Connection\-Manager\-::\-Network\-Connection\-Manager} (
+\begin{DoxyParamCaption}
+\item[{ros\-::\-Node\-Handle \&}]{handle, }
+\item[{\-N\-M\-Remote\-Settings $\ast$}]{remote\-\_\-settings}
+\end{DoxyParamCaption}
+)}\label{classNetworkConnectionManager_af691594031396547501dd0907b710ee2}
+
+
+\-Definition at line 15 of file \-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!$\sim$\-Network\-Connection\-Manager@{$\sim$\-Network\-Connection\-Manager}}
+\index{$\sim$\-Network\-Connection\-Manager@{$\sim$\-Network\-Connection\-Manager}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{$\sim$\-Network\-Connection\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Network\-Connection\-Manager\-::$\sim$\-Network\-Connection\-Manager} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classNetworkConnectionManager_a678b84c10e82b3a71b04412a445cf086}
+
+
+\-Definition at line 142 of file \-Network\-Connection\-Manager.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!connection\-\_\-added\-\_\-cb@{connection\-\_\-added\-\_\-cb}}
+\index{connection\-\_\-added\-\_\-cb@{connection\-\_\-added\-\_\-cb}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{connection\-\_\-added\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Connection\-Manager\-::connection\-\_\-added\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Remote\-Settings $\ast$}]{settings, }
+\item[{\-N\-M\-Remote\-Connection $\ast$}]{connection, }
+\item[{gpointer}]{user\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [static, private]}}\label{classNetworkConnectionManager_a1dd8e0c5ef18b8d408130488e9fdd73f}
+
+
+\-Definition at line 125 of file \-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!connection\-\_\-removed\-\_\-cb@{connection\-\_\-removed\-\_\-cb}}
+\index{connection\-\_\-removed\-\_\-cb@{connection\-\_\-removed\-\_\-cb}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{connection\-\_\-removed\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Connection\-Manager\-::connection\-\_\-removed\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Remote\-Connection $\ast$}]{connection, }
+\item[{gpointer}]{user\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [static, private]}}\label{classNetworkConnectionManager_a768b30e75063ea029cf8857771d977c7}
+
+
+\-Definition at line 131 of file \-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!connection\-\_\-updated\-\_\-cb@{connection\-\_\-updated\-\_\-cb}}
+\index{connection\-\_\-updated\-\_\-cb@{connection\-\_\-updated\-\_\-cb}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{connection\-\_\-updated\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Connection\-Manager\-::connection\-\_\-updated\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Remote\-Connection $\ast$}]{connection, }
+\item[{gpointer}]{user\-\_\-data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [static, private]}}\label{classNetworkConnectionManager_a999bede48c73a0a731edfa2659acc2e6}
+
+
+\-Definition at line 136 of file \-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!fill\-\_\-connection\-\_\-info@{fill\-\_\-connection\-\_\-info}}
+\index{fill\-\_\-connection\-\_\-info@{fill\-\_\-connection\-\_\-info}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{fill\-\_\-connection\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Connection\-Manager\-::fill\-\_\-connection\-\_\-info} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Connection $\ast$}]{connection, }
+\item[{oryx\-\_\-network\-\_\-manager\-::\-Network\-Connection \&}]{ros\-\_\-connection\-\_\-message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConnectionManager_a83f9554139aa38ff8677c458505c2868}
+
+
+\-Definition at line 56 of file \-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!process\-\_\-added\-\_\-connection@{process\-\_\-added\-\_\-connection}}
+\index{process\-\_\-added\-\_\-connection@{process\-\_\-added\-\_\-connection}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{process\-\_\-added\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Connection\-Manager\-::process\-\_\-added\-\_\-connection} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Connection $\ast$}]{connection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConnectionManager_ae4bcc03b4cdd03c8905684435989e959}
+
+
+\-Definition at line 24 of file \-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!process\-\_\-removed\-\_\-connection@{process\-\_\-removed\-\_\-connection}}
+\index{process\-\_\-removed\-\_\-connection@{process\-\_\-removed\-\_\-connection}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{process\-\_\-removed\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Connection\-Manager\-::process\-\_\-removed\-\_\-connection} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Connection $\ast$}]{connection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConnectionManager_afd8068d0716e0a43080ee86778a4d5b2}
+
+
+\-Definition at line 36 of file \-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!process\-\_\-updated\-\_\-connection@{process\-\_\-updated\-\_\-connection}}
+\index{process\-\_\-updated\-\_\-connection@{process\-\_\-updated\-\_\-connection}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{process\-\_\-updated\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Connection\-Manager\-::process\-\_\-updated\-\_\-connection} (
+\begin{DoxyParamCaption}
+\item[{\-N\-M\-Connection $\ast$}]{connection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConnectionManager_ad4684ed50a06beb24dd8cf121cd644e1}
+
+
+\-Definition at line 45 of file \-Network\-Connection\-Manager.\-cpp.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!publish\-\_\-connections@{publish\-\_\-connections}}
+\index{publish\-\_\-connections@{publish\-\_\-connections}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{publish\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Connection\-Manager\-::publish\-\_\-connections} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConnectionManager_a6ecb02cc664e791861311340b3686901}
+
+
+\-Definition at line 115 of file \-Network\-Connection\-Manager.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!connection\-\_\-pub@{connection\-\_\-pub}}
+\index{connection\-\_\-pub@{connection\-\_\-pub}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{connection\-\_\-pub}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf \-Network\-Connection\-Manager\-::connection\-\_\-pub}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConnectionManager_a7b37e74cf258d28068a9ceb4f68725fd}
+
+
+\-Definition at line 39 of file \-Network\-Connection\-Manager.\-h.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!connections@{connections}}
+\index{connections@{connections}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{connections}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$std\-::string, \-Network\-Connection$>$ {\bf \-Network\-Connection\-Manager\-::connections}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConnectionManager_ab75d5285bcba0b2e0043307e9b87474f}
+
+
+\-Definition at line 40 of file \-Network\-Connection\-Manager.\-h.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!m\-\_\-handle@{m\-\_\-handle}}
+\index{m\-\_\-handle@{m\-\_\-handle}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{m\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle\& {\bf \-Network\-Connection\-Manager\-::m\-\_\-handle}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConnectionManager_a2e35829f6d0b115042694cf905245c2a}
+
+
+\-Definition at line 36 of file \-Network\-Connection\-Manager.\-h.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!m\-\_\-remote\-\_\-settings@{m\-\_\-remote\-\_\-settings}}
+\index{m\-\_\-remote\-\_\-settings@{m\-\_\-remote\-\_\-settings}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{m\-\_\-remote\-\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}\-N\-M\-Remote\-Settings$\ast$ {\bf \-Network\-Connection\-Manager\-::m\-\_\-remote\-\_\-settings}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConnectionManager_ac76e26931f1389722b68ddca91c0e574}
+
+
+\-Definition at line 37 of file \-Network\-Connection\-Manager.\-h.
+
+\index{\-Network\-Connection\-Manager@{\-Network\-Connection\-Manager}!msg\-\_\-seq@{msg\-\_\-seq}}
+\index{msg\-\_\-seq@{msg\-\_\-seq}!NetworkConnectionManager@{\-Network\-Connection\-Manager}}
+\subsubsection[{msg\-\_\-seq}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Network\-Connection\-Manager\-::msg\-\_\-seq}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConnectionManager_a8e7d07af1f0abc1b2114e03b743b4c13}
+
+
+\-Definition at line 38 of file \-Network\-Connection\-Manager.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Network\-Connection\-Manager.\-h}\item 
+{\bf \-Network\-Connection\-Manager.\-cpp}\end{DoxyCompactItemize}

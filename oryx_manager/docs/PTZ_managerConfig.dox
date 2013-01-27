@@ -1,0 +1,12 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~Pan" : \b [int] Pan in Degrees min: -120, default: 0, max: 120
+- \b "~Tilt" : \b [int] Tilt in Degrees min: -60, default: 0, max: 60
+- \b "~Invert" : \b [bool] Invert the Controls min: False, default: False, max: True
+- \b "~Home_Pan" : \b [bool] Home Pan Motor min: False, default: False, max: True
+- \b "~Home_Tilt" : \b [bool] Home Tilt Motor min: False, default: False, max: True
+- \b "~Home_Boom" : \b [bool] Home Boom Motor min: False, default: False, max: True
+- \b "~Home_Safely" : \b [bool] Configures the safety mode of the boom min: False, default: True, max: True
+

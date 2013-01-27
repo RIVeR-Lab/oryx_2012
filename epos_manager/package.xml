@@ -1,0 +1,27 @@
+<package>
+  <name>epos_manager</name>
+  <version>1.0.0</version>
+  <description>
+
+     Package containing nodes needed for communicating with Maxon Epos motor controllers
+
+  </description>
+  <maintainer email="robot@wpi.edu">RIVeR</maintainer>
+  <license>BSD</license>
+  <url>http://ros.org/wiki/EposManager</url>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>oryx_msgs</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
+  <build_depend>message_generation</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>oryx_msgs</run_depend>
+  <run_depend>dynamic_reconfigure</run_depend>
+  <run_depend>message_runtime</run_depend>
+  
+</package>
+
+

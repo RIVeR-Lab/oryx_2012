@@ -1,0 +1,219 @@
+\section{oryx\-\_\-manager\-:\-:oryx\-\_\-manager\-Config\-:\-:\-Param\-Description$<$ \-T $>$ \-Class \-Template \-Reference}
+\label{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription}\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description$<$ T $>$@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description$<$ T $>$}}
+
+
+{\ttfamily \#include $<$oryx\-\_\-manager\-Config.\-h$>$}
+
+
+
+\-Inheritance diagram for oryx\-\_\-manager\-:\-:oryx\-\_\-manager\-Config\-:\-:\-Param\-Description$<$ \-T $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf calc\-Level} (uint32\-\_\-t \&comb\-\_\-level, const {\bf oryx\-\_\-manager\-Config} \&config1, const {\bf oryx\-\_\-manager\-Config} \&config2) const 
+\item 
+virtual void {\bf clamp} ({\bf oryx\-\_\-manager\-Config} \&config, const {\bf oryx\-\_\-manager\-Config} \&{\bf max}, const {\bf oryx\-\_\-manager\-Config} \&min) const 
+\item 
+{\footnotesize template$<$$>$ }\\void {\bf clamp} ({\bf oryx\-\_\-manager\-Config} \&config, const {\bf oryx\-\_\-manager\-Config} \&{\bf max}, const {\bf oryx\-\_\-manager\-Config} \&min) const
+\item 
+virtual bool {\bf from\-Message} (const dynamic\-\_\-reconfigure\-::\-Config \&msg, {\bf oryx\-\_\-manager\-Config} \&config) const 
+\item 
+virtual void {\bf from\-Server} (const ros\-::\-Node\-Handle \&nh, {\bf oryx\-\_\-manager\-Config} \&config) const 
+\item 
+virtual void {\bf get\-Value} (const {\bf oryx\-\_\-manager\-Config} \&config, boost\-::any \&val) const 
+\item 
+{\bf \-Param\-Description} (std\-::string name, std\-::string type, uint32\-\_\-t level, std\-::string description, std\-::string edit\-\_\-method, \-T oryx\-\_\-manager\-Config\-::$\ast$f)
+\item 
+virtual void {\bf to\-Message} (dynamic\-\_\-reconfigure\-::\-Config \&msg, const {\bf oryx\-\_\-manager\-Config} \&config) const 
+\item 
+virtual void {\bf to\-Server} (const ros\-::\-Node\-Handle \&nh, const {\bf oryx\-\_\-manager\-Config} \&config) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-Toryx\-\_\-manager\-Config\-::$\ast$ {\bf field}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$class T$>$class oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description$<$ T $>$}
+
+
+
+\-Definition at line 92 of file oryx\-\_\-manager\-Config.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}!\-Param\-Description@{\-Param\-Description}}
+\index{\-Param\-Description@{\-Param\-Description}!oryx_manager::oryx_managerConfig::ParamDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}}
+\subsubsection[{\-Param\-Description}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}$<$ \-T $>$\-::{\bf \-Param\-Description} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name, }
+\item[{std\-::string}]{type, }
+\item[{uint32\-\_\-t}]{level, }
+\item[{std\-::string}]{description, }
+\item[{std\-::string}]{edit\-\_\-method, }
+\item[{\-T oryx\-\_\-manager\-Config\-::$\ast$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription_a085a903acdad06b60c92d0b859e073c6}
+
+
+\-Definition at line 95 of file oryx\-\_\-manager\-Config.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}!calc\-Level@{calc\-Level}}
+\index{calc\-Level@{calc\-Level}!oryx_manager::oryx_managerConfig::ParamDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}}
+\subsubsection[{calc\-Level}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}$<$ \-T $>$\-::{\bf calc\-Level} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t \&}]{comb\-\_\-level, }
+\item[{const {\bf oryx\-\_\-manager\-Config} \&}]{config1, }
+\item[{const {\bf oryx\-\_\-manager\-Config} \&}]{config2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline, virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription_a0d07dbe09f9b0ba2ceae8005a098c827}
+
+
+\-Implements {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Param\-Description} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1AbstractParamDescription_a327472bd773a2f2cc069886d6c21ddc2}.
+
+
+
+\-Definition at line 112 of file oryx\-\_\-manager\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}!clamp@{clamp}}
+\index{clamp@{clamp}!oryx_manager::oryx_managerConfig::ParamDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}}
+\subsubsection[{clamp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}$<$ \-T $>$\-::{\bf clamp} (
+\begin{DoxyParamCaption}
+\item[{{\bf oryx\-\_\-manager\-Config} \&}]{config, }
+\item[{const {\bf oryx\-\_\-manager\-Config} \&}]{max, }
+\item[{const {\bf oryx\-\_\-manager\-Config} \&}]{min}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline, virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription_a0f719dbec7f153fd58476441c095f7ad}
+
+
+\-Implements {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Param\-Description} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1AbstractParamDescription_a3128306c1a5ed11e0fa4dc7ded22918f}.
+
+
+
+\-Definition at line 103 of file oryx\-\_\-manager\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}!clamp@{clamp}}
+\index{clamp@{clamp}!oryx_manager::oryx_managerConfig::ParamDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}}
+\subsubsection[{clamp}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}$<$ std\-::string $>$\-::{\bf clamp} (
+\begin{DoxyParamCaption}
+\item[{{\bf oryx\-\_\-manager\-Config} \&}]{config, }
+\item[{const {\bf oryx\-\_\-manager\-Config} \&}]{max, }
+\item[{const {\bf oryx\-\_\-manager\-Config} \&}]{min}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline, virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription_a511d074bc5ad672881f88439d55dea8d}
+
+
+\-Implements {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Param\-Description} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1AbstractParamDescription_a3128306c1a5ed11e0fa4dc7ded22918f}.
+
+
+
+\-Definition at line 405 of file oryx\-\_\-manager\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}!from\-Message@{from\-Message}}
+\index{from\-Message@{from\-Message}!oryx_manager::oryx_managerConfig::ParamDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}}
+\subsubsection[{from\-Message}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual bool {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}$<$ \-T $>$\-::{\bf from\-Message} (
+\begin{DoxyParamCaption}
+\item[{const dynamic\-\_\-reconfigure\-::\-Config \&}]{msg, }
+\item[{{\bf oryx\-\_\-manager\-Config} \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline, virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription_a842cbbe400626bdb9979716b0b5988cd}
+
+
+\-Implements {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Param\-Description} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1AbstractParamDescription_a78abca3500146fcda031ed8649448def}.
+
+
+
+\-Definition at line 128 of file oryx\-\_\-manager\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}!from\-Server@{from\-Server}}
+\index{from\-Server@{from\-Server}!oryx_manager::oryx_managerConfig::ParamDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}}
+\subsubsection[{from\-Server}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}$<$ \-T $>$\-::{\bf from\-Server} (
+\begin{DoxyParamCaption}
+\item[{const ros\-::\-Node\-Handle \&}]{nh, }
+\item[{{\bf oryx\-\_\-manager\-Config} \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline, virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription_ac8f950d023307e6ecc67c7b56f12a261}
+
+
+\-Implements {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Param\-Description} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1AbstractParamDescription_ad6adc490598760db89d520fc8992736e}.
+
+
+
+\-Definition at line 118 of file oryx\-\_\-manager\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}!get\-Value@{get\-Value}}
+\index{get\-Value@{get\-Value}!oryx_manager::oryx_managerConfig::ParamDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}}
+\subsubsection[{get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}$<$ \-T $>$\-::{\bf get\-Value} (
+\begin{DoxyParamCaption}
+\item[{const {\bf oryx\-\_\-manager\-Config} \&}]{config, }
+\item[{boost\-::any \&}]{val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline, virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription_aff087a68debb3f9dfa752035af771f0c}
+
+
+\-Implements {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Param\-Description} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1AbstractParamDescription_aa71c6fdc159082ad0b5e4b70ed9b5793}.
+
+
+
+\-Definition at line 138 of file oryx\-\_\-manager\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}!to\-Message@{to\-Message}}
+\index{to\-Message@{to\-Message}!oryx_manager::oryx_managerConfig::ParamDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}}
+\subsubsection[{to\-Message}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}$<$ \-T $>$\-::{\bf to\-Message} (
+\begin{DoxyParamCaption}
+\item[{dynamic\-\_\-reconfigure\-::\-Config \&}]{msg, }
+\item[{const {\bf oryx\-\_\-manager\-Config} \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline, virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription_aca9809abd68545a9cefd380cf4905bc3}
+
+
+\-Implements {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Param\-Description} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1AbstractParamDescription_a01aba0f299e0ba5861f8a46d71a43a08}.
+
+
+
+\-Definition at line 133 of file oryx\-\_\-manager\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}!to\-Server@{to\-Server}}
+\index{to\-Server@{to\-Server}!oryx_manager::oryx_managerConfig::ParamDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}}
+\subsubsection[{to\-Server}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}$<$ \-T $>$\-::{\bf to\-Server} (
+\begin{DoxyParamCaption}
+\item[{const ros\-::\-Node\-Handle \&}]{nh, }
+\item[{const {\bf oryx\-\_\-manager\-Config} \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline, virtual]}}\label{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription_a61a79b248b40475ad29e2cef0152f65f}
+
+
+\-Implements {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Abstract\-Param\-Description} \doxyref{}{p.}{classoryx__manager_1_1oryx__managerConfig_1_1AbstractParamDescription_ad128ad05e925b04f32fc8e572696f322}.
+
+
+
+\-Definition at line 123 of file oryx\-\_\-manager\-Config.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}!field@{field}}
+\index{field@{field}!oryx_manager::oryx_managerConfig::ParamDescription@{oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}}
+\subsubsection[{field}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ \-Toryx\-\_\-manager\-Config\-::$\ast$ {\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config\-::\-Param\-Description}$<$ \-T $>$\-::{\bf field}}\label{classoryx__manager_1_1oryx__managerConfig_1_1ParamDescription_a2c800d995b8218b698bdbf9159887a6b}
+
+
+\-Definition at line 101 of file oryx\-\_\-manager\-Config.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf oryx\-\_\-manager\-Config.\-h}\end{DoxyCompactItemize}

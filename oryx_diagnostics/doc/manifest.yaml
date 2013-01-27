@@ -1,14 +1,18 @@
-authors: aruis
-brief: oryx_diagnostics
+authors: ''
+brief: ''
 depends:
+- catkin
+- roscpp
+- message_runtime
 - std_msgs
 - oryx_msgs
+- message_generation
 - rospy
-- roscpp
-description: "\n\n     oryx_diagnostics\n\n  "
+description: oryx_diagnostics
 license: BSD
 msgs: []
 package_type: package
 srvs:
+- DiagnosticsRegistration
 - DiagnosticsCommand
 url: http://ros.org/wiki/oryx_diagnostics

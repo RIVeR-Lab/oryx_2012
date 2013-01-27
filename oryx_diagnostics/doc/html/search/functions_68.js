@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hbcb',['hbCB',['../classDiagnosticsManager.html#a003a1549dc27a11e6605228b14a737f3',1,'DiagnosticsManager']]]
+  ['hbcb',['hbCB',['../classoryx__diagnostics_1_1DiagnosticsManager.html#aa598a15f2539d8b48685aa7d817b3a2e',1,'oryx_diagnostics::DiagnosticsManager']]]
 ];

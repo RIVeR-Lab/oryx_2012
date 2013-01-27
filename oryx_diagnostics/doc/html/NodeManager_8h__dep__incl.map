@@ -1,4 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$NodeManager_8cpp.html" title="//TODO fill in detailed discription here" alt="" coords="5,83,133,112"/>
-<area shape="rect" id="node5" href="$oryx__diagnostics__manager_8cpp.html" title="//TODO fill in detailed discription here" alt="" coords="157,83,360,112"/>
+<area shape="rect" id="node3" href="$DiagnosticsManager_8h.html" title="//TODO fill in detailed discription here" alt="" coords="116,83,268,112"/>
+<area shape="rect" id="node9" href="$NodeManager_8cpp.html" title="//TODO fill in detailed discription here" alt="" coords="292,83,420,112"/>
+<area shape="rect" id="node5" href="$DiagnosticsManager_8cpp.html" title="//TODO fill in detailed discription here" alt="" coords="5,160,171,189"/>
+<area shape="rect" id="node7" href="$oryx__diagnostics__manager_8cpp.html" title="//TODO fill in detailed discription here" alt="" coords="195,160,397,189"/>
 </map>

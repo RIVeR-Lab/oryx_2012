@@ -1,0 +1,7 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~Max_Speed" : \b [double] Max Speed in Meters per Second min: 0.0, default: 1.0, max: 1.2
+- \b "~Linear_Velocity" : \b [double] Move With Linear Velocity min: 0.0, default: 1.0, max: 1.2
+

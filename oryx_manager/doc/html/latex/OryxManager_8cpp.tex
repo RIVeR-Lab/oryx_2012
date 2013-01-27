@@ -1,0 +1,132 @@
+\section{\-Oryx\-Manager.\-cpp \-File \-Reference}
+\label{OryxManager_8cpp}\index{\-Oryx\-Manager.\-cpp@{\-Oryx\-Manager.\-cpp}}
+{\ttfamily \#include \char`\"{}\-Oryx\-Manager.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}std\-\_\-msgs/\-String.\-h\char`\"{}}\*
+{\ttfamily \#include $<$oryx\-\_\-manager/oryx\-\_\-manager\-Config.\-h$>$}\*
+\-Include dependency graph for \-Oryx\-Manager.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{OryxManager_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf battery\-Callback} (const oryx\-\_\-msgs\-::\-Battery\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf heartbeat\-Callback} (const ros\-::\-Timer\-Event \&)
+\item 
+int {\bf main} (int argc, char $\ast$$\ast$argv)
+\item 
+void {\bf reconfigure\-Callback} ({\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config} \&config, uint32\-\_\-t level)
+\item 
+void {\bf remote\-Connection\-Callback} (const std\-\_\-msgs\-::\-String\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf temperature\-Callback} (const oryx\-\_\-msgs\-::\-Temperature\-::\-Const\-Ptr \&msg)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\-::\-Publisher {\bf heartbeat\-Publisher}
+\item 
+bool {\bf remote\-Connection} = false
+\item 
+int {\bf remote\-Connection\-Attempts} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Oryx\-Manager.\-cpp@{\-Oryx\-Manager.\-cpp}!battery\-Callback@{battery\-Callback}}
+\index{battery\-Callback@{battery\-Callback}!OryxManager.cpp@{\-Oryx\-Manager.\-cpp}}
+\subsubsection[{battery\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf battery\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const oryx\-\_\-msgs\-::\-Battery\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{OryxManager_8cpp_a2dc5155f2ce3fe31c05059f1db9de036}
+
+
+\-Definition at line 19 of file \-Oryx\-Manager.\-cpp.
+
+\index{\-Oryx\-Manager.\-cpp@{\-Oryx\-Manager.\-cpp}!heartbeat\-Callback@{heartbeat\-Callback}}
+\index{heartbeat\-Callback@{heartbeat\-Callback}!OryxManager.cpp@{\-Oryx\-Manager.\-cpp}}
+\subsubsection[{heartbeat\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf heartbeat\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const ros\-::\-Timer\-Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{OryxManager_8cpp_a3c2024aa2316d07458feea0b44702a12}
+
+
+\-Definition at line 9 of file \-Oryx\-Manager.\-cpp.
+
+\index{\-Oryx\-Manager.\-cpp@{\-Oryx\-Manager.\-cpp}!main@{main}}
+\index{main@{main}!OryxManager.cpp@{\-Oryx\-Manager.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{OryxManager_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 50 of file \-Oryx\-Manager.\-cpp.
+
+\index{\-Oryx\-Manager.\-cpp@{\-Oryx\-Manager.\-cpp}!reconfigure\-Callback@{reconfigure\-Callback}}
+\index{reconfigure\-Callback@{reconfigure\-Callback}!OryxManager.cpp@{\-Oryx\-Manager.\-cpp}}
+\subsubsection[{reconfigure\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf reconfigure\-Callback} (
+\begin{DoxyParamCaption}
+\item[{{\bf oryx\-\_\-manager\-::oryx\-\_\-manager\-Config} \&}]{config, }
+\item[{uint32\-\_\-t}]{level}
+\end{DoxyParamCaption}
+)}\label{OryxManager_8cpp_a36b3de546a9147fcde9a8b94a2c1a307}
+
+
+\-Definition at line 42 of file \-Oryx\-Manager.\-cpp.
+
+\index{\-Oryx\-Manager.\-cpp@{\-Oryx\-Manager.\-cpp}!remote\-Connection\-Callback@{remote\-Connection\-Callback}}
+\index{remote\-Connection\-Callback@{remote\-Connection\-Callback}!OryxManager.cpp@{\-Oryx\-Manager.\-cpp}}
+\subsubsection[{remote\-Connection\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf remote\-Connection\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const std\-\_\-msgs\-::\-String\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{OryxManager_8cpp_a4e7a127a718b47056aeb3a9d00918dd8}
+
+
+\-Definition at line 46 of file \-Oryx\-Manager.\-cpp.
+
+\index{\-Oryx\-Manager.\-cpp@{\-Oryx\-Manager.\-cpp}!temperature\-Callback@{temperature\-Callback}}
+\index{temperature\-Callback@{temperature\-Callback}!OryxManager.cpp@{\-Oryx\-Manager.\-cpp}}
+\subsubsection[{temperature\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf temperature\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const oryx\-\_\-msgs\-::\-Temperature\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{OryxManager_8cpp_a9c435782c810b2d248e5c0e9b12c4036}
+
+
+\-Definition at line 33 of file \-Oryx\-Manager.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\index{\-Oryx\-Manager.\-cpp@{\-Oryx\-Manager.\-cpp}!heartbeat\-Publisher@{heartbeat\-Publisher}}
+\index{heartbeat\-Publisher@{heartbeat\-Publisher}!OryxManager.cpp@{\-Oryx\-Manager.\-cpp}}
+\subsubsection[{heartbeat\-Publisher}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf heartbeat\-Publisher}}\label{OryxManager_8cpp_aebbd08c4c946dfb1aada6336a0867588}
+
+
+\-Definition at line 5 of file \-Oryx\-Manager.\-cpp.
+
+\index{\-Oryx\-Manager.\-cpp@{\-Oryx\-Manager.\-cpp}!remote\-Connection@{remote\-Connection}}
+\index{remote\-Connection@{remote\-Connection}!OryxManager.cpp@{\-Oryx\-Manager.\-cpp}}
+\subsubsection[{remote\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf remote\-Connection} = false}\label{OryxManager_8cpp_a999068130cd92be99f342b455e62904e}
+
+
+\-Definition at line 6 of file \-Oryx\-Manager.\-cpp.
+
+\index{\-Oryx\-Manager.\-cpp@{\-Oryx\-Manager.\-cpp}!remote\-Connection\-Attempts@{remote\-Connection\-Attempts}}
+\index{remote\-Connection\-Attempts@{remote\-Connection\-Attempts}!OryxManager.cpp@{\-Oryx\-Manager.\-cpp}}
+\subsubsection[{remote\-Connection\-Attempts}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf remote\-Connection\-Attempts} = 0}\label{OryxManager_8cpp_a2a0c77907fa23ef437c767e5300de75a}
+
+
+\-Definition at line 7 of file \-Oryx\-Manager.\-cpp.
+

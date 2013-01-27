@@ -30,7 +30,6 @@ private:
   void publish_connections();
 
   static void connection_added_cb(NMRemoteSettings* settings, NMRemoteConnection* connection, gpointer user_data);
-  static void initial_connections_read_cb(NMRemoteSettings* settings, gpointer user_data);
   static void connection_removed_cb(NMRemoteConnection *connection, gpointer user_data);
   static void connection_updated_cb(NMRemoteConnection *connection, gpointer user_data);
 private:

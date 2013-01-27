@@ -1,0 +1,207 @@
+\section{\-Rocker\-Position.\-cpp \-File \-Reference}
+\label{RockerPosition_8cpp}\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}}
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include $<$sstream$>$}\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\*
+{\ttfamily \#include $<$termios.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$errno.\-h$>$}\*
+{\ttfamily \#include $<$signal.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+{\ttfamily \#include \char`\"{}ros/ros.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}std\-\_\-msgs/\-Float32.\-h\char`\"{}}\*
+\-Include dependency graph for \-Rocker\-Position.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RockerPosition_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf \-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V}~360.\-0
+\item 
+\#define {\bf \-F\-A\-L\-S\-E}~0
+\item 
+\#define {\bf \-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}~4096.\-0
+\item 
+\#define {\bf \-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T}~\char`\"{}/dev/rocker\char`\"{}
+\item 
+\#define {\bf \-T\-R\-U\-E}~1
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf ctrl\-C\-Handler} (int signal)
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\item 
+void {\bf print\-Qsb\-Error} (char $\ast$error\-Message)
+\item 
+void {\bf qsb\-Command} (int qsb, char $\ast$command, char $\ast$response, int response\-Size)
+\item 
+void {\bf read\-Qsb\-Response} (int qsb, char $\ast$response, int response\-Size)
+\item 
+void {\bf send\-Qsb\-Instruction} (int qsb, char $\ast$command)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int {\bf \-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E} = 27
+\item 
+int {\bf \-Close\-Requested} = {\bf \-F\-A\-L\-S\-E}
+\item 
+const int {\bf \-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S} = 5000
+\item 
+const int {\bf \-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S} = 20
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!\-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V@{\-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V}}
+\index{\-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V@{\-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{\-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V}~360.\-0}\label{RockerPosition_8cpp_a658bdff4e38aa32e8cf4a62b67288c34}
+
+
+\-Definition at line 33 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!\-F\-A\-L\-S\-E@{\-F\-A\-L\-S\-E}}
+\index{\-F\-A\-L\-S\-E@{\-F\-A\-L\-S\-E}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{\-F\-A\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-F\-A\-L\-S\-E}~0}\label{RockerPosition_8cpp_aa93f0eb578d23995850d61f7d61c55c1}
+
+
+\-Definition at line 29 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N@{\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}}
+\index{\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N@{\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}~4096.\-0}\label{RockerPosition_8cpp_a95d55ebfa2f2f1bd14867ad6a6cc9bfb}
+
+
+\-Definition at line 32 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!\-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T@{\-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T}}
+\index{\-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T@{\-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{\-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T}~\char`\"{}/dev/rocker\char`\"{}}\label{RockerPosition_8cpp_ac08f8f916661bb5fc606373bea93d274}
+
+
+\-Definition at line 38 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!\-T\-R\-U\-E@{\-T\-R\-U\-E}}
+\index{\-T\-R\-U\-E@{\-T\-R\-U\-E}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{\-T\-R\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-R\-U\-E}~1}\label{RockerPosition_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+
+\-Definition at line 30 of file \-Rocker\-Position.\-cpp.
+
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!ctrl\-C\-Handler@{ctrl\-C\-Handler}}
+\index{ctrl\-C\-Handler@{ctrl\-C\-Handler}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{ctrl\-C\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf ctrl\-C\-Handler} (
+\begin{DoxyParamCaption}
+\item[{int}]{signal}
+\end{DoxyParamCaption}
+)}\label{RockerPosition_8cpp_a54a00077fbc2e2f0abd9d815a75b7904}
+
+
+\-Definition at line 174 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!main@{main}}
+\index{main@{main}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv[$\,$]}
+\end{DoxyParamCaption}
+)}\label{RockerPosition_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+\-Definition at line 193 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!print\-Qsb\-Error@{print\-Qsb\-Error}}
+\index{print\-Qsb\-Error@{print\-Qsb\-Error}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{print\-Qsb\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf print\-Qsb\-Error} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{error\-Message}
+\end{DoxyParamCaption}
+)}\label{RockerPosition_8cpp_a3afe6e485d41bc5639136fcf402a0805}
+
+
+\-Definition at line 98 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!qsb\-Command@{qsb\-Command}}
+\index{qsb\-Command@{qsb\-Command}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{qsb\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf qsb\-Command} (
+\begin{DoxyParamCaption}
+\item[{int}]{qsb, }
+\item[{char $\ast$}]{command, }
+\item[{char $\ast$}]{response, }
+\item[{int}]{response\-Size}
+\end{DoxyParamCaption}
+)}\label{RockerPosition_8cpp_a53d20c25fb767b71af8a249a9c858e39}
+
+
+\-Definition at line 166 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!read\-Qsb\-Response@{read\-Qsb\-Response}}
+\index{read\-Qsb\-Response@{read\-Qsb\-Response}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{read\-Qsb\-Response}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf read\-Qsb\-Response} (
+\begin{DoxyParamCaption}
+\item[{int}]{qsb, }
+\item[{char $\ast$}]{response, }
+\item[{int}]{response\-Size}
+\end{DoxyParamCaption}
+)}\label{RockerPosition_8cpp_ab345065c6b203bde4795f80b506fc1b3}
+
+
+\-Definition at line 133 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!send\-Qsb\-Instruction@{send\-Qsb\-Instruction}}
+\index{send\-Qsb\-Instruction@{send\-Qsb\-Instruction}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{send\-Qsb\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf send\-Qsb\-Instruction} (
+\begin{DoxyParamCaption}
+\item[{int}]{qsb, }
+\item[{char $\ast$}]{command}
+\end{DoxyParamCaption}
+)}\label{RockerPosition_8cpp_acd7659be487c4357004b28923935be98}
+
+
+\-Definition at line 116 of file \-Rocker\-Position.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf \-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E} = 27}\label{RockerPosition_8cpp_a91f806c1bc7c1f4f402a627773840252}
+
+
+\-Definition at line 75 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!\-Close\-Requested@{\-Close\-Requested}}
+\index{\-Close\-Requested@{\-Close\-Requested}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{\-Close\-Requested}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Close\-Requested} = {\bf \-F\-A\-L\-S\-E}}\label{RockerPosition_8cpp_a31399492a08e7db3b19489afef12b19e}
+
+
+\-Definition at line 94 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!\-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S@{\-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S}}
+\index{\-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S@{\-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{\-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf \-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S} = 5000}\label{RockerPosition_8cpp_ac862c6742e96de1dd8400208e8aef788}
+
+
+\-Definition at line 82 of file \-Rocker\-Position.\-cpp.
+
+\index{\-Rocker\-Position.\-cpp@{\-Rocker\-Position.\-cpp}!\-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S@{\-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S}}
+\index{\-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S@{\-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S}!RockerPosition.cpp@{\-Rocker\-Position.\-cpp}}
+\subsubsection[{\-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf \-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S} = 20}\label{RockerPosition_8cpp_ac4ec4d4bc9a81238d9103dc63ea01800}
+
+
+\-Definition at line 87 of file \-Rocker\-Position.\-cpp.
+

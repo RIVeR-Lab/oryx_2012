@@ -52,15 +52,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="oryx__diagnostics__client_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00008"></a>00008 <span class="preprocessor">#include &lt;ros/ros.h&gt;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;<a class="code" href="DiagnosticsCommand_8h.html">oryx_diagnostics/DiagnosticsCommand.h</a>&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;oryx_diagnostics/DiagnosticsCommand.h&gt;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 
-<a name="l00012"></a><a class="code" href="oryx__diagnostics__client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">00012</a> <span class="keywordtype">int</span> <a class="code" href="namespaceinterrogate__setup__dot__py.html#a13c37ad37b9153e698b6bed029bf5d86">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {
+<a name="l00012"></a><a class="code" href="oryx__diagnostics__client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">00012</a> <span class="keywordtype">int</span> <a class="code" href="oryx__diagnostics__client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {
 <a name="l00013"></a>00013         ros::init(argc, argv, <span class="stringliteral">&quot;oryx_diagnostics_client&quot;</span>);
 <a name="l00014"></a>00014         ros::NodeHandle nh;
 <a name="l00015"></a>00015         ros::NodeHandle pnh(<span class="stringliteral">&quot;~&quot;</span>);
 <a name="l00016"></a>00016 
-<a name="l00017"></a>00017         ros::ServiceClient client = nh.serviceClient&lt;<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommand.html">oryx_diagnostics::DiagnosticsCommand</a>&gt;(<span class="stringliteral">&quot;oryx/diagnostics/commands&quot;</span>);
+<a name="l00017"></a>00017         ros::ServiceClient client = nh.serviceClient&lt;oryx_diagnostics::DiagnosticsCommand&gt;(<span class="stringliteral">&quot;oryx/diagnostics/commands&quot;</span>);
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019         std::string command;
 <a name="l00020"></a>00020         std::string arguments;
@@ -70,17 +70,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00024"></a>00024 
 <a name="l00025"></a>00025         <span class="keywordflow">if</span>(command == <span class="stringliteral">&quot;&quot;</span>) ROS_WARN(<span class="stringliteral">&quot;No Command Given!&quot;</span>);
 <a name="l00026"></a>00026         <span class="keywordflow">else</span>{
-<a name="l00027"></a>00027                 <a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommand.html">oryx_diagnostics::DiagnosticsCommand</a> msg;
-<a name="l00028"></a>00028                 msg.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommand.html#a42a11d97997f52ccf33fd3b3ebe50b7e">request</a>.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommandRequest__.html#a88b7ce59bc986210aae81197ca74564a">command</a> = command;
-<a name="l00029"></a>00029                 msg.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommand.html#a42a11d97997f52ccf33fd3b3ebe50b7e">request</a>.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommandRequest__.html#ae53e76725d0ee5b2bd13e3fb65959322">data</a> = arguments;
-<a name="l00030"></a>00030                 <span class="keywordflow">if</span>(client.call(msg.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommand.html#a42a11d97997f52ccf33fd3b3ebe50b7e">request</a>, msg.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommand.html#a7d5f6e55c9bc1fce857e073289fbcb75">response</a>)){
-<a name="l00031"></a>00031                         <span class="keywordflow">if</span>(msg.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommand.html#a7d5f6e55c9bc1fce857e073289fbcb75">response</a>.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommandResponse__.html#a876b1860ee4eba9f88397f8d9c479f40">success</a>)
+<a name="l00027"></a>00027                 oryx_diagnostics::DiagnosticsCommand msg;
+<a name="l00028"></a>00028                 msg.request.command = command;
+<a name="l00029"></a>00029                 msg.request.data = arguments;
+<a name="l00030"></a>00030                 <span class="keywordflow">if</span>(client.call(msg.request, msg.response)){
+<a name="l00031"></a>00031                         <span class="keywordflow">if</span>(msg.response.success)
 <a name="l00032"></a>00032                         {
-<a name="l00033"></a>00033                                 ROS_INFO(<span class="stringliteral">&quot;%s&quot;</span>, msg.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommand.html#a7d5f6e55c9bc1fce857e073289fbcb75">response</a>.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommandResponse__.html#a05e1b9ed544326db669ac60cfe09122d">data</a>.c_str());
+<a name="l00033"></a>00033                                 ROS_INFO(<span class="stringliteral">&quot;%s&quot;</span>, msg.response.data.c_str());
 <a name="l00034"></a>00034                         }
 <a name="l00035"></a>00035                         <span class="keywordflow">else</span>
 <a name="l00036"></a>00036                         {
-<a name="l00037"></a>00037                                 ROS_WARN(<span class="stringliteral">&quot;Error With Command: %s&quot;</span>, msg.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommand.html#a7d5f6e55c9bc1fce857e073289fbcb75">response</a>.<a class="code" href="structoryx__diagnostics_1_1DiagnosticsCommandResponse__.html#a05e1b9ed544326db669ac60cfe09122d">data</a>.c_str());
+<a name="l00037"></a>00037                                 ROS_WARN(<span class="stringliteral">&quot;Error With Command: %s&quot;</span>, msg.response.data.c_str());
 <a name="l00038"></a>00038                         }
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040                 }
@@ -110,8 +110,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <br clear="all" />
 <hr size="1"><div style="align: right;">
 <a href="http://ros.org/wiki/oryx_diagnostics">oryx_diagnostics</a><br />
-Author(s): aruis</br />
-<small>autogenerated on Sun Jan 20 2013 15:15:46</small>
+Author(s): </br />
+<small>autogenerated on Sun Jan 27 2013 12:07:12</small>
 </div>
 </body>
 </html>

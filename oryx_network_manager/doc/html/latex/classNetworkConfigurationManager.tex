@@ -1,0 +1,216 @@
+\section{\-Network\-Configuration\-Manager \-Class \-Reference}
+\label{classNetworkConfigurationManager}\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}}
+
+
+{\ttfamily \#include $<$\-Network\-Configuration\-Manager.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf activate\-\_\-connection} (std\-::string iface, std\-::string connection\-\_\-name)
+\item 
+void {\bf load\-\_\-config\-\_\-from\-\_\-file} (const char $\ast$filename)
+\item 
+{\bf \-Network\-Configuration\-Manager} (ros\-::\-Node\-Handle \&handle, \-N\-M\-Client $\ast$client, \-N\-M\-Remote\-Settings $\ast$remote\-\_\-settings)
+\item 
+void {\bf set\-\_\-config} (boost\-::shared\-\_\-ptr$<$ {\bf \-Network\-Config} $>$ new\-\_\-config)
+\item 
+virtual {\bf $\sim$\-Network\-Configuration\-Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf active\-\_\-connections\-\_\-changed\-\_\-cb} (const \-Active\-Network\-Connections\-::\-Const\-Ptr \&latest\-\_\-connections)
+\item 
+void {\bf connections\-\_\-changed\-\_\-cb} (const \-Network\-Connections\-::\-Const\-Ptr \&latest\-\_\-connections)
+\item 
+void {\bf update\-\_\-config} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\-::\-Subscriber {\bf active\-\_\-connection\-\_\-sub}
+\item 
+ros\-::\-Subscriber {\bf connection\-\_\-sub}
+\item 
+\-N\-M\-Client $\ast$ {\bf m\-\_\-client}
+\item 
+boost\-::shared\-\_\-ptr$<$ {\bf \-Network\-Config} $>$ {\bf m\-\_\-config}
+\item 
+ros\-::\-Node\-Handle \& {\bf m\-\_\-handle}
+\item 
+\-Active\-Network\-Connections\-::\-Const\-Ptr {\bf m\-\_\-latest\-\_\-active\-\_\-connections}
+\item 
+\-Network\-Connections\-::\-Const\-Ptr {\bf m\-\_\-latest\-\_\-connections}
+\item 
+\-N\-M\-Remote\-Settings $\ast$ {\bf m\-\_\-remote\-\_\-settings}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class which manages the the active configuration 
+
+\-Definition at line 62 of file \-Network\-Configuration\-Manager.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}}
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{\-Network\-Configuration\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Network\-Configuration\-Manager\-::\-Network\-Configuration\-Manager} (
+\begin{DoxyParamCaption}
+\item[{ros\-::\-Node\-Handle \&}]{handle, }
+\item[{\-N\-M\-Client $\ast$}]{client, }
+\item[{\-N\-M\-Remote\-Settings $\ast$}]{remote\-\_\-settings}
+\end{DoxyParamCaption}
+)}\label{classNetworkConfigurationManager_a64ae8256fb391ee0488432685501fa4f}
+
+
+\-Definition at line 11 of file \-Network\-Configuration\-Manager.\-cpp.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!$\sim$\-Network\-Configuration\-Manager@{$\sim$\-Network\-Configuration\-Manager}}
+\index{$\sim$\-Network\-Configuration\-Manager@{$\sim$\-Network\-Configuration\-Manager}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{$\sim$\-Network\-Configuration\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Network\-Configuration\-Manager\-::$\sim$\-Network\-Configuration\-Manager} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classNetworkConfigurationManager_a986f55ebf2c2b37b09b45b297ec5c2b8}
+
+
+\-Definition at line 166 of file \-Network\-Configuration\-Manager.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!activate\-\_\-connection@{activate\-\_\-connection}}
+\index{activate\-\_\-connection@{activate\-\_\-connection}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{activate\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Network\-Configuration\-Manager\-::activate\-\_\-connection} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{iface, }
+\item[{std\-::string}]{connection\-\_\-name}
+\end{DoxyParamCaption}
+)}\label{classNetworkConfigurationManager_ac53a0cefb1945574af3fa46e6846b6e0}
+
+
+\-Definition at line 123 of file \-Network\-Configuration\-Manager.\-cpp.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!active\-\_\-connections\-\_\-changed\-\_\-cb@{active\-\_\-connections\-\_\-changed\-\_\-cb}}
+\index{active\-\_\-connections\-\_\-changed\-\_\-cb@{active\-\_\-connections\-\_\-changed\-\_\-cb}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{active\-\_\-connections\-\_\-changed\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Configuration\-Manager\-::active\-\_\-connections\-\_\-changed\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{const \-Active\-Network\-Connections\-::\-Const\-Ptr \&}]{latest\-\_\-connections}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConfigurationManager_ae1339a0032203c62409286b6ec2f8362}
+
+
+\-Definition at line 74 of file \-Network\-Configuration\-Manager.\-cpp.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!connections\-\_\-changed\-\_\-cb@{connections\-\_\-changed\-\_\-cb}}
+\index{connections\-\_\-changed\-\_\-cb@{connections\-\_\-changed\-\_\-cb}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{connections\-\_\-changed\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Configuration\-Manager\-::connections\-\_\-changed\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{const \-Network\-Connections\-::\-Const\-Ptr \&}]{latest\-\_\-connections}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConfigurationManager_ab254b7f93bd4624210852aac1d8f21e4}
+
+
+\-Definition at line 80 of file \-Network\-Configuration\-Manager.\-cpp.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!load\-\_\-config\-\_\-from\-\_\-file@{load\-\_\-config\-\_\-from\-\_\-file}}
+\index{load\-\_\-config\-\_\-from\-\_\-file@{load\-\_\-config\-\_\-from\-\_\-file}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{load\-\_\-config\-\_\-from\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Configuration\-Manager\-::load\-\_\-config\-\_\-from\-\_\-file} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\label{classNetworkConfigurationManager_a2718c71af598abdd08014ef6e3b7948b}
+
+
+\-Definition at line 22 of file \-Network\-Configuration\-Manager.\-cpp.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!set\-\_\-config@{set\-\_\-config}}
+\index{set\-\_\-config@{set\-\_\-config}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{set\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Configuration\-Manager\-::set\-\_\-config} (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ {\bf \-Network\-Config} $>$}]{new\-\_\-config}
+\end{DoxyParamCaption}
+)}\label{classNetworkConfigurationManager_af2d14623dcbcbc57a4acabbd70eb75e0}
+
+
+\-Definition at line 67 of file \-Network\-Configuration\-Manager.\-cpp.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!update\-\_\-config@{update\-\_\-config}}
+\index{update\-\_\-config@{update\-\_\-config}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{update\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Network\-Configuration\-Manager\-::update\-\_\-config} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConfigurationManager_a6b16703c640ab8598a9c0fe7ca84ed2c}
+
+
+\-Definition at line 85 of file \-Network\-Configuration\-Manager.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!active\-\_\-connection\-\_\-sub@{active\-\_\-connection\-\_\-sub}}
+\index{active\-\_\-connection\-\_\-sub@{active\-\_\-connection\-\_\-sub}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{active\-\_\-connection\-\_\-sub}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Network\-Configuration\-Manager\-::active\-\_\-connection\-\_\-sub}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConfigurationManager_a87f5f5864731d45b3ad342445f1e081c}
+
+
+\-Definition at line 80 of file \-Network\-Configuration\-Manager.\-h.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!connection\-\_\-sub@{connection\-\_\-sub}}
+\index{connection\-\_\-sub@{connection\-\_\-sub}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{connection\-\_\-sub}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Network\-Configuration\-Manager\-::connection\-\_\-sub}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConfigurationManager_a6ce6469d5de5bc935062c3902bf57ae0}
+
+
+\-Definition at line 78 of file \-Network\-Configuration\-Manager.\-h.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!m\-\_\-client@{m\-\_\-client}}
+\index{m\-\_\-client@{m\-\_\-client}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{m\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}\-N\-M\-Client$\ast$ {\bf \-Network\-Configuration\-Manager\-::m\-\_\-client}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConfigurationManager_ad3e7ab11c29f836976fa4432c069fadc}
+
+
+\-Definition at line 76 of file \-Network\-Configuration\-Manager.\-h.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!m\-\_\-config@{m\-\_\-config}}
+\index{m\-\_\-config@{m\-\_\-config}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{m\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-ptr$<${\bf \-Network\-Config}$>$ {\bf \-Network\-Configuration\-Manager\-::m\-\_\-config}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConfigurationManager_a13e746bf1caed53802c1abc6d84039cc}
+
+
+\-Definition at line 82 of file \-Network\-Configuration\-Manager.\-h.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!m\-\_\-handle@{m\-\_\-handle}}
+\index{m\-\_\-handle@{m\-\_\-handle}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{m\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle\& {\bf \-Network\-Configuration\-Manager\-::m\-\_\-handle}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConfigurationManager_ab5f5fb7e24e1c58738cfc8b976557248}
+
+
+\-Definition at line 75 of file \-Network\-Configuration\-Manager.\-h.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!m\-\_\-latest\-\_\-active\-\_\-connections@{m\-\_\-latest\-\_\-active\-\_\-connections}}
+\index{m\-\_\-latest\-\_\-active\-\_\-connections@{m\-\_\-latest\-\_\-active\-\_\-connections}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{m\-\_\-latest\-\_\-active\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}\-Active\-Network\-Connections\-::\-Const\-Ptr {\bf \-Network\-Configuration\-Manager\-::m\-\_\-latest\-\_\-active\-\_\-connections}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConfigurationManager_a3363ab3b2d8369ff5ca376d7834036ff}
+
+
+\-Definition at line 81 of file \-Network\-Configuration\-Manager.\-h.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!m\-\_\-latest\-\_\-connections@{m\-\_\-latest\-\_\-connections}}
+\index{m\-\_\-latest\-\_\-connections@{m\-\_\-latest\-\_\-connections}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{m\-\_\-latest\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}\-Network\-Connections\-::\-Const\-Ptr {\bf \-Network\-Configuration\-Manager\-::m\-\_\-latest\-\_\-connections}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConfigurationManager_adc1dc81d476f0db5375ad69da8b4add4}
+
+
+\-Definition at line 79 of file \-Network\-Configuration\-Manager.\-h.
+
+\index{\-Network\-Configuration\-Manager@{\-Network\-Configuration\-Manager}!m\-\_\-remote\-\_\-settings@{m\-\_\-remote\-\_\-settings}}
+\index{m\-\_\-remote\-\_\-settings@{m\-\_\-remote\-\_\-settings}!NetworkConfigurationManager@{\-Network\-Configuration\-Manager}}
+\subsubsection[{m\-\_\-remote\-\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}\-N\-M\-Remote\-Settings$\ast$ {\bf \-Network\-Configuration\-Manager\-::m\-\_\-remote\-\_\-settings}\hspace{0.3cm}{\ttfamily  [private]}}\label{classNetworkConfigurationManager_a4e74292e88e07caebee36c7a6fba78f9}
+
+
+\-Definition at line 77 of file \-Network\-Configuration\-Manager.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Network\-Configuration\-Manager.\-h}\item 
+{\bf \-Network\-Configuration\-Manager.\-cpp}\end{DoxyCompactItemize}

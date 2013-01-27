@@ -1,0 +1,18 @@
+authors: ''
+brief: ''
+depends:
+- dynamic_reconfigure
+- nav_msgs
+- catkin
+- roscpp
+- epos_manager
+- sensor_msgs
+- oryx_msgs
+- tf
+- geometry_msgs
+description: Package which contains all of the high level operation nodes
+license: BSD
+msgs: []
+package_type: package
+srvs: []
+url: http://ros.org/wiki/OryxManager

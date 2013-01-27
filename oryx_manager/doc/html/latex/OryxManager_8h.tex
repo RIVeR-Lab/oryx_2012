@@ -1,0 +1,508 @@
+\section{\-Oryx\-Manager.\-h \-File \-Reference}
+\label{OryxManager_8h}\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}}
+{\ttfamily \#include \char`\"{}ros/ros.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}sensor\-\_\-msgs/\-Joy.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-msgs/\-Twist\-Stamped.\-h\char`\"{}}\*
+{\ttfamily \#include $<$oryx\-\_\-msgs/\-Battery.\-h$>$}\*
+{\ttfamily \#include $<$oryx\-\_\-msgs/\-Temperature.\-h$>$}\*
+{\ttfamily \#include $<$epos\-\_\-manager/\-Group\-E\-P\-O\-S\-Control.\-h$>$}\*
+{\ttfamily \#include $<$epos\-\_\-manager/\-E\-P\-O\-S\-Control.\-h$>$}\*
+{\ttfamily \#include $<$epos\-\_\-manager/\-Group\-Motor\-Info.\-h$>$}\*
+{\ttfamily \#include $<$epos\-\_\-manager/\-Motor\-Info.\-h$>$}\*
+{\ttfamily \#include $<$dynamic\-\_\-reconfigure/server.\-h$>$}\*
+{\ttfamily \#include $<$boost/thread.\-hpp$>$}\*
+\-Include dependency graph for \-Oryx\-Manager.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{OryxManager_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{OryxManager_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf homing\-Data}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf \-A\-\_\-\-B\-U\-T\-T\-O\-N}~0
+\item 
+\#define {\bf \-A\-R\-M\-\_\-\-P\-A\-N}~3
+\item 
+\#define {\bf \-A\-R\-M\-\_\-\-S\-C\-O\-O\-P}~2
+\item 
+\#define {\bf \-A\-R\-M\-\_\-\-S\-H\-O\-U\-L\-D\-E\-R}~1
+\item 
+\#define {\bf \-B\-\_\-\-B\-U\-T\-T\-O\-N}~1
+\item 
+\#define {\bf \-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L}~2
+\item 
+\#define {\bf \-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~13
+\item 
+\#define {\bf \-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L}~4
+\item 
+\#define {\bf \-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~15
+\item 
+\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-1\-\_\-\-N\-O\-D\-E}~6
+\item 
+\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-2\-\_\-\-N\-O\-D\-E}~7
+\item 
+\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-3\-\_\-\-N\-O\-D\-E}~8
+\item 
+\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-4\-\_\-\-N\-O\-D\-E}~9
+\item 
+\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-5\-\_\-\-N\-O\-D\-E}~10
+\item 
+\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-6\-\_\-\-N\-O\-D\-E}~11
+\item 
+\#define {\bf \-B\-M\-S\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~5
+\item 
+\#define {\bf \-C\-E\-N\-T\-E\-R\-\_\-\-B\-U\-T\-T\-O\-N}~8
+\item 
+\#define {\bf \-C\-O\-M\-P\-U\-T\-E\-R\-\_\-\-B\-O\-X\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~0
+\item 
+\#define {\bf \-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-1\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~1
+\item 
+\#define {\bf \-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-2\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~2
+\item 
+\#define {\bf \-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-3\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~3
+\item 
+\#define {\bf \-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-4\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~4
+\item 
+\#define {\bf \-D\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-R\-I\-G\-H\-T}~6
+\item 
+\#define {\bf \-D\-\_\-\-P\-A\-D\-\_\-\-U\-P\-\_\-\-D\-O\-W\-N}~7
+\item 
+\#define {\bf \-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L}~1
+\item 
+\#define {\bf \-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~12
+\item 
+\#define {\bf \-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L}~3
+\item 
+\#define {\bf \-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~14
+\item 
+\#define {\bf \-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}~156
+\item 
+\#define {\bf \-L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}~4
+\item 
+\#define {\bf \-L\-E\-F\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S}~0
+\item 
+\#define {\bf \-L\-E\-F\-T\-\_\-\-S\-T\-I\-C\-K}~9
+\item 
+\#define {\bf \-L\-E\-F\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R}~2
+\item 
+\#define {\bf \-L\-E\-F\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S}~1
+\item 
+\#define {\bf \-P\-T\-Z\-\_\-\-B\-O\-O\-M}~1
+\item 
+\#define {\bf \-P\-T\-Z\-\_\-\-P\-A\-N}~3
+\item 
+\#define {\bf \-P\-T\-Z\-\_\-\-T\-I\-L\-T}~2
+\item 
+\#define {\bf \-R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}~5
+\item 
+\#define {\bf \-R\-I\-G\-H\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S}~3
+\item 
+\#define {\bf \-R\-I\-G\-H\-T\-\_\-\-S\-T\-I\-C\-K}~10
+\item 
+\#define {\bf \-R\-I\-G\-H\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R}~5
+\item 
+\#define {\bf \-R\-I\-G\-H\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S}~4
+\item 
+\#define {\bf \-R\-O\-C\-K\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}~.\-33020
+\item 
+\#define {\bf \-R\-O\-C\-K\-E\-R\-\_\-\-O\-F\-F\-S\-E\-T}~0.\-148352986
+\item 
+\#define {\bf \-S\-E\-L\-E\-C\-T\-\_\-\-B\-U\-T\-T\-O\-N}~6
+\item 
+\#define {\bf \-S\-T\-A\-R\-T\-\_\-\-B\-U\-T\-T\-O\-N}~7
+\item 
+\#define {\bf \-T\-I\-C\-S\-\_\-\-P\-E\-R\-\_\-\-M\-O\-T\-O\-R\-\_\-\-R\-E\-V}~1024
+\item 
+\#define {\bf \-W\-H\-E\-E\-L\-\_\-\-B\-A\-S\-E}~0.\-86147
+\item 
+\#define {\bf \-W\-H\-E\-E\-L\-\_\-\-D\-I\-A\-M\-E\-T\-E\-R}~(12.\-5$\ast$2.\-54/100)
+\item 
+\#define {\bf \-W\-H\-E\-E\-L\-\_\-\-T\-R\-A\-C\-K}~100
+\item 
+\#define {\bf \-X\-\_\-\-B\-U\-T\-T\-O\-N}~2
+\item 
+\#define {\bf \-Y\-\_\-\-B\-U\-T\-T\-O\-N}~3
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-A\-\_\-\-B\-U\-T\-T\-O\-N@{\-A\-\_\-\-B\-U\-T\-T\-O\-N}}
+\index{\-A\-\_\-\-B\-U\-T\-T\-O\-N@{\-A\-\_\-\-B\-U\-T\-T\-O\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-A\-\_\-\-B\-U\-T\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-\_\-\-B\-U\-T\-T\-O\-N}~0}\label{OryxManager_8h_a5ec59d5e4f6bfacfdf3aa6e7ed5c0373}
+
+
+\-Definition at line 81 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-A\-R\-M\-\_\-\-P\-A\-N@{\-A\-R\-M\-\_\-\-P\-A\-N}}
+\index{\-A\-R\-M\-\_\-\-P\-A\-N@{\-A\-R\-M\-\_\-\-P\-A\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-A\-R\-M\-\_\-\-P\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-R\-M\-\_\-\-P\-A\-N}~3}\label{OryxManager_8h_a4fdfc30293fa0f3364c1901776194826}
+
+
+\-Definition at line 39 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-A\-R\-M\-\_\-\-S\-C\-O\-O\-P@{\-A\-R\-M\-\_\-\-S\-C\-O\-O\-P}}
+\index{\-A\-R\-M\-\_\-\-S\-C\-O\-O\-P@{\-A\-R\-M\-\_\-\-S\-C\-O\-O\-P}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-A\-R\-M\-\_\-\-S\-C\-O\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-R\-M\-\_\-\-S\-C\-O\-O\-P}~2}\label{OryxManager_8h_a08ee0a3c8715a69add57ecd74ed38e85}
+
+
+\-Definition at line 38 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-A\-R\-M\-\_\-\-S\-H\-O\-U\-L\-D\-E\-R@{\-A\-R\-M\-\_\-\-S\-H\-O\-U\-L\-D\-E\-R}}
+\index{\-A\-R\-M\-\_\-\-S\-H\-O\-U\-L\-D\-E\-R@{\-A\-R\-M\-\_\-\-S\-H\-O\-U\-L\-D\-E\-R}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-A\-R\-M\-\_\-\-S\-H\-O\-U\-L\-D\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-R\-M\-\_\-\-S\-H\-O\-U\-L\-D\-E\-R}~1}\label{OryxManager_8h_ac3c4889dad04c9a36d293081a9a085d2}
+
+
+\-Definition at line 37 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-\_\-\-B\-U\-T\-T\-O\-N@{\-B\-\_\-\-B\-U\-T\-T\-O\-N}}
+\index{\-B\-\_\-\-B\-U\-T\-T\-O\-N@{\-B\-\_\-\-B\-U\-T\-T\-O\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-\_\-\-B\-U\-T\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-\_\-\-B\-U\-T\-T\-O\-N}~1}\label{OryxManager_8h_a2454c318caf152737fd63bebddd58ea2}
+
+
+\-Definition at line 82 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L@{\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L}}
+\index{\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L@{\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L}~2}\label{OryxManager_8h_af63672c06b373edfec829146a318dbf6}
+
+
+\-Definition at line 29 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}}
+\index{\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-C\-K\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~13}\label{OryxManager_8h_a04ce599e198213099d477fcd967ca44d}
+
+
+\-Definition at line 64 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L@{\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L}}
+\index{\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L@{\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L}~4}\label{OryxManager_8h_ab7a707c28fc8e161a8842d6a47a1dd8a}
+
+
+\-Definition at line 31 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}}
+\index{\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-C\-K\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~15}\label{OryxManager_8h_af00c0760bf87d9bdb1ec67b121327169}
+
+
+\-Definition at line 66 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-1\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-1\-\_\-\-N\-O\-D\-E}}
+\index{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-1\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-1\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-1\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-1\-\_\-\-N\-O\-D\-E}~6}\label{OryxManager_8h_af89e9abfba061f8bd09b6c1b6151dbcd}
+
+
+\-Definition at line 57 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-2\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-2\-\_\-\-N\-O\-D\-E}}
+\index{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-2\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-2\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-2\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-2\-\_\-\-N\-O\-D\-E}~7}\label{OryxManager_8h_a9e9c0b228bb649922c9bc20db7e0802c}
+
+
+\-Definition at line 58 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-3\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-3\-\_\-\-N\-O\-D\-E}}
+\index{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-3\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-3\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-3\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-3\-\_\-\-N\-O\-D\-E}~8}\label{OryxManager_8h_a3e5db5aa19c0b7df46cada8ab6258ace}
+
+
+\-Definition at line 59 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-4\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-4\-\_\-\-N\-O\-D\-E}}
+\index{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-4\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-4\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-4\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-4\-\_\-\-N\-O\-D\-E}~9}\label{OryxManager_8h_a3066a5977798432c5dc7722055cbcdaa}
+
+
+\-Definition at line 60 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-5\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-5\-\_\-\-N\-O\-D\-E}}
+\index{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-5\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-5\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-5\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-5\-\_\-\-N\-O\-D\-E}~10}\label{OryxManager_8h_a093c45b9d74fb3cef00d9f1dce550196}
+
+
+\-Definition at line 61 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-6\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-6\-\_\-\-N\-O\-D\-E}}
+\index{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-6\-\_\-\-N\-O\-D\-E@{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-6\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-6\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-T\-T\-E\-R\-Y\-\_\-\-C\-E\-L\-L\-\_\-6\-\_\-\-N\-O\-D\-E}~11}\label{OryxManager_8h_ab83d698bdca03ce08bebfb369c0d8cd0}
+
+
+\-Definition at line 62 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-B\-M\-S\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-B\-M\-S\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}}
+\index{\-B\-M\-S\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-B\-M\-S\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-B\-M\-S\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-M\-S\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~5}\label{OryxManager_8h_a750771a256c248ab18cae9e0ce6354ac}
+
+
+\-Definition at line 56 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-C\-E\-N\-T\-E\-R\-\_\-\-B\-U\-T\-T\-O\-N@{\-C\-E\-N\-T\-E\-R\-\_\-\-B\-U\-T\-T\-O\-N}}
+\index{\-C\-E\-N\-T\-E\-R\-\_\-\-B\-U\-T\-T\-O\-N@{\-C\-E\-N\-T\-E\-R\-\_\-\-B\-U\-T\-T\-O\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-C\-E\-N\-T\-E\-R\-\_\-\-B\-U\-T\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-E\-N\-T\-E\-R\-\_\-\-B\-U\-T\-T\-O\-N}~8}\label{OryxManager_8h_ad08c06031cd3e743eb0a667500cbc225}
+
+
+\-Definition at line 89 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-C\-O\-M\-P\-U\-T\-E\-R\-\_\-\-B\-O\-X\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-C\-O\-M\-P\-U\-T\-E\-R\-\_\-\-B\-O\-X\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}}
+\index{\-C\-O\-M\-P\-U\-T\-E\-R\-\_\-\-B\-O\-X\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-C\-O\-M\-P\-U\-T\-E\-R\-\_\-\-B\-O\-X\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-C\-O\-M\-P\-U\-T\-E\-R\-\_\-\-B\-O\-X\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-O\-M\-P\-U\-T\-E\-R\-\_\-\-B\-O\-X\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~0}\label{OryxManager_8h_a9c3837896f98716cd207989a65f8023c}
+
+
+\-Definition at line 51 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-1\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-1\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}}
+\index{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-1\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-1\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-1\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-1\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~1}\label{OryxManager_8h_aec0ed35efa192ca92838446a68bcd6d6}
+
+
+\-Definition at line 52 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-2\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-2\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}}
+\index{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-2\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-2\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-2\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-2\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~2}\label{OryxManager_8h_abb9f6844ea6109cc911cc70c6f23d818}
+
+
+\-Definition at line 53 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-3\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-3\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}}
+\index{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-3\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-3\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-3\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-3\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~3}\label{OryxManager_8h_a338836cd47fe43ce1cc87e4e607f7dc2}
+
+
+\-Definition at line 54 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-4\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-4\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}}
+\index{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-4\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-4\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-4\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-P\-U\-\_\-\-C\-O\-R\-E\-\_\-4\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~4}\label{OryxManager_8h_accc4d1702acb4824f579d6ff4a14b99d}
+
+
+\-Definition at line 55 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-D\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-R\-I\-G\-H\-T@{\-D\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-R\-I\-G\-H\-T}}
+\index{\-D\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-R\-I\-G\-H\-T@{\-D\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-R\-I\-G\-H\-T}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-D\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-R\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-\_\-\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-R\-I\-G\-H\-T}~6}\label{OryxManager_8h_a92031be0fbf461373d4f203fd0078faa}
+
+
+\-Definition at line 77 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-D\-\_\-\-P\-A\-D\-\_\-\-U\-P\-\_\-\-D\-O\-W\-N@{\-D\-\_\-\-P\-A\-D\-\_\-\-U\-P\-\_\-\-D\-O\-W\-N}}
+\index{\-D\-\_\-\-P\-A\-D\-\_\-\-U\-P\-\_\-\-D\-O\-W\-N@{\-D\-\_\-\-P\-A\-D\-\_\-\-U\-P\-\_\-\-D\-O\-W\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-D\-\_\-\-P\-A\-D\-\_\-\-U\-P\-\_\-\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-\_\-\-P\-A\-D\-\_\-\-U\-P\-\_\-\-D\-O\-W\-N}~7}\label{OryxManager_8h_a90d0d22c88407cc5f94429ebc8ab4664}
+
+
+\-Definition at line 78 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L@{\-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L}}
+\index{\-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L@{\-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L}~1}\label{OryxManager_8h_a0a6ff7f7c6085d52e2ca64fc9b90b9ad}
+
+
+\-Definition at line 28 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}}
+\index{\-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-F\-R\-O\-N\-T\-\_\-\-L\-E\-F\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~12}\label{OryxManager_8h_ab285dab0fbc34771ce319cb2d5b7cece}
+
+
+\-Definition at line 63 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L@{\-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L}}
+\index{\-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L@{\-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L}~3}\label{OryxManager_8h_a6f2ab098af7a51c1334a6c97aae0a7d1}
+
+
+\-Definition at line 30 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}}
+\index{\-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E@{\-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-F\-R\-O\-N\-T\-\_\-\-R\-I\-G\-H\-T\-\_\-\-W\-H\-E\-E\-L\-\_\-\-T\-E\-M\-P\-\_\-\-N\-O\-D\-E}~14}\label{OryxManager_8h_a4b74f8b338096d383de41fb1bd89accb}
+
+
+\-Definition at line 65 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O@{\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}}
+\index{\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O@{\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}~156}\label{OryxManager_8h_a1b5f0a2cda8866a2a87331026ac8bd9a}
+
+
+\-Definition at line 44 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N@{\-L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}}
+\index{\-L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N@{\-L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-E\-F\-T\-\_\-\-B\-U\-T\-T\-O\-N}~4}\label{OryxManager_8h_abbc8382ae4ea521f03c119a14478b759}
+
+
+\-Definition at line 85 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-L\-E\-F\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S@{\-L\-E\-F\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S}}
+\index{\-L\-E\-F\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S@{\-L\-E\-F\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-L\-E\-F\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-E\-F\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S}~0}\label{OryxManager_8h_a10bc88ea759b97c8c8ef598d79191282}
+
+
+\-Definition at line 71 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-L\-E\-F\-T\-\_\-\-S\-T\-I\-C\-K@{\-L\-E\-F\-T\-\_\-\-S\-T\-I\-C\-K}}
+\index{\-L\-E\-F\-T\-\_\-\-S\-T\-I\-C\-K@{\-L\-E\-F\-T\-\_\-\-S\-T\-I\-C\-K}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-L\-E\-F\-T\-\_\-\-S\-T\-I\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-E\-F\-T\-\_\-\-S\-T\-I\-C\-K}~9}\label{OryxManager_8h_a38892cf6490a9bcabba90f32784a85d7}
+
+
+\-Definition at line 90 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-L\-E\-F\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R@{\-L\-E\-F\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R}}
+\index{\-L\-E\-F\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R@{\-L\-E\-F\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-L\-E\-F\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-E\-F\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R}~2}\label{OryxManager_8h_ae6609846bdb870896086330423600934}
+
+
+\-Definition at line 73 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-L\-E\-F\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S@{\-L\-E\-F\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S}}
+\index{\-L\-E\-F\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S@{\-L\-E\-F\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-L\-E\-F\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-E\-F\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S}~1}\label{OryxManager_8h_ad17a2882b3afb36d2ad7e3b46e58a154}
+
+
+\-Definition at line 72 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-P\-T\-Z\-\_\-\-B\-O\-O\-M@{\-P\-T\-Z\-\_\-\-B\-O\-O\-M}}
+\index{\-P\-T\-Z\-\_\-\-B\-O\-O\-M@{\-P\-T\-Z\-\_\-\-B\-O\-O\-M}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-P\-T\-Z\-\_\-\-B\-O\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-T\-Z\-\_\-\-B\-O\-O\-M}~1}\label{OryxManager_8h_adc9c4c051488f0a5fa5697bd92042651}
+
+
+\-Definition at line 35 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-P\-T\-Z\-\_\-\-P\-A\-N@{\-P\-T\-Z\-\_\-\-P\-A\-N}}
+\index{\-P\-T\-Z\-\_\-\-P\-A\-N@{\-P\-T\-Z\-\_\-\-P\-A\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-P\-T\-Z\-\_\-\-P\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-T\-Z\-\_\-\-P\-A\-N}~3}\label{OryxManager_8h_ae2ac707bf8998ce4b84f6419c7b95b69}
+
+
+\-Definition at line 33 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-P\-T\-Z\-\_\-\-T\-I\-L\-T@{\-P\-T\-Z\-\_\-\-T\-I\-L\-T}}
+\index{\-P\-T\-Z\-\_\-\-T\-I\-L\-T@{\-P\-T\-Z\-\_\-\-T\-I\-L\-T}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-P\-T\-Z\-\_\-\-T\-I\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-T\-Z\-\_\-\-T\-I\-L\-T}~2}\label{OryxManager_8h_a545f573fa7c2dcdd8a2dfe2f20b31e77}
+
+
+\-Definition at line 34 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N@{\-R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}}
+\index{\-R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N@{\-R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-I\-G\-H\-T\-\_\-\-B\-U\-T\-T\-O\-N}~5}\label{OryxManager_8h_aeb17351958162535ab6af2cd6b030955}
+
+
+\-Definition at line 86 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-R\-I\-G\-H\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S@{\-R\-I\-G\-H\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S}}
+\index{\-R\-I\-G\-H\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S@{\-R\-I\-G\-H\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-R\-I\-G\-H\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-I\-G\-H\-T\-\_\-\-H\-O\-R\-I\-Z\-O\-N\-T\-A\-L\-\_\-\-A\-X\-I\-S}~3}\label{OryxManager_8h_a7848a9e13b3f91c87acff2d3709488ff}
+
+
+\-Definition at line 74 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-R\-I\-G\-H\-T\-\_\-\-S\-T\-I\-C\-K@{\-R\-I\-G\-H\-T\-\_\-\-S\-T\-I\-C\-K}}
+\index{\-R\-I\-G\-H\-T\-\_\-\-S\-T\-I\-C\-K@{\-R\-I\-G\-H\-T\-\_\-\-S\-T\-I\-C\-K}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-R\-I\-G\-H\-T\-\_\-\-S\-T\-I\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-I\-G\-H\-T\-\_\-\-S\-T\-I\-C\-K}~10}\label{OryxManager_8h_a94ec938a90aadf38ad2a421c982bca95}
+
+
+\-Definition at line 91 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-R\-I\-G\-H\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R@{\-R\-I\-G\-H\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R}}
+\index{\-R\-I\-G\-H\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R@{\-R\-I\-G\-H\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-R\-I\-G\-H\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-I\-G\-H\-T\-\_\-\-T\-R\-I\-G\-G\-E\-R}~5}\label{OryxManager_8h_ab5379b04b4372b84cc8c5b143673aa58}
+
+
+\-Definition at line 76 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-R\-I\-G\-H\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S@{\-R\-I\-G\-H\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S}}
+\index{\-R\-I\-G\-H\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S@{\-R\-I\-G\-H\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-R\-I\-G\-H\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-I\-G\-H\-T\-\_\-\-V\-E\-R\-T\-I\-C\-A\-L\-\_\-\-A\-X\-I\-S}~4}\label{OryxManager_8h_a81a32ba1262d91d5a6472735df593887}
+
+
+\-Definition at line 75 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-R\-O\-C\-K\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H@{\-R\-O\-C\-K\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{\-R\-O\-C\-K\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H@{\-R\-O\-C\-K\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-R\-O\-C\-K\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-O\-C\-K\-E\-R\-\_\-\-L\-E\-N\-G\-T\-H}~.\-33020}\label{OryxManager_8h_a42c6a5b56d3be18f002f0defd8f048e6}
+
+
+\-Definition at line 46 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-R\-O\-C\-K\-E\-R\-\_\-\-O\-F\-F\-S\-E\-T@{\-R\-O\-C\-K\-E\-R\-\_\-\-O\-F\-F\-S\-E\-T}}
+\index{\-R\-O\-C\-K\-E\-R\-\_\-\-O\-F\-F\-S\-E\-T@{\-R\-O\-C\-K\-E\-R\-\_\-\-O\-F\-F\-S\-E\-T}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-R\-O\-C\-K\-E\-R\-\_\-\-O\-F\-F\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-O\-C\-K\-E\-R\-\_\-\-O\-F\-F\-S\-E\-T}~0.\-148352986}\label{OryxManager_8h_ab5987651401715c38278b09269e5c7d4}
+
+
+\-Definition at line 47 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-S\-E\-L\-E\-C\-T\-\_\-\-B\-U\-T\-T\-O\-N@{\-S\-E\-L\-E\-C\-T\-\_\-\-B\-U\-T\-T\-O\-N}}
+\index{\-S\-E\-L\-E\-C\-T\-\_\-\-B\-U\-T\-T\-O\-N@{\-S\-E\-L\-E\-C\-T\-\_\-\-B\-U\-T\-T\-O\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-S\-E\-L\-E\-C\-T\-\_\-\-B\-U\-T\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-L\-E\-C\-T\-\_\-\-B\-U\-T\-T\-O\-N}~6}\label{OryxManager_8h_addb92861d7c344086af68ef1f56c04a1}
+
+
+\-Definition at line 87 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-S\-T\-A\-R\-T\-\_\-\-B\-U\-T\-T\-O\-N@{\-S\-T\-A\-R\-T\-\_\-\-B\-U\-T\-T\-O\-N}}
+\index{\-S\-T\-A\-R\-T\-\_\-\-B\-U\-T\-T\-O\-N@{\-S\-T\-A\-R\-T\-\_\-\-B\-U\-T\-T\-O\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-S\-T\-A\-R\-T\-\_\-\-B\-U\-T\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-T\-A\-R\-T\-\_\-\-B\-U\-T\-T\-O\-N}~7}\label{OryxManager_8h_ab341b8680b89a9888189982451117fbf}
+
+
+\-Definition at line 88 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-T\-I\-C\-S\-\_\-\-P\-E\-R\-\_\-\-M\-O\-T\-O\-R\-\_\-\-R\-E\-V@{\-T\-I\-C\-S\-\_\-\-P\-E\-R\-\_\-\-M\-O\-T\-O\-R\-\_\-\-R\-E\-V}}
+\index{\-T\-I\-C\-S\-\_\-\-P\-E\-R\-\_\-\-M\-O\-T\-O\-R\-\_\-\-R\-E\-V@{\-T\-I\-C\-S\-\_\-\-P\-E\-R\-\_\-\-M\-O\-T\-O\-R\-\_\-\-R\-E\-V}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-T\-I\-C\-S\-\_\-\-P\-E\-R\-\_\-\-M\-O\-T\-O\-R\-\_\-\-R\-E\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-I\-C\-S\-\_\-\-P\-E\-R\-\_\-\-M\-O\-T\-O\-R\-\_\-\-R\-E\-V}~1024}\label{OryxManager_8h_a08577912ac76cd094f53eed5871e171a}
+
+
+\-Definition at line 43 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-W\-H\-E\-E\-L\-\_\-\-B\-A\-S\-E@{\-W\-H\-E\-E\-L\-\_\-\-B\-A\-S\-E}}
+\index{\-W\-H\-E\-E\-L\-\_\-\-B\-A\-S\-E@{\-W\-H\-E\-E\-L\-\_\-\-B\-A\-S\-E}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-W\-H\-E\-E\-L\-\_\-\-B\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-W\-H\-E\-E\-L\-\_\-\-B\-A\-S\-E}~0.\-86147}\label{OryxManager_8h_aba417e114296ca6ffc4ca022e72b9901}
+
+
+\-Definition at line 45 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-W\-H\-E\-E\-L\-\_\-\-D\-I\-A\-M\-E\-T\-E\-R@{\-W\-H\-E\-E\-L\-\_\-\-D\-I\-A\-M\-E\-T\-E\-R}}
+\index{\-W\-H\-E\-E\-L\-\_\-\-D\-I\-A\-M\-E\-T\-E\-R@{\-W\-H\-E\-E\-L\-\_\-\-D\-I\-A\-M\-E\-T\-E\-R}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-W\-H\-E\-E\-L\-\_\-\-D\-I\-A\-M\-E\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-W\-H\-E\-E\-L\-\_\-\-D\-I\-A\-M\-E\-T\-E\-R}~(12.\-5$\ast$2.\-54/100)}\label{OryxManager_8h_a5419e057d3cc43cca2f87bff5b09cb47}
+
+
+\-Definition at line 42 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-W\-H\-E\-E\-L\-\_\-\-T\-R\-A\-C\-K@{\-W\-H\-E\-E\-L\-\_\-\-T\-R\-A\-C\-K}}
+\index{\-W\-H\-E\-E\-L\-\_\-\-T\-R\-A\-C\-K@{\-W\-H\-E\-E\-L\-\_\-\-T\-R\-A\-C\-K}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-W\-H\-E\-E\-L\-\_\-\-T\-R\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-W\-H\-E\-E\-L\-\_\-\-T\-R\-A\-C\-K}~100}\label{OryxManager_8h_aa9cd2eaae3d5c89c36ebd4cccd174d4d}
+
+
+\-Definition at line 48 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-X\-\_\-\-B\-U\-T\-T\-O\-N@{\-X\-\_\-\-B\-U\-T\-T\-O\-N}}
+\index{\-X\-\_\-\-B\-U\-T\-T\-O\-N@{\-X\-\_\-\-B\-U\-T\-T\-O\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-X\-\_\-\-B\-U\-T\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-X\-\_\-\-B\-U\-T\-T\-O\-N}~2}\label{OryxManager_8h_afdb8ffccf7c918ee70c71d65bae4a61f}
+
+
+\-Definition at line 83 of file \-Oryx\-Manager.\-h.
+
+\index{\-Oryx\-Manager.\-h@{\-Oryx\-Manager.\-h}!\-Y\-\_\-\-B\-U\-T\-T\-O\-N@{\-Y\-\_\-\-B\-U\-T\-T\-O\-N}}
+\index{\-Y\-\_\-\-B\-U\-T\-T\-O\-N@{\-Y\-\_\-\-B\-U\-T\-T\-O\-N}!OryxManager.h@{\-Oryx\-Manager.\-h}}
+\subsubsection[{\-Y\-\_\-\-B\-U\-T\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-Y\-\_\-\-B\-U\-T\-T\-O\-N}~3}\label{OryxManager_8h_a6539782a40ba20f423b4dd9183dd7ec4}
+
+
+\-Definition at line 84 of file \-Oryx\-Manager.\-h.
+
