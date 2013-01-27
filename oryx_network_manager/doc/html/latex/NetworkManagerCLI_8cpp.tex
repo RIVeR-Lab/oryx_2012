@@ -1,0 +1,144 @@
+\section{\-Network\-Manager\-C\-L\-I.\-cpp \-File \-Reference}
+\label{NetworkManagerCLI_8cpp}\index{\-Network\-Manager\-C\-L\-I.\-cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}oryx\-\_\-network\-\_\-manager/\-Network\-Connections.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}oryx\-\_\-network\-\_\-manager/\-Network\-Devices.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}oryx\-\_\-network\-\_\-manager/\-Active\-Network\-Connections.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}oryx\-\_\-network\-\_\-manager/\-Activate\-Connection.\-h\char`\"{}}\*
+{\ttfamily \#include $<$sstream$>$}\*
+\-Include dependency graph for \-Network\-Manager\-C\-L\-I.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{NetworkManagerCLI_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf connect} (const char $\ast$iface, const char $\ast$connection\-\_\-name)
+\item 
+void {\bf help} (const char $\ast$message)
+\item 
+void {\bf list\-\_\-active\-\_\-connections} (bool run\-\_\-once)
+\item 
+void {\bf list\-\_\-active\-\_\-connections\-\_\-callback} (const \-Active\-Network\-Connections\-::\-Const\-Ptr \&active\-\_\-connections, bool run\-\_\-once)
+\item 
+void {\bf list\-\_\-connections} (bool run\-\_\-once)
+\item 
+void {\bf list\-\_\-connections\-\_\-callback} (const \-Network\-Connections\-::\-Const\-Ptr \&connections, bool run\-\_\-once)
+\item 
+void {\bf list\-\_\-devices} (bool run\-\_\-once)
+\item 
+void {\bf list\-\_\-devices\-\_\-callback} (const \-Network\-Devices\-::\-Const\-Ptr \&devices, bool run\-\_\-once)
+\item 
+int {\bf main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Network\-Manager\-C\-L\-I.\-cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}!connect@{connect}}
+\index{connect@{connect}!NetworkManagerCLI.cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf connect} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{const char $\ast$}]{connection\-\_\-name}
+\end{DoxyParamCaption}
+)}\label{NetworkManagerCLI_8cpp_aeed3893b8ce500d2f9c7d4f12a6b8ff6}
+
+
+\-Definition at line 100 of file \-Network\-Manager\-C\-L\-I.\-cpp.
+
+\index{\-Network\-Manager\-C\-L\-I.\-cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}!help@{help}}
+\index{help@{help}!NetworkManagerCLI.cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}}
+\subsubsection[{help}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf help} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\label{NetworkManagerCLI_8cpp_a73fe081479888fcd619a52229be228a5}
+
+
+\-Definition at line 115 of file \-Network\-Manager\-C\-L\-I.\-cpp.
+
+\index{\-Network\-Manager\-C\-L\-I.\-cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}!list\-\_\-active\-\_\-connections@{list\-\_\-active\-\_\-connections}}
+\index{list\-\_\-active\-\_\-connections@{list\-\_\-active\-\_\-connections}!NetworkManagerCLI.cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}}
+\subsubsection[{list\-\_\-active\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf list\-\_\-active\-\_\-connections} (
+\begin{DoxyParamCaption}
+\item[{bool}]{run\-\_\-once}
+\end{DoxyParamCaption}
+)}\label{NetworkManagerCLI_8cpp_a91ab5129d8f7c29f5ceac523f5b952c7}
+
+
+\-Definition at line 65 of file \-Network\-Manager\-C\-L\-I.\-cpp.
+
+\index{\-Network\-Manager\-C\-L\-I.\-cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}!list\-\_\-active\-\_\-connections\-\_\-callback@{list\-\_\-active\-\_\-connections\-\_\-callback}}
+\index{list\-\_\-active\-\_\-connections\-\_\-callback@{list\-\_\-active\-\_\-connections\-\_\-callback}!NetworkManagerCLI.cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}}
+\subsubsection[{list\-\_\-active\-\_\-connections\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf list\-\_\-active\-\_\-connections\-\_\-callback} (
+\begin{DoxyParamCaption}
+\item[{const \-Active\-Network\-Connections\-::\-Const\-Ptr \&}]{active\-\_\-connections, }
+\item[{bool}]{run\-\_\-once}
+\end{DoxyParamCaption}
+)}\label{NetworkManagerCLI_8cpp_aa50884b1f3d4fe36b7d9eeeec136516c}
+
+
+\-Definition at line 49 of file \-Network\-Manager\-C\-L\-I.\-cpp.
+
+\index{\-Network\-Manager\-C\-L\-I.\-cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}!list\-\_\-connections@{list\-\_\-connections}}
+\index{list\-\_\-connections@{list\-\_\-connections}!NetworkManagerCLI.cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}}
+\subsubsection[{list\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf list\-\_\-connections} (
+\begin{DoxyParamCaption}
+\item[{bool}]{run\-\_\-once}
+\end{DoxyParamCaption}
+)}\label{NetworkManagerCLI_8cpp_ac5db45ad2db212a13f79df665ea377c4}
+
+
+\-Definition at line 41 of file \-Network\-Manager\-C\-L\-I.\-cpp.
+
+\index{\-Network\-Manager\-C\-L\-I.\-cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}!list\-\_\-connections\-\_\-callback@{list\-\_\-connections\-\_\-callback}}
+\index{list\-\_\-connections\-\_\-callback@{list\-\_\-connections\-\_\-callback}!NetworkManagerCLI.cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}}
+\subsubsection[{list\-\_\-connections\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf list\-\_\-connections\-\_\-callback} (
+\begin{DoxyParamCaption}
+\item[{const \-Network\-Connections\-::\-Const\-Ptr \&}]{connections, }
+\item[{bool}]{run\-\_\-once}
+\end{DoxyParamCaption}
+)}\label{NetworkManagerCLI_8cpp_ac404438ec9bd52c3a6f43a6815bdbf60}
+
+
+\-Definition at line 20 of file \-Network\-Manager\-C\-L\-I.\-cpp.
+
+\index{\-Network\-Manager\-C\-L\-I.\-cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}!list\-\_\-devices@{list\-\_\-devices}}
+\index{list\-\_\-devices@{list\-\_\-devices}!NetworkManagerCLI.cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}}
+\subsubsection[{list\-\_\-devices}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf list\-\_\-devices} (
+\begin{DoxyParamCaption}
+\item[{bool}]{run\-\_\-once}
+\end{DoxyParamCaption}
+)}\label{NetworkManagerCLI_8cpp_ae00ec5aec66a1a7e48745a98891ef272}
+
+
+\-Definition at line 92 of file \-Network\-Manager\-C\-L\-I.\-cpp.
+
+\index{\-Network\-Manager\-C\-L\-I.\-cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}!list\-\_\-devices\-\_\-callback@{list\-\_\-devices\-\_\-callback}}
+\index{list\-\_\-devices\-\_\-callback@{list\-\_\-devices\-\_\-callback}!NetworkManagerCLI.cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}}
+\subsubsection[{list\-\_\-devices\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf list\-\_\-devices\-\_\-callback} (
+\begin{DoxyParamCaption}
+\item[{const \-Network\-Devices\-::\-Const\-Ptr \&}]{devices, }
+\item[{bool}]{run\-\_\-once}
+\end{DoxyParamCaption}
+)}\label{NetworkManagerCLI_8cpp_a5767123336e76e31bf9fb9d064096a8f}
+
+
+\-Definition at line 73 of file \-Network\-Manager\-C\-L\-I.\-cpp.
+
+\index{\-Network\-Manager\-C\-L\-I.\-cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}!main@{main}}
+\index{main@{main}!NetworkManagerCLI.cpp@{\-Network\-Manager\-C\-L\-I.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{NetworkManagerCLI_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 129 of file \-Network\-Manager\-C\-L\-I.\-cpp.
+

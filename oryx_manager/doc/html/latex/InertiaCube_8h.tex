@@ -1,0 +1,256 @@
+\section{\-Inertia\-Cube.\-h \-File \-Reference}
+\label{InertiaCube_8h}\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}}
+{\ttfamily \#include $<$ros/ros.\-h$>$}\*
+{\ttfamily \#include $<$tf/transform\-\_\-broadcaster.\-h$>$}\*
+{\ttfamily \#include $<$sensor\-\_\-msgs/\-Imu.\-h$>$}\*
+{\ttfamily \#include \char`\"{}\-Kinematics/isense.\-h\char`\"{}}\*
+{\ttfamily \#include $<$dynamic\-\_\-reconfigure/server.\-h$>$}\*
+{\ttfamily \#include $<$boost/thread.\-hpp$>$}\*
+{\ttfamily \#include $<$termios.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include \char`\"{}oryx\-\_\-manager/\-I\-M\-U\-Config.\-h\char`\"{}}\*
+\-Include dependency graph for \-Inertia\-Cube.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{InertiaCube_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{InertiaCube_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+sensor\-\_\-msgs\-::\-Imu {\bf get\-I\-M\-U\-Data} ()
+\item 
+void {\bf reconfigure\-Callback} ({\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config} \&config, uint32\-\_\-t level)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf \-Angle\-Format}
+\item 
+int $\ast$ {\bf \-Boresight} = new int[3]
+\item 
+bool {\bf \-Compass}
+\item 
+int {\bf \-Compass\-Compensation}
+\item 
+int {\bf \-Coord\-Frame}
+\item 
+{\bf \-I\-S\-D\-\_\-\-T\-R\-A\-C\-K\-I\-N\-G\-\_\-\-D\-A\-T\-A\-\_\-\-T\-Y\-P\-E} {\bf data}
+\item 
+int {\bf \-Enhancement}
+\item 
+bool {\bf \-Get\-Aux\-Inputs}
+\item 
+bool {\bf \-Get\-Camera\-Data}
+\item 
+bool {\bf \-Get\-Inputs}
+\item 
+{\bf \-I\-S\-D\-\_\-\-T\-R\-A\-C\-K\-E\-R\-\_\-\-H\-A\-N\-D\-L\-E} {\bf handle}
+\item 
+int {\bf port} = 1
+\item 
+int {\bf \-Prediction}
+\item 
+double {\bf publish\-Rate} = 10
+\item 
+int {\bf \-Sensitivity}
+\item 
+int {\bf \-State}
+\item 
+{\bf \-I\-S\-D\-\_\-\-S\-T\-A\-T\-I\-O\-N\-\_\-\-I\-N\-F\-O\-\_\-\-T\-Y\-P\-E} {\bf station}
+\item 
+bool {\bf \-Timestamped}
+\item 
+int $\ast$ {\bf \-Tip\-Offset} = new int[3]
+\item 
+std\-::string {\bf \-Tracker\-Model}
+\item 
+int {\bf \-Yaw\-Boresight}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!get\-I\-M\-U\-Data@{get\-I\-M\-U\-Data}}
+\index{get\-I\-M\-U\-Data@{get\-I\-M\-U\-Data}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{get\-I\-M\-U\-Data}]{\setlength{\rightskip}{0pt plus 5cm}sensor\-\_\-msgs\-::\-Imu {\bf get\-I\-M\-U\-Data} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{InertiaCube_8h_aaca33ef0e6e3b077258e3741fa91aea4}
+
+
+\-Definition at line 31 of file \-Inertia\-Cube.\-cpp.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!reconfigure\-Callback@{reconfigure\-Callback}}
+\index{reconfigure\-Callback@{reconfigure\-Callback}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{reconfigure\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf reconfigure\-Callback} (
+\begin{DoxyParamCaption}
+\item[{{\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config} \&}]{config, }
+\item[{uint32\-\_\-t}]{level}
+\end{DoxyParamCaption}
+)}\label{InertiaCube_8h_a9a50f88262122d91268c54c481b04d1e}
+
+
+\-Definition at line 11 of file \-Inertia\-Cube.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Angle\-Format@{\-Angle\-Format}}
+\index{\-Angle\-Format@{\-Angle\-Format}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Angle\-Format}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Angle\-Format}}\label{InertiaCube_8h_a41a1d522ba723f2594ee9f76b0c09cce}
+
+
+\-Definition at line 43 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Boresight@{\-Boresight}}
+\index{\-Boresight@{\-Boresight}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Boresight}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf \-Boresight} = new int[3]}\label{InertiaCube_8h_a21ec8f5725d5fe985e7cb7bf1d37831e}
+
+
+\-Definition at line 47 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Compass@{\-Compass}}
+\index{\-Compass@{\-Compass}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Compass}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Compass}}\label{InertiaCube_8h_a06eb6b3174591b7282c2575f51e1c6ff}
+
+
+\-Definition at line 34 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Compass\-Compensation@{\-Compass\-Compensation}}
+\index{\-Compass\-Compensation@{\-Compass\-Compensation}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Compass\-Compensation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Compass\-Compensation}}\label{InertiaCube_8h_a67286eb8d48928bbb4034eeabb4a325d}
+
+
+\-Definition at line 39 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Coord\-Frame@{\-Coord\-Frame}}
+\index{\-Coord\-Frame@{\-Coord\-Frame}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Coord\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Coord\-Frame}}\label{InertiaCube_8h_a975c82a2dea21c26471c4adfb2b25695}
+
+
+\-Definition at line 44 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!data@{data}}
+\index{data@{data}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-I\-S\-D\-\_\-\-T\-R\-A\-C\-K\-I\-N\-G\-\_\-\-D\-A\-T\-A\-\_\-\-T\-Y\-P\-E} {\bf data}}\label{InertiaCube_8h_a68175a9f963535b098bf6cb60463ecef}
+
+
+\-Definition at line 25 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Enhancement@{\-Enhancement}}
+\index{\-Enhancement@{\-Enhancement}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Enhancement}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Enhancement}}\label{InertiaCube_8h_a2cd034be31e00bb9936e32ea072f2077}
+
+
+\-Definition at line 40 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Get\-Aux\-Inputs@{\-Get\-Aux\-Inputs}}
+\index{\-Get\-Aux\-Inputs@{\-Get\-Aux\-Inputs}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Get\-Aux\-Inputs}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Get\-Aux\-Inputs}}\label{InertiaCube_8h_a6153d6cda7d17002ffddd483e24a1194}
+
+
+\-Definition at line 37 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Get\-Camera\-Data@{\-Get\-Camera\-Data}}
+\index{\-Get\-Camera\-Data@{\-Get\-Camera\-Data}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Get\-Camera\-Data}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Get\-Camera\-Data}}\label{InertiaCube_8h_af453df88891c4a08cbe44f712ed2cc70}
+
+
+\-Definition at line 38 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Get\-Inputs@{\-Get\-Inputs}}
+\index{\-Get\-Inputs@{\-Get\-Inputs}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Get\-Inputs}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Get\-Inputs}}\label{InertiaCube_8h_a41ac2b2ee091a213d7d684796ae755ee}
+
+
+\-Definition at line 36 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!handle@{handle}}
+\index{handle@{handle}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-I\-S\-D\-\_\-\-T\-R\-A\-C\-K\-E\-R\-\_\-\-H\-A\-N\-D\-L\-E} {\bf handle}}\label{InertiaCube_8h_a579fcf07940cf9ac059864bec784e10a}
+
+
+\-Definition at line 23 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!port@{port}}
+\index{port@{port}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf port} = 1}\label{InertiaCube_8h_a63c89c04d1feae07ca35558055155ffb}
+
+
+\-Definition at line 28 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Prediction@{\-Prediction}}
+\index{\-Prediction@{\-Prediction}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Prediction}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Prediction}}\label{InertiaCube_8h_a4c829686f847a22555c3ca1ba8b617a3}
+
+
+\-Definition at line 42 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!publish\-Rate@{publish\-Rate}}
+\index{publish\-Rate@{publish\-Rate}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{publish\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf publish\-Rate} = 10}\label{InertiaCube_8h_a7f5b716c830afb09122ad50eec8aaa45}
+
+
+\-Definition at line 29 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Sensitivity@{\-Sensitivity}}
+\index{\-Sensitivity@{\-Sensitivity}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Sensitivity}}\label{InertiaCube_8h_a1aefca8d2230b8157d45fb28693ef789}
+
+
+\-Definition at line 41 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-State@{\-State}}
+\index{\-State@{\-State}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-State}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-State}}\label{InertiaCube_8h_a18de412e641d6e3d45d7a829923a29c3}
+
+
+\-Definition at line 33 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!station@{station}}
+\index{station@{station}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{station}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-I\-S\-D\-\_\-\-S\-T\-A\-T\-I\-O\-N\-\_\-\-I\-N\-F\-O\-\_\-\-T\-Y\-P\-E} {\bf station}}\label{InertiaCube_8h_af88797d6d7b02f85efbddf8d296b2b70}
+
+
+\-Definition at line 24 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Timestamped@{\-Timestamped}}
+\index{\-Timestamped@{\-Timestamped}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Timestamped}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Timestamped}}\label{InertiaCube_8h_adb4bb81b01559f3311db001348555d5c}
+
+
+\-Definition at line 35 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Tip\-Offset@{\-Tip\-Offset}}
+\index{\-Tip\-Offset@{\-Tip\-Offset}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Tip\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf \-Tip\-Offset} = new int[3]}\label{InertiaCube_8h_a9214573c8e6b6825aaf1eb1207fcf60a}
+
+
+\-Definition at line 45 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Tracker\-Model@{\-Tracker\-Model}}
+\index{\-Tracker\-Model@{\-Tracker\-Model}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Tracker\-Model}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-Tracker\-Model}}\label{InertiaCube_8h_a26baa0127075568d61e5f770755b98e2}
+
+
+\-Definition at line 32 of file \-Inertia\-Cube.\-h.
+
+\index{\-Inertia\-Cube.\-h@{\-Inertia\-Cube.\-h}!\-Yaw\-Boresight@{\-Yaw\-Boresight}}
+\index{\-Yaw\-Boresight@{\-Yaw\-Boresight}!InertiaCube.h@{\-Inertia\-Cube.\-h}}
+\subsubsection[{\-Yaw\-Boresight}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Yaw\-Boresight}}\label{InertiaCube_8h_a52ad3dc556f27fa661e0e0caf5a7ab85}
+
+
+\-Definition at line 46 of file \-Inertia\-Cube.\-h.
+

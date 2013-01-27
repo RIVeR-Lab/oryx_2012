@@ -1,0 +1,136 @@
+\section{\-Arm\-Manager.\-h \-File \-Reference}
+\label{ArmManager_8h}\index{\-Arm\-Manager.\-h@{\-Arm\-Manager.\-h}}
+{\ttfamily \#include \char`\"{}\-Oryx\-Manager.\-h\char`\"{}}\*
+\-Include dependency graph for \-Arm\-Manager.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ArmManager_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{ArmManager_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf drop\-Off\-Rock} ()
+\item 
+void {\bf send\-Position\-Message} ({\bf homing\-Data} motor, int setpoint, bool absolute)
+\item 
+void {\bf send\-Velocity\-Message} ({\bf homing\-Data} motor, int velocity)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\-::\-Publisher {\bf arm\-\_\-publisher}
+\item 
+ros\-::\-Publisher {\bf arm\-Orientation\-Publisher}
+\item 
+long {\bf drop\-Off\-Position}
+\item 
+ros\-::\-Publisher {\bf group\-\_\-arm\-\_\-publisher}
+\item 
+{\bf homing\-Data} {\bf pan\-Motor}
+\item 
+{\bf homing\-Data} {\bf scoop\-Motor}
+\item 
+{\bf homing\-Data} {\bf shoulder\-Motor}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Arm\-Manager.\-h@{\-Arm\-Manager.\-h}!drop\-Off\-Rock@{drop\-Off\-Rock}}
+\index{drop\-Off\-Rock@{drop\-Off\-Rock}!ArmManager.h@{\-Arm\-Manager.\-h}}
+\subsubsection[{drop\-Off\-Rock}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf drop\-Off\-Rock} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{ArmManager_8h_a06a49c887520b025f06fa685b0179c41}
+
+
+\-Definition at line 81 of file \-Arm\-Manager.\-cpp.
+
+\index{\-Arm\-Manager.\-h@{\-Arm\-Manager.\-h}!send\-Position\-Message@{send\-Position\-Message}}
+\index{send\-Position\-Message@{send\-Position\-Message}!ArmManager.h@{\-Arm\-Manager.\-h}}
+\subsubsection[{send\-Position\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf send\-Position\-Message} (
+\begin{DoxyParamCaption}
+\item[{{\bf homing\-Data}}]{motor, }
+\item[{int}]{setpoint, }
+\item[{bool}]{absolute}
+\end{DoxyParamCaption}
+)}\label{ArmManager_8h_a96dd3c826b2fbb1f49b88d3b80cf4d4c}
+\-Sends a position message to the specified motor. 
+
+\-Definition at line 254 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Arm\-Manager.\-h@{\-Arm\-Manager.\-h}!send\-Velocity\-Message@{send\-Velocity\-Message}}
+\index{send\-Velocity\-Message@{send\-Velocity\-Message}!ArmManager.h@{\-Arm\-Manager.\-h}}
+\subsubsection[{send\-Velocity\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf send\-Velocity\-Message} (
+\begin{DoxyParamCaption}
+\item[{{\bf homing\-Data}}]{motor, }
+\item[{int}]{velocity}
+\end{DoxyParamCaption}
+)}\label{ArmManager_8h_af9c0427b868a9243ea405e56c4654568}
+\-Sends a velocity message to the specified motor 
+
+\-Definition at line 107 of file \-Arm\-Manager.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\index{\-Arm\-Manager.\-h@{\-Arm\-Manager.\-h}!arm\-\_\-publisher@{arm\-\_\-publisher}}
+\index{arm\-\_\-publisher@{arm\-\_\-publisher}!ArmManager.h@{\-Arm\-Manager.\-h}}
+\subsubsection[{arm\-\_\-publisher}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf arm\-\_\-publisher}}\label{ArmManager_8h_a58e6192f639d19043c86ccc300d3a11c}
+
+
+\-Definition at line 12 of file \-Arm\-Manager.\-h.
+
+\index{\-Arm\-Manager.\-h@{\-Arm\-Manager.\-h}!arm\-Orientation\-Publisher@{arm\-Orientation\-Publisher}}
+\index{arm\-Orientation\-Publisher@{arm\-Orientation\-Publisher}!ArmManager.h@{\-Arm\-Manager.\-h}}
+\subsubsection[{arm\-Orientation\-Publisher}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf arm\-Orientation\-Publisher}}\label{ArmManager_8h_ad11836ffdb9da29d5e6de66bcb841e04}
+
+
+\-Definition at line 14 of file \-Arm\-Manager.\-h.
+
+\index{\-Arm\-Manager.\-h@{\-Arm\-Manager.\-h}!drop\-Off\-Position@{drop\-Off\-Position}}
+\index{drop\-Off\-Position@{drop\-Off\-Position}!ArmManager.h@{\-Arm\-Manager.\-h}}
+\subsubsection[{drop\-Off\-Position}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf drop\-Off\-Position}}\label{ArmManager_8h_a55cce650f8b1dc2b79382772bcdb4167}
+
+
+\-Definition at line 16 of file \-Arm\-Manager.\-h.
+
+\index{\-Arm\-Manager.\-h@{\-Arm\-Manager.\-h}!group\-\_\-arm\-\_\-publisher@{group\-\_\-arm\-\_\-publisher}}
+\index{group\-\_\-arm\-\_\-publisher@{group\-\_\-arm\-\_\-publisher}!ArmManager.h@{\-Arm\-Manager.\-h}}
+\subsubsection[{group\-\_\-arm\-\_\-publisher}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf group\-\_\-arm\-\_\-publisher}}\label{ArmManager_8h_a62cfd16c75a40dbbf7cb09bc0b39abf9}
+
+
+\-Definition at line 13 of file \-Arm\-Manager.\-h.
+
+\index{\-Arm\-Manager.\-h@{\-Arm\-Manager.\-h}!pan\-Motor@{pan\-Motor}}
+\index{pan\-Motor@{pan\-Motor}!ArmManager.h@{\-Arm\-Manager.\-h}}
+\subsubsection[{pan\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf homing\-Data} {\bf pan\-Motor}}\label{ArmManager_8h_a00510a85362690f6f88d80a43736008e}
+
+
+\-Definition at line 17 of file \-Arm\-Manager.\-h.
+
+\index{\-Arm\-Manager.\-h@{\-Arm\-Manager.\-h}!scoop\-Motor@{scoop\-Motor}}
+\index{scoop\-Motor@{scoop\-Motor}!ArmManager.h@{\-Arm\-Manager.\-h}}
+\subsubsection[{scoop\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf homing\-Data} {\bf scoop\-Motor}}\label{ArmManager_8h_a37064b06e61b47de715b215002dd20db}
+
+
+\-Definition at line 17 of file \-Arm\-Manager.\-h.
+
+\index{\-Arm\-Manager.\-h@{\-Arm\-Manager.\-h}!shoulder\-Motor@{shoulder\-Motor}}
+\index{shoulder\-Motor@{shoulder\-Motor}!ArmManager.h@{\-Arm\-Manager.\-h}}
+\subsubsection[{shoulder\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf homing\-Data} {\bf shoulder\-Motor}}\label{ArmManager_8h_a656e9697e47ff8c0a6320ab5cccdcb14}
+
+
+\-Definition at line 17 of file \-Arm\-Manager.\-h.
+

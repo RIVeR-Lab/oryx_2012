@@ -1,0 +1,22 @@
+authors: Mitchell Wills <mwills@wpi.edu>
+brief: ''
+depends:
+- message_generation
+- catkin
+- message_runtime
+- std_msgs
+- roscpp
+description: A program which monitors a system's network connections and automatically
+  makes connections
+license: '?'
+msgs:
+- NetworkConnection
+- NetworkDevices
+- ActiveNetworkConnection
+- NetworkConnections
+- ActiveNetworkConnections
+- NetworkDevice
+package_type: package
+srvs:
+- ActivateConnection
+url: http://ros.org/wiki/oryx_network_manager

@@ -1,0 +1,344 @@
+\section{oryx\-\_\-manager\-:\-:\-I\-M\-U\-Config \-Class \-Reference}
+\label{classoryx__manager_1_1IMUConfig}\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+
+
+{\ttfamily \#include $<$\-I\-M\-U\-Config.\-h$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf \-Abstract\-Group\-Description}
+\item 
+class {\bf \-Abstract\-Param\-Description}
+\item 
+class {\bf \-D\-E\-F\-A\-U\-L\-T}
+\item 
+class {\bf \-Group\-Description}
+\item 
+class {\bf \-Param\-Description}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ const \*
+{\bf \-Abstract\-Group\-Description} $>$ {\bf \-Abstract\-Group\-Description\-Const\-Ptr}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ {\bf \-Abstract\-Group\-Description} $>$ {\bf \-Abstract\-Group\-Description\-Ptr}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ const \*
+{\bf \-Abstract\-Param\-Description} $>$ {\bf \-Abstract\-Param\-Description\-Const\-Ptr}
+\item 
+typedef boost\-::shared\-\_\-ptr\*
+$<$ {\bf \-Abstract\-Param\-Description} $>$ {\bf \-Abstract\-Param\-Description\-Ptr}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf \-\_\-\-\_\-clamp\-\_\-\-\_\-} ()
+\item 
+bool {\bf \-\_\-\-\_\-from\-Message\-\_\-\-\_\-} (dynamic\-\_\-reconfigure\-::\-Config \&msg)
+\item 
+void {\bf \-\_\-\-\_\-from\-Server\-\_\-\-\_\-} (const ros\-::\-Node\-Handle \&nh)
+\item 
+uint32\-\_\-t {\bf \-\_\-\-\_\-level\-\_\-\-\_\-} (const {\bf \-I\-M\-U\-Config} \&config) const 
+\item 
+void {\bf \-\_\-\-\_\-to\-Message\-\_\-\-\_\-} (dynamic\-\_\-reconfigure\-::\-Config \&msg, const std\-::vector$<$ {\bf \-Abstract\-Param\-Description\-Const\-Ptr} $>$ \&\-\_\-\-\_\-param\-\_\-descriptions\-\_\-\-\_\-, const std\-::vector$<$ {\bf \-Abstract\-Group\-Description\-Const\-Ptr} $>$ \&\-\_\-\-\_\-group\-\_\-descriptions\-\_\-\-\_\-) const 
+\item 
+void {\bf \-\_\-\-\_\-to\-Message\-\_\-\-\_\-} (dynamic\-\_\-reconfigure\-::\-Config \&msg) const 
+\item 
+void {\bf \-\_\-\-\_\-to\-Server\-\_\-\-\_\-} (const ros\-::\-Node\-Handle \&nh) const 
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const {\bf \-I\-M\-U\-Config} \& {\bf \-\_\-\-\_\-get\-Default\-\_\-\-\_\-} ()
+\item 
+static const \*
+dynamic\-\_\-reconfigure\-::\-Config\-Description \& {\bf \-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-} ()
+\item 
+static const std\-::vector\*
+$<$ {\bf \-Abstract\-Group\-Description\-Const\-Ptr} $>$ \& {\bf \-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-} ()
+\item 
+static const {\bf \-I\-M\-U\-Config} \& {\bf \-\_\-\-\_\-get\-Max\-\_\-\-\_\-} ()
+\item 
+static const {\bf \-I\-M\-U\-Config} \& {\bf \-\_\-\-\_\-get\-Min\-\_\-\-\_\-} ()
+\item 
+static const std\-::vector\*
+$<$ {\bf \-Abstract\-Param\-Description\-Const\-Ptr} $>$ \& {\bf \-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf \-Compass}
+\item 
+int {\bf \-Compass\-\_\-\-Compensation}
+\item 
+int {\bf \-Enhancement}
+\item 
+class \*
+{\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-D\-E\-F\-A\-U\-L\-T} {\bf groups}
+\item 
+int {\bf \-Prediction}
+\item 
+bool {\bf \-Reset\-\_\-\-Heading}
+\item 
+bool {\bf \-Timestamped}
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const {\bf \-I\-M\-U\-Config\-Statics} $\ast$ {\bf \-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 63 of file \-I\-M\-U\-Config.\-h.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-Abstract\-Group\-Description\-Const\-Ptr@{\-Abstract\-Group\-Description\-Const\-Ptr}}
+\index{\-Abstract\-Group\-Description\-Const\-Ptr@{\-Abstract\-Group\-Description\-Const\-Ptr}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-Abstract\-Group\-Description\-Const\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<$const {\bf \-Abstract\-Group\-Description}$>$ {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-Abstract\-Group\-Description\-Const\-Ptr}}\label{classoryx__manager_1_1IMUConfig_afc6545ea22ba0ef0e4d4f013895f9a51}
+
+
+\-Definition at line 175 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-Abstract\-Group\-Description\-Ptr@{\-Abstract\-Group\-Description\-Ptr}}
+\index{\-Abstract\-Group\-Description\-Ptr@{\-Abstract\-Group\-Description\-Ptr}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-Abstract\-Group\-Description\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf \-Abstract\-Group\-Description}$>$ {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-Abstract\-Group\-Description\-Ptr}}\label{classoryx__manager_1_1IMUConfig_a4a56f93566ef96fb23199bdd312bb6e4}
+
+
+\-Definition at line 174 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-Abstract\-Param\-Description\-Const\-Ptr@{\-Abstract\-Param\-Description\-Const\-Ptr}}
+\index{\-Abstract\-Param\-Description\-Const\-Ptr@{\-Abstract\-Param\-Description\-Const\-Ptr}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-Abstract\-Param\-Description\-Const\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<$const {\bf \-Abstract\-Param\-Description}$>$ {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-Abstract\-Param\-Description\-Const\-Ptr}}\label{classoryx__manager_1_1IMUConfig_a53c1c993ee27295aad9005024fdc0a79}
+
+
+\-Definition at line 89 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-Abstract\-Param\-Description\-Ptr@{\-Abstract\-Param\-Description\-Ptr}}
+\index{\-Abstract\-Param\-Description\-Ptr@{\-Abstract\-Param\-Description\-Ptr}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-Abstract\-Param\-Description\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf \-Abstract\-Param\-Description}$>$ {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-Abstract\-Param\-Description\-Ptr}}\label{classoryx__manager_1_1IMUConfig_a6cc526c8f299152d3f4a108a0a8d55ca}
+
+
+\-Definition at line 88 of file \-I\-M\-U\-Config.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-clamp\-\_\-\-\_\-@{\-\_\-\-\_\-clamp\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-clamp\-\_\-\-\_\-@{\-\_\-\-\_\-clamp\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-clamp\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-clamp\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classoryx__manager_1_1IMUConfig_a76cdcbbec4c0ebfe4f6d87e91d0340aa}
+
+
+\-Definition at line 395 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-from\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-from\-Message\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-from\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-from\-Message\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-from\-Message\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-from\-Message\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{dynamic\-\_\-reconfigure\-::\-Config \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classoryx__manager_1_1IMUConfig_a970a12b5abb7376c67cc76ac114f2721}
+
+
+\-Definition at line 304 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-from\-Server\-\_\-\-\_\-@{\-\_\-\-\_\-from\-Server\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-from\-Server\-\_\-\-\_\-@{\-\_\-\-\_\-from\-Server\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-from\-Server\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-from\-Server\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{const ros\-::\-Node\-Handle \&}]{nh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline]}}\label{classoryx__manager_1_1IMUConfig_af2819ff2aad58c8c0609f6229b1602b6}
+
+
+\-Definition at line 377 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-@{\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-@{\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-I\-M\-U\-Config\-Statics} $\ast$ {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-get\-\_\-statics\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static, private]}}\label{classoryx__manager_1_1IMUConfig_ad943482ab00197a20f49b6d5dba55980}
+
+
+\-Definition at line 559 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-get\-Default\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Default\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Default\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Default\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Default\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-I\-M\-U\-Config} \& {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-get\-Default\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classoryx__manager_1_1IMUConfig_a610f89e190f9336ab981ba2fe1650aa9}
+
+
+\-Definition at line 534 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const dynamic\-\_\-reconfigure\-::\-Config\-Description \& {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-get\-Description\-Message\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classoryx__manager_1_1IMUConfig_af335b9e8f2beff0569411efcbececbd8}
+
+
+\-Definition at line 529 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$ {\bf \-I\-M\-U\-Config\-::\-Abstract\-Group\-Description\-Const\-Ptr} $>$ \& {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-get\-Group\-Descriptions\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classoryx__manager_1_1IMUConfig_aa715b367abd2677bc5263eeef9503b51}
+
+
+\-Definition at line 554 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-get\-Max\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Max\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Max\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Max\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Max\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-I\-M\-U\-Config} \& {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-get\-Max\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classoryx__manager_1_1IMUConfig_aaf837fc3ef1253e558b80fac602b5837}
+
+
+\-Definition at line 539 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-get\-Min\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Min\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Min\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Min\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Min\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-I\-M\-U\-Config} \& {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-get\-Min\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classoryx__manager_1_1IMUConfig_a417ac04236f21d11b851823aa71736ae}
+
+
+\-Definition at line 544 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-@{\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$ {\bf \-I\-M\-U\-Config\-::\-Abstract\-Param\-Description\-Const\-Ptr} $>$ \& {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-get\-Param\-Descriptions\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [inline, static]}}\label{classoryx__manager_1_1IMUConfig_a4a299d7eed44c553dfcf5da3edeb4102}
+
+
+\-Definition at line 549 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-level\-\_\-\-\_\-@{\-\_\-\-\_\-level\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-level\-\_\-\-\_\-@{\-\_\-\-\_\-level\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-level\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-level\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-I\-M\-U\-Config} \&}]{config}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline]}}\label{classoryx__manager_1_1IMUConfig_a9f5ace880745db3121669f3f32f3064f}
+
+
+\-Definition at line 404 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-to\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-to\-Message\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{dynamic\-\_\-reconfigure\-::\-Config \&}]{msg, }
+\item[{const std\-::vector$<$ {\bf \-Abstract\-Param\-Description\-Const\-Ptr} $>$ \&}]{\-\_\-\-\_\-param\-\_\-descriptions\-\_\-\-\_\-, }
+\item[{const std\-::vector$<$ {\bf \-Abstract\-Group\-Description\-Const\-Ptr} $>$ \&}]{\-\_\-\-\_\-group\-\_\-descriptions\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline]}}\label{classoryx__manager_1_1IMUConfig_a6eb2b43ac668f200742a044cd6087fd0}
+
+
+\-Definition at line 348 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-to\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-to\-Message\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-to\-Message\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{dynamic\-\_\-reconfigure\-::\-Config \&}]{msg}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline]}}\label{classoryx__manager_1_1IMUConfig_af64f226fa4874f1196478afbd9f4c082}
+
+
+\-Definition at line 363 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-\_\-\-\_\-to\-Server\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Server\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-to\-Server\-\_\-\-\_\-@{\-\_\-\-\_\-to\-Server\-\_\-\-\_\-}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-\_\-\-\_\-to\-Server\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-\_\-\-\_\-to\-Server\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{const ros\-::\-Node\-Handle \&}]{nh}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline]}}\label{classoryx__manager_1_1IMUConfig_a993128bd822e3366997145fb6b8aecf5}
+
+
+\-Definition at line 370 of file \-I\-M\-U\-Config.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-Compass@{\-Compass}}
+\index{\-Compass@{\-Compass}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-Compass}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-Compass}}\label{classoryx__manager_1_1IMUConfig_a84c5228d9bae31bb99da6e23e3c6742b}
+
+
+\-Definition at line 291 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-Compass\-\_\-\-Compensation@{\-Compass\-\_\-\-Compensation}}
+\index{\-Compass\-\_\-\-Compensation@{\-Compass\-\_\-\-Compensation}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-Compass\-\_\-\-Compensation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-Compass\-\_\-\-Compensation}}\label{classoryx__manager_1_1IMUConfig_a2277d54dc5809a352e3fcba64222f9e1}
+
+
+\-Definition at line 295 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-Enhancement@{\-Enhancement}}
+\index{\-Enhancement@{\-Enhancement}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-Enhancement}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-Enhancement}}\label{classoryx__manager_1_1IMUConfig_af97d372532d546049fa9e7a6fdcb570b}
+
+
+\-Definition at line 297 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!groups@{groups}}
+\index{groups@{groups}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{groups}]{\setlength{\rightskip}{0pt plus 5cm}class {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-D\-E\-F\-A\-U\-L\-T} {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::groups}}\label{classoryx__manager_1_1IMUConfig_ac913f93e1f665a6723794bea5d0f4cb8}
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-Prediction@{\-Prediction}}
+\index{\-Prediction@{\-Prediction}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-Prediction}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-Prediction}}\label{classoryx__manager_1_1IMUConfig_ae44db953680cf07b09b58720b29fda81}
+
+
+\-Definition at line 299 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-Reset\-\_\-\-Heading@{\-Reset\-\_\-\-Heading}}
+\index{\-Reset\-\_\-\-Heading@{\-Reset\-\_\-\-Heading}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-Reset\-\_\-\-Heading}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-Reset\-\_\-\-Heading}}\label{classoryx__manager_1_1IMUConfig_a523c1d9e072cd588c1c56c4c4fa690f7}
+
+
+\-Definition at line 301 of file \-I\-M\-U\-Config.\-h.
+
+\index{oryx\-\_\-manager\-::\-I\-M\-U\-Config@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}!\-Timestamped@{\-Timestamped}}
+\index{\-Timestamped@{\-Timestamped}!oryx_manager::IMUConfig@{oryx\-\_\-manager\-::\-I\-M\-U\-Config}}
+\subsubsection[{\-Timestamped}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf oryx\-\_\-manager\-::\-I\-M\-U\-Config\-::\-Timestamped}}\label{classoryx__manager_1_1IMUConfig_a688ef802cd02416d3ed1095c0e274dca}
+
+
+\-Definition at line 293 of file \-I\-M\-U\-Config.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-I\-M\-U\-Config.\-h}\end{DoxyCompactItemize}

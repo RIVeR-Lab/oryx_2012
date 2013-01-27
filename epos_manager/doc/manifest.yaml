@@ -1,0 +1,20 @@
+authors: ''
+brief: ''
+depends:
+- dynamic_reconfigure
+- catkin
+- roscpp
+- message_runtime
+- oryx_msgs
+- message_generation
+description: Package containing nodes needed for communicating with Maxon Epos motor
+  controllers
+license: BSD
+msgs:
+- GroupMotorInfo
+- EPOSControl
+- MotorInfo
+- GroupEPOSControl
+package_type: package
+srvs: []
+url: http://ros.org/wiki/EposManager

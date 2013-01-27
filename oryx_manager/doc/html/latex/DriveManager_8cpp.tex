@@ -1,0 +1,100 @@
+\section{\-Drive\-Manager.\-cpp \-File \-Reference}
+\label{DriveManager_8cpp}\index{\-Drive\-Manager.\-cpp@{\-Drive\-Manager.\-cpp}}
+{\ttfamily \#include \char`\"{}\-Drive\-Manager.\-h\char`\"{}}\*
+{\ttfamily \#include $<$ros/console.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+\-Include dependency graph for \-Drive\-Manager.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DriveManager_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf joy\-Callback} (const sensor\-\_\-msgs\-::\-Joy\-::\-Const\-Ptr \&msg)
+\item 
+epos\-\_\-manager\-::\-Group\-E\-P\-O\-S\-Control {\bf joy\-To\-Drive\-Message} (float left\-\_\-value, float right\-\_\-value, float scale)
+\item 
+int {\bf main} (int argc, char $\ast$$\ast$argv)
+\item 
+void {\bf motor\-Info\-Callback} (const epos\-\_\-manager\-::\-Group\-Motor\-Info\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf twist\-Callback} (const geometry\-\_\-msgs\-::\-Twist\-::\-Const\-Ptr \&msg)
+\item 
+int {\bf velocity\-To\-R\-P\-M} (float velocity)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Drive\-Manager.\-cpp@{\-Drive\-Manager.\-cpp}!joy\-Callback@{joy\-Callback}}
+\index{joy\-Callback@{joy\-Callback}!DriveManager.cpp@{\-Drive\-Manager.\-cpp}}
+\subsubsection[{joy\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf joy\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const sensor\-\_\-msgs\-::\-Joy\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{DriveManager_8cpp_a5fb337b31c79f195e9d305ed7ff45817}
+
+
+\-Definition at line 7 of file \-Drive\-Manager.\-cpp.
+
+\index{\-Drive\-Manager.\-cpp@{\-Drive\-Manager.\-cpp}!joy\-To\-Drive\-Message@{joy\-To\-Drive\-Message}}
+\index{joy\-To\-Drive\-Message@{joy\-To\-Drive\-Message}!DriveManager.cpp@{\-Drive\-Manager.\-cpp}}
+\subsubsection[{joy\-To\-Drive\-Message}]{\setlength{\rightskip}{0pt plus 5cm}epos\-\_\-manager\-::\-Group\-E\-P\-O\-S\-Control {\bf joy\-To\-Drive\-Message} (
+\begin{DoxyParamCaption}
+\item[{float}]{left\-\_\-value, }
+\item[{float}]{right\-\_\-value, }
+\item[{float}]{scale}
+\end{DoxyParamCaption}
+)}\label{DriveManager_8cpp_ade1f8fd7aaa0adeaf4a523d6132b2ad2}
+
+
+\-Definition at line 115 of file \-Drive\-Manager.\-cpp.
+
+\index{\-Drive\-Manager.\-cpp@{\-Drive\-Manager.\-cpp}!main@{main}}
+\index{main@{main}!DriveManager.cpp@{\-Drive\-Manager.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{DriveManager_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 87 of file \-Drive\-Manager.\-cpp.
+
+\index{\-Drive\-Manager.\-cpp@{\-Drive\-Manager.\-cpp}!motor\-Info\-Callback@{motor\-Info\-Callback}}
+\index{motor\-Info\-Callback@{motor\-Info\-Callback}!DriveManager.cpp@{\-Drive\-Manager.\-cpp}}
+\subsubsection[{motor\-Info\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf motor\-Info\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const epos\-\_\-manager\-::\-Group\-Motor\-Info\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{DriveManager_8cpp_a7946336aa4b4ab73d9d5ad04093abb66}
+
+
+\-Definition at line 45 of file \-Drive\-Manager.\-cpp.
+
+\index{\-Drive\-Manager.\-cpp@{\-Drive\-Manager.\-cpp}!twist\-Callback@{twist\-Callback}}
+\index{twist\-Callback@{twist\-Callback}!DriveManager.cpp@{\-Drive\-Manager.\-cpp}}
+\subsubsection[{twist\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf twist\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const geometry\-\_\-msgs\-::\-Twist\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{DriveManager_8cpp_a28dd467735b3ad6ea8bb7a4854b1e521}
+
+
+\-Definition at line 54 of file \-Drive\-Manager.\-cpp.
+
+\index{\-Drive\-Manager.\-cpp@{\-Drive\-Manager.\-cpp}!velocity\-To\-R\-P\-M@{velocity\-To\-R\-P\-M}}
+\index{velocity\-To\-R\-P\-M@{velocity\-To\-R\-P\-M}!DriveManager.cpp@{\-Drive\-Manager.\-cpp}}
+\subsubsection[{velocity\-To\-R\-P\-M}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf velocity\-To\-R\-P\-M} (
+\begin{DoxyParamCaption}
+\item[{float}]{velocity}
+\end{DoxyParamCaption}
+)}\label{DriveManager_8cpp_ab8d0ad46d21c6ec9efd29ea914e26775}
+
+
+\-Definition at line 110 of file \-Drive\-Manager.\-cpp.
+

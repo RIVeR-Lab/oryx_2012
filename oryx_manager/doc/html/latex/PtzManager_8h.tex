@@ -1,0 +1,214 @@
+\section{\-Ptz\-Manager.\-h \-File \-Reference}
+\label{PtzManager_8h}\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}}
+{\ttfamily \#include \char`\"{}\-Oryx\-Manager.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}oryx\-\_\-manager/\-P\-T\-Z\-\_\-manager\-Config.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-msgs/\-Quaternion\-Stamped.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}tf/tf.\-h\char`\"{}}\*
+{\ttfamily \#include $<$cmath$>$}\*
+\-Include dependency graph for \-Ptz\-Manager.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PtzManager_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{PtzManager_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf \-P\-A\-N\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}~420
+\item 
+\#define {\bf \-T\-I\-L\-T\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}~690
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf home\-Motor} ({\bf homing\-Data} $\ast$motor, const epos\-\_\-manager\-::\-Motor\-Info\-::\-Const\-Ptr \&msg)
+\item 
+bool {\bf is\-Motor\-Too\-Close} ({\bf homing\-Data} motor)
+\item 
+void {\bf send\-Position\-Message} ({\bf homing\-Data} motor, int setpoint, bool absolute)
+\item 
+void {\bf send\-Velocity\-Message} ({\bf homing\-Data} motor, int velocity)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\bf homing\-Data} {\bf boom\-Motor}
+\item 
+ros\-::\-Publisher {\bf camera\-Orientation\-Publisher}
+\item 
+bool {\bf drive\-Boom\-Without\-Monitoring}
+\item 
+ros\-::\-Publisher {\bf group\-\_\-ptz\-\_\-publisher}
+\item 
+bool {\bf invert}
+\item 
+int {\bf left\-Right\-Step}
+\item 
+{\bf homing\-Data} {\bf pan\-Motor}
+\item 
+{\bf oryx\-\_\-manager\-::\-P\-T\-Z\-\_\-manager\-Config} {\bf previous\-Config}
+\item 
+ros\-::\-Publisher {\bf ptz\-\_\-publisher}
+\item 
+{\bf homing\-Data} {\bf tilt\-Motor}
+\item 
+int {\bf up\-Down\-Step}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!\-P\-A\-N\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O@{\-P\-A\-N\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}}
+\index{\-P\-A\-N\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O@{\-P\-A\-N\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{\-P\-A\-N\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-A\-N\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}~420}\label{PtzManager_8h_aaafe5d6660e202cccd8b94cd5a2dd6a3}
+
+
+\-Definition at line 15 of file \-Ptz\-Manager.\-h.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!\-T\-I\-L\-T\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O@{\-T\-I\-L\-T\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}}
+\index{\-T\-I\-L\-T\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O@{\-T\-I\-L\-T\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{\-T\-I\-L\-T\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-I\-L\-T\-\_\-\-M\-O\-T\-O\-R\-\_\-\-G\-E\-A\-R\-\_\-\-R\-A\-T\-I\-O}~690}\label{PtzManager_8h_a659df0e194c37e87ccda74ccbf13005c}
+
+
+\-Definition at line 16 of file \-Ptz\-Manager.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!home\-Motor@{home\-Motor}}
+\index{home\-Motor@{home\-Motor}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{home\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf home\-Motor} (
+\begin{DoxyParamCaption}
+\item[{{\bf homing\-Data} $\ast$}]{motor, }
+\item[{const epos\-\_\-manager\-::\-Motor\-Info\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8h_a41f03115004f78a44614e6a9bea8f4a2}
+\-This function will home the given motor by monitoring current spikes. 
+
+\-Definition at line 274 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!is\-Motor\-Too\-Close@{is\-Motor\-Too\-Close}}
+\index{is\-Motor\-Too\-Close@{is\-Motor\-Too\-Close}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{is\-Motor\-Too\-Close}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf is\-Motor\-Too\-Close} (
+\begin{DoxyParamCaption}
+\item[{{\bf homing\-Data}}]{motor}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8h_a475364a2e863bd39c1582d69131e7a0e}
+\-Checks if the motor is too close to a boundary point (hard stop) 
+
+\-Definition at line 230 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!send\-Position\-Message@{send\-Position\-Message}}
+\index{send\-Position\-Message@{send\-Position\-Message}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{send\-Position\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf send\-Position\-Message} (
+\begin{DoxyParamCaption}
+\item[{{\bf homing\-Data}}]{motor, }
+\item[{int}]{setpoint, }
+\item[{bool}]{absolute}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8h_a96dd3c826b2fbb1f49b88d3b80cf4d4c}
+\-Sends a position message to the specified motor. 
+
+\-Definition at line 254 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!send\-Velocity\-Message@{send\-Velocity\-Message}}
+\index{send\-Velocity\-Message@{send\-Velocity\-Message}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{send\-Velocity\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf send\-Velocity\-Message} (
+\begin{DoxyParamCaption}
+\item[{{\bf homing\-Data}}]{motor, }
+\item[{int}]{velocity}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8h_af9c0427b868a9243ea405e56c4654568}
+\-Sends a velocity message to the specified motor 
+
+\-Definition at line 107 of file \-Arm\-Manager.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!boom\-Motor@{boom\-Motor}}
+\index{boom\-Motor@{boom\-Motor}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{boom\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf homing\-Data} {\bf boom\-Motor}}\label{PtzManager_8h_ad0c64a11e327dff021013ac32099f44f}
+
+
+\-Definition at line 18 of file \-Ptz\-Manager.\-h.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!camera\-Orientation\-Publisher@{camera\-Orientation\-Publisher}}
+\index{camera\-Orientation\-Publisher@{camera\-Orientation\-Publisher}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{camera\-Orientation\-Publisher}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf camera\-Orientation\-Publisher}}\label{PtzManager_8h_aa67daa405c6a4a68a1c31ee1c5da2b98}
+
+
+\-Definition at line 23 of file \-Ptz\-Manager.\-h.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!drive\-Boom\-Without\-Monitoring@{drive\-Boom\-Without\-Monitoring}}
+\index{drive\-Boom\-Without\-Monitoring@{drive\-Boom\-Without\-Monitoring}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{drive\-Boom\-Without\-Monitoring}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf drive\-Boom\-Without\-Monitoring}}\label{PtzManager_8h_aaac326dc7db30552f073616264c68986}
+
+
+\-Definition at line 19 of file \-Ptz\-Manager.\-h.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!group\-\_\-ptz\-\_\-publisher@{group\-\_\-ptz\-\_\-publisher}}
+\index{group\-\_\-ptz\-\_\-publisher@{group\-\_\-ptz\-\_\-publisher}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{group\-\_\-ptz\-\_\-publisher}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf group\-\_\-ptz\-\_\-publisher}}\label{PtzManager_8h_a35d0c8a1258d7df847aff3582247cf70}
+
+
+\-Definition at line 22 of file \-Ptz\-Manager.\-h.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!invert@{invert}}
+\index{invert@{invert}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{invert}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf invert}}\label{PtzManager_8h_a1ce68ee7353ca42c590d37a84deeb5d1}
+
+
+\-Definition at line 17 of file \-Ptz\-Manager.\-h.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!left\-Right\-Step@{left\-Right\-Step}}
+\index{left\-Right\-Step@{left\-Right\-Step}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{left\-Right\-Step}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf left\-Right\-Step}}\label{PtzManager_8h_aae0f65d589ce3c50e97b2ff1528da0ee}
+
+
+\-Definition at line 20 of file \-Ptz\-Manager.\-h.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!pan\-Motor@{pan\-Motor}}
+\index{pan\-Motor@{pan\-Motor}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{pan\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf homing\-Data} {\bf pan\-Motor}}\label{PtzManager_8h_a00510a85362690f6f88d80a43736008e}
+
+
+\-Definition at line 18 of file \-Ptz\-Manager.\-h.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!previous\-Config@{previous\-Config}}
+\index{previous\-Config@{previous\-Config}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{previous\-Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf oryx\-\_\-manager\-::\-P\-T\-Z\-\_\-manager\-Config} {\bf previous\-Config}}\label{PtzManager_8h_a405b3d014dee2b6803a0e1460b55561b}
+
+
+\-Definition at line 28 of file \-Ptz\-Manager.\-h.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!ptz\-\_\-publisher@{ptz\-\_\-publisher}}
+\index{ptz\-\_\-publisher@{ptz\-\_\-publisher}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{ptz\-\_\-publisher}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf ptz\-\_\-publisher}}\label{PtzManager_8h_a4f09e4bd35d186f301b0defb837d03a6}
+
+
+\-Definition at line 21 of file \-Ptz\-Manager.\-h.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!tilt\-Motor@{tilt\-Motor}}
+\index{tilt\-Motor@{tilt\-Motor}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{tilt\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf homing\-Data} {\bf tilt\-Motor}}\label{PtzManager_8h_ad3262e4d179cdd765ff7fe4e04f59519}
+
+
+\-Definition at line 18 of file \-Ptz\-Manager.\-h.
+
+\index{\-Ptz\-Manager.\-h@{\-Ptz\-Manager.\-h}!up\-Down\-Step@{up\-Down\-Step}}
+\index{up\-Down\-Step@{up\-Down\-Step}!PtzManager.h@{\-Ptz\-Manager.\-h}}
+\subsubsection[{up\-Down\-Step}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf up\-Down\-Step}}\label{PtzManager_8h_aa69ba01631e95ead9ba6aa98b08f787d}
+
+
+\-Definition at line 20 of file \-Ptz\-Manager.\-h.
+

@@ -1,0 +1,146 @@
+\section{\-Activate\-Connection\-Service \-Class \-Reference}
+\label{classActivateConnectionService}\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}}
+
+
+{\ttfamily \#include $<$\-Activate\-Connection\-Service.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Activate\-Connection\-Service} (ros\-::\-Node\-Handle \&handle, \-N\-M\-Client $\ast$client, \-N\-M\-Remote\-Settings $\ast$remote\-\_\-settings)
+\item 
+virtual {\bf $\sim$\-Activate\-Connection\-Service} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf activate\-\_\-connection\-\_\-cb} (\-Activate\-Connection\-::\-Request \&request, \-Activate\-Connection\-::\-Response \&response)
+\item 
+void {\bf connections\-\_\-changed\-\_\-cb} (const \-Network\-Connections\-::\-Const\-Ptr \&latest\-\_\-connections)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\-::\-Service\-Server {\bf activate\-\_\-service}
+\item 
+ros\-::\-Subscriber {\bf connection\-\_\-sub}
+\item 
+\-N\-M\-Client $\ast$ {\bf m\-\_\-client}
+\item 
+ros\-::\-Node\-Handle \& {\bf m\-\_\-handle}
+\item 
+\-Network\-Connections\-::\-Const\-Ptr {\bf m\-\_\-latest\-\_\-connections}
+\item 
+\-N\-M\-Remote\-Settings $\ast$ {\bf m\-\_\-remote\-\_\-settings}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 22 of file \-Activate\-Connection\-Service.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}!\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}}
+\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}!ActivateConnectionService@{\-Activate\-Connection\-Service}}
+\subsubsection[{\-Activate\-Connection\-Service}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Activate\-Connection\-Service\-::\-Activate\-Connection\-Service} (
+\begin{DoxyParamCaption}
+\item[{ros\-::\-Node\-Handle \&}]{handle, }
+\item[{\-N\-M\-Client $\ast$}]{client, }
+\item[{\-N\-M\-Remote\-Settings $\ast$}]{remote\-\_\-settings}
+\end{DoxyParamCaption}
+)}\label{classActivateConnectionService_a7c23cbd680a182ce9cd3aa5264400681}
+
+
+\-Definition at line 11 of file \-Activate\-Connection\-Service.\-cpp.
+
+\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}!$\sim$\-Activate\-Connection\-Service@{$\sim$\-Activate\-Connection\-Service}}
+\index{$\sim$\-Activate\-Connection\-Service@{$\sim$\-Activate\-Connection\-Service}!ActivateConnectionService@{\-Activate\-Connection\-Service}}
+\subsubsection[{$\sim$\-Activate\-Connection\-Service}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Activate\-Connection\-Service\-::$\sim$\-Activate\-Connection\-Service} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classActivateConnectionService_acbaa002b0254244b26476c3c591857fd}
+
+
+\-Definition at line 72 of file \-Activate\-Connection\-Service.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}!activate\-\_\-connection\-\_\-cb@{activate\-\_\-connection\-\_\-cb}}
+\index{activate\-\_\-connection\-\_\-cb@{activate\-\_\-connection\-\_\-cb}!ActivateConnectionService@{\-Activate\-Connection\-Service}}
+\subsubsection[{activate\-\_\-connection\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Activate\-Connection\-Service\-::activate\-\_\-connection\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{\-Activate\-Connection\-::\-Request \&}]{request, }
+\item[{\-Activate\-Connection\-::\-Response \&}]{response}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classActivateConnectionService_a55306854ff9e114b467995a9ee48b28d}
+
+
+\-Definition at line 26 of file \-Activate\-Connection\-Service.\-cpp.
+
+\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}!connections\-\_\-changed\-\_\-cb@{connections\-\_\-changed\-\_\-cb}}
+\index{connections\-\_\-changed\-\_\-cb@{connections\-\_\-changed\-\_\-cb}!ActivateConnectionService@{\-Activate\-Connection\-Service}}
+\subsubsection[{connections\-\_\-changed\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Activate\-Connection\-Service\-::connections\-\_\-changed\-\_\-cb} (
+\begin{DoxyParamCaption}
+\item[{const \-Network\-Connections\-::\-Const\-Ptr \&}]{latest\-\_\-connections}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classActivateConnectionService_a0f4926f8118d9ee23968a02ad6876849}
+
+
+\-Definition at line 21 of file \-Activate\-Connection\-Service.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}!activate\-\_\-service@{activate\-\_\-service}}
+\index{activate\-\_\-service@{activate\-\_\-service}!ActivateConnectionService@{\-Activate\-Connection\-Service}}
+\subsubsection[{activate\-\_\-service}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Service\-Server {\bf \-Activate\-Connection\-Service\-::activate\-\_\-service}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActivateConnectionService_ab1521272ed126482c4973f51a711b4ff}
+
+
+\-Definition at line 37 of file \-Activate\-Connection\-Service.\-h.
+
+\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}!connection\-\_\-sub@{connection\-\_\-sub}}
+\index{connection\-\_\-sub@{connection\-\_\-sub}!ActivateConnectionService@{\-Activate\-Connection\-Service}}
+\subsubsection[{connection\-\_\-sub}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf \-Activate\-Connection\-Service\-::connection\-\_\-sub}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActivateConnectionService_aee1f6a94b630078bd590bfd4958204a9}
+
+
+\-Definition at line 35 of file \-Activate\-Connection\-Service.\-h.
+
+\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}!m\-\_\-client@{m\-\_\-client}}
+\index{m\-\_\-client@{m\-\_\-client}!ActivateConnectionService@{\-Activate\-Connection\-Service}}
+\subsubsection[{m\-\_\-client}]{\setlength{\rightskip}{0pt plus 5cm}\-N\-M\-Client$\ast$ {\bf \-Activate\-Connection\-Service\-::m\-\_\-client}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActivateConnectionService_a5fcdf3076a10001ec531ed0e814d1735}
+
+
+\-Definition at line 33 of file \-Activate\-Connection\-Service.\-h.
+
+\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}!m\-\_\-handle@{m\-\_\-handle}}
+\index{m\-\_\-handle@{m\-\_\-handle}!ActivateConnectionService@{\-Activate\-Connection\-Service}}
+\subsubsection[{m\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle\& {\bf \-Activate\-Connection\-Service\-::m\-\_\-handle}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActivateConnectionService_a65a1507f91302366e6a15ed4e944d113}
+
+
+\-Definition at line 32 of file \-Activate\-Connection\-Service.\-h.
+
+\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}!m\-\_\-latest\-\_\-connections@{m\-\_\-latest\-\_\-connections}}
+\index{m\-\_\-latest\-\_\-connections@{m\-\_\-latest\-\_\-connections}!ActivateConnectionService@{\-Activate\-Connection\-Service}}
+\subsubsection[{m\-\_\-latest\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}\-Network\-Connections\-::\-Const\-Ptr {\bf \-Activate\-Connection\-Service\-::m\-\_\-latest\-\_\-connections}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActivateConnectionService_abdbdad68c7231f6709718e0996f57392}
+
+
+\-Definition at line 36 of file \-Activate\-Connection\-Service.\-h.
+
+\index{\-Activate\-Connection\-Service@{\-Activate\-Connection\-Service}!m\-\_\-remote\-\_\-settings@{m\-\_\-remote\-\_\-settings}}
+\index{m\-\_\-remote\-\_\-settings@{m\-\_\-remote\-\_\-settings}!ActivateConnectionService@{\-Activate\-Connection\-Service}}
+\subsubsection[{m\-\_\-remote\-\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}\-N\-M\-Remote\-Settings$\ast$ {\bf \-Activate\-Connection\-Service\-::m\-\_\-remote\-\_\-settings}\hspace{0.3cm}{\ttfamily  [private]}}\label{classActivateConnectionService_aa9a6f263a0a6deb10bc4bd624bec21c8}
+
+
+\-Definition at line 34 of file \-Activate\-Connection\-Service.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Activate\-Connection\-Service.\-h}\item 
+{\bf \-Activate\-Connection\-Service.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,356 @@
+\section{oryx\-\_\-diagnostics\-:\-:\-Diagnostics\-Manager \-Class \-Reference}
+\label{classoryx__diagnostics_1_1DiagnosticsManager}\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+
+
+{\ttfamily \#include $<$\-Diagnostics\-Manager.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Diagnostics\-Manager} (const string \&name, ros\-::\-Node\-Handle \&nh)
+\item 
+void {\bf print\-List} ()
+\item 
+void {\bf run\-Diagnostics} ()
+\item 
+virtual {\bf $\sim$\-Diagnostics\-Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef function$<$ bool(string \*
+\&data, \*
+oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-::\-Response \*
+\&response)$>$ {\bf command\-\_\-func\-\_\-}
+\item 
+typedef unordered\-\_\-map$<$ string, \*
+{\bf command\-\_\-func\-\_\-} $>$ {\bf command\-\_\-map}
+\begin{DoxyCompactList}\small\item\em \-Typedef defining a function object wrapper specifying the callback signature of commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf com\-C\-B} (oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-::\-Request \&req, oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-::\-Response \&response)
+\item 
+void {\bf hb\-C\-B} (const oryx\-\_\-msgs\-::\-Heartbeat\-Const\-Ptr \&msg)
+\item 
+bool {\bf list\-C\-B} (string \&data, oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-::\-Response \&response)
+\item 
+bool {\bf reg\-C\-B} (oryx\-\_\-diagnostics\-::\-Diagnostics\-Registration\-::\-Request \&req, oryx\-\_\-diagnostics\-::\-Diagnostics\-Registration\-::\-Response \&res)
+\item 
+void {\bf register\-Commands} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\-::\-Service\-Server {\bf com\-\_\-srv\-\_\-}
+\item 
+{\bf command\-\_\-map} {\bf commands\-\_\-}
+\item 
+ros\-::\-Subscriber {\bf hb\-\_\-sub\-\_\-}
+\item 
+ros\-::\-Duration {\bf max\-\_\-skew\-\_\-}
+\item 
+string {\bf name\-\_\-}
+\item 
+ros\-::\-Node\-Handle {\bf nh\-\_\-}
+\item 
+{\bf \-Node\-Manager} {\bf nodes\-\_\-}
+\item 
+ros\-::\-Service\-Server {\bf reg\-\_\-srv\-\_\-}
+\item 
+ros\-::\-Publisher {\bf soft\-\_\-stop\-\_\-pub\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 31 of file \-Diagnostics\-Manager.\-h.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!command\-\_\-func\-\_\-@{command\-\_\-func\-\_\-}}
+\index{command\-\_\-func\-\_\-@{command\-\_\-func\-\_\-}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{command\-\_\-func\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}typedef function$<$bool (string\& data, oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-::\-Response\& response)$>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::command\-\_\-func\-\_\-}\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_acdf54040433a693b5bd505e92ee5d6bb}
+
+
+\-Definition at line 33 of file \-Diagnostics\-Manager.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!command\-\_\-map@{command\-\_\-map}}
+\index{command\-\_\-map@{command\-\_\-map}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{command\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}typedef unordered\-\_\-map$<$string, {\bf command\-\_\-func\-\_\-}$>$ {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::command\-\_\-map}\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_afbdb8e04ce64c14a3abef92dab142ffb}
+
+
+\-Typedef defining a function object wrapper specifying the callback signature of commands. 
+
+
+
+\-Definition at line 34 of file \-Diagnostics\-Manager.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!\-Diagnostics\-Manager@{\-Diagnostics\-Manager}}
+\index{\-Diagnostics\-Manager@{\-Diagnostics\-Manager}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{\-Diagnostics\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::\-Diagnostics\-Manager} (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{name, }
+\item[{ros\-::\-Node\-Handle \&}]{nh}
+\end{DoxyParamCaption}
+)}\label{classoryx__diagnostics_1_1DiagnosticsManager_aefcb92749eaf3eef6698228fa8a7374a}
+\-Constructor for creating a new \doxyref{\-Diagnostics\-Manager}{p.}{classoryx__diagnostics_1_1DiagnosticsManager} \begin{DoxyAuthor}{\-Author}
+\-Adam \-Panzica 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{\-Parameters}
+{\em name} & \-The node name of the node containg the diagnostics manager \\
+\hline
+{\em nh} & \-Node\-Handel to access parameters/ros system \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 12 of file \-Diagnostics\-Manager.\-cpp.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!$\sim$\-Diagnostics\-Manager@{$\sim$\-Diagnostics\-Manager}}
+\index{$\sim$\-Diagnostics\-Manager@{$\sim$\-Diagnostics\-Manager}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{$\sim$\-Diagnostics\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::$\sim$\-Diagnostics\-Manager} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_a09d508969473e4c10b9b0392e2223fa8}
+
+
+\-Definition at line 32 of file \-Diagnostics\-Manager.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!com\-C\-B@{com\-C\-B}}
+\index{com\-C\-B@{com\-C\-B}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{com\-C\-B}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::com\-C\-B} (
+\begin{DoxyParamCaption}
+\item[{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-::\-Request \&}]{req, }
+\item[{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-::\-Response \&}]{response}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_a384eb0521ff7648562ea8f51be9c6eb9}
+\-Callback for servicing \-Diagnostics\-Command services \begin{DoxyAuthor}{\-Author}
+\-Adam \-Panzica 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{\-Parameters}
+{\em req} & \-The service request \\
+\hline
+{\em response} & \-The service response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-T\-R\-U\-E if sucessful, else false
+\end{DoxyReturn}
+\-Callback for servicing \-Diagnostics\-Command services 
+\begin{DoxyParams}{\-Parameters}
+{\em req} & \-The service request \\
+\hline
+{\em response} & \-The service response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-T\-R\-U\-E if sucessful, else false 
+\end{DoxyReturn}
+
+
+\-Definition at line 142 of file \-Diagnostics\-Manager.\-cpp.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!hb\-C\-B@{hb\-C\-B}}
+\index{hb\-C\-B@{hb\-C\-B}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{hb\-C\-B}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::hb\-C\-B} (
+\begin{DoxyParamCaption}
+\item[{const oryx\-\_\-msgs\-::\-Heartbeat\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_aa598a15f2539d8b48685aa7d817b3a2e}
+\-Callback for handling receiving heartbeat messages from nodes \begin{DoxyAuthor}{\-Author}
+\-Adam \-Panzica
+\end{DoxyAuthor}
+\-Callback for handling receiving heartbeat messages from nodes 
+
+\-Definition at line 121 of file \-Diagnostics\-Manager.\-cpp.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!list\-C\-B@{list\-C\-B}}
+\index{list\-C\-B@{list\-C\-B}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{list\-C\-B}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::list\-C\-B} (
+\begin{DoxyParamCaption}
+\item[{string \&}]{data, }
+\item[{oryx\-\_\-diagnostics\-::\-Diagnostics\-Command\-::\-Response \&}]{response}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_a6d4c7c8817dc464264cbfc1978847872}
+\-Callback for handling the \char`\"{}node\-\_\-list\char`\"{} command. \-Fills the response.\-data field with the same string as would result from calling \doxyref{\-Diagnostics\-Manager\-::print\-List}{p.}{classoryx__diagnostics_1_1DiagnosticsManager_ab0bf257bea9a26651293e61dee8efbb5} \begin{DoxyAuthor}{\-Author}
+\-Adam \-Panzica 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{\-Parameters}
+{\em data} & \-The callback argument data (in this case, ignored) \\
+\hline
+{\em response} & \-The \-Diagnostics\-Command\-::\-Response reference to fill with data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-T\-R\-U\-E if sucessful, else \-F\-A\-L\-S\-E
+\end{DoxyReturn}
+\-Callback for handling the \char`\"{}node\-\_\-list\char`\"{} command. \-Fills the response.\-data field with the same string as would result from calling \doxyref{\-Diagnostics\-Manager\-::print\-List}{p.}{classoryx__diagnostics_1_1DiagnosticsManager_ab0bf257bea9a26651293e61dee8efbb5} 
+\begin{DoxyParams}{\-Parameters}
+{\em data} & \-The callback argument data (in this case, ignored) \\
+\hline
+{\em response} & \-The \-Diagnostics\-Command\-::\-Response reference to fill with data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-T\-R\-U\-E if sucessful, else \-F\-A\-L\-S\-E 
+\end{DoxyReturn}
+
+
+\-Definition at line 161 of file \-Diagnostics\-Manager.\-cpp.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!print\-List@{print\-List}}
+\index{print\-List@{print\-List}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{print\-List}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::print\-List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classoryx__diagnostics_1_1DiagnosticsManager_ab0bf257bea9a26651293e61dee8efbb5}
+\-Prints a list of all currently registered nodes to \-R\-O\-S\-\_\-\-I\-N\-F\-O 
+
+\-Definition at line 45 of file \-Diagnostics\-Manager.\-cpp.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!reg\-C\-B@{reg\-C\-B}}
+\index{reg\-C\-B@{reg\-C\-B}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{reg\-C\-B}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::reg\-C\-B} (
+\begin{DoxyParamCaption}
+\item[{oryx\-\_\-diagnostics\-::\-Diagnostics\-Registration\-::\-Request \&}]{req, }
+\item[{oryx\-\_\-diagnostics\-::\-Diagnostics\-Registration\-::\-Response \&}]{res}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_a4025fbf6c452d87ba457cd91c615e5c6}
+\-Callback for processing requests to register new nodes with \doxyref{oryx\-\_\-diagnostics}{p.}{namespaceoryx__diagnostics} \begin{DoxyAuthor}{\-Author}
+\-Adam \-Panzica 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{\-Parameters}
+{\em req} & \-The service request \\
+\hline
+{\em res} & \-The service response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-T\-R\-U\-E if sucessful, else false
+\end{DoxyReturn}
+\-Callback for processing requests to register new nodes with \doxyref{oryx\-\_\-diagnostics}{p.}{namespaceoryx__diagnostics} 
+\begin{DoxyParams}{\-Parameters}
+{\em req} & \-The service request \\
+\hline
+{\em res} & \-The service response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-T\-R\-U\-E if sucessful, else false 
+\end{DoxyReturn}
+
+
+\-Definition at line 103 of file \-Diagnostics\-Manager.\-cpp.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!register\-Commands@{register\-Commands}}
+\index{register\-Commands@{register\-Commands}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{register\-Commands}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::register\-Commands} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_add2f82853f5f920cf5ce57c3e969d624}
+\-Handles registering commands with the system \begin{DoxyAuthor}{\-Author}
+\-Adam \-Panzica 
+\end{DoxyAuthor}
+
+
+\-Definition at line 34 of file \-Diagnostics\-Manager.\-cpp.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!run\-Diagnostics@{run\-Diagnostics}}
+\index{run\-Diagnostics@{run\-Diagnostics}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{run\-Diagnostics}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::run\-Diagnostics} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classoryx__diagnostics_1_1DiagnosticsManager_a367a7ca1d15a10a40fbbbb8d333a05f9}
+\-Begins the actual operation of performing diagnostics checks. \-Will run as long as ros\-::ok() returns true 
+
+\-Definition at line 51 of file \-Diagnostics\-Manager.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!com\-\_\-srv\-\_\-@{com\-\_\-srv\-\_\-}}
+\index{com\-\_\-srv\-\_\-@{com\-\_\-srv\-\_\-}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{com\-\_\-srv\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Service\-Server {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::com\-\_\-srv\-\_\-}\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_a4bba6bc5393b231dfb7e57a5895ed632}
+\-R\-O\-S service server for \-Diagnostics\-Commands 
+
+\-Definition at line 72 of file \-Diagnostics\-Manager.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!commands\-\_\-@{commands\-\_\-}}
+\index{commands\-\_\-@{commands\-\_\-}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{commands\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\-\_\-map} {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::commands\-\_\-}\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_ac2b2b06f12e226122898f3e7c55f434c}
+unordered\-\_\-map between string command keywords and their callback functions 
+
+\-Definition at line 90 of file \-Diagnostics\-Manager.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!hb\-\_\-sub\-\_\-@{hb\-\_\-sub\-\_\-}}
+\index{hb\-\_\-sub\-\_\-@{hb\-\_\-sub\-\_\-}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{hb\-\_\-sub\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Subscriber {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::hb\-\_\-sub\-\_\-}\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_a9a9f7fb92e716e9c16aef5dd9ce0a179}
+\-R\-O\-S \-Subscriber to \-Hearbeat messages 
+
+\-Definition at line 76 of file \-Diagnostics\-Manager.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!max\-\_\-skew\-\_\-@{max\-\_\-skew\-\_\-}}
+\index{max\-\_\-skew\-\_\-@{max\-\_\-skew\-\_\-}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{max\-\_\-skew\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Duration {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::max\-\_\-skew\-\_\-}\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_ad21912ed96a34346a254e0afcc2993d6}
+\-The \-Duration that represents the maximum acceptable skew between a heartbeat being sent out and recieved 
+
+\-Definition at line 84 of file \-Diagnostics\-Manager.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::name\-\_\-}\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_ab06a8107fb8d061c2f1c103b002444ba}
+
+
+\-Definition at line 56 of file \-Diagnostics\-Manager.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!nh\-\_\-@{nh\-\_\-}}
+\index{nh\-\_\-@{nh\-\_\-}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{nh\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Node\-Handle {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::nh\-\_\-}\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_aaeb15026ccc9eae48bf77b1d24cb370c}
+\-R\-O\-S \-Node\-Handle 
+
+\-Definition at line 64 of file \-Diagnostics\-Manager.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!nodes\-\_\-@{nodes\-\_\-}}
+\index{nodes\-\_\-@{nodes\-\_\-}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{nodes\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Node\-Manager} {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::nodes\-\_\-}\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_a71172c8a78d10bc3e7436730271c66fb}
+\-Node\-Manger containing a database of all currently registered nodes 
+
+\-Definition at line 60 of file \-Diagnostics\-Manager.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!reg\-\_\-srv\-\_\-@{reg\-\_\-srv\-\_\-}}
+\index{reg\-\_\-srv\-\_\-@{reg\-\_\-srv\-\_\-}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{reg\-\_\-srv\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Service\-Server {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::reg\-\_\-srv\-\_\-}\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_a4010cefae64e648a39820a6f0e40e274}
+\-R\-O\-S service server for \-Diagnostics\-Registration 
+
+\-Definition at line 68 of file \-Diagnostics\-Manager.\-h.
+
+\index{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}!soft\-\_\-stop\-\_\-pub\-\_\-@{soft\-\_\-stop\-\_\-pub\-\_\-}}
+\index{soft\-\_\-stop\-\_\-pub\-\_\-@{soft\-\_\-stop\-\_\-pub\-\_\-}!oryx_diagnostics::DiagnosticsManager@{oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager}}
+\subsubsection[{soft\-\_\-stop\-\_\-pub\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}ros\-::\-Publisher {\bf oryx\-\_\-diagnostics\-::\-Diagnostics\-Manager\-::soft\-\_\-stop\-\_\-pub\-\_\-}\hspace{0.3cm}{\ttfamily  [private]}}\label{classoryx__diagnostics_1_1DiagnosticsManager_ab529f04b07f572ce057ccce1ebd35c0e}
+\-R\-O\-S publisher for \-Software\-Stop messages 
+
+\-Definition at line 80 of file \-Diagnostics\-Manager.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf \-Diagnostics\-Manager.\-h}\item 
+{\bf \-Diagnostics\-Manager.\-cpp}\end{DoxyCompactItemize}

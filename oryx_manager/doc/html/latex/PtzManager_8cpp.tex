@@ -1,0 +1,168 @@
+\section{\-Ptz\-Manager.\-cpp \-File \-Reference}
+\label{PtzManager_8cpp}\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}}
+{\ttfamily \#include \char`\"{}\-Ptz\-Manager.\-h\char`\"{}}\*
+\-Include dependency graph for \-Ptz\-Manager.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PtzManager_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf top\-Speed}~2000
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf home\-Motor} ({\bf homing\-Data} $\ast$motor, const epos\-\_\-manager\-::\-Motor\-Info\-::\-Const\-Ptr \&msg)
+\item 
+bool {\bf is\-Motor\-Too\-Close} ({\bf homing\-Data} motor)
+\item 
+void {\bf joy\-Callback} (const sensor\-\_\-msgs\-::\-Joy\-::\-Const\-Ptr \&msg)
+\item 
+int {\bf main} (int argc, char $\ast$$\ast$argv)
+\item 
+void {\bf motor\-Info\-Callback} (const epos\-\_\-manager\-::\-Motor\-Info\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf ptz\-Joy\-Callback} (const sensor\-\_\-msgs\-::\-Joy\-::\-Const\-Ptr \&msg)
+\item 
+void {\bf publish\-Camera\-Angle} ()
+\item 
+void {\bf reconfigure\-Callback} ({\bf oryx\-\_\-manager\-::\-P\-T\-Z\-\_\-manager\-Config} \&config, uint32\-\_\-t level)
+\item 
+void {\bf send\-Position\-Message} ({\bf homing\-Data} motor, int setpoint, bool absolute)
+\item 
+void {\bf send\-Velocity\-Message} ({\bf homing\-Data} motor, int velocity)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}!top\-Speed@{top\-Speed}}
+\index{top\-Speed@{top\-Speed}!PtzManager.cpp@{\-Ptz\-Manager.\-cpp}}
+\subsubsection[{top\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf top\-Speed}~2000}\label{PtzManager_8cpp_a6f5c568363a0d2b0ad380dfd31d0f940}
+
+
+\-Definition at line 10 of file \-Ptz\-Manager.\-cpp.
+
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}!home\-Motor@{home\-Motor}}
+\index{home\-Motor@{home\-Motor}!PtzManager.cpp@{\-Ptz\-Manager.\-cpp}}
+\subsubsection[{home\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf home\-Motor} (
+\begin{DoxyParamCaption}
+\item[{{\bf homing\-Data} $\ast$}]{motor, }
+\item[{const epos\-\_\-manager\-::\-Motor\-Info\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8cpp_a41f03115004f78a44614e6a9bea8f4a2}
+\-This function will home the given motor by monitoring current spikes. 
+
+\-Definition at line 274 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}!is\-Motor\-Too\-Close@{is\-Motor\-Too\-Close}}
+\index{is\-Motor\-Too\-Close@{is\-Motor\-Too\-Close}!PtzManager.cpp@{\-Ptz\-Manager.\-cpp}}
+\subsubsection[{is\-Motor\-Too\-Close}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf is\-Motor\-Too\-Close} (
+\begin{DoxyParamCaption}
+\item[{{\bf homing\-Data}}]{motor}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8cpp_a475364a2e863bd39c1582d69131e7a0e}
+\-Checks if the motor is too close to a boundary point (hard stop) 
+
+\-Definition at line 230 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}!joy\-Callback@{joy\-Callback}}
+\index{joy\-Callback@{joy\-Callback}!PtzManager.cpp@{\-Ptz\-Manager.\-cpp}}
+\subsubsection[{joy\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf joy\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const sensor\-\_\-msgs\-::\-Joy\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8cpp_a5fb337b31c79f195e9d305ed7ff45817}
+\-This is the callback for \-P\-T\-Z control in single user mode. \-The driver needs to press the left bumper button to control the camera. 
+
+\-Definition at line 16 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}!main@{main}}
+\index{main@{main}!PtzManager.cpp@{\-Ptz\-Manager.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\-Definition at line 326 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}!motor\-Info\-Callback@{motor\-Info\-Callback}}
+\index{motor\-Info\-Callback@{motor\-Info\-Callback}!PtzManager.cpp@{\-Ptz\-Manager.\-cpp}}
+\subsubsection[{motor\-Info\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf motor\-Info\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const epos\-\_\-manager\-::\-Motor\-Info\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8cpp_afde6f345064facbfad86bb176f799ccf}
+\-Callback to be run whenever a new motor info message is received 
+
+\-Definition at line 183 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}!ptz\-Joy\-Callback@{ptz\-Joy\-Callback}}
+\index{ptz\-Joy\-Callback@{ptz\-Joy\-Callback}!PtzManager.cpp@{\-Ptz\-Manager.\-cpp}}
+\subsubsection[{ptz\-Joy\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf ptz\-Joy\-Callback} (
+\begin{DoxyParamCaption}
+\item[{const sensor\-\_\-msgs\-::\-Joy\-::\-Const\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8cpp_a449806dcea087fe4bd1e5c6aa20ec842}
+\-This is the callback for \-P\-T\-Z control in multi user mode. \-A\-Ny joystick command will automatically be treated as though it were meant for the \-P\-T\-Z 
+
+\-Definition at line 79 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}!publish\-Camera\-Angle@{publish\-Camera\-Angle}}
+\index{publish\-Camera\-Angle@{publish\-Camera\-Angle}!PtzManager.cpp@{\-Ptz\-Manager.\-cpp}}
+\subsubsection[{publish\-Camera\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf publish\-Camera\-Angle} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8cpp_aebf2f154372406a72ff630cc93a8a3e3}
+
+
+\-Definition at line 172 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}!reconfigure\-Callback@{reconfigure\-Callback}}
+\index{reconfigure\-Callback@{reconfigure\-Callback}!PtzManager.cpp@{\-Ptz\-Manager.\-cpp}}
+\subsubsection[{reconfigure\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf reconfigure\-Callback} (
+\begin{DoxyParamCaption}
+\item[{{\bf oryx\-\_\-manager\-::\-P\-T\-Z\-\_\-manager\-Config} \&}]{config, }
+\item[{uint32\-\_\-t}]{level}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8cpp_a50809a9e940ab3af315795cd1403070b}
+\-The callback for reconfiguring the different manager parameters/functions. 
+
+\-Definition at line 133 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}!send\-Position\-Message@{send\-Position\-Message}}
+\index{send\-Position\-Message@{send\-Position\-Message}!PtzManager.cpp@{\-Ptz\-Manager.\-cpp}}
+\subsubsection[{send\-Position\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf send\-Position\-Message} (
+\begin{DoxyParamCaption}
+\item[{{\bf homing\-Data}}]{motor, }
+\item[{int}]{setpoint, }
+\item[{bool}]{absolute}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8cpp_a96dd3c826b2fbb1f49b88d3b80cf4d4c}
+\-Sends a position message to the specified motor. 
+
+\-Definition at line 254 of file \-Ptz\-Manager.\-cpp.
+
+\index{\-Ptz\-Manager.\-cpp@{\-Ptz\-Manager.\-cpp}!send\-Velocity\-Message@{send\-Velocity\-Message}}
+\index{send\-Velocity\-Message@{send\-Velocity\-Message}!PtzManager.cpp@{\-Ptz\-Manager.\-cpp}}
+\subsubsection[{send\-Velocity\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf send\-Velocity\-Message} (
+\begin{DoxyParamCaption}
+\item[{{\bf homing\-Data}}]{motor, }
+\item[{int}]{velocity}
+\end{DoxyParamCaption}
+)}\label{PtzManager_8cpp_af9c0427b868a9243ea405e56c4654568}
+\-Sends a velocity message to the specified motor 
+
+\-Definition at line 242 of file \-Ptz\-Manager.\-cpp.
+

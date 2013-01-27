@@ -1,0 +1,256 @@
+\section{\-Battery\-Manager.\-cpp \-File \-Reference}
+\label{BatteryManager_8cpp}\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}}
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include $<$sstream$>$}\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\*
+{\ttfamily \#include $<$termios.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$errno.\-h$>$}\*
+{\ttfamily \#include $<$signal.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+{\ttfamily \#include \char`\"{}ros/ros.\-h\char`\"{}}\*
+{\ttfamily \#include $<$oryx\-\_\-msgs/\-Battery.\-h$>$}\*
+{\ttfamily \#include $<$oryx\-\_\-msgs/\-Temperature.\-h$>$}\*
+\-Include dependency graph for \-Battery\-Manager.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BatteryManager_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf \-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V}~360.\-0
+\item 
+\#define {\bf \-F\-A\-L\-S\-E}~0
+\item 
+\#define {\bf \-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}~4096.\-0
+\item 
+\#define {\bf \-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T}~\char`\"{}/dev/tty\-U\-S\-B0\char`\"{}
+\item 
+\#define {\bf \-T\-R\-U\-E}~1
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf bms\-Command} (int {\bf bms}, char $\ast$command, char $\ast$response, int response\-Size)
+\item 
+void {\bf configure\-B\-M\-S} (std\-::string {\bf port})
+\item 
+void {\bf ctrl\-C\-Handler} (int signal)
+\item 
+float {\bf get\-Temperature} (int node)
+\item 
+float {\bf get\-Voltage} (int node)
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\item 
+void {\bf print\-B\-M\-S\-Error} (char $\ast$error\-Message)
+\item 
+void {\bf read\-B\-M\-S\-Response} (int {\bf bms}, char $\ast$response, int response\-Size)
+\item 
+void {\bf send\-B\-M\-S\-Instruction} (int {\bf bms}, char $\ast$command)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf bms}
+\item 
+const int {\bf \-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E} = 100
+\item 
+int {\bf \-Close\-Requested} = {\bf \-F\-A\-L\-S\-E}
+\item 
+const int {\bf \-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S} = 50000
+\item 
+const int {\bf \-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S} = 20
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!\-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V@{\-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V}}
+\index{\-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V@{\-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{\-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-E\-G\-\_\-\-P\-E\-R\-\_\-\-R\-E\-V}~360.\-0}\label{BatteryManager_8cpp_a658bdff4e38aa32e8cf4a62b67288c34}
+
+
+\-Definition at line 33 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!\-F\-A\-L\-S\-E@{\-F\-A\-L\-S\-E}}
+\index{\-F\-A\-L\-S\-E@{\-F\-A\-L\-S\-E}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{\-F\-A\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-F\-A\-L\-S\-E}~0}\label{BatteryManager_8cpp_aa93f0eb578d23995850d61f7d61c55c1}
+
+
+\-Definition at line 29 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N@{\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}}
+\index{\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N@{\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}~4096.\-0}\label{BatteryManager_8cpp_a95d55ebfa2f2f1bd14867ad6a6cc9bfb}
+
+
+\-Definition at line 32 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!\-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T@{\-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T}}
+\index{\-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T@{\-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{\-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-R\-I\-A\-L\-\_\-\-P\-O\-R\-T}~\char`\"{}/dev/tty\-U\-S\-B0\char`\"{}}\label{BatteryManager_8cpp_ac08f8f916661bb5fc606373bea93d274}
+
+
+\-Definition at line 38 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!\-T\-R\-U\-E@{\-T\-R\-U\-E}}
+\index{\-T\-R\-U\-E@{\-T\-R\-U\-E}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{\-T\-R\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-R\-U\-E}~1}\label{BatteryManager_8cpp_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+
+\-Definition at line 30 of file \-Battery\-Manager.\-cpp.
+
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!bms\-Command@{bms\-Command}}
+\index{bms\-Command@{bms\-Command}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{bms\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf bms\-Command} (
+\begin{DoxyParamCaption}
+\item[{int}]{bms, }
+\item[{char $\ast$}]{command, }
+\item[{char $\ast$}]{response, }
+\item[{int}]{response\-Size}
+\end{DoxyParamCaption}
+)}\label{BatteryManager_8cpp_acecd63f11817b7adbcd8eb33d209045a}
+
+
+\-Definition at line 117 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!configure\-B\-M\-S@{configure\-B\-M\-S}}
+\index{configure\-B\-M\-S@{configure\-B\-M\-S}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{configure\-B\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf configure\-B\-M\-S} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{port}
+\end{DoxyParamCaption}
+)}\label{BatteryManager_8cpp_a2fbba4c632a86b9b06cf2688e18c0769}
+
+
+\-Definition at line 240 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!ctrl\-C\-Handler@{ctrl\-C\-Handler}}
+\index{ctrl\-C\-Handler@{ctrl\-C\-Handler}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{ctrl\-C\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf ctrl\-C\-Handler} (
+\begin{DoxyParamCaption}
+\item[{int}]{signal}
+\end{DoxyParamCaption}
+)}\label{BatteryManager_8cpp_a54a00077fbc2e2f0abd9d815a75b7904}
+
+
+\-Definition at line 125 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!get\-Temperature@{get\-Temperature}}
+\index{get\-Temperature@{get\-Temperature}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{get\-Temperature}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf get\-Temperature} (
+\begin{DoxyParamCaption}
+\item[{int}]{node}
+\end{DoxyParamCaption}
+)}\label{BatteryManager_8cpp_a201e042d4fa215e4e360626692ad8ab0}
+
+
+\-Definition at line 189 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!get\-Voltage@{get\-Voltage}}
+\index{get\-Voltage@{get\-Voltage}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{get\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf get\-Voltage} (
+\begin{DoxyParamCaption}
+\item[{int}]{node}
+\end{DoxyParamCaption}
+)}\label{BatteryManager_8cpp_a25e93f3513e33b4ec8d6a460ecc1381f}
+
+
+\-Definition at line 132 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!main@{main}}
+\index{main@{main}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv[$\,$]}
+\end{DoxyParamCaption}
+)}\label{BatteryManager_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+\-Definition at line 295 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!print\-B\-M\-S\-Error@{print\-B\-M\-S\-Error}}
+\index{print\-B\-M\-S\-Error@{print\-B\-M\-S\-Error}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{print\-B\-M\-S\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf print\-B\-M\-S\-Error} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{error\-Message}
+\end{DoxyParamCaption}
+)}\label{BatteryManager_8cpp_ad2c620cf74b5e3c906bbde817e6b2309}
+
+
+\-Definition at line 62 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!read\-B\-M\-S\-Response@{read\-B\-M\-S\-Response}}
+\index{read\-B\-M\-S\-Response@{read\-B\-M\-S\-Response}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{read\-B\-M\-S\-Response}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf read\-B\-M\-S\-Response} (
+\begin{DoxyParamCaption}
+\item[{int}]{bms, }
+\item[{char $\ast$}]{response, }
+\item[{int}]{response\-Size}
+\end{DoxyParamCaption}
+)}\label{BatteryManager_8cpp_aa8c034d1d60a1de54e07a6ed4702c81e}
+
+
+\-Definition at line 94 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!send\-B\-M\-S\-Instruction@{send\-B\-M\-S\-Instruction}}
+\index{send\-B\-M\-S\-Instruction@{send\-B\-M\-S\-Instruction}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{send\-B\-M\-S\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf send\-B\-M\-S\-Instruction} (
+\begin{DoxyParamCaption}
+\item[{int}]{bms, }
+\item[{char $\ast$}]{command}
+\end{DoxyParamCaption}
+)}\label{BatteryManager_8cpp_ab948678af29debff63187877055661e3}
+
+
+\-Definition at line 77 of file \-Battery\-Manager.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!bms@{bms}}
+\index{bms@{bms}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{bms}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf bms}}\label{BatteryManager_8cpp_abe47096eee9cbe10d68a40faac2e9608}
+
+
+\-Definition at line 60 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf \-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E} = 100}\label{BatteryManager_8cpp_a91f806c1bc7c1f4f402a627773840252}
+
+
+\-Definition at line 43 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!\-Close\-Requested@{\-Close\-Requested}}
+\index{\-Close\-Requested@{\-Close\-Requested}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{\-Close\-Requested}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Close\-Requested} = {\bf \-F\-A\-L\-S\-E}}\label{BatteryManager_8cpp_a31399492a08e7db3b19489afef12b19e}
+
+
+\-Definition at line 58 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!\-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S@{\-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S}}
+\index{\-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S@{\-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{\-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf \-F\-I\-V\-E\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D\-S} = 50000}\label{BatteryManager_8cpp_ac862c6742e96de1dd8400208e8aef788}
+
+
+\-Definition at line 49 of file \-Battery\-Manager.\-cpp.
+
+\index{\-Battery\-Manager.\-cpp@{\-Battery\-Manager.\-cpp}!\-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S@{\-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S}}
+\index{\-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S@{\-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S}!BatteryManager.cpp@{\-Battery\-Manager.\-cpp}}
+\subsubsection[{\-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf \-M\-A\-X\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-I\-E\-S} = 20}\label{BatteryManager_8cpp_ac4ec4d4bc9a81238d9103dc63ea01800}
+
+
+\-Definition at line 53 of file \-Battery\-Manager.\-cpp.
+
