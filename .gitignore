@@ -1,0 +1,7 @@
+#epos_manager dynamic reconfigure build artifacts
+epos_manager/cfg/cpp/
+epos_manager/src/epos_manager/
+
+#oryx_manager dynamic reconfigure build artifacts
+oryx_manager/cfg/cpp/
+oryx_manager/src/oryx_manager/
