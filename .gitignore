@@ -1,7 +1,24 @@
 #epos_manager dynamic reconfigure build artifacts
 epos_manager/cfg/cpp/
+#msg generation
 epos_manager/src/epos_manager/
+epos_manager/msg_gen/
 
 #oryx_manager dynamic reconfigure build artifacts
 oryx_manager/cfg/cpp/
+oryx_manager/docs/
+#msg generation
 oryx_manager/src/oryx_manager/
+
+#oryx_msgs
+oryx_msgs/src/oryx_msgs/
+oryx_msgs/msg_gen/
+
+#oryx_diagnostics
+oryx_diagnostics/src/oryx_diagnostics/
+oryx_diagnostics/srv_gen/
+
+
+#generated dynanmic reconfigure files
+*.cfgc
+

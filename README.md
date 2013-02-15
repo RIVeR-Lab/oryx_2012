@@ -6,7 +6,8 @@ All packages are in the root directory of the repository.
 
 Development
 -----------
-Checkout the repository to the src directory of the catkin worksapce (`${catkin_workspace}/src/oryx`). To build the packages return to the catkin workspace directory and then run `catkin_make`. To do a clean build run `rm -r build devel`.
+The code can be checked out using the following command.
+>$rosws set oryx https://github.com/RIVeR-Lab/oryx.git --git
 
 The development branch is the 'in-flux' version of the master branch. Code which has been at least tested for basic functionality, but not for full validation, should be merged into this branch.
 
@@ -16,7 +17,6 @@ When creating/modify data for the development branch, create a new 'topic' branc
 Packages
 --------
 - **epos\_manager**: A package containing nodes needed for communicating with Maxon Epos motor controllers
-- **oryx**: A meta package for all of the oryx packages
 - **oryx\_diagnostics**: A node for monitoring other nodes
 - **oryx\_gui**: A package containing a basic teleop GUI (rosbuild)
 - **oryx\_manager**: A package which contains all of the high level operation nodes for oryx
