@@ -10,7 +10,7 @@
 #include <signal.h>
 using namespace std;
 
-void EPOS::dynamicCallback(epos_manager::epos_managerConfig &config, uint32_t level){
+void EPOS::dynamicCallback(epos_manager::MotorConfig &config, uint32_t level){
 	if(isInitialized){
 		if(currentConfig.Position_Profile_Velocity!=config.Position_Profile_Velocity){
 			setPositionProfileVelocity(config.Position_Profile_Velocity);
@@ -353,8 +353,8 @@ bool EPOS::reinitialize() {
 		}
 	}
 
-	if(!saveParameters())
-		return false;
+	//if(!saveParameters())
+	//return false;
 
 	isInitialized = true;
 	if(motorName.size())
@@ -618,7 +618,7 @@ bool EPOS::setVelocityProfileDeceleration(unsigned long velocityProfileDecelerat
 	else return false;
 }
 
-bool EPOS::getPosition(long* position){
+bool EPOS::getPosition(int* position){
 	int loopCounter=0;
 	while (!VCS_GetPositionIs(keyHandle, nodeID, position, &errorCode)) {
 		if(motorName.size())
@@ -636,7 +636,7 @@ bool EPOS::getPosition(long* position){
 	return true;
 }
 
-bool EPOS::getVelocity(long* velocity){
+bool EPOS::getVelocity(int* velocity){
 	int loopCounter=0;
 	while (!VCS_GetVelocityIs(keyHandle, nodeID, velocity, &errorCode)) {
 		if(motorName.size())
@@ -735,8 +735,8 @@ bool EPOS::isInFault(){
 bool EPOS::printFaults(){
 	int loopCounter=0;
 	unsigned char numErrors;
-	unsigned long functionErrorCode = 0;
-	unsigned long deviceErrorCode = 0;
+	unsigned int functionErrorCode = 0;
+	unsigned int deviceErrorCode = 0;
 
 	while (!VCS_GetNbOfDeviceError(keyHandle, nodeID, &numErrors,&errorCode)) {
 		if (loopCounter++ > maxCommandAttempts){

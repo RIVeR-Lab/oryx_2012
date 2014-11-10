@@ -26,7 +26,7 @@ int maxHeartbeatAttempts;
 int heartbeatAttempts;
 EPOS** motors;
 int numMotors;
-unsigned long errorCode;
+unsigned int errorCode;
 void * keyHandle;
 map<int,int> nodeIDMap;
 
@@ -102,7 +102,7 @@ void motorInfoCallback(const ros::TimerEvent&){
 	epos_manager::GroupMotorInfo msg;
 	vector<epos_manager::MotorInfo> motor_group;
 	short current;
-	long velocity,position;
+	int velocity,position;
 	for(int i=0;i<numMotors;i++){
 		if (motors[i]->isEPOSInitialized()) {
 			epos_manager::MotorInfo motor_msg;

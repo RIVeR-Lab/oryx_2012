@@ -3,6 +3,7 @@
 
 	
 	<node name="Name" pkg="epos_manager" type="epos_manager" args="New_Motor" ns="motors/Drive_Motors" output="screen" >
+	  <!--<param name="Port" value="/dev/bus/usb/003/003" />-->
 		<param name="Port" value="USB0" />
 		<param name="Protocol" value="USB" />
 		<param name="Publish_Rate" value="10" />

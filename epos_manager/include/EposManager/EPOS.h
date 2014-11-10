@@ -7,10 +7,10 @@
 
 #ifndef EPOS_H_
 #define EPOS_H_
-#include "EposManager/Definitions.h"
+#include <Definitions.h>
 #include <ros/ros.h>
 #include <dynamic_reconfigure/server.h>
-#include <epos_manager/epos_managerConfig.h>
+#include <epos_manager/MotorConfig.h>
 
 
 class EPOS {
@@ -187,7 +187,7 @@ public:
 	 *
 	 * @return A boolean indicating whether or not the command succeeded.
 	 */
-	bool getPosition(long* position);
+	bool getPosition(int* position);
 
 	/**
 	 * Returns the velocity of the motor in rpm.
@@ -198,7 +198,7 @@ public:
 	 * @param velocity Holder for the velocity of the motor in rpm.
 	 * @return A boolean indicating whether or not the command succeeded.
 	 */
-	bool getVelocity(long* velocity);
+	bool getVelocity(int* velocity);
 
 	/**
 	 * Returns the current being drawn by the motor in mA.
@@ -243,7 +243,7 @@ public:
 	 */
 	bool printFaults();
 	virtual ~EPOS();
-	void dynamicCallback(epos_manager::epos_managerConfig &config, uint32_t level);
+	void dynamicCallback(epos_manager::MotorConfig &config, uint32_t level);
 	/**
 	 * Returns a boolean indicating whether or not the EPOS has been initialized
 	 *
@@ -268,7 +268,7 @@ public:
 
 private:
 	ros::NodeHandle nh;
-	unsigned long errorCode;
+	unsigned int errorCode;
 	int maxCommandAttempts;
 	void* keyHandle;
 	bool isInitialized;
@@ -341,9 +341,9 @@ private:
 	bool quickStopActiveLow;
 	int quickstopPin;
 
-	dynamic_reconfigure::Server<epos_manager::epos_managerConfig> server;
-	dynamic_reconfigure::Server<epos_manager::epos_managerConfig>::CallbackType callbackManager;
-	epos_manager::epos_managerConfig currentConfig;
+	dynamic_reconfigure::Server<epos_manager::MotorConfig> server;
+	dynamic_reconfigure::Server<epos_manager::MotorConfig>::CallbackType callbackManager;
+	epos_manager::MotorConfig currentConfig;
 
 	/*******************METHODS******************/
 
@@ -700,7 +700,7 @@ private:
 
 	bool loadIncEncoderParametersFromEpos(){
 		int loopCounter=0;
-		while(!VCS_GetIncEncoderParameter(keyHandle, nodeID, (unsigned long*) &sensorIncEncoderResolution,
+		while(!VCS_GetIncEncoderParameter(keyHandle, nodeID, &sensorIncEncoderResolution,
 				&sensorInversion, &errorCode)){
 			if (loopCounter++ > maxCommandAttempts){
 				ROS_ERROR_STREAM("Could not load Incremental Encoder Parameters from EPOS: " << getErrorInfo(errorCode));
@@ -772,7 +772,7 @@ private:
 
 	bool loadMaxFollowingErrorFromEpos(){
 		int loopCounter = 0;
-		while (!VCS_GetMaxFollowingError(keyHandle, nodeID, (unsigned long*) &maxFollowingError,
+		while (!VCS_GetMaxFollowingError(keyHandle, nodeID, &maxFollowingError,
 				&errorCode)) {
 			if (loopCounter++ > maxCommandAttempts) {
 				ROS_ERROR_STREAM("Could not load Maximum Following Error from EPOS: " << getErrorInfo(errorCode));
@@ -784,7 +784,7 @@ private:
 
 	bool loadVelocityProfileFromEpos(){
 		int loopCounter=0;
-		while(!VCS_GetVelocityProfile(keyHandle, nodeID, (unsigned long*) &velocityProfileAcceleration, (unsigned long*) &velocityProfileDeceleration, &errorCode)){
+		while(!VCS_GetVelocityProfile(keyHandle, nodeID,  &velocityProfileAcceleration, &velocityProfileDeceleration, &errorCode)){
 			if (loopCounter++ > maxCommandAttempts){
 				ROS_ERROR_STREAM("Could not load Velocity Profile from EPOS: " << getErrorInfo(errorCode));
 				return false;
@@ -795,7 +795,7 @@ private:
 
 	bool loadPositionProfileFromEpos(){
 		int loopCounter=0;
-		while(!VCS_GetPositionProfile(keyHandle, nodeID, (unsigned long*) &positionProfileVelocity, (unsigned long*) &positionProfileAcceleration,(unsigned long*) &positionProfileDeceleration, &errorCode)){
+		while(!VCS_GetPositionProfile(keyHandle, nodeID, &positionProfileVelocity, &positionProfileAcceleration, &positionProfileDeceleration, &errorCode)){
 			if (loopCounter++ > maxCommandAttempts){
 				ROS_ERROR_STREAM("Could not load Position Profile from EPOS: " << getErrorInfo(errorCode));
 				return false;
@@ -806,7 +806,7 @@ private:
 
 	bool loadMaxAccelerationFromEpos(){
 		int loopCounter = 0;
-		while (!VCS_GetMaxAcceleration(keyHandle, nodeID,(unsigned long*) &maxAcceleration,
+		while (!VCS_GetMaxAcceleration(keyHandle, nodeID, &maxAcceleration,
 				&errorCode)) {
 			if (loopCounter++ > maxCommandAttempts) {
 				ROS_ERROR_STREAM("Could not load Max Acceleration from EPOS: " << getErrorInfo(errorCode));
@@ -818,7 +818,7 @@ private:
 
 	bool loadMaxVelocityFromEpos(){
 		int loopCounter = 0;
-		while (!VCS_GetMaxProfileVelocity(keyHandle, nodeID, (unsigned long*)&maxProfileVelocity, &errorCode)) {
+		while (!VCS_GetMaxProfileVelocity(keyHandle, nodeID, &maxProfileVelocity, &errorCode)) {
 			if (loopCounter++ > maxCommandAttempts) {
 				ROS_ERROR_STREAM("Could not load Max Velocity from EPOS: " << getErrorInfo(errorCode));
 				return false;
