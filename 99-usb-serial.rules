@@ -1,0 +1,8 @@
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="61406", SYMLINK+="rocker"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0410", ATTRS{idProduct}=="6000", ATTRS{serial}=="091037643411000", SYMLINK+="Novatel"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="A800eYOa", SYMLINK+="BMS"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="AH00PSLV", SYMLINK+="Arduino"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{product}=="USB <-> Serial", ATTRS{bcdDevice}=="0400", SYMLINK+="IMU"
+SUBSYSTEM=="usb|usb_device", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="a8b0",  ATTRS{serial}=="662080000839" , SYMLINK+="DriveEPOS"
+SUBSYSTEM=="usb|usb_device", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="a8b0",  ATTRS{serial}=="602083000493" , SYMLINK+="PTZEPOS"
+SUBSYSTEM=="usb|usb_device", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="a8b0",  ATTRS{serial}=="602083000640" , SYMLINK+="ArmEPOS"
