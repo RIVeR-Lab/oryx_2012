@@ -8,7 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   dynamic_reconfigure
   message_generation
-  EposLib
+  eposcmd
 )
 
 generate_dynamic_reconfigure_options(
@@ -33,7 +33,7 @@ generate_messages(
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES
-  CATKIN_DEPENDS roscpp dynamic_reconfigure message_runtime EposLib
+  CATKIN_DEPENDS roscpp dynamic_reconfigure message_runtime eposcmd
   DEPENDS
 )
 
@@ -52,6 +52,5 @@ add_executable(epos_manager src/EposManager.cpp src/EPOS.cpp)
 target_link_libraries(epos_manager
   ${catkin_LIBRARIES}
 )
-
-
+add_dependencies(epos_manager ${PROJECT_NAME}_gencpp)
 add_dependencies(epos_manager ${PROJECT_NAME}_gencfg)
